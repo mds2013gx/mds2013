@@ -25,6 +25,12 @@ Cursa o 7º Semestre, e possui conhecimentos de desenvolvimento web _frontend_.<
 
 
 #### Produtos desta entrega:
-1. Configuração GitHub
-2. Documento de Arquitetura
-3. 
+Nota1/Entrega
+1. Etapa/Feedback 1 (19/09/2013 - Quinta)
+2. Planejamento/Comunicação Interna e Externa (agenda + ferramentas)
+
+Nota1/Entrega
+Etapa/Feedback 2 (01/10/2013 - Terça)
+3. Documento de Arquitetura do Projeto
+4. Configuração do Repositório (Github)
+5. Wiki atualizada
