@@ -1,4 +1,4 @@
-MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Ícone da moeda virtual Pr$")
+MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Icone MDS")
 ==========
 
 ## Apresentação do Grupo
