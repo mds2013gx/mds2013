@@ -28,7 +28,7 @@ Cursa o 7º Semestre, e possui conhecimentos de desenvolvimento web _frontend_.<
 ##### Nota1/Entrega
 1. Etapa/Feedback 1 (19/09/2013 - Quinta)<br>
 2. Planejamento/Comunicação Interna e Externa (agenda + ferramentas)<br>
-<br><br>
+<br>
 
 ##### Nota1/Entrega
 Etapa/Feedback 2 (01/10/2013 - Terça)<br>
