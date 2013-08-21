@@ -4,7 +4,7 @@ MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak
 ## Apresentação do Grupo
 
 [__Eduardo Augusto__](https://www.facebook.com/EduardoRaTiM)<br>
-Cursa o 7º Semestre, e possui conhecimentos de desenvolvimento web _frontend_.<br>
+Conhecimentos de desenvolvimento web _frontend_, _infra-estrutura_, _sistemas operacionais_, _tecnologias relacionadas a web_.<br>
 [__Lucas Andrade__](https://www.facebook.com/lucas.andrade.r)<br>
 [__Lucas Carvalho__](https://www.facebook.com/lucas.fcc)<br>
 [__Eliseu Egewarth__](https://www.facebook.com/eliseuegewarth)<br>
