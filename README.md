@@ -25,13 +25,13 @@ Cursa o 7º Semestre, e possui conhecimentos de desenvolvimento web _frontend_.<
 
 
 #### Produtos desta entrega:
-##### Nota1/Entrega
-1. Etapa/Feedback 1 (19/09/2013 - Quinta)<br>
+##### Nota1/Entrega (19/09/2013 - Quinta)
+1. Etapa/Feedback 1<br>
 2. Planejamento/Comunicação Interna e Externa (agenda + ferramentas)<br>
 <br>
 
-##### Nota1/Entrega
-Etapa/Feedback 2 (01/10/2013 - Terça)<br>
+##### Nota1/Entrega (01/10/2013 - Terça)
+Etapa/Feedback 2<br>
 3. Documento de Arquitetura do Projeto<br>
 4. Configuração do Repositório (Github)<br>
 5. Wiki atualizada<br>
