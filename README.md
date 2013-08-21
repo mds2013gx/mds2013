@@ -13,3 +13,18 @@ Cursa o 7º Semestre, e possui conhecimentos de desenvolvimento web _frontend_.<
 
 #### Objetivos Entrega 1:
 ------------------
+
+###### Ambiente e Ferramentas:
+1. <del>Criação de grupo destinado a discussão de tarefas do grupo de MDS.<del>
+2. <del>Criação de ambiente wiki para manter informações de documentação do grupo atualizadas.<del>
+ * Criação de usuários dentro da [__Wiki MDS__](http://164.41.57.25/wiki/index.php).
+3. <del>Convidar grupo para "Grupo GPP/MDS" da matéria no facebook.<del>
+4. <del>Criar repositório do GitHub para manutenção de recursos do projeto da matéria.<del>
+5. Montar quadro de disponibilidade do grupo (horários)
+6. <del>Montar quadro de competências do grupo (tecnologias)<del>
+
+
+#### Produtos desta entrega:
+1. Configuração GitHub
+2. Documento de Arquitetura
+3. 
