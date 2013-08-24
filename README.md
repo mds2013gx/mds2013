@@ -55,5 +55,5 @@ Etapa/Feedback 2<br>
 #### Planejamento:
 ------------------
 
-[_Horários de MDS_](http://doodle.com/muhrqd5uxyigu9ts), com base nesta planilha, definimos que reuniões entre o grupo de MDS
+[Horários de MDS](http://doodle.com/muhrqd5uxyigu9ts), com base nesta planilha, definimos que reuniões entre o grupo de MDS
 ocorrerá toda SEGUNDA FEIRA - das 14:00 às 18:00 e nas QUARTAS-FEIRAS - horário a definir.
