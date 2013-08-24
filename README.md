@@ -3,19 +3,19 @@ MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak
 
 ## Grupo de MDS
 
+[__Sérgio B. da Silva__](https://www.facebook.com/sergio.bezerradasilva)<sup>lider</sup><br>
 [__Eduardo Augusto__](https://www.facebook.com/EduardoRaTiM)<br>
 [__Lucas Andrade__](https://www.facebook.com/lucas.andrade.r)<br>
 [__Lucas Carvalho__](https://www.facebook.com/lucas.fcc)<br>
-[__Eliseu Egewarth__](https://www.facebook.com/eliseuegewarth)<br>
-[__Sérgio B. da Silva__](https://www.facebook.com/sergio.bezerradasilva)
+[__Eliseu Egewarth__](https://www.facebook.com/eliseuegewarth)
 <br><br>
 
 ## Grupo de GPP
 
-[__Thiago Honorato__](https://www.facebook.com/thiago.honorato.165)<br>
-[__Yago Regis__](https://www.facebook.com/lucas.andrade.r)<br>
-[__Lucas dos Santos__](https://www.facebook.com/lucas.fcc)<br>
-[__Bruno Rodrigues__](https://www.facebook.com/eliseuegewarth)
+[__Thiago Honorato__](https://www.facebook.com/thiago.honorato.165)<sup>lider</sup><br>
+[__Yago Regis__](https://www.facebook.com/yago.regis)<br>
+[__Lucas dos Santos__](https://www.facebook.com/lucas.dossantos.393)<br>
+[__Bruno Rodrigues__](https://www.facebook.com/brunounbgama)
 <br><br>
 
 #### Objetivos Entrega 1:
@@ -29,6 +29,13 @@ MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak
 4. <del>Criar repositório do GitHub para manutenção de recursos do projeto da matéria.<del>
 5. Montar quadro de disponibilidade do grupo (horários)
 6. <del>Montar quadro de competências do grupo (tecnologias)<del>
+7. Configuração de Ambiente
+8. Dias fixos de reunião da matéria (para trabalho)
+9. Fechar detalhes de escolha de tema (já para terça)
+10. Fechar tecnologias
+11. Configuração de ambientes
+12. GitHub
+13. Wiki (popular e categorizar) - junto com Eduardo Augusto
 
 
 #### Produtos desta entrega:
@@ -42,3 +49,5 @@ Etapa/Feedback 2<br>
 3. Documento de Arquitetura do Projeto<br>
 4. Configuração do Repositório (Github)<br>
 5. Wiki atualizada<br>
+6. Arquitetura MVC
+7. Tratamento de Exceção
