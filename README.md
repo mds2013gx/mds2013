@@ -1,14 +1,21 @@
 MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Icone MDS")
 ==========
 
-## Apresentação do Grupo
+## Grupo de MDS
 
 [__Eduardo Augusto__](https://www.facebook.com/EduardoRaTiM)<br>
-Conhecimentos de desenvolvimento web _frontend_, _infra-estrutura_, _sistemas operacionais_, _tecnologias relacionadas a web_.<br>
 [__Lucas Andrade__](https://www.facebook.com/lucas.andrade.r)<br>
 [__Lucas Carvalho__](https://www.facebook.com/lucas.fcc)<br>
 [__Eliseu Egewarth__](https://www.facebook.com/eliseuegewarth)<br>
-[__Sérgio B. da Silva__](https://www.facebook.com/sergio.bezerradasilva)<br>
+[__Sérgio B. da Silva__](https://www.facebook.com/sergio.bezerradasilva)
+<br><br>
+
+## Grupo de GPP
+
+[__Thiago Honorato__](https://www.facebook.com/thiago.honorato.165)<br>
+[__Yago Regis__](https://www.facebook.com/lucas.andrade.r)<br>
+[__Lucas dos Santos__](https://www.facebook.com/lucas.fcc)<br>
+[__Bruno Rodrigues__](https://www.facebook.com/eliseuegewarth)
 <br><br>
 
 #### Objetivos Entrega 1:
