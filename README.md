@@ -51,3 +51,7 @@ Etapa/Feedback 2<br>
 5. Wiki atualizada<br>
 6. Arquitetura MVC
 7. Tratamento de Exceção
+
+##### Planejamento
+[_Horários de MDS_](http://doodle.com/muhrqd5uxyigu9ts), com base nesta planilha, definimos que reuniões entre o grupo de MDS
+ocorrerá toda SEGUNDA FEIRA - das 14:00 às 18:00 e nas QUARTAS-FEIRAS - horário a definir.
