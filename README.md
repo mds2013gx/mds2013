@@ -49,7 +49,7 @@ Etapa/Feedback 2<br>
 3. Documento de Arquitetura do Projeto<br>
 4. Configuração do Repositório (Github)<br>
 5. Wiki atualizada<br>
-6. Arquitetura MVC
+6. Arquitetura MVC<br>
 7. Tratamento de Exceção
 
 #### Planejamento:
