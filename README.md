@@ -1,4 +1,4 @@
-MDS 2013.2 - Grupo X ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Icone MDS")
+MDS/GPP 2013.2 - Grupo 2 ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Icone MDS")
 ==========
 
 ## Grupo de MDS
@@ -57,3 +57,11 @@ Etapa/Feedback 2<br>
 
 [Horários de MDS](http://doodle.com/muhrqd5uxyigu9ts), com base nesta planilha, definimos que reuniões entre o grupo de MDS
 ocorrerá toda SEGUNDA FEIRA - das 14:00 às 18:00 e nas QUARTAS-FEIRAS - horário a definir.
+
+
+#### Tema do projeto:
+------------------
+
+### Mapa do Crime
+O sistema propoe o mapeamento de áreas com maior numero de ocorrência e teor destas ocorrencias, fazendo a separação das RAs (Regiões Administrativas) de acordo com a quantidade e gravidadedos crimes cometidos. estes dados serão consultados junto a secretaria de segurança:
+[Website da Secretaria de Segurança do DF](http://www.ssp.df.gov.br/).
