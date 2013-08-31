@@ -58,7 +58,6 @@ Etapa/Feedback 2<br>
 [Horários de MDS](http://doodle.com/muhrqd5uxyigu9ts), com base nesta planilha, definimos que reuniões entre o grupo de MDS
 ocorrerá toda SEGUNDA FEIRA - das 14:00 às 18:00 e nas QUARTAS-FEIRAS - horário a definir.
 ![image] (https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/556355_688105867885602_1452505700_n.jpg "Horários MDS")
-<legend>Horários MDS </legend>
 
 
 #### Tema do projeto:
