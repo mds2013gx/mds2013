@@ -7,6 +7,12 @@
 	define ('__SITE_PATH', $site_path);
 
 	/*** include the init.php file ***/
-	include 'includes/init.php';
+	include 'libs/init.php';
+	
+	/*** load the router ***/
+	$registry->router = new router($registry);
+	
+	/*** set the path to the controllers directory ***/
+	$router->setPath (__SITE_PATH . 'controller');
 
 ?>
