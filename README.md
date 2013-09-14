@@ -55,3 +55,8 @@ ocorrerá toda SEGUNDA FEIRA - das 14:00 às 18:00 e nas QUARTAS-FEIRAS - horár
 ##### Mapa do Crime
 O sistema propoe o mapeamento de áreas com maior numero de ocorrência e teor destas ocorrencias, fazendo a separação das RAs (Regiões Administrativas) de acordo com a quantidade e gravidadedos crimes cometidos. estes dados serão consultados junto a secretaria de segurança:
 [Website da Secretaria de Segurança do DF](http://www.ssp.df.gov.br/).
+
+
+#### Execução
+Biblioteca pesquisada pelo grupo que efetua o parse de dados Excel para qualquer outra saída desejada.
+[__PHP Excel Reader__](https://code.google.com/p/php-excel-reader/)
