@@ -1,21 +1,10 @@
 MDS/GPP 2013.2 - Grupo 2 ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/995955_669034129792776_2108392329_n.jpg "Icone MDS")
 ==========
 
-## Grupo de MDS
+## Atualizações
 
-[__Sérgio B. da Silva__](https://www.facebook.com/sergio.bezerradasilva)<sup>lider</sup><br>
-[__Eduardo Augusto__](https://www.facebook.com/EduardoRaTiM)<br>
-[__Lucas Andrade__](https://www.facebook.com/lucas.andrade.r)<br>
-[__Lucas Carvalho__](https://www.facebook.com/lucas.fcc)<br>
-[__Eliseu Egewarth__](https://www.facebook.com/eliseuegewarth)
-<br><br>
+[__Wiki do Grupo__](http://164.41.127.65/wiki/index.php/Grupo_2_-_Radar_Criminal)
 
-## Grupo de GPP
-
-[__Thiago Honorato__](https://www.facebook.com/thiago.honorato.165)<sup>lider</sup><br>
-[__Yago Regis__](https://www.facebook.com/yago.regis)<br>
-[__Lucas dos Santos__](https://www.facebook.com/lucas.dossantos.393)<br>
-[__Bruno Rodrigues__](https://www.facebook.com/brunounbgama)
 <br><br>
 
 #### Objetivos Entrega 1:
@@ -27,21 +16,26 @@ MDS/GPP 2013.2 - Grupo 2 ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphoto
  * Criação de usuários dentro da [__Wiki MDS__](http://164.41.57.25/wiki/index.php).
 3. <del>Convidar grupo para "Grupo GPP/MDS" da matéria no facebook.<del>
 4. <del>Criar repositório do GitHub para manutenção de recursos do projeto da matéria.<del>
-5. Montar quadro de disponibilidade do grupo (horários)
+5. <del>Montar quadro de disponibilidade do grupo (horários)
 6. <del>Montar quadro de competências do grupo (tecnologias)<del>
-7. Configuração de Ambiente
-8. Dias fixos de reunião da matéria (para trabalho)
-9. Fechar detalhes de escolha de tema (já para terça)
-10. Fechar tecnologias
-11. Configuração de ambientes
-12. GitHub
-13. Wiki (popular e categorizar) - junto com Eduardo Augusto
+7. <del>Configuração de Ambiente</del>
+8. <del>Dias fixos de reunião da matéria (para trabalho)</del>
+9. <del>Fechar detalhes de escolha de tema (já para terça)</del>
+10. <del>Fechar tecnologias</del>
+11. <del>Configuração de ambientes</del>
+12. <del>GitHub</del>
+13. <del>Wiki (popular e categorizar) - junto com Eduardo Augusto</del>
 
 
 #### Produtos desta entrega:
 ##### Nota1/Entrega (19/09/2013 - Quinta)
 1. Etapa/Feedback 1<br>
 2. Planejamento/Comunicação Interna e Externa (agenda + ferramentas)<br>
+* Detalhes desta Entrega:
+** OpenUp (EPF) funcionando junto ao Eclipse
+** Objetivos descritos:
+*** O que já foi feito
+*** O que será feito na próxima semana
 <br>
 
 ##### Nota1/Entrega (01/10/2013 - Terça)
