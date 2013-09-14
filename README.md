@@ -31,11 +31,6 @@ MDS/GPP 2013.2 - Grupo 2 ![image] (https://fbcdn-sphotos-h-a.akamaihd.net/hphoto
 ##### Nota1/Entrega (19/09/2013 - Quinta)
 1. Etapa/Feedback 1<br>
 2. Planejamento/Comunicação Interna e Externa (agenda + ferramentas)<br>
-* Detalhes desta Entrega:
-** OpenUp (EPF) funcionando junto ao Eclipse
-** Objetivos descritos:
-*** O que já foi feito
-*** O que será feito na próxima semana
 <br>
 
 ##### Nota1/Entrega (01/10/2013 - Terça)
