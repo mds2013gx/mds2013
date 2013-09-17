@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.epf.export.msp; singleton:=true
+Eclipse-LazyStart: true
+Bundle-Activator: org.eclipse.epf.export.msp.ExportMSPPlugin
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.epf.export;visibi
+ lity:=reexport,org.eclipse.epf.msproject;visibility:=reexport,org.ecl
+ ipse.epf.publishing,org.eclipse.epf.publishing.ui;visibility:=reexpor
+ t,org.eclipse.ui,org.eclipse.epf.common.ui,org.eclipse.epf.library.ed
+ it.ui
+Bundle-Version: 1.5.0.v20120910-1437
+Export-Package: org.eclipse.epf.export.msp
+Bundle-ClassPath: exportmsp.jar
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+
+

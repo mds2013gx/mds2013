@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.epf.base.feature"
+      label="%featureName"
+      version="1.5.0.v20120516-1305-7e9z-F_XUFsyfgsSdsuk1"
+      provider-name="%providerName"
+      plugin="org.eclipse.epf.base"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.draw2d"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="org.eclipse.ui.cheatsheets"/>
+      <import plugin="org.eclipse.ui.forms"/>
+      <import plugin="org.eclipse.ui.intro"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="org.eclipse.team.cvs.ui"/>
+      <import plugin="org.eclipse.search"/>
+      <import plugin="org.eclipse.epf.common.ui"/>
+      <import plugin="org.apache.ant"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.epf.common"/>
+      <import plugin="org.eclipse.emf.mapping.ecore2ecore"/>
+      <import plugin="org.eclipse.emf.mapping.ecore2xml"/>
+      <import plugin="org.eclipse.core.filebuffers"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="com.ibm.icu"/>
+      <import plugin="org.eclipse.help.base"/>
+      <import plugin="org.apache.lucene"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.validation"/>
+      <import plugin="org.eclipse.epf.richtext"/>
+      <import plugin="org.eclipse.gmf.runtime.draw2d.ui.render"/>
+      <import plugin="org.eclipse.gmf.runtime.draw2d.ui.render.awt"/>
+      <import plugin="org.eclipse.emf.transaction"/>
+      <import plugin="org.eclipse.emf.workspace"/>
+      <import plugin="org.eclipse.core.net"/>
+      <import plugin="org.eclipse.ui.browser"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.ui.workbench"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.core"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.commands.core"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.ui.properties"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers.ide"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.render"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <import plugin="org.eclipse.gmf.runtime.notation.providers"/>
+      <import plugin="org.eclipse.uml2.uml"/>
+      <import plugin="org.eclipse.uml2.uml.edit"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.gmf.runtime.draw2d.ui"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.geoshapes"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.actions"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.printing"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.printing.render"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.properties"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.epf.base"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.authoring.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121204-1559"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.dataexchange"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.model"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.export"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110606-1748"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.export.msp"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120910-1437"/>
+
+   <plugin
+         id="org.eclipse.epf.export.msp.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110517-1541"/>
+
+   <plugin
+         id="org.eclipse.epf.export.xml"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110512-1529"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.import"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121130-1519"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.import.xml"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110511-1659"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121206-0930"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121206-0930"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.persistence"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121108-1618"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121206-1641"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.ui.xmi"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110221-0640"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.xmi"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120502-1743"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.msproject"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.publish.layout"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121205-1503"/>
+         
+   <plugin
+         id="org.eclipse.epf.publishing"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121115-1511"/>
+
+   <plugin
+         id="org.eclipse.epf.publishing.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121108-1109"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.search"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.search.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121004-1236"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.services"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120314-1905"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.ui.intro"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.v20101012-1720"/>
+
+   <plugin
+         id="org.eclipse.epf.uma"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120921-1620"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.uma.ecore"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120615-0951"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.uma.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121115-1511"/>
+
+   <plugin
+         id="org.eclipse.epf.validation"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20110228-2324"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.xml.uma"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.ad"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120727-1325"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.add"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120727-1325"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.edit"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.wpdd"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20120727-1325"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.core"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20121011-1448"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.migration.diagram"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.diagram.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.library.edit.ui"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.common.service"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.epf.publishing.cmdline"
+         download-size="0"
+         install-size="0"
+         version="1.5.0.v20101012-1720"/>
+
+</feature>

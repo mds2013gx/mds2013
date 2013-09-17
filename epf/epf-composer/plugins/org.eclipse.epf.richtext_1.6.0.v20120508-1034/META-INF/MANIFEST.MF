@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.epf.richtext;singleton:=true
+Eclipse-LazyStart: true
+Bundle-Activator: org.eclipse.epf.richtext.RichTextPlugin
+Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,org.ecli
+ pse.ui;visibility:=reexport,org.eclipse.ui.forms;visibility:=reexport
+ ,org.eclipse.jface.text;visibility:=reexport,org.eclipse.ui.workbench
+ .texteditor;visibility:=reexport,org.eclipse.epf.common.ui;visibility
+ :=reexport
+Bundle-Version: 1.6.0.v20120508-1034
+Export-Package: org.eclipse.epf.richtext,org.eclipse.epf.richtext.acti
+ ons,org.eclipse.epf.richtext.dialogs,org.eclipse.epf.richtext.html,or
+ g.eclipse.epf.richtext.preferences
+Bundle-ClassPath: richtext.jar
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+
+

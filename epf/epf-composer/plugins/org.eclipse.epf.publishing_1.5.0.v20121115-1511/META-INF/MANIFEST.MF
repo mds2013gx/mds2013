@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.epf.publishing
+Eclipse-LazyStart: true
+Bundle-Activator: org.eclipse.epf.publishing.PublishingPlugin
+Require-Bundle: org.eclipse.epf.search;visibility:=reexport,org.eclips
+ e.core.runtime,org.eclipse.epf.diagram.core,org.eclipse.core.net
+Bundle-Version: 1.5.0.v20121115-1511
+Export-Package: org.eclipse.epf.publishing,org.eclipse.epf.publishing.
+ services,org.eclipse.epf.publishing.services.index,org.eclipse.epf.pu
+ blishing.services.search,org.eclipse.epf.publishing.util,org.eclipse.
+ epf.publishing.util.http
+Bundle-ClassPath: publishing.jar, lib/rpwcore.jar
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-ManifestVersion: 2
+
+
