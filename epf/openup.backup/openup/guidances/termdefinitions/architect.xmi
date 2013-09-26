@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eclipse.epf.uma:ContentDescription xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.epf.uma="http://www.eclipse.org/epf/uma/1.0.4/uma.ecore"
-    xmlns:epf="http://www.eclipse.org/epf" epf:version="1.2.0" xmlns:rmc="http://www.ibm.com/rmc"
-    rmc:version="7.2.0" xmi:id="-2QB1bosN011CudkwZ0cn-g"
-    name="architect,_wI3R4EvCEdunZcj9T5hrMQ" guid="-2QB1bosN011CudkwZ0cn-g">
-  <mainDescription>Papel que representa alguém responsável por projetar a arquitetura de software, o que inclui a tomada das principais decisões técnicas que orientam todo o design e implementação do projeto.</mainDescription>
-</org.eclipse.epf.uma:ContentDescription>
