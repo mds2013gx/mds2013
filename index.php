@@ -1,25 +1,16 @@
 <?php
-
- /*** error reporting on ***/
- error_reporting(E_ALL);
-
- /*** define the site path ***/
- $site_path = realpath(dirname(__FILE__));
- define ('__SITE_PATH', $site_path);
-
- /*** include the init.php file ***/
- include 'includes/init.php';
-
- /*** load the router ***/
- $registry->router = new router($registry);
-
- /*** set the controller path ***/
- $registry->router->setPath (__SITE_PATH . '/controller');
-
- /*** load up the template ***/
- $registry->template = new template($registry);
-
- /*** load the controller ***/
- $registry->router->loader();
-
-?>
+require_once 'excel_reader2.php';
+ 
+$reader = new Spreadsheet_Excel_Reader();
+$reader->setOutputEncoding("UTF-8");
+ 
+$reader->read("example.xls");
+ 
+for ($i = 1; $i <= $reader->sheets[0]["numRows"]; $i++)
+{
+    for ($j = 1; $j <= $reader->sheets[0]["numCols"]; $j++)
+    {
+        print "\"".$reader->sheets[0]["cells"][$i][$j]."\",";
+    }
+    echo "\n";
+}
