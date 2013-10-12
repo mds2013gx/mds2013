@@ -74,20 +74,4 @@ class Parse{
 	function parseDeQuadrimestre(){
 		
 	}
-	function inserirCategoria(){
-		
-	}
-	function inserirTempo(){
-		
-	}
-	function inserirRegiao(){
-		
-	}
-	function inserirNatureza(){
-		
-	}
-	function inserirCrime(){
-		
-	}
-	
 }
