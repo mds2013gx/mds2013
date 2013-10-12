@@ -12,7 +12,7 @@
 					<div class="boxchart-overlay blue">
 						<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 					</div>	
-					<span class="title">Clients</span>
+					<span class="title">Ocorrências</span>
 					<span class="value">4 589</span>
 				</div>
 				
@@ -20,20 +20,20 @@
 					<div class="boxchart-overlay red">
 						<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
 					</div>	
-					<span class="title">Transactions</span>
+					<span class="title">Homicídios</span>
 					<span class="value">789</span>
 				</div>
 				
 				<div class="span3 smallstat box mobileHalf noMargin" onTablet="span6" onDesktop="span3">
 					<i class="icon-download-alt green"></i>
-					<span class="title">Income</span>
-					<span class="value">$1 999,99</span>
+					<span class="title">Roubo</span>
+					<span class="value">500</span>
 				</div>
 				
 				<div class="span3 smallstat mobileHalf box" onTablet="span6" onDesktop="span3">
 					<i class="icon-money yellow"></i>
-					<span class="title">Account</span>
-					<span class="value">$19 999,99</span>
+					<span class="title">Furto</span>
+					<span class="value">1000</span>
 				</div>
 			
 			</div>	
@@ -51,7 +51,7 @@
 					
 					<div class="bar simple">
 						
-						<div class="title">FEB</div>
+						<div class="title">FEV</div>
 						<div class="value">60%</div>
 					
 					</div>
@@ -65,14 +65,14 @@
 					
 					<div class="bar">
 						
-						<div class="title">APR</div>
+						<div class="title">ABR</div>
 						<div class="value">40%</div>
 					
 					</div>
 					
 					<div class="bar simple">
 						
-						<div class="title">MAY</div>
+						<div class="title">MAI</div>
 						<div class="value">10%</div>
 					
 					</div>	
@@ -93,21 +93,21 @@
 					
 					<div class="bar simple">
 						
-						<div class="title">AUG</div>
+						<div class="title">AGO</div>
 						<div class="value">65%</div>
 					
 					</div>
 					
 					<div class="bar simple">
 						
-						<div class="title">SEP</div>
+						<div class="title">SET</div>
 						<div class="value">40%</div>
 					
 					</div>
 					
 					<div class="bar">
 						
-						<div class="title">OCT</div>
+						<div class="title">OUT</div>
 						<div class="value">32%</div>
 					
 					</div>
@@ -121,7 +121,7 @@
 					
 					<div class="bar simple">
 						
-						<div class="title">DEC</div>
+						<div class="title">DEZ</div>
 						<div class="value">10%</div>
 					
 					</div>
@@ -135,7 +135,7 @@
 					
 					<div class="bar simple">
 						
-						<div class="title">FEB</div>
+						<div class="title">FEV</div>
 						<div class="value">60%</div>
 					
 					</div>
@@ -149,14 +149,14 @@
 					
 					<div class="bar">
 						
-						<div class="title">APR</div>
+						<div class="title">ABR</div>
 						<div class="value">40%</div>
 					
 					</div>
 					
 					<div class="bar simple">
 						
-						<div class="title">MAY</div>
+						<div class="title">MAI</div>
 						<div class="value">10%</div>
 					
 					</div>	
@@ -177,7 +177,7 @@
 					
 					<div class="bar simple">
 						
-						<div class="title">AUG</div>
+						<div class="title">AGO</div>
 						<div class="value">65%</div>
 					
 					</div>		
@@ -194,11 +194,11 @@
 						<div class="span12 multi-stat-box box">
 							<div class="header row-fluid">
 								<div class="left">
-									<h2>Pageviews</h2>
+									<h2>Crimes contra pessoa</h2>
 									<a class="icon-chevron-down"></a>
 								</div>
 								<div class="right">
-									<h2>MAY 15 - MAY 22</h2>
+									<h2>JAN 2010 - JAN 2011</h2>
 									<div class="percent"><i class="icon-double-angle-up"></i> 22%</div>
 								</div>
 							</div>
@@ -206,20 +206,20 @@
 								<div class="left">
 									<ul>
 										<li>
-											<span class="date">Overall</span>
-											<span class="value">987,123</span>
+											<span class="date">Homicídio</span>
+											<span class="value">500</span>
 										</li>
 										<li class="active">
-											<span class="date">This week</span>
-											<span class="value">9,873</span>
+											<span class="date">Tentativa de Homicídio</span>
+											<span class="value">821</span>
 										</li>
 										<li>
-											<span class="date">Yesterday</span>
-											<span class="value">851</span>
+											<span class="date">Lesão Corporal</span>
+											<span class="value">12230</span>
 										</li>
 										<li>
-											<span class="date">Today</span>
-											<span class="value">184</span>
+											<span class="date"></span>
+											<span class="value"></span>
 										</li>
 									</ul>	
 								</div>
@@ -231,7 +231,7 @@
 						
 						<div class="box blue span12 noMarginLeft">
 							<div class="box-header">
-								<h2><i class="icon-bar-chart"></i>Weekly Stat</h2>
+								<h2><i class="icon-bar-chart"></i>Estatistica Semanal</h2>
 								<div class="box-icon">
 									<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 									<a href="#" class="btn-close"><i class="icon-remove"></i></a>
@@ -248,7 +248,7 @@
 
 				<div class="box blue span6 noMargin" onTablet="span12" onDesktop="span6">
 					<div class="box-header">
-						<h2>Revenue</h2>
+						<h2>Homicídios nos últimos 10 anos</h2>
 					</div>
 					<div class="box-content">
 						
@@ -256,21 +256,21 @@
 						
 						<div class="verticalChart">
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="Taguatinga" title="Taguatinga">
 							
 								<div class="bar">
 								
 									<div class="value">
-										<span>37%</span>
+										<span>85%</span>
 									</div>
 								
 								</div>
 								
-								<div class="title">US</div>
+								<div class="title">TG</div>
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -284,7 +284,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -298,7 +298,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -312,7 +312,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -326,7 +326,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -340,7 +340,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -354,7 +354,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -368,7 +368,7 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -382,7 +382,287 @@
 							
 							</div>
 							
-							<div class="singleBar">
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>1%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">N/A</div>
+							
+							</div>	
+
+							<div class="singleBar" alt="Taguatinga" title="Taguatinga">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>37%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">TG</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>16%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">PL</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>12%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">GB</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>9%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">DE</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>7%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">NL</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>6%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">CA</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>5%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">FI</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>4%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">RU</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>3%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">AU</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>1%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">N/A</div>
+							
+							</div>	
+
+							<div class="singleBar" alt="Taguatinga" title="Taguatinga">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>37%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">TG</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>16%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">PL</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>12%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">GB</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>9%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">DE</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>7%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">NL</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>6%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">CA</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>5%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">FI</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>4%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">RU</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
+							
+								<div class="bar">
+								
+									<div class="value">
+										<span>3%</span>
+									</div>
+								
+								</div>
+								
+								<div class="title">AU</div>
+							
+							</div>
+							
+							<div class="singleBar" alt="" title="">
 							
 								<div class="bar">
 								
@@ -410,32 +690,13 @@
 				
 				<div class="span7" onTablet="span12" onDesktop="span7">
 					
-					<div class="row-fluid">
-						
-						<div class="box calendar span12">
-							<div class="calendar-details">
-								<div class="day">MONDAY</div>
-								<div class="date">MAY 22</div>
-								<ul class="events">
-									<li>MAY 22, 19:30 Meeting</li>
-									<li>MAY 22, 19:30 Meeting</li>
-								</ul>
-								<div class="add-event">
-									<i class="icon-plus"></i>
-									<input type="text" class="new event" value="">
-								</div>		
-							</div>	
-							<div class="calendar-small"></div>
-							<div class="clearfix"></div>
-						</div><!--/span-->
 					
-					</div>
 					
 					<div class="row-fluid">	
 						
 						<div class="span6 smallchart blue box mobileHalf">
 
-							<div class="title">Account balance</div>
+							<div class="title">GRAFICO</div>
 
 							<div class="content">
 
@@ -451,7 +712,7 @@
 
 						<div class="span6 smallchart red box mobileHalf">
 
-							<div class="title">Weekly revenue</div>
+							<div class="title">GRAFICO</div>
 
 							<div class="content">
 
@@ -466,74 +727,6 @@
 						</div>
 						
 					</div>	
-					
-				</div>
-				
-				
-				<div class="box chat alt span5 noMargin" onTablet="span12" onDesktop="span5">
-					
-					<div class="contacts">
-						<ul class="list">
-							<li>
-								<img class="avatar" src="img/avatar.jpg" alt="avatar">
-								<span class="name">Łukasz Holeczek</span>
-								<span class="status online"></span>
-								<span class="important">4</span>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar2.jpg" alt="avatar">
-								<span class="name">Łukasz Holeczek</span>
-								<span class="status offline"></span>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar3.jpg" alt="avatar">
-								<span class="name">Łukasz Holeczek</span>
-								<span class="status busy"></span>
-							</li>
-						</ul>	
-					</div>
-					<div class="conversation">
-						<div class="actions">
-							<img class="avatar" src="img/avatar.jpg" alt="avatar">
-							<img class="avatar" src="img/avatar3.jpg" alt="avatar">
-							<img class="avatar" src="img/avatar4.jpg" alt="avatar">
-						</div>
-						<ul class="talk">
-							<li>
-								<img class="avatar" src="img/avatar3.jpg" alt="avatar">
-								<span class="name">Ann Kovalsky</span>
-								<span class="time">1:32PM</span>
-								<div class="message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar4.jpg" alt="avatar">
-								<span class="name">Megan Abbott</span>
-								<span class="time">1:32PM</span>
-								<div class="message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar3.jpg" alt="avatar">
-								<span class="name">Ann Kovalsky</span>
-								<span class="time">1:32PM</span>
-								<div class="message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar.jpg" alt="avatar">
-								<span class="name">Łukasz Holeczek</span>
-								<span class="time">1:32PM</span>
-								<div class="message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-							</li>
-							<li>
-								<img class="avatar" src="img/avatar4.jpg" alt="avatar">
-								<span class="name">Megan Abbott</span>
-								<span class="time">1:32PM</span>
-								<div class="message">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
-							</li>
-						</ul>
-						<div class="form">
-							<input type="text" class="write-message" placeholder="Write Message">
-						</div>	
-					</div>
 					
 				</div>
 				
@@ -623,133 +816,28 @@
 					</div>
 				</div>
 		
-			</div>
-			
+			</div>	
+
+			<!-- MAPA DO DF -->
 			<div class="row-fluid">
-				
-				<div class="span12 discussions">
-					
-					<ul>
-						
-						<li>
-							<div class="author">
-								<img src="img/avatar.jpg" alt="avatar">
-							</div>
-							
-							<div class="name">Łukasz Holeczek</div>
-							<div class="date">Today, 1:08 PM</div>
-							<div class="delete"><i class="icon-remove"></i></div>
-							
-							<div class="message">
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							</div>	
-							
-							<ul>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar3.jpg" alt="avatar">
-									</div>
-									<div class="name">Ann Kovalsky</div>
-									<div class="date">Today, 1:08 PM</div>
-									<div class="delete"><i class="icon-remove"></i></div>
-
-									<div class="message">
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-									</div>
-	
-								</li>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar6.jpg" alt="avatar">
-									</div>
-									<div class="name">Megan Abbott</div>
-									<div class="date">Today, 1:08 PM</div>
-									<div class="delete"><i class="icon-remove"></i></div>
-
-									<div class="message">
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-									</div>	
-								</li>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar.jpg" alt="avatar">
-									</div>
-									<textarea class="diss-form" placeholder="Write comment"></textarea>
-								</li>
-								
-							</ul>	
-									
-						</li>
-						
-						<li>
-							<div class="author">
-								<img src="img/avatar9.jpg" alt="avatar">
-							</div>
-							
-							<div class="name">Tom Allen</div>
-							<div class="date">Today, 1:08 PM</div>
-							<div class="delete"><i class="icon-remove"></i></div>
-							
-							<div class="message">
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							</div>	
-							
-							<ul>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar2.jpg" alt="avatar">
-									</div>
-									<div class="name">Katie Moss</div>
-									<div class="date">Today, 1:08 PM</div>
-									<div class="delete"><i class="icon-remove"></i></div>
-
-									<div class="message">
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-									</div>
-	
-								</li>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar4.jpg" alt="avatar">
-									</div>
-									<div class="name">Anna Holn</div>
-									<div class="date">Today, 1:08 PM</div>
-									<div class="delete"><i class="icon-remove"></i></div>
-
-									<div class="message">
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-									</div>	
-								</li>
-								
-								<li>
-									<div class="author">
-										<img src="img/avatar9.jpg" alt="avatar">
-									</div>
-									<textarea class="diss-form" placeholder="Write comment"></textarea>
-								</li>
-								
-							</ul>	
-									
-						</li>
-						
-					</ul>	
-					
+				<div class="box span12" onTablet="span12" onDesktop="span12">
+					<div class="box-header">
+						<h2>Mapa do Distrito Federal</h2>
+					</div>
+					<div class="box-content">
+						<div class="span12" style="height:200px">
+							<p>MAPA DO DF</p>
+						</div>
+					</div>
 				</div>
-			
-			</div>				
-			
-       
-					
+			</div>
+			<!-- /MAPA DO DF -->
+
 			</div>
 			<!-- end: Content -->
 				
 				</div><!--/fluid-row-->
-				
+
 <?php 
 	include 'footer.php';
 ?>
