@@ -2,11 +2,6 @@
 require_once 'libs/excel_reader2.php';
 class Parse{
 	
-	private $categoria;
-	private $tempo;
-	private $regiao;
-	private $natureza;
-	private $crime;
 	private $dados;
 	
 	function __construct($planilha){
@@ -28,6 +23,8 @@ class Parse{
 		$natureza;
 		$tempo;
 		$crime;
+		$natureza1;
+		$categoria;
 		//loop que pega natureza do crime
 		for($i=1,$auxNatureza=0; $i<$numeroLinhas; $i++){
 			if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -63,7 +60,26 @@ class Parse{
 				$auxLinha++;
 			}
 		}
-		echo $natureza[0];
+
+	
+		//loop que pega a natureza
+		$auxCategoria=0;
+		for($i=0;$i<$numeroLinhas;$i++){
+			if($i == 2){ 
+				$categoria[$auxCategoria] = $this->dados->val($i,1,1);
+				$auxCategoria++;
+			}	
+			if($i == 33){
+				$categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+				$auxCategoria++;
+			}	
+			if($i == 38){
+				$categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+			}	
+		}
+	
+		
+	
 	}//fim do metodo parseDeSerieHistorica
 	
 		
