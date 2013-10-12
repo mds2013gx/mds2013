@@ -1,5 +1,5 @@
 <?php
-require_once 'excel_reader2.php';
+require_once 'libs/excel_reader2.php';
 class Parse{
 	
 	private $categoria;
@@ -9,9 +9,8 @@ class Parse{
 	private $crime;
 	private $dados;
 	
-	function Parse($planilha)
-	{
-		$this->dados = new Spreadsheet_Excel_Reader($planilha);
+	function __construct($planilha){
+		$this->dados = new Spreadsheet_Excel_Reader("files/".$planilha,"UTF-8");
 		if($planilha = "série histórica - 2001 - 2012 2.xls"){
 			$this->parseDeSerieHistorica();
 		}
@@ -22,48 +21,52 @@ class Parse{
 			$this->parseDeQuadrimestre();
 		}	
 	}
-	
+	//Parse 
 	function parseDeSerieHistorica(){
 		$numeroLinhas = 40;
-		$numeroColunas = 14;
-		$numeroColunas = $this->dados->colcount();
-		$natureza[];
-		$tempo[];
-		$crime[natureza][tempo][dado];
+		$numeroColunas = 15;
+		$natureza;
+		$tempo;
+		$crime;
 		//loop que pega natureza do crime
-		for($i=0; $i<$numeroLinhas; $i++){
-			if(($i == 5)||($i == 21)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
-				$i++;
+		for($i=1,$auxNatureza=0; $i<$numeroLinhas; $i++){
+			if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
+				continue;
 			}
 			else{	
-				$natureza[$i]= $this->dados->val($i, C);
+				if($i>32){
+					$natureza[$auxNatureza]= $this->dados->val($i, 'B',1);
+				}else{
+					$natureza[$auxNatureza]= $this->dados->val($i, 'C',1);
+				}
+				$auxNatureza++;
 			}
 		}
 		//loop que pega os anos disponiveis
-		for($i=0; $i<$numeroColunas; $i++){
+		for($i=1,$auxTempo = 0; $i<$numeroColunas; $i++){
 			if(($i == 1)||($i == 2)||($i == 3)){
-				$i++;
+				continue;
 			}else{
-				$tempo[$i] = $this->dados->val(1, $i);
+				$tempo[$auxTempo] = $this->dados->val(1,$i,1);
+				$auxTempo++;
 			}
 		}
 		//loop que pega os dados do crime
-		for($i=0; $i<strlen($natureza); $i++){
-				if(($i == 5)||($i == 21)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
-					$i++;
-				}else{
-					for($j=0; $j=strlen($tempo); $i++){
-						if(($j == 1)||($j == 2)||($j == 3)){
-							$j++;
-						}else{
-							$crime[$i][$j][$this->dados->val($i,$j)];
-						}
-					}
+		for($i=1,$auxLinha=0; $i<$numeroLinhas; $i++){	
+			if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
+				continue;
+			}else{	
+				for($j=4,$auxColuna=0; $j<$numeroColunas; $j++){
+						$crime[$auxLinha][$auxColuna] = $this->dados->raw($i,$j,1);
+						$auxColuna++;
 				}
+				$auxLinha++;
 			}
 		}
+		echo $natureza[0];
 	}//fim do metodo parseDeSerieHistorica
 	
+		
 	function parsePorRegiao(){
 		
 	}
