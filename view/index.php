@@ -12,7 +12,7 @@
 	<header>
 		<hgroup>
 			<h1>RadarCriminal</h1>
-			<h2>Saiba sobre os níveis de ocorrências dentro da sua RA em Brasília</h2>
+			<h2>Saiba sobre os níveis de ocorrências dentro da sua <abbr title="Região Administrativa">RA</abbr> em Brasília</h2>
 		</hgroup>
 		
 		<canvas id="introChart" width="489" height="246"></canvas>
