@@ -115,4 +115,35 @@ class Parse{
 	public function __getCategoria(){
 		return $this->categoria;
 	}
+
+	public function somaLinhas($arrayCrime){
+		$numeroLinhas = 31;
+		$numeroColunas = 11;
+		$soma;
+		
+		
+		for($i=0;$i<$numeroLinhas;$i++){
+			for($j=0;$j<$numeroColunas;$j++){
+				$soma[$i] += $arrayCrime[$i][$j];				
+			}
+		}
+		return $soma;
+	}
+
+	public function somaColunas($arrayCrime){
+		$numeroLinhas = 31;
+		$numeroColunas = 11;
+		$soma;
+	
+	
+		for($i=0;$i<$numeroColunas;$i++){
+			for($j=0;$j<$numeroLinhas;$j++){
+				$soma[$i] += $arrayCrime[$j][$i];
+			}
+		}
+		for($i=0;$i<$numeroColunas;$i++){
+			echo $soma[$i]."<br>";
+		}
+		return $soma;
+	}
 }
