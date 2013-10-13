@@ -13,20 +13,24 @@ canvas {
   font-family: "proxima-nova", sans-serif sans-serif;
 }
 .redBorder,
+.blueBorder,
 .greenBorder,
-.yellowBorder {
-  width: 33.33%;
+.orangeBorder {
+  width: 25%;
   float: left;
   height: 8px;
 }
 .redBorder {
-  background-color: #f33e6f;
+  background-color: #ff5454;
+}
+.blueBorder {
+  background-color: #1e8fc6;
 }
 .greenBorder {
-  background-color: #46bfbd;
+  background-color: #bdea74;
 }
-.yellowBorder {
-  background-color: #fdb45c;
+.orangeBorder {
+  background-color: #ffaf33;
 }
 h1 {
   font-family: "proxima-nova", sans-serif;
@@ -88,16 +92,34 @@ p {
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 .btn.red {
-  background-color: #f33e6f;
+  background-color: #FF5454;
 }
 .btn.red:hover {
-  background-color: #f2265d;
+  background-color: #FF6A6A;
 }
 .btn.blue {
-  background-color: #2d91ea;
+  background-color: #1E8FC6;
 }
 .btn.blue:hover {
-  background-color: #1785e6;
+  background-color: #2BA5DF;
+}
+.btn.green {
+  background-color: #BDEA74;
+}
+.btn.green:hover {
+  background-color: #CBEE91;
+}
+.btn.orange {
+  background-color: #ffaf33;
+}
+.btn.orange:hover {
+  background-color: #FFBB55;
+}
+.btn.tranparent {
+  color: #1E8FC6;
+}
+.btn.tranparent:hover {
+  color: #2BA5DF;
 }
 header {
   width: 978px;

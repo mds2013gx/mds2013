@@ -1,6 +1,6 @@
 $(window).load(function() {
 		var lineChartData = {
-			labels : ["January","February","March","April","May","June","July"],
+			labels : ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho"],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
@@ -20,7 +20,7 @@ $(window).load(function() {
 		};
 		
 		var barChartData = {
-			labels : ["January","February","March","April","May","June","July"],
+			labels : ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho"],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
