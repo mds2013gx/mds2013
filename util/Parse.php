@@ -44,9 +44,19 @@ class Parse{
 			}
 			else{	
 				if($i>32){
-					$this->natureza[$auxNatureza]= $this->dados->val($i, 'B',1);
+					if($i<37){
+						$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'B',1);
+					}else{
+						$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'B',1);
+					}
 				}else{
-					$this->natureza[$auxNatureza]= $this->dados->val($i, 'C',1);
+					if($i<32){
+						$this->natureza[$this->__getCategoria()[0]][$auxNatureza]= $this->dados->val($i,'C',1);
+					}else if($i>32 && $i<37){
+						$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'C',1);
+					}else{
+						$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'C',1);
+					}
 				}
 				$auxNatureza++;
 			}
@@ -65,15 +75,43 @@ class Parse{
 			if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
 				continue;
 			}else{	
-				for($j=4,$auxColuna=0; $j<$numeroColunas; $j++){
-						$this->crime[$this->__getNatureza()[$auxLinha]][$this->__getTempo()[$auxColuna]] = $this->dados->raw($i,$j,1);
+				for($j=4,$auxColuna=0,$auxCategoria; $j<$numeroColunas; $j++){
+						if($i<32){
+							$auxCategoria = 0;
+						}else if($i>32 && $i<37){
+							$auxCategoria = 1;
+						}else{
+							$auxCategoria = 2;
+						}
+						$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[$auxColuna]] = $this->dados->raw($i,$j,1);
 						$auxColuna++;
 				}
 				$auxLinha++;
 			}
 		}
-		
-		print_r($this->__getCrime());
+		print_r(count($this->__getNatureza()[$this->__getCategoria()[1]]));
+		for($i=0,$array_keys = $this->__getNatureza(),$inicio = 0,$array = $this->__getNatureza();$i<3;$i++){
+			$chave = key($array_keys);
+			for($j=$inicio;$j<(count($array[$chave])+$inicio);$j++){
+				print_r($array[$chave][$j]);
+				echo "<br>";
+				//next($array);
+			}
+			$inicio = count($array[$chave]);
+			next($array_keys);	
+			
+		}	
+		/**
+		for($i=0,$array = $this->__getCrime();$i<31;$i++){
+			
+			print_r(key($array));
+			echo "&nbsp;";
+			print_r(key($array[$this->__getNatureza()[$this->__getCategoria()[0]][1]]));
+			echo "&nbsp;";
+			print_r($array[$this->__getNatureza()[$this->__getCategoria()[0]][1]][$this->__getTempo()[1]]);
+			echo "<br>";
+			next($array);
+		}**/
 	}//fim do metodo parseDeSerieHistorica
 	
 	public function parsePorRegiao(){
