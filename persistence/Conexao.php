@@ -3,18 +3,21 @@ require('../libs/adodb/adodb.inc.php');
 
 class Conexao{
 	
-	protected $banco;
-	
+	public $banco;
+	private $tipo_banco;
+	private $servidor;
+	private $usuario;
+	private $senha;
+	private $db;
 	protected function __construct(){
-		$tipo_banco    = "mysql";
-		$servidor      = "";
-		$usuario       = "";
-		$senha         = "";
-		$db            = "";
-		$this->banco = NewADOConnection($tipo_banco);
+		$this->tipo_banco    = "mysql";
+		$this->servidor      = "localhost";
+		$this->usuario       = "root";
+		$this->senha         = "";
+		$this->db            = "radar_criminal";
+		$this->banco = NewADOConnection($this->tipo_banco);
 		$this->banco->dialect = 3;
 		$this->banco->debug = false;
-		$this->banco->Connect($servidor,$usuario,$senha,$db);
-		return $this->banco;
+		$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$db);
 	}
 }
