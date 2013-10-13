@@ -1,5 +1,5 @@
 <?php
-require('../libs/adodb/adodb.inc.php');
+require_once('../libs/adodb/adodb.inc.php');
 
 class Conexao{
 	
