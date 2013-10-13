@@ -1,10 +1,13 @@
 <?php
 require_once 'libs/excel_reader2.php';
 class Parse{
-	
+	private $natureza;
+	private $tempo;
+	private $crime;
+	private $categoria;
 	private $dados;
 	
-	function __construct($planilha){
+	public function __construct($planilha){
 		$this->dados = new Spreadsheet_Excel_Reader("files/".$planilha,"UTF-8");
 		if($planilha = "série histórica - 2001 - 2012 2.xls"){
 			$this->parseDeSerieHistorica();
@@ -16,15 +19,24 @@ class Parse{
 			$this->parseDeQuadrimestre();
 		}	
 	}
-	//Parse 
-	function parseDeSerieHistorica(){
+	//ParsePorSerieHistorica 
+	public function parseDeSerieHistorica(){
 		$numeroLinhas = 40;
 		$numeroColunas = 15;
-		$natureza;
-		$tempo;
-		$crime;
-		$natureza1;
-		$categoria;
+		//loop que pega a natureza
+		for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
+			if($i == 2){
+				$this->categoria[$auxCategoria] = $this->dados->val($i,1,1);
+				$auxCategoria++;
+			}
+			if($i == 33){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+				$auxCategoria++;
+			}
+			if($i == 38){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+			}
+		} 
 		//loop que pega natureza do crime
 		for($i=1,$auxNatureza=0; $i<$numeroLinhas; $i++){
 			if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -32,9 +44,9 @@ class Parse{
 			}
 			else{	
 				if($i>32){
-					$natureza[$auxNatureza]= $this->dados->val($i, 'B',1);
+					$this->natureza[$auxNatureza]= $this->dados->val($i, 'B',1);
 				}else{
-					$natureza[$auxNatureza]= $this->dados->val($i, 'C',1);
+					$this->natureza[$auxNatureza]= $this->dados->val($i, 'C',1);
 				}
 				$auxNatureza++;
 			}
@@ -44,7 +56,7 @@ class Parse{
 			if(($i == 1)||($i == 2)||($i == 3)){
 				continue;
 			}else{
-				$tempo[$auxTempo] = $this->dados->val(1,$i,1);
+				$this->tempo[$auxTempo] = $this->dados->val(1,$i,1);
 				$auxTempo++;
 			}
 		}
@@ -54,40 +66,53 @@ class Parse{
 				continue;
 			}else{	
 				for($j=4,$auxColuna=0; $j<$numeroColunas; $j++){
-						$crime[$auxLinha][$auxColuna] = $this->dados->raw($i,$j,1);
+						$this->crime[$this->__getNatureza()[$auxLinha]][$this->__getTempo()[$auxColuna]] = $this->dados->raw($i,$j,1);
 						$auxColuna++;
 				}
 				$auxLinha++;
 			}
 		}
-
-	
-		//loop que pega a natureza
-		$auxCategoria=0;
-		for($i=0;$i<$numeroLinhas;$i++){
-			if($i == 2){ 
-				$categoria[$auxCategoria] = $this->dados->val($i,1,1);
-				$auxCategoria++;
-			}	
-			if($i == 33){
-				$categoria[$auxCategoria] =  $this->dados->val($i,1,1);
-				$auxCategoria++;
-			}	
-			if($i == 38){
-				$categoria[$auxCategoria] =  $this->dados->val($i,1,1);
-			}	
-		}
-	
 		
-	
+		print_r($this->__getCrime());
 	}//fim do metodo parseDeSerieHistorica
 	
-		
-	function parsePorRegiao(){
+	public function parsePorRegiao(){
 		
 	}
 	
-	function parseDeQuadrimestre(){
+	public function parseDeQuadrimestre(){
 		
+	}
+	
+	public function __setNatureza($natureza){
+		$this->natureza = $natureza;
+	}
+	
+	public function __getNatureza(){
+		return $this->natureza;
+	}
+	
+	public function __setTempo($tempo){
+		$this->tempo = $tempo;
+	}
+	
+	public function __getTempo(){
+		return $this->tempo;
+	}
+	
+	public function __setCrime($crime){
+		$this->crime = $crime;
+	}
+	
+	public function __getCrime(){
+		return $this->crime;
+	}
+	
+	public function __setCategoria($categoria){
+		$this->categoria = $categoria;
+	}
+	
+	public function __getCategoria(){
+		return $this->categoria;
 	}
 }
