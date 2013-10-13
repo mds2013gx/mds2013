@@ -11,10 +11,7 @@ class CategoriaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosCategoria = new Categoria();
-			$dadosCategoria->__setIdCategoria($registro->ID_CATEGORIA);
-			$dadosCategoria->__setNomeCategoria($registro->NOME_CATEGORIA);
-			
+			$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);	
 			$retornaCategorias[] = $dadosCategoria;
 		}
 		return $retornaCategorias;
@@ -24,10 +21,7 @@ class CategoriaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosCategoria = new Categoria();
-			$dadosCategoria->__setIdCategoria($registro->ID_CATEGORIA);
-			$dadosCategoria->__setNomeCategoria($registro->NOME_CATEGORIA);
-				
+			$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 			$retornaCategorias[] = $dadosCategoria;
 		}
 		return $retornaCategorias;
@@ -36,9 +30,7 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria WHERE id_categoria = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCategoria = new Categoria();
-		$dadosCategoria->__setIdCategoria($registro->ID_CATEGORIA);
-		$dadosCategoria->__setNomeCategoria($registro->NOME_CATEGORIA);
+		$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 		return $dadosCategoria;
 		
 	}
@@ -46,9 +38,7 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria WHERE nome_categoria = $nomeCategoria";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCategoria = new Categoria();
-		$dadosCategoria->__setIdCategoria($registro->ID_CATEGORIA);
-		$dadosCategoria->__setNomeCategoria($registro->NOME_CATEGORIA);
+		$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 		return $dadosCategoria;
 	}
 	public function inserirCategoria($arrayCategoria){

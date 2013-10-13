@@ -13,11 +13,7 @@ class NaturezaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosNatureza = new Natureza();
-			$dadosNatureza->__setIdNatureza($registro->ID_NATUREZA);
-			$dadosNatureza->__setNatureza($registro->NATUREZA);
-			$dadosNatureza->__setIdCategoria($registro->CATEGORIA_ID_CATEGORIA);
-				
+			$dadosNatureza = new Natureza($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				
 			$retornaNaturezas[] = $dadosNatureza;
 		}
 		return $retornaNaturezas;
@@ -27,11 +23,7 @@ class NaturezaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosNatureza = new Natureza();
-			$dadosNatureza->__setIdNatureza($registro->ID_CATEGORIA);
-			$dadosNatureza->__setNatureza($registro->NOME_CATEGORIA);
-			$dadosNatureza->__setIdCategoria($registro->CATEGORIA_ID_CATEGORIA);
-
+			$dadosNatureza = new Natureza($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA,$registro->CATEGORIA_ID_CATEGORIA);
 			$retornaNaturezas[] = $dadosNatureza;
 		}
 		return $retornaNaturezas;
@@ -40,10 +32,7 @@ class NaturezaDAO{
 		$sql = "SELECT * FROM natureza WHERE id_natureza = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosNatureza = new Natureza();
-		$dadosNatureza->__setIdNatureza($registro->ID_CATEGORIA);
-		$dadosNatureza->__setNatureza($registro->NOME_CATEGORIA);
-		$dadosNatureza->__setIdCategoria($registro->CATEGORIA_ID_CATEGORIA);
+		$dadosNatureza = new Natureza($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA,$registro->CATEGORIA_ID_CATEGORIA);
 		return $dadosNatureza;
 
 	}
@@ -51,10 +40,7 @@ class NaturezaDAO{
 		$sql = "SELECT * FROM natureza WHERE natureza = $natureza";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosNatureza = new Natureza();
-		$dadosNatureza->__setIdNatureza($registro->ID_CATEGORIA);
-		$dadosNatureza->__setNatureza($registro->NOME_CATEGORIA);
-		$dadosNatureza->__setIdCategoria($registro->CATEGORIA_ID_CATEGORIA);
+		$dadosNatureza = new Natureza($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA,$registro->CATEGORIA_ID_CATEGORIA);
 		return $dadosNatureza;
 	}
 	public function inserirNatureza($arrayNatureza){

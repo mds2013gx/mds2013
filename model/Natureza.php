@@ -1,9 +1,17 @@
 <?php
 class Natureza{
 	private $idNatureza;
-	private $idCategoria;
 	private $natureza;
+	private $idCategoria;
 	
+	public function __construct(){
+		
+	}
+	public function __construct($idNatureza,$nomeNatureza,$idCategoriaNatureza){
+		$this->idNatureza = $idNatureza;
+		$this->natureza = $nomeNatureza;
+		$this->idCategoria = $idCategoriaNatureza;
+	}
 	public function __setIdNatureza($idNatureza){
 		$this->idNatureza = $idNatureza;
 	}
