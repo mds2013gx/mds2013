@@ -141,9 +141,6 @@ class Parse{
 				$soma[$i] += $arrayCrime[$j][$i];
 			}
 		}
-		for($i=0;$i<$numeroColunas;$i++){
-			echo $soma[$i]."<br>";
-		}
 		return $soma;
 	}
 }
