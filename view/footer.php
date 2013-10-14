@@ -1,5 +1,7 @@
+	
+	<h3>Gostaria de colaborar? <a href="https://github.com/mds2013gx/mds2013">Download RadarCriminal no Github</a> ou <a href="docs">Leia a documentação</a></h3>
 	<footer>
-		<p>MDS - <a href="#">Métodos de Desenvolvimento de Software</a></p>
+		<p>Projeto elaborado por alunos da <a href="http://www.unb.br">UnB - Campus Gama</a></p>
 		
 	</footer>
 	<script src="assets/effects.js"></script>
