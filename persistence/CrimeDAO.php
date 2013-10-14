@@ -1,5 +1,7 @@
 <?php
 include_once('../model/Crime.php');
+include_once('../model/Tempo.php');
+include_once('../model/Natureza.php');
 class CrimeDAO{
 	private $conexao;
 	public function __construct(){

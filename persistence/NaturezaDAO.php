@@ -1,7 +1,6 @@
 <?php
 include_once('../model/Natureza.php');
 include_once('../model/Categoria.php');
-include_once('CategoriaDAO.php');
 class NaturezaDAO{
 	private $conexao;
 	public function __construct(){
