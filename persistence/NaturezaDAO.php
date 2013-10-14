@@ -52,7 +52,7 @@ class NaturezaDAO{
 				for($j=$inicio;$j<(count($arrayNatureza[$chave])+$inicio);$j++){
 					$dadosNatureza = new Natureza();
 					$dadosNatureza->__setNatureza($arrayNatureza[$chave][$j]);
-					$sql = "INSERT INTO categoria_id_categoria,natureza values ('{$dadosCategoria->__getNomeCategoria()}','{$dadosNatureza->__getNomeNatureza()}')";
+					$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$dadosCategoria->__getNomeCategoria()}','{$dadosNatureza->__getNomeNatureza()}')";
 					$this->conexao->banco->Execute($sql);
 				}
 			$inicio = $inicio+count($arrayNatureza[$chave]);
