@@ -29,10 +29,10 @@
 			<h2>Saiba sobre os níveis de ocorrências dentro da sua <abbr title="Região Administrativa">RA</abbr> em Brasília</h2>
 		</hgroup>
 		
-		<canvas id="introChart" width="489" height="246"></canvas>
+		<canvas id="topoChart" width="489" height="246"></canvas>
 		
 		<a class="btn blue" href="https://github.com/mds2013gx/mds2013"><img src="assets/down.png">Download</a>
-		<a class="btn transparent" href="#"><img src="">ou Experimente</a>
+		<a class="btn transparent disable" href="#"><img src="">ou Experimente</a>
 
 	</header>
 	<!-- /TOPO DA PÁGINA -->
