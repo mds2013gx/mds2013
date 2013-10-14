@@ -15,4 +15,11 @@ class Tempo{
 	public function __getIntervalo(){
 		return $this->intervalo = $intervalo;
 	}
+	public function __construct(){
+		
+	}
+	public function __construct($idTempo,$intervalo){
+		$this->idTempo = $idTempo;
+		$this->intervalo = $intervalo;
+	}
 }
