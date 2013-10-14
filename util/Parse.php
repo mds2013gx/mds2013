@@ -89,15 +89,41 @@ class Parse{
 				$auxLinha++;
 			}
 		}
-		print_r(count($this->__getNatureza()[$this->__getCategoria()[1]]));
+		//print_r($this->__getCrime());
+		$arrayCrime = $this->__getCrime();
+		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
+			$Natureza = key($arrayKey);
+			$arrayTempo = $arrayCrime[$Natureza];
+			for($j=0;$j<count(array_keys($arrayCrime[$Natureza]));$j++){
+				echo $Natureza;
+				echo " ";
+				$Tempo = key($arrayTempo);
+				echo $Tempo;
+				echo " ";
+				echo $arrayCrime[$Natureza][$Tempo];
+				echo "<br>";
+				next($arrayTempo);
+			}	
+			next($arrayKey);
+		}
+		/**
+		//print_r($this->__getTempo());
+		$arrayTempo = $this->__getTempo();
+		for($i=0;$i<count($arrayTempo);$i++){
+			echo $arrayTempo[$i];
+			echo "<br>";
+		}
+		
+		print_r(count($this->__getNatureza()));
 		for($i=0,$array_keys = $this->__getNatureza(),$inicio = 0,$array = $this->__getNatureza();$i<3;$i++){
 			$chave = key($array_keys);
+			echo "=====.$chave";
+			echo "<br>";
 			for($j=$inicio;$j<(count($array[$chave])+$inicio);$j++){
 				print_r($array[$chave][$j]);
 				echo "<br>";
-				//next($array);
 			}
-			$inicio = count($array[$chave]);
+			$inicio = $inicio+count($array[$chave]);
 			next($array_keys);	
 			
 		}	
