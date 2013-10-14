@@ -76,6 +76,7 @@ p {
   border-radius: 5px;
   text-align: center;
   font-size: 18px;
+  vertical-align: middle;
   -webkit-transition-property: background-color box-shadow;
   -webkit-transition-duration: 200ms;
   -webkit-transition-timing-function: ease-in-out;
@@ -266,10 +267,20 @@ section:after {
 }
 #navigation .btn {
   margin-right: 23px;
+  width: 150px;
 }
 #navigation {
   text-align: center;
 }
-.btn {
-  vertical-align: middle;
+#navSection .btn {
+  position: relative;
+}
+#soonIcon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+.disable {
+   pointer-events: none;
+   cursor: default;
 }

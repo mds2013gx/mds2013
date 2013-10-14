@@ -31,7 +31,7 @@
 		
 		<canvas id="introChart" width="489" height="246"></canvas>
 		
-		<a class="btn blue" href="#"><img src="assets/down.png">Download</a>
+		<a class="btn blue" href="https://github.com/mds2013gx/mds2013"><img src="assets/down.png">Download</a>
 		<a class="btn transparent" href="#"><img src="">ou Experimente</a>
 
 	</header>
