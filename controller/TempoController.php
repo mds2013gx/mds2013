@@ -1,5 +1,6 @@
 <?php
 include_once('./persistence/TempoDAO.php');
+include_once('./model/Tempo.php');
 class TempoController{
 	private $tempoDAO;
 	
@@ -18,7 +19,14 @@ class TempoController{
 	public function _consultarPorIntervalo($intervalo){
 		return $this->tempoDAO->consultarPorIntervalo($intervalo);
 	}
-	public function _inserirTempo($arrayTempo){
-		return $this->tempoDAO->inserirTempo($arrayTempo);
+	public function _inserirTempo(Tempo $tempo){
+		return $this->tempoDAO->inserirTempo($tempo);
+	}
+	public function _inserirTempoArrayParse($arrayTempo){
+		for($i=0;$i<count($arrayTempo);$i++){
+			$dadosTempo = new Tempo();
+			$dadosTempo->__setIntervalo($arrayTempo[$i]);
+			$this->tempoDAO->inserirTempo($dadosTempo);
+		}
 	}
 }
