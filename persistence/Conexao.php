@@ -1,5 +1,5 @@
 <?php
-require_once('../libs/adodb/adodb.inc.php');
+require_once('./libs/adodb/adodb.inc.php');
 
 class Conexao{
 	
@@ -9,7 +9,7 @@ class Conexao{
 	private $usuario;
 	private $senha;
 	private $db;
-	protected function __construct(){
+	public function __construct(){
 		$this->tipo_banco    = "mysql";
 		$this->servidor      = "localhost";
 		$this->usuario       = "root";
@@ -18,6 +18,6 @@ class Conexao{
 		$this->banco = NewADOConnection($this->tipo_banco);
 		$this->banco->dialect = 3;
 		$this->banco->debug = false;
-		$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$db);
+		$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db);
 	}
 }

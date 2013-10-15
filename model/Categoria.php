@@ -10,18 +10,16 @@ class Categoria{
 		return $this->idCategoria;
 	}
 	public function __setNomeCategoria($nomeCategoria){
-		$this->nomeCategoria = nomeCategoria;
+		$this->nomeCategoria = $nomeCategoria;
 	}
 	public function __getNomeCategoria(){
 		return $this->nomeCategoria;
 	}
-	
-	public function __construct(){
-		
-	}
-	
-	public function __construct($idCategoria,$nomeCategoria){
+	public function __constructOverload($idCategoria,$nomeCategoria){
 		$this->idCategoria = $idCategoria;
 		$this->nomeCategoria = $nomeCategoria;
+	}
+	public function __construct(){
+		
 	}
 }

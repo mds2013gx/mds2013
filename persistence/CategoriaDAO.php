@@ -1,5 +1,6 @@
 <?php
-include_once('../model/Categoria.php');
+include_once('./model/Categoria.php');
+include_once('Conexao.php');
 class CategoriaDAO{
 	private $conexao;
 	public function __construct(){
@@ -11,7 +12,8 @@ class CategoriaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);	
+			$dadosCategoria = new Categoria();
+			$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);	
 			$retornaCategorias[] = $dadosCategoria;
 		}
 		return $retornaCategorias;
@@ -21,7 +23,8 @@ class CategoriaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
+			$dadosCategoria = new Categoria();
+			$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 			$retornaCategorias[] = $dadosCategoria;
 		}
 		return $retornaCategorias;
@@ -30,22 +33,24 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria WHERE id_categoria = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
+		$dadosCategoria = new Categoria();
+		$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 		return $dadosCategoria;
 		
 	}
 	public function consultarPorNome($nomeCategoria){
-		$sql = "SELECT * FROM categoria WHERE nome_categoria = $nomeCategoria";
+		$sql = "SELECT * FROM categoria WHERE nome_categoria = '".$nomeCategoria."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCategoria = new Categoria($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
+		$dadosCategoria = new Categoria();
+		$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 		return $dadosCategoria;
 	}
 	public function inserirCategoria($arrayCategoria){
 		$dadosCategoria = new Categoria();
-		for($i=0; $i<count(arrayCategoria);$i++){
+		for($i=0; $i<count($arrayCategoria);$i++){
 			$dadosCategoria->__setNomeCategoria($arrayCategoria[$i]);
-			$sql = "INSERT INTO nome_categoria values ('{$dadosCategoria->__getNomeCategoria()}')";
+			$sql = "INSERT INTO categoria (nome_categoria) values ('{$dadosCategoria->__getNomeCategoria()}')";
 			$this->conexao->banco->Execute($sql);
 		}
 	}

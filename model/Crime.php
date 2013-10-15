@@ -2,7 +2,6 @@
 class Crime{
 	private $idCrime;
 	private $quantidade;
-	private $idRegiaoAdministrativa;
 	private $idTempo;
 	private $idNatureza;
 	
@@ -18,12 +17,6 @@ class Crime{
 	public function __getQuantidade(){
 		return $this->quantidade;
 	}
-	public function __setIdRegiaoAdministrativa($idRegiaoAdministrativa){
-		$this->idRegiaoAdministrativa = $idRegiaoAdministrativa;
-	}
-	public function __getIdRegiaoAdminsitartiva(){
-		return $this->idRegiaoAdministrativa;
-	}
 	public function __setIdTempo($idTempo){
 		$this->idTempo = $idTempo;
 	}
@@ -35,5 +28,14 @@ class Crime{
 	}
 	public function __getIdNatureza(){
 		return $this->idNatureza;
+	}
+	public function __construct(){
+		
+	}
+	public function __constructOverload($idCrime="",$idTempo="",$idNatureza="",$quantidade=""){
+		$this->idCrime = $idCrime;
+		$this->idTempo = $idTempo;
+		$this->idNatureza = $idNatureza;
+		$this->quantidade = $quantidade;
 	}
 }
