@@ -8,7 +8,7 @@
 			<p>Saiba os índices de ocorrência em sua Região Administrativa com um simples filtro e consiga medir os níveis de criminalidade.</p>
 		</article>
 		<article id="feature2">
-			<img src="assets/circle.png">
+			<img src="assets/circleChart.png">
 			<h3>Fácil de Entender e Ilustrado</h3>
 			<p>Todos os indices são bem facéis de entender e vem ilustrados em forma de gráfico para melhor visualização.</p>
 		</article>
