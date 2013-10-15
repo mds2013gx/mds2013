@@ -48,20 +48,8 @@ class NaturezaDAO{
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				
 		return $dadosNatureza;
 	}
-	public function inserirNatureza($arrayNatureza){
-		for($i=0,$arrayKey = $arrayNatureza,$inicio = 0;$i<count($arrayNatureza);$i++){
-			$chave = key($arrayKey);
-			$categoriaDAO = new CategoriaDAO();
-			$dadosCategoria = new Categoria();
-			$dadosCategoria = $categoriaDAO->consultarPorNome($chave);
-				for($j=$inicio;$j<(count($arrayNatureza[$chave])+$inicio);$j++){
-					$dadosNatureza = new Natureza();
-					$dadosNatureza->__setNatureza($arrayNatureza[$chave][$j]);
-					$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$dadosCategoria->__getIdCategoria()}','{$dadosNatureza->__getNatureza()}')";
-					$this->conexao->banco->Execute($sql);
-				}
-			$inicio = $inicio+count($arrayNatureza[$chave]);
-			next($arrayKey);				
-		}
+	public function inserirNatureza(Natureza $natureza){
+		$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$natureza->__getIdCategoria()}','{$natureza->__getNatureza()}')";
+		$this->conexao->banco->Execute($sql);					
 	}
 }
