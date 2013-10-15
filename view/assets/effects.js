@@ -1,11 +1,9 @@
-<?php 
-require_once('views/CrimeView.php');
-require_once('views/TempoView.php');
-$crimeVW = new CrimeView();
-$tempoVW = new TempoView();		
- ?>
+<?php include_once('./views/CrimeView.php');
+	include_once('./views/TempoView.php');
+	$crimeVW = new CrimeView();
+	$tempoVW = new TempoView();
+?>
 $(window).load(function() {
-
 		var topoChartData = {
 			labels : ["","","","","","",""],
 			datasets : [
@@ -37,7 +35,7 @@ $(window).load(function() {
 				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(151,187,205,1)",
-					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatado();?>
+					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatado() ?>
 				}
 			]
 			

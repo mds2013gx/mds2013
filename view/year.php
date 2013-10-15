@@ -1,4 +1,3 @@
-	
 	<!-- CORPO  -->
 	<section id="examples">
 		<h2 id="navText">Informações por Ano</h2><br>
