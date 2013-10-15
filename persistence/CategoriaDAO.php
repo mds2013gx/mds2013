@@ -46,12 +46,8 @@ class CategoriaDAO{
 		$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);
 		return $dadosCategoria;
 	}
-	public function inserirCategoria($arrayCategoria){
-		$dadosCategoria = new Categoria();
-		for($i=0; $i<count($arrayCategoria);$i++){
-			$dadosCategoria->__setNomeCategoria($arrayCategoria[$i]);
-			$sql = "INSERT INTO categoria (nome_categoria) values ('{$dadosCategoria->__getNomeCategoria()}')";
-			$this->conexao->banco->Execute($sql);
-		}
+	public function inserirCategoria(Categoria $categoria){
+		$sql = "INSERT INTO categoria (nome_categoria) values ('{$categoria->__getNomeCategoria()}')";
+		$this->conexao->banco->Execute($sql);
 	}
 }

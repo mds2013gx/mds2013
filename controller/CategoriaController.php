@@ -1,5 +1,6 @@
 <?php
 include_once('./persistence/CategoriaDAO.php');
+include_once('./model/Categoria.php');
 class CategoriaController{
 	private $categoriaDAO;
 	
@@ -18,7 +19,14 @@ class CategoriaController{
 	public function _consultarPorNome($nomeCategoria){
 		return $this->categoriaDAO->consultarPorNome($nomeCategoria);
 	}
-	public function _inserirCategoria($arrayCategoria){
-		return $this->categoriaDAO->inserirCategoria($arrayCategoria);
+	public function _inserirCategoria(Categoria $categoria){
+		return $this->categoriaDAO->inserirCategoria($categoria);
+	}
+	public function _inserirCategoriaArrayParse($arrayCategoria){
+		$dadosCategoria = new Categoria();
+		for($i=0; $i<count($arrayCategoria);$i++){
+			$dadosCategoria->__setNomeCategoria($arrayCategoria[$i]);
+			$this->categoriaDAO->inserirCategoria($dadosCategoria);
+		}
 	}
 }

@@ -46,27 +46,20 @@ class CrimeDAO{
 		$dadosCrime->__constructOverload($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
 		return $dadosCrime;
 	}
-	public function inserirCrime($arrayCrime){
-		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
-			$natureza = key($arrayKey);
-			$dadosNatureza = new Natureza();
-			$naturezaDAO = new NaturezaDAO();
-			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
-			$arrayTempo = $arrayCrime[$natureza];
-			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
-				$tempo = key($arrayTempo);
-				$dadosTempo = new Tempo();
-				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
-				$dadosCrime = new Crime();
-				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
-				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
-				$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
-				$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$dadosCrime->__getIdNatureza()}','{$dadosCrime->__getIdTempo()}','{$dadosCrime->__getQuantidade()}')";
-				$this->conexao->banco->Execute($sql);
-				next($arrayTempo);
-			}
-			next($arrayKey);
-		}
+	public function somaDeCrimePorAno($ano){
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, tempo t WHERE c.tempo_id_tempo = t.id_tempo AND t.intervalo = $ano";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL; 
+	}
+	public function somaDeCrimePorNatureza($natureza){
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza = '".$natureza."'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+	public function inserirCrime(Crime $crime){
+		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}')";
+		$this->conexao->banco->Execute($sql);
 	}
 }

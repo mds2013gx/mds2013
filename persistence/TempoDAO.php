@@ -46,12 +46,8 @@ class TempoDAO{
 		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
 		return $dadosTempo;
 	}
-	public function inserirTempo($arrayTempo){
-		for($i=0;$i<count($arrayTempo);$i++){
-			$dadosTempo = new Tempo();
-			$dadosTempo->__setIntervalo($arrayTempo[$i]);
-			$sql = "INSERT INTO tempo (intervalo) VALUES ('{$dadosTempo->__getIntervalo()}')";
-			$this->conexao->banco->Execute($sql);
-		}
+	public function inserirTempo(Tempo $tempo){
+		$sql = "INSERT INTO tempo (intervalo) VALUES ('{$tempo->__getIntervalo()}')";
+		$this->conexao->banco->Execute($sql);
 	}
 }

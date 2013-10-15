@@ -1,5 +1,10 @@
 <?php
 include_once('./persistence/CrimeDAO.php');
+include_once('./persistence/TempoDAO.php');
+include_once('./persistence/NaturezaDAO.php');
+include_once('./model/Crime.php');
+include_once('./model/Tempo.php');
+include_once('./model/Natureza.php');
 class CrimeController{
 	private $crimeDAO;
 	
@@ -18,7 +23,35 @@ class CrimeController{
 	public function _consultarPorIdTempo($tempo){
 		return $this->crimeDAO->consultarPorIdNatureza($tempo);
 	}
-	public function _inserirCrime($arrayCrime){
-		return $this->crimeDAO->inserirCrime($arrayCrime);
+	public function _inserirCrime(Crime $crime){
+		return $this->crimeDAO->inserirCrime($crime);
+	}
+	public function _somaDeCrimePorAno($ano){
+		return $this->crimeDAO->somaDeCrimePorAno($ano);
+	}
+	public function _somaDeCrimePorNatureza($natureza){
+		return $this->crimeDAO->somaDeCrimePorNatureza($natureza);
+	}
+	public function _inserirCrimeArrayParse($arrayCrime){
+		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
+			$natureza = key($arrayKey);
+			$dadosNatureza = new Natureza();
+			$naturezaDAO = new NaturezaDAO();
+			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
+			$arrayTempo = $arrayCrime[$natureza];
+			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
+				$tempo = key($arrayTempo);
+				$dadosTempo = new Tempo();
+				$tempoDAO = new TempoDAO();
+				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosCrime = new Crime();
+				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
+				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
+				$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
+				$this->crimeDAO->inserirCrime($dadosCrime);
+				next($arrayTempo);
+			}
+			next($arrayKey);
+		}
 	}
 }
