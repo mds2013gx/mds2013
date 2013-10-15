@@ -4,7 +4,7 @@
 		<p>Projeto elaborado por alunos da <a href="http://www.unb.br">UnB - Campus Gama</a></p>
 		
 	</footer>
-	<script src="assets/effects.js"></script>
+	<script src="./view/assets/effects.js"></script>
 	<script type="text/javascript">
 	
 	  var _gaq = _gaq || [];
