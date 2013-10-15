@@ -21,55 +21,55 @@ $(window).load(function() {
 		};
 		
 		var barChartData = {
-			labels : ["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"],
+			<?php echo 'labels : ["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"]' ?>,
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
 					strokeColor : "rgba(220,220,220,1)",
-					<?php echo "data : [65,59,90,81,56,55,40,81,56,55,40]" ?>
+					<?php echo 'data : [65,59,90,81,56,55,40,81,56,55,40]' ?>
 				},
 				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(151,187,205,1)",
-					<?php echo "data : [28,48,40,19,96,27,100,19,96,27,100]" ?>
+					<?php echo 'data : [28,48,40,19,96,27,100,19,96,27,100]' ?>
 				}
 			]
 			
 		};		
 		var pieChartData = [
 				{
-					<?php echo "value: 30," ?>
+					<?php echo 'value: 30' ?>,
 					color:"#F38630"
 				},
 				{
-					<?php echo "value: 50," ?>
+					<?php echo 'value: 50' ?>,
 					color : "#E0E4CC"
 				},
 				{
-					<?php echo "value: 100," ?>
+					<?php echo 'value: 100' ?>,
 					color : "#69D2E7"
 				}
 			
 		];
 		var doughnutChartData = [
 				{
-					<?php echo "value: 30," ?>
+					<?php echo 'value: 30' ?>,
 					color:"#F7464A"
 				},
 				{
-					<?php echo "value: 50," ?>
+					<?php echo 'value: 50' ?>,
 					color : "#46BFBD"
 				},
 				{
-					<?php echo "value: 100," ?>
+					<?php echo 'value: 100' ?>,
 					color : "#FDB45C"
 				},
 				{
-					<?php echo "value: 40," ?>
+					<?php echo 'value: 40' ?>,
 					color : "#949FB1"
 				},
 				{
-					<?php echo "value: 120," ?>
+					<?php echo 'value: 120' ?>,
 					color : "#4D5360"
 				}
 			

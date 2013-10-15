@@ -1,5 +1,5 @@
 <?php
-$pagina = isset( $_GET['pg'] ) ? $_GET['pg'] : null;
+$pagina = isset( $_GET['pag'] ) ? $_GET['pag'] : null;
 switch($pagina){
 	case 'year':
 		include('./view/year.php');
