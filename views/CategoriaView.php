@@ -1,5 +1,5 @@
 <?php
-include_once('./controller/CategoriaView.php');
+include_once('./controller/CategoriaController.php');
 class CategoriaView{
 	private $categoriaCO;
 	public function __construct(){

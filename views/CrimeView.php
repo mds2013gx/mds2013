@@ -1,5 +1,5 @@
 <?php
-include_once('./controller/CrimeView.php');
+include_once('./controller/CrimeController.php');
 class CrimeView{
 	private $crimeCO;
 	public function __construct(){

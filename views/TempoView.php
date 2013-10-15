@@ -1,5 +1,5 @@
 <?php
-include_once('./controller/TempoView.php');
+include_once('./controller/TempoController.php');
 class TempoView{
 	private $tempoCO;
 	public function __construct(){
