@@ -13,7 +13,7 @@ CREATE TABLE categoria (
 CREATE TABLE natureza (
   id_natureza INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   categoria_id_categoria INTEGER UNSIGNED NOT NULL,
-  natureza INTEGER UNSIGNED NULL,
+  natureza VARCHAR(50) NULL,
   PRIMARY KEY(id_natureza),
   INDEX natureza_FKIndex1(categoria_id_categoria)
 );
