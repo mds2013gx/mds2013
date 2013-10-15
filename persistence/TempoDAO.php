@@ -1,5 +1,6 @@
 <?php
-include_once('../model/Tempo.php');
+include_once('./model/Tempo.php');
+include_once('Conexao.php');
 class TempoDAO{
 	private $conexao;
 	public function __construct(){
@@ -11,7 +12,8 @@ class TempoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosTempo = new Tempo($registro->ID_TEMPO,$registro->INTERVALO);	
+			$dadosTempo = new Tempo();
+			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);	
 			$retornaTempos[] = $dadosTempo;
 		}
 		return $retornaTempos;
@@ -21,7 +23,8 @@ class TempoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosTempo = new Tempo($registro->ID_TEMPO,$registro->INTERVALO);
+			$dadosTempo = new Tempo();
+			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
 			$retornaTempos[] = $dadosTempo;
 		}
 		return $retornaTempos;
@@ -30,7 +33,8 @@ class TempoDAO{
 		$sql = "SELECT * FROM tempo WHERE id_tempo = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosTempo = new Tempo($registro->ID_TEMPO,$registro->INTERVALO);
+		$dadosTempo = new Tempo();
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
 		return $dadosTempo;
 		
 	}
@@ -38,7 +42,8 @@ class TempoDAO{
 		$sql = "SELECT * FROM tempo WHERE intervalo = $intervalo";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosTempo = new Tempo($registro->ID_TEMPO,$registro->INTERVALO);
+		$dadosTempo = new Tempo();
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
 		return $dadosTempo;
 	}
 	public function inserirTempo($arrayTempo){

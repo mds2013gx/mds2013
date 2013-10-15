@@ -1,7 +1,10 @@
 <?php
-include_once('../model/Crime.php');
-include_once('../model/Tempo.php');
-include_once('../model/Natureza.php');
+include_once('./model/Crime.php');
+include_once('./model/Tempo.php');
+include_once('./model/Natureza.php');
+include_once('Conexao.php');
+include_once('NaturezaDAO.php');
+include_once('TempoDAO.php');
 class CrimeDAO{
 	private $conexao;
 	public function __construct(){
@@ -13,7 +16,8 @@ class CrimeDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
-			$dadosCrime = new Crime($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);	
+			$dadosCrime = new Crime();
+			$dadosCrime->__constructOverload($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);	
 			$retornaCrimes[] = $dadosCrime;
 		}
 		return $retornaCrimes;
@@ -22,21 +26,24 @@ class CrimeDAO{
 		$sql = "SELECT * FROM crime WHERE id_crime = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCrime = new Crime($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
+		$dadosCrime = new Crime();
+		$dadosCrime->__constructOverload($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
 		return $dadosCrime;
 	}
 	public function consultarPorIdNatureza($id){
 		$sql = "SELECT * FROM crime WHERE id_natureza = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCrime = new Crime($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
+		$dadosCrime = new Crime();
+		$dadosCrime->__constructOverload($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
 		return $dadosCrime;
 	}
 	public function consultarPorIdTempo($id){
 		$sql = "SELECT * FROM crime WHERE id_tempo = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
-		$dadosCrime = new Crime($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
+		$dadosCrime = new Crime();
+		$dadosCrime->__constructOverload($registro->ID_CRIME,$registro->TEMPO_ID_TEMPO,$registro->NATUREZA_ID_NATUREZA,$registro->QUANTIDADE);
 		return $dadosCrime;
 	}
 	public function inserirCrime($arrayCrime){
