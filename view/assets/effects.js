@@ -1,3 +1,9 @@
+<?php 
+require_once('views/CrimeView.php');
+require_once('views/TempoView.php');
+$crimeVW = new CrimeView();
+$tempoVW = new TempoView();		
+ ?>
 $(window).load(function() {
 
 		var topoChartData = {
@@ -21,7 +27,7 @@ $(window).load(function() {
 		};
 		
 		var barChartData = {
-			<?php echo 'labels : ["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011"]' ?>,
+			<?php echo $tempoVW->retornarDadosTempoFormatado(); ?>,
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
@@ -31,7 +37,7 @@ $(window).load(function() {
 				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(151,187,205,1)",
-					<?php echo 'data : [28,48,40,19,96,27,100,19,96,27,100]' ?>
+					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatado();?>
 				}
 			]
 			

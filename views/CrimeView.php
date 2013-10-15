@@ -5,4 +5,7 @@ class CrimeView{
 	public function __construct(){
 		$this->crimeCO = new CrimeController();
 	}
+	public function retornarDadosCrimeSomadoFormatado(){
+		return $this->crimeCO->_retornarDadosDeSomaFormatado();
+	}
 }

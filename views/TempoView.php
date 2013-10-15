@@ -5,4 +5,8 @@ class TempoView{
 	public function __construct(){
 		$this->tempoCO = new TempoController();
 	}
+
+	public function retornarDadosTempoFormatado(){
+		return $this->tempoCO->_retornarDadosFormatados();
+	}
 }
