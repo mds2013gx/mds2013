@@ -1,5 +1,5 @@
 <?php
-include_once('../persistence/TempoDAO.php');
+include_once('./persistence/TempoDAO.php');
 class TempoController{
 	private $tempoDAO;
 	

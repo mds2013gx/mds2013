@@ -7,7 +7,7 @@ class Natureza{
 	public function __construct(){
 		
 	}
-	public function __construct($idNatureza,$nomeNatureza,$idCategoriaNatureza){
+	public function __constructOverload($idNatureza,$nomeNatureza,$idCategoriaNatureza){
 		$this->idNatureza = $idNatureza;
 		$this->natureza = $nomeNatureza;
 		$this->idCategoria = $idCategoriaNatureza;

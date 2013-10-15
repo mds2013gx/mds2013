@@ -1,5 +1,5 @@
 <?php
-include_once('../persistence/CrimeDAO.php');
+include_once('./persistence/CrimeDAO.php');
 class CrimeController{
 	private $crimeDAO;
 	

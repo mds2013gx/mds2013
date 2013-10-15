@@ -1,5 +1,5 @@
 <?php
-include_once('../persistence/CategoriaDAO.php');
+include_once('./persistence/CategoriaDAO.php');
 class CategoriaController{
 	private $categoriaDAO;
 	

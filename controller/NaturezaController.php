@@ -1,5 +1,5 @@
 <?php
-include_once('../persistence/NaturezaDAO.php');
+include_once('./persistence/NaturezaDAO.php');
 class NaturezaController{
 	private $naturezaDAO;
 	

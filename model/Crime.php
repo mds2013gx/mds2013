@@ -32,7 +32,7 @@ class Crime{
 	public function __construct(){
 		
 	}
-	public function __construct($idCrime,$idTempo,$idNatureza,$quantidade){
+	public function __constructOverload($idCrime="",$idTempo="",$idNatureza="",$quantidade=""){
 		$this->idCrime = $idCrime;
 		$this->idTempo = $idTempo;
 		$this->idNatureza = $idNatureza;
