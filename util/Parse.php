@@ -89,6 +89,7 @@ class Parse{
 				$auxLinha++;
 			}
 		}
+		/**
 		//print_r($this->__getCrime());
 		$arrayCrime = $this->__getCrime();
 		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
@@ -106,7 +107,6 @@ class Parse{
 			}	
 			next($arrayKey);
 		}
-		/**
 		//print_r($this->__getTempo());
 		$arrayTempo = $this->__getTempo();
 		for($i=0;$i<count($arrayTempo);$i++){
