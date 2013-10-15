@@ -7,8 +7,8 @@ class CategoriaController{
 	public function __construct(){
 		$this->categoriaDAO = new CategoriaDAO();
 	}
-	public function _listarTodos(){
-		return $this->categoriaDAO->listarTodos();
+	public function _listarTodas(){
+		return $this->categoriaDAO->listarTodas();
 	}
 	public function _listarTodasAlfabicamente(){
 		return $this->categoriaDAO->listarTodasAlfabicamente();

@@ -9,8 +9,8 @@ class NaturezaController{
 	public function __construct(){
 		$this->naturezaDAO = new NaturezaDAO();
 	}
-	public function _listarTodos(){
-		return $this->naturezaDAO->listarTodos();
+	public function _listarTodas(){
+		return $this->naturezaDAO->listarTodas();
 	}
 	public function _listarTodasAlfabicamente(){
 		return $this->naturezaDAO->listarTodasAlfabicamente();
