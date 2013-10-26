@@ -125,9 +125,11 @@ p {
 }
 .btn.transparent {
   color: #1E8FC6;
+  border: 1px solid #1E8FC6;
 }
 .btn.transparent:hover {
   color: #2BA5DF;
+  border: 1px solid #2BA5DF;
 }
 header {
   width: 978px;

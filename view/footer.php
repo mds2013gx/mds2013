@@ -1,5 +1,5 @@
 	
-	<h3>Gostaria de colaborar? <a href="https://github.com/mds2013gx/mds2013">Download RadarCriminal no Github</a> ou <a href="http://164.41.127.65/wiki/index.php/Grupo_2_-_Radar_Criminal">Leia a documentação</a></h3>
+	<h3>Gostaria de colaborar? <a href="https://github.com/mds2013gx/mds2013">Download RadarCriminal no Github</a> ou <a href="http://164.41.127.65/wiki/index.php/Grupo_2_-_Radar_Criminal">Leia a documentacao</a></h3>
 	<footer>
 		<p>Projeto elaborado por alunos da <a href="http://www.unb.br">UnB - Campus Gama</a></p>
 		

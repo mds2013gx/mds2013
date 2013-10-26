@@ -1,9 +1,11 @@
-<?php include_once('./views/CrimeView.php');
-	include_once('./views/TempoView.php');
+<?php  
+	include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/views/CrimeView.php');
+	include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/views/TempoView.php');
 	$crimeVW = new CrimeView();
-	$tempoVW = new TempoView();
+	$tempoVW = new TempoView();		
 ?>
 $(window).load(function() {
+
 		var topoChartData = {
 			labels : ["","","","","","",""],
 			datasets : [
@@ -28,14 +30,9 @@ $(window).load(function() {
 			<?php echo $tempoVW->retornarDadosTempoFormatado(); ?>,
 			datasets : [
 				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
-					<?php echo 'data : [65,59,90,81,56,55,40,81,56,55,40]' ?>
-				},
-				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(151,187,205,1)",
-					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatado() ?>
+					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatado();?>
 				}
 			]
 			

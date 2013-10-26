@@ -1,5 +1,5 @@
 <?php
-require_once('./libs/adodb/adodb.inc.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/libs/adodb/adodb.inc.php');
 
 class Conexao{
 	

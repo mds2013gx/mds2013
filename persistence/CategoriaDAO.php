@@ -1,5 +1,5 @@
 <?php
-include_once('./model/Categoria.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
 include_once('Conexao.php');
 class CategoriaDAO{
 	private $conexao;

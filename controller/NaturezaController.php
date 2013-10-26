@@ -1,8 +1,8 @@
 <?php
-include_once('./persistence/NaturezaDAO.php');
-include_once('./persistence/CategoriaDAO.php');
-include_once('./model/Natureza.php');
-include_once('./model/Categoria.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/NaturezaDAO.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/CategoriaDAO.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Natureza.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
 class NaturezaController{
 	private $naturezaDAO;
 	

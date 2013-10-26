@@ -30,9 +30,9 @@
 		</hgroup>
 		
 		<canvas id="topoChart" width="489" height="246"></canvas>
-		
-		<a class="btn blue" href="https://github.com/mds2013gx/mds2013"><img src="./view/assets/down.png">Download</a>
-		<a class="btn transparent disable" href="#"><img src="">ou Experimente</a>
-
+		<div id="navSection">
+			<a class="btn blue" href="https://github.com/mds2013gx/mds2013"><img src="./view/assets/down.png">Download</a>
+			<a class="btn transparent disable" href="#"><img src="">ou Experimente<img id="soonIcon" src="./view/assets/soon.png"></a>
+		</div>
 	</header>
 	<!-- /TOPO DA PÃ�GINA -->

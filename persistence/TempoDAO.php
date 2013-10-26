@@ -1,5 +1,5 @@
 <?php
-include_once('./model/Tempo.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Tempo.php');
 include_once('Conexao.php');
 class TempoDAO{
 	private $conexao;

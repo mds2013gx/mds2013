@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>404 Página não encontrada :(</title>
+        <title>401 Unauthorized :(</title>
         <style>
             ::-moz-selection {
                 background: #b3d4fc;
@@ -137,22 +137,16 @@
                 padding: 0;
                 border: 0;
             }
-            #logoError {
-                text-align: center;
-                width: 190px;
-                height: 40px;
-            }
         </style>
     </head>
     <body>
         <div class="container">
-            <img id="logoError" src="./view/assets/logo.png">
-            <h1>404 Página não encontrada <span>:(</span></h1>
-            <p>Desculpe, mas a pagina que você está tentando acessar não existe.</p>
+            <img id="logoError" src="../view/assets/logo.png">
+            <h1>401 Unauthorized <span>:(</span></h1>
+            <p>Desculpe, mas a pagina que você está tentando acessar não é permitida.</p>
             <p>Isso pode estar ocorrendo por:</p>
             <ul>
-                <li>uma URL errada</li>
-                <li>ou um link expirado</li>
+                <li>Acesso a pagina não permitida</li>
             </ul>
             <script>
                 var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
