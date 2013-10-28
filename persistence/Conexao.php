@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/libs/adodb/adodb.inc.php');
-
+require_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EConexaoFalha.php');
 class Conexao{
 	
 	public $banco;
@@ -10,6 +10,7 @@ class Conexao{
 	private $senha;
 	private $db;
 	public function __construct(){
+		
 		$this->tipo_banco    = "mysql";
 		$this->servidor      = "localhost";
 		$this->usuario       = "root";
@@ -18,6 +19,12 @@ class Conexao{
 		$this->banco = NewADOConnection($this->tipo_banco);
 		$this->banco->dialect = 3;
 		$this->banco->debug = false;
-		$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db);
+		try{
+			if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
+				throw new EConexaoFalha();	
+			}
+		}catch(EConexaoFalha $e){
+			echo $e->getMessage();
+		}
 	}
 }
