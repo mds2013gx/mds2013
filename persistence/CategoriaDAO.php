@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
-include_once('Conexao.php');
+include_once(__APP_PATH.'/model/Categoria.php');
+include_once(__APP_PATH.'/persistence/Conexao.php');
 class CategoriaDAO{
 	private $conexao;
 	public function __construct(){

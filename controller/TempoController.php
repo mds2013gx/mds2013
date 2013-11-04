@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/TempoDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Tempo.php');
+include_once(__APP_PATH.'/persistence/TempoDAO.php');
+include_once(__APP_PATH.'/model/Tempo.php');
 class TempoController{
 	private $tempoDAO;
 	

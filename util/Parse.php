@@ -1,11 +1,11 @@
 <?php
-require_once 'libs/excel_reader2.php';
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/ENomePlanilhaIncompativel.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/EPlanilhaSerieIncompativel.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/EFalhaLeituraSerieCategoria.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/EFalhaLeituraSerieNatureza.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/EFalhaLeituraSerieTempo.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/exceptions/EFalhaLeituraSerieCrime.php');
+require_once (__APP_PATH.'/exceptions/ENomePlanilhaIncompativel.php');
+require_once (__APP_PATH.'/exceptions/EPlanilhaSerieIncompativel.php');
+require_once (__APP_PATH.'/exceptions/EFalhaLeituraSerieCategoria.php');
+require_once (__APP_PATH.'/exceptions/EFalhaLeituraSerieNatureza.php');
+require_once (__APP_PATH.'/exceptions/EFalhaLeituraSerieTempo.php');
+require_once (__APP_PATH.'/exceptions/EFalhaLeituraSerieCrime.php');
+require_once (__APP_PATH.'/libs/excel_reader2.php');
 
 class Parse{
 	private $natureza;

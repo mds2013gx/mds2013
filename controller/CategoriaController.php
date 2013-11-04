@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/CategoriaDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
+include_once(__APP_PATH.'/persistence/CategoriaDAO.php');
+include_once(__APP_PATH.'/model/Categoria.php');
 class CategoriaController{
 	private $categoriaDAO;
 	
