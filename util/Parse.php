@@ -1,5 +1,5 @@
 <?php
-require_once 'libs/excel_reader2.php';
+require_once (__APP_PATH.'/libs/excel_reader2.php');
 class Parse{
 	private $natureza;
 	private $tempo;

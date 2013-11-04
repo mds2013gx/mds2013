@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Tempo.php');
-include_once('Conexao.php');
+include_once(__APP_PATH.'/model/Tempo.php');
+include_once(__APP_PATH.'/persistence/Conexao.php');
 class TempoDAO{
 	private $conexao;
 	public function __construct(){

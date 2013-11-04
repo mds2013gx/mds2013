@@ -1,10 +1,10 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/CrimeDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/TempoDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/NaturezaDAO.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Crime.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Tempo.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Natureza.php');
+include_once(__APP_PATH.'/persistence/CrimeDAO.php');
+include_once(__APP_PATH.'/persistence/TempoDAO.php');
+include_once(__APP_PATH.'/persistence/NaturezaDAO.php');
+include_once(__APP_PATH.'/model/Crime.php');
+include_once(__APP_PATH.'/model/Tempo.php');
+include_once(__APP_PATH.'/model/Natureza.php');
 class CrimeController{
 	private $crimeDAO;
 	

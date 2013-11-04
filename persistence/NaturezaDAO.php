@@ -1,8 +1,8 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Natureza.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
-include_once('Conexao.php');
-include_once('CategoriaDAO.php');
+include_once(__APP_PATH.'/model/Natureza.php');
+include_once(__APP_PATH.'/model/Categoria.php');
+include_once(__APP_PATH.'/persistence/Conexao.php');
+include_once(__APP_PATH.'/persistence/CategoriaDAO.php');
 class NaturezaDAO{
 	private $conexao;
 	public function __construct(){
