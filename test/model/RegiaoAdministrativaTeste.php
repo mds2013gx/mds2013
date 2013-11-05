@@ -11,10 +11,10 @@
 			$this->assertEquals(42, $regiao_administrativa->__getIdRegiaoAdministrativa());
 		}
 	
-		public function _testeSetNomeCategoria(){
-			$categoria = new Categoria();
-			$categoria->__setNomeCategoria("NomeCategoria");
-			$this->assertEquals("NomeCategria", $categoria->__getNomeCategoria());
+		public function testSet_GetNomeRegiaoAdminstrativa(){
+			$regiao_administrativa = new RegiaoAdministrativa();
+			$regiao_administrativa->__setNomeRegiao("Regiao Administrativa");
+			$this->assertEquals("Regiao Administrativa", $regiao_administrativa->__getNomeRegiao());
 		}
 	}
 ?>
