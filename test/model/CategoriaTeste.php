@@ -1,5 +1,5 @@
 <?php
-	require_once "../model/Categoria.php";
+	require_once "../../model/Categoria.php";
 	
 	/**
 	 * Classe Categoria Teste
