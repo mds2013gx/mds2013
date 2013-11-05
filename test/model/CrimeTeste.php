@@ -5,7 +5,7 @@
 	require_once "../../model/Crime.php";
 	
 	class CrimeTeste extends PHPUnit_Framework_Testcase{
-	public function testeIdCrime(){
+		public function testeIdCrime(){
 			$crime = new Crime();
 			$crime->__setIdCrime(15);
 			$this->assertEquals(15, $crime->__getIdCrime());
@@ -25,6 +25,5 @@
 			$crime->__setIdNatureza(15);
 			$this->assertEquals(15, $crime->__getIdNatureza());
 		}
-		private $idNatureza;
 	}
 ?>
