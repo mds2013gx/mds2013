@@ -18,6 +18,14 @@
 			$this->assertEquals(1,$tempo->__getIntervalo());
 		}
 		
+		public function testConstrut(){
+			$tempo = new Tempo();
+			$tempo->__constructOverload(1, 2);
+			$this->assertEquals(1,$tempo->__getIdTempo());
+			$this->assertEquals(2,$tempo->__getIntervalo());
+			
+		}
+		
 		
 		
 		
