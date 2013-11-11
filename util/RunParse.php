@@ -1,9 +1,9 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/util/Parse.php');
-include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/CategoriaController.php');
-include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/CrimeController.php');
-include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/NaturezaController.php');
-include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/TempoController.php');
+require_once ('C:/xampp/htdocs/mds2013/util/Parse.php');
+include_once ('C:/xampp/htdocs/mds2013/controller/CategoriaController.php');
+include_once ('C:/xampp/htdocs/mds2013/controller/CrimeController.php');
+include_once ('C:/xampp/htdocs/mds2013/controller/NaturezaController.php');
+include_once ('C:/xampp/htdocs/mds2013/controller/TempoController.php');
 class RunParse{
 	private $parse;
 	private $categoriaCO;

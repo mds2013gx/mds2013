@@ -1,7 +1,7 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php';
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/Conexao.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/ECategoriaListarTodasVazio.php');
+include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaListarTodasVazio.php');
 
 class CategoriaDAO{
 	private $conexao;

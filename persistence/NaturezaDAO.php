@@ -1,8 +1,8 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Natureza.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/Conexao.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/CategoriaDAO.php');
+include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
+include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 class NaturezaDAO{
 	private $conexao;
 	public function __construct(){

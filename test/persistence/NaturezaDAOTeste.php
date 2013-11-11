@@ -1,5 +1,5 @@
 <?php
-	require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/NaturezaDAO.php');
+	require_once ('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 	//include_once(__APP_PATH.'../../persistence/NaturezaDAO.php');
 	/**
 	 * Classe Categoria Teste
