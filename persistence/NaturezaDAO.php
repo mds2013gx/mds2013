@@ -3,6 +3,11 @@ include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaListarTodosVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaListarTodasAlfabeticamenteVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaConsultarPorIdVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaConsultarPorNomeVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/EConexaoFalha.php');
 class NaturezaDAO{
 	private $conexao;
 	public function __construct(){
