@@ -26,7 +26,7 @@ class Parse{
 				$this->parseDeQuadrimestre();
 			}
 			else{
-				throw ENomePlanilhaIncompativel();
+				throw new ENomePlanilhaIncompativel();
 			}		
 			$this->dados = new Spreadsheet_Excel_Reader("files/".$planilha,"UTF-8");
 		}
@@ -38,7 +38,7 @@ class Parse{
 	public function parseDeSerieHistorica(){
 		try{
 			if($this->dados->val(2, 1,1) != "Natureza"){
-				throw EPlanilhaSerieIncompativel();
+				throw new EPlanilhaSerieIncompativel();
 			}
 			$numeroLinhas = 40;
 			$numeroColunas = 15;
@@ -56,9 +56,9 @@ class Parse{
 					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
 				}
 			}
-			if(($this->__getCategoria() == null) || (empty($this->__getCategoria())== true) || (count($this->__getCategoria()) != 3)){
-				throw new EFalhaLeituraSerieCategoria();
-			} 
+			//if(($this->__getCategoria() == null) || (empty($this->__getCategoria())== true) || (count($this->__getCategoria()) != 3)){
+			//	throw new EFalhaLeituraSerieCategoria();
+			//} 
 			//loop que pega natureza do crime
 			for($i=1,$auxNatureza=0; $i<$numeroLinhas; $i++){
 				if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -83,9 +83,9 @@ class Parse{
 					$auxNatureza++;
 				}
 			}
-			if(($this->__getNatureza() == null) || (empty($this->__getNatureza()) == true) || (count($this->__getNatureza()[0]) !=25) || (count($this->__getNatureza()[1]) !=4) || (count($this->__getNatureza()[1]) != 2)){			
-				throw new EFalhaLeituraSerieNatureza();
-			}
+			//if(($this->__getNatureza() == null) || (empty($this->__getNatureza()) == true) || (count($this->__getNatureza()[0]) !=25) || (count($this->__getNatureza()[1]) !=4) || (count($this->__getNatureza()[1]) != 2)){			
+			//	throw new EFalhaLeituraSerieNatureza();
+			//}
 			//loop que pega os anos disponiveis
 			for($i=1,$auxTempo = 0; $i<$numeroColunas; $i++){
 				if(($i == 1)||($i == 2)||($i == 3)){
@@ -95,9 +95,9 @@ class Parse{
 					$auxTempo++;
 				}
 			}
-			if(($this->__getTempo() ==  null) || (empty($this->__getTempo())== true) || (count($this->__getTempo()) !=11)){
-				throw EFalhaLeituraSerieTempo();
-			}
+			//if(($this->__getTempo() ==  null) || (empty($this->__getTempo())== true) || (count($this->__getTempo()) !=11)){
+			//	throw EFalhaLeituraSerieTempo();
+			//}
 			//loop que pega os dados do crime
 			for($i=1,$auxLinha=0; $i<$numeroLinhas; $i++){	
 				if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -117,9 +117,9 @@ class Parse{
 					$auxLinha++;
 				}
 			}
-			if(($this->__getCrime() ==  null) || (empty($this->__getCrime())== true)){
-				throw EFalhaLeituraSerieCrime();
-			}
+			//if(($this->__getCrime() ==  null) || (empty($this->__getCrime())== true)){
+			//	throw EFalhaLeituraSerieCrime();
+			//}
 		}catch(EPlanilhaSerieIncompativel $e){
 			echo $e->getMessage();
 		}catch (EFalhaLeituraSerieCategoria $e){
@@ -171,33 +171,5 @@ class Parse{
 	
 	public function __getCategoria(){
 		return $this->categoria;
-	}
-
-	public function somaLinhas($arrayCrime){
-		$numeroLinhas = 31;
-		$numeroColunas = 11;
-		$soma;
-		
-		
-		for($i=0;$i<$numeroLinhas;$i++){
-			for($j=0;$j<$numeroColunas;$j++){
-				$soma[$i] += $arrayCrime[$i][$j];				
-			}
-		}
-		return $soma;
-	}
-
-	public function somaColunas($arrayCrime){
-		$numeroLinhas = 31;
-		$numeroColunas = 11;
-		$soma;
-	
-	
-		for($i=0;$i<$numeroColunas;$i++){
-			for($j=0;$j<$numeroLinhas;$j++){
-				$soma[$i] += $arrayCrime[$j][$i];
-			}
-		}
-		return $soma;
 	}
 }
