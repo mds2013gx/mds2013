@@ -1,7 +1,7 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Categoria.php';
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/persistence/Conexao.php');
-include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/ECategoriaListarTodasVazio.php');
+include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaListarTodasVazio.php');
 
 class CategoriaDAO{
 	private $conexao;
@@ -13,7 +13,7 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if(($resultado == null) || (empty($resultado) == true) || (count($resultado) == 0)){
-			throw ECategoriaListarTodasVazio;
+			throw new ECategoriaListarTodasVazio();
 			
 		}
 		while($registro = $resultado->FetchNextObject())
@@ -28,7 +28,7 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria ORDER BY nome_categoria ASC ";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if(($resultado == null) || (empty($resultado) == true) || (count($resultado) == 0)){
-			throw ECategoriaListarTodasAlfabeticamenteVazio;
+			throw new ECategoriaListarTodasAlfabeticamenteVazio();
 		}
 		while($registro = $resultado->FetchNextObject())
 		{
@@ -42,7 +42,7 @@ class CategoriaDAO{
 		$sql = "SELECT * FROM categoria WHERE id_categoria = $id";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if(($resultado == null) || (empty($resultado) == true) || (count($resultado) == 0)){
-			throw ECategoriaListarConsultaPorIdVazio;
+			throw new ECategoriaListarConsultaPorIdVazio();
 		}
 		$registro = $resultado->FetchNextObject();
 		$dadosCategoria = new Categoria();
@@ -55,7 +55,7 @@ class CategoriaDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		if(($resultado == null) || (empty($resultado) == true) || (count($resultado) == 0)){
-			throw ECategoriaConsultarPorNomeVazio;
+			throw new ECategoriaConsultarPorNomeVazio();
 		}
 		$dadosCategoria = new Categoria();
 		$dadosCategoria->__constructOverload($registro->ID_CATEGORIA,$registro->NOME_CATEGORIA);

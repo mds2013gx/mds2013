@@ -1,6 +1,6 @@
 <?php  
-	include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/views/CrimeView.php');
-	include_once($_SERVER['DOCUMENT_ROOT'].'/mds2013/views/TempoView.php');
+	include_once('C:/xampp/htdocs/mds2013/views/CrimeView.php');
+	include_once('C:/xampp/htdocs/mds2013/views/TempoView.php');
 	$crimeVW = new CrimeView();
 	$tempoVW = new TempoView();		
 ?>
