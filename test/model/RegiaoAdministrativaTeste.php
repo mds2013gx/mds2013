@@ -5,16 +5,17 @@
 	 * Classe RegiaoAdministrativa Teste
 	 **/
 	class RegiaoAdministrativaTeste extends PHPUnit_Framework_Testcase{
-		public function testSet_GetIdRegiaoAdministriva(){
-			$regiao_administrativa = new RegiaoAdministrativa();
-			$regiao_administrativa->__setIDRegiaoAdministrativa(42);
-			$this->assertEquals(42, $regiao_administrativa->__getIdRegiaoAdministrativa());
+		private $regiaoAdministrativa;
+		
+		public function testeSetIdRegiaoAdministriva(){
+			$regiaoAdministrativa = new RegiaoAdministrativa();
+			$regiaoAdministrativa->__setIdRegiaoAdministrativa(42);
+			$this->assertEquals(42, $regiaoAdministrativa->__getIdRegiaoAdministrativa());
 		}
-	
-		public function testSet_GetNomeRegiaoAdminstrativa(){
-			$regiao_administrativa = new RegiaoAdministrativa();
-			$regiao_administrativa->__setNomeRegiao("Regiao Administrativa");
-			$this->assertEquals("Regiao Administrativa", $regiao_administrativa->__getNomeRegiao());
+		public function testSetNomeRegiaoAdminstrativa(){
+			$regiaoAdministrativa = new RegiaoAdministrativa();
+			$regiaoAdministrativa->__setNomeRegiao("Regiao Administrativa");
+			$this->assertEquals("Regiao Administrativa", $regiaoAdministrativa->__getNomeRegiao());
 		}
 	}
 ?>

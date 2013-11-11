@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="1.4.1" timestamp="2013-11-11T20:00:27+01:00">
+  <file name="C:\xampp\htdocs\mds2013\controller\CrimeController.php">
+    <violation beginline="36" endline="36" rule="UnusedLocalVariable" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" priority="3">
+      Avoid unused local variables such as '$inicio'.
+    </violation>
+  </file>
+  <file name="C:\xampp\htdocs\mds2013\util\Parse.php">
+    <violation beginline="10" endline="203" rule="TooManyMethods" ruleset="Code Size Rules" package="+global" externalInfoUrl="http://phpmd.org/rules/codesize.html#toomanymethods" class="Parse" priority="3">
+      The class Parse has 14 methods. Consider refactoring Parse to keep number of methods under 10.
+    </violation>
+    <violation beginline="10" endline="203" rule="ExcessiveClassComplexity" ruleset="Code Size Rules" package="+global" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessiveclasscomplexity" class="Parse" priority="3">
+      The class Parse has an overall complexity of 78 which is very high. The configured complexity threshold is 50.
+    </violation>
+    <violation beginline="38" endline="134" rule="CyclomaticComplexity" ruleset="Code Size Rules" package="+global" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" class="Parse" method="parseDeSerieHistorica" priority="2">
+      The method parseDeSerieHistorica() has a Cyclomatic Complexity of 57. The configured cyclomatic complexity threshold is 10.
+    </violation>
+    <violation beginline="38" endline="134" rule="NPathComplexity" ruleset="Code Size Rules" package="+global" externalInfoUrl="http://phpmd.org/rules/codesize.html#npathcomplexity" class="Parse" method="parseDeSerieHistorica" priority="2">
+      The method parseDeSerieHistorica() has an NPath complexity of 6220805. The configured NPath complexity threshold is 200.
+    </violation>
+  </file>
+  <error filename="C:\xampp\htdocs\mds2013\exceptions\IdException.php" msg="Unexpected token: -&gt;, line: 5, col: 12, file: C:\xampp\htdocs\mds2013\exceptions\IdException.php." />
+</pmd>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <phpunit
+               convertErrorsToExceptions="true"
+               convertNoticesToExceptions="true"
+               convertWarningsToExceptions="true"
+               stopOnFailure="false">
+   <testsuites>
+       <testsuite name="controllerUnitTests">
+           <directory>test\controller</directory>
+       </testsuite>
+        <testsuite name="modelUnitTests">
+           <directory>test\model</directory>
+       </testsuite>
+        <testsuite name="persistenceUnitTests">
+           <directory>test\persistence</directory>
+       </testsuite>
+   </testsuites>
+</phpunit> -->
+
+<phpunit><testsuites><testsuite name="Generated">
+<!--<file>test\controller\CategoriaControllerTeste.php</file>
+<file>test\controller\NaturezaControllerTeste.php</file>
+<file>test\model\CategoriaTeste.php</file> -->
+<file>test\model\CrimeTeste.php</file>
+<!--<file>test\model\TempoTeste.php</file>
+<file>test\persistence\NaturezaDAOTeste.php</file>-->
+</testsuite></testsuites></phpunit>
