@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metrics generated="2013-11-06T00:02:37" pdepend="1.1.1" ahh="0.18181818181818" andc="0" calls="151" ccn="176" ccn2="205" cloc="15" clsa="0" clsc="28" eloc="861" fanout="39" leafs="26" lloc="581" loc="930" maxDIT="2" ncloc="915" noc="28" nof="0" noi="0" nom="123" nop="1" roots="2">
+<metrics generated="2013-11-11T20:00:20" pdepend="1.1.1" ahh="0.18181818181818" andc="0" calls="151" ccn="176" ccn2="205" cloc="15" clsa="0" clsc="28" eloc="861" fanout="39" leafs="26" lloc="581" loc="930" maxDIT="2" ncloc="915" noc="28" nof="0" noi="0" nom="123" nop="1" roots="2">
   <files>
     <file name="C:\xampp\htdocs\mds2013\controller\CategoriaController.php" cloc="0" eloc="31" lloc="20" loc="32" ncloc="32"/>
     <file name="C:\xampp\htdocs\mds2013\controller\CrimeController.php" cloc="0" eloc="69" lloc="52" loc="70" ncloc="70"/>
