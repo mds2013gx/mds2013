@@ -429,6 +429,21 @@
   <error line="5" column="3" severity="error" message="Line indented incorrectly; expected at least 8 spaces, found 2" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
   <error line="6" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
  </file>
+ <file name="C:\xampp\htdocs\mds2013\exceptions\IdException.php">
+  <error line="1" column="1" severity="error" message="End of line character is invalid; expected &quot;\n&quot; but found &quot;\r\n&quot;" source="Generic.Files.LineEndings.InvalidEOLChar"/>
+  <error line="4" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+  <error line="4" column="2" severity="error" message="Line indented incorrectly; expected at least 4 spaces, found 1" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="4" column="9" severity="warning" message="The method parameter $id is never used" source="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
+  <error line="4" column="9" severity="error" message="Line indented incorrectly; expected 4 spaces, found 1" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="4" column="45" severity="error" message="Arguments with default values must be at the end of the argument list" source="PEAR.Functions.ValidDefaultValue.NotAtEnd"/>
+  <error line="5" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+  <error line="5" column="3" severity="error" message="Line indented incorrectly; expected at least 8 spaces, found 2" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="5" column="8" severity="error" message="Constants must be uppercase; expected THIS but found this" source="Generic.NamingConventions.UpperCaseConstantName.ConstantNotUpperCase"/>
+  <error line="6" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+  <error line="6" column="3" severity="error" message="Line indented incorrectly; expected at least 8 spaces, found 2" source="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
+  <error line="7" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+  <error line="8" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
+ </file>
  <file name="C:\xampp\htdocs\mds2013\model\Categoria.php">
   <error line="1" column="1" severity="error" message="End of line character is invalid; expected &quot;\n&quot; but found &quot;\r\n&quot;" source="Generic.Files.LineEndings.InvalidEOLChar"/>
   <error line="3" column="1" severity="error" message="Spaces must be used to indent lines; tabs are not allowed" source="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
