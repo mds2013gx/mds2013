@@ -2,6 +2,10 @@
 include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaListarTodasVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaListarTodasAlfabeticamenteVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaListarConsultaPorIdVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ECategoriaConsultarPorNomeVazio.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/EConexaoFalha.php');
 
 class CategoriaDAO{
 	private $conexao;
