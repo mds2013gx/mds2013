@@ -2,7 +2,7 @@
 	/**
 	 * Classe Tempo Teste
 	 **/
-	require_once "../../model/Tempo.php";
+	require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Tempo.php');
 	
 	class TempoTeste extends PHPUnit_Framework_Testcase{
 		

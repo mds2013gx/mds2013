@@ -1,9 +1,9 @@
 <?php
-require_once (__APP_PATH.'/util/Parse.php');
-include_once (__APP_PATH.'/controller/CategoriaController.php');
-include_once (__APP_PATH.'/controller/CrimeController.php');
-include_once (__APP_PATH.'/controller/NaturezaController.php');
-include_once (__APP_PATH.'/controller/TempoController.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/util/Parse.php');
+include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/CategoriaController.php');
+include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/CrimeController.php');
+include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/NaturezaController.php');
+include_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/controller/TempoController.php');
 class RunParse{
 	private $parse;
 	private $categoriaCO;

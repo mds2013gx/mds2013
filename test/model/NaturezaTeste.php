@@ -1,5 +1,5 @@
 <?php
-	require_once "../../model/Natureza.php";
+	require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/Natureza.php');
 	class NaturezaTeste extends PHPUnit_Framework_Testcase{
 	public function testeIdNatureza(){
 			$natureza = new Natureza();

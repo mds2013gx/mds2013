@@ -1,5 +1,5 @@
 <?php
-	require_once "../../model/RegiaoAdministrativa.php";
+	require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/model/RegiaoAdministrativa.php');
 	
 	/**
 	 * Classe RegiaoAdministrativa Teste

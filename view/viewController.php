@@ -2,11 +2,11 @@
 $pagina = isset( $_GET['pag'] ) ? $_GET['pag'] : null;
 switch($pagina){
 	case 'ano':
-		include(__APP_PATH.'/view/year.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/mds2013/view/year.php');
 		break;
 	case 'tipo':
-		include(__APP_PATH.'/view/type.php');
+		include($_SERVER['DOCUMENT_ROOT'].'/mds2013/view/type.php');
 		break;
 	default:
-		include(__APP_PATH.'/view/initial.php');	
+		include($_SERVER['DOCUMENT_ROOT'].'/mds2013/view/initial.php');	
 }

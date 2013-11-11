@@ -1,5 +1,5 @@
 <?php
-	require_once "../persistance/CategoriaDAO.php";
+	require_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 	
 	/**
 	 * Classe CategoriaDAOTeste
@@ -29,5 +29,3 @@
 			
 		}
 	}
-
-?>
