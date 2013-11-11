@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metrics generated="2013-11-06T00:02:37" pdepend="1.1.1" ahh="0.18181818181818" andc="0" calls="151" ccn="176" ccn2="205" cloc="15" clsa="0" clsc="28" eloc="861" fanout="39" leafs="26" lloc="581" loc="930" maxDIT="2" ncloc="915" noc="28" nof="0" noi="0" nom="123" nop="1" roots="2">
+  <files>
+    <file name="C:\xampp\htdocs\mds2013\controller\CategoriaController.php" cloc="0" eloc="31" lloc="20" loc="32" ncloc="32"/>
+    <file name="C:\xampp\htdocs\mds2013\controller\CrimeController.php" cloc="0" eloc="69" lloc="52" loc="70" ncloc="70"/>
+    <file name="C:\xampp\htdocs\mds2013\controller\NaturezaController.php" cloc="0" eloc="42" lloc="30" loc="43" ncloc="43"/>
+    <file name="C:\xampp\htdocs\mds2013\controller\TempoController.php" cloc="0" eloc="40" lloc="27" loc="41" ncloc="41"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EConexaoFalha.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieCategoria.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieCrime.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieNatureza.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieTempo.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\ENomePlanilhaIncompativel.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\exceptions\EPlanilhaSerieIncompativel.php" cloc="0" eloc="6" lloc="2" loc="7" ncloc="7"/>
+    <file name="C:\xampp\htdocs\mds2013\model\Categoria.php" cloc="0" eloc="23" lloc="14" loc="25" ncloc="25"/>
+    <file name="C:\xampp\htdocs\mds2013\model\Crime.php" cloc="0" eloc="39" lloc="26" loc="41" ncloc="41"/>
+    <file name="C:\xampp\htdocs\mds2013\model\Natureza.php" cloc="0" eloc="31" lloc="20" loc="33" ncloc="33"/>
+    <file name="C:\xampp\htdocs\mds2013\model\RegiaoAdministrativa.php" cloc="0" eloc="17" lloc="10" loc="18" ncloc="18"/>
+    <file name="C:\xampp\htdocs\mds2013\model\Tempo.php" cloc="0" eloc="23" lloc="14" loc="25" ncloc="25"/>
+    <file name="C:\xampp\htdocs\mds2013\persistence\CategoriaDAO.php" cloc="0" eloc="51" lloc="38" loc="53" ncloc="53"/>
+    <file name="C:\xampp\htdocs\mds2013\persistence\Conexao.php" cloc="0" eloc="28" lloc="22" loc="31" ncloc="31"/>
+    <file name="C:\xampp\htdocs\mds2013\persistence\CrimeDAO.php" cloc="0" eloc="64" lloc="51" loc="65" ncloc="65"/>
+    <file name="C:\xampp\htdocs\mds2013\persistence\NaturezaDAO.php" cloc="0" eloc="53" lloc="40" loc="55" ncloc="55"/>
+    <file name="C:\xampp\htdocs\mds2013\persistence\TempoDAO.php" cloc="0" eloc="51" lloc="38" loc="54" ncloc="54"/>
+    <file name="C:\xampp\htdocs\mds2013\util\Parse.php" cloc="6" eloc="178" lloc="121" loc="203" ncloc="197"/>
+    <file name="C:\xampp\htdocs\mds2013\util\RunParse.php" cloc="0" eloc="24" lloc="20" loc="25" ncloc="25"/>
+    <file name="C:\xampp\htdocs\mds2013\util\teste.php" cloc="9" eloc="17" lloc="4" loc="28" ncloc="19"/>
+    <file name="C:\xampp\htdocs\mds2013\view\CategoriaView.php" cloc="0" eloc="8" lloc="4" loc="8" ncloc="8"/>
+    <file name="C:\xampp\htdocs\mds2013\view\CrimeView.php" cloc="0" eloc="11" lloc="6" loc="11" ncloc="11"/>
+    <file name="C:\xampp\htdocs\mds2013\view\NaturezaView.php" cloc="0" eloc="8" lloc="4" loc="8" ncloc="8"/>
+    <file name="C:\xampp\htdocs\mds2013\view\TempoView.php" cloc="0" eloc="11" lloc="6" loc="12" ncloc="12"/>
+  </files>
+  <package name="+global" cr="0.15" noc="28" nof="0" noi="0" nom="123" rcr="0.2775">
+    <class name="CategoriaController" ca="2" cbo="2" ce="2" cis="7" cloc="0" cr="0.15" csz="8" dit="0" eloc="25" impl="0" lloc="10" loc="29" ncloc="29" noam="0" nocc="0" nom="7" noom="0" npm="7" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="8" wmci="8" wmcnp="8">
+      <file name="C:\xampp\htdocs\mds2013\controller\CategoriaController.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodas" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodasAlfabicamente" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorNome" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirCategoriaArrayParse" ccn="2" ccn2="2" cloc="0" eloc="7" lloc="4" loc="7" ncloc="7" npath="2"/>
+    </class>
+    <class name="CrimeController" ca="2" cbo="6" ce="6" cis="10" cloc="0" cr="0.15" csz="11" dit="0" eloc="59" impl="0" lloc="35" loc="63" ncloc="63" noam="0" nocc="0" nom="10" noom="0" npm="10" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="14" wmci="14" wmcnp="14">
+      <file name="C:\xampp\htdocs\mds2013\controller\CrimeController.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodos" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorIdTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirCrime" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_somaDeCrimePorAno" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_somaDeCrimePorNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirCrimeArrayParse" ccn="3" ccn2="3" cloc="0" eloc="22" lloc="18" loc="22" ncloc="22" npath="3"/>
+      <method name="_retornarDadosDeSomaFormatado" ccn="3" ccn2="3" cloc="0" eloc="13" lloc="9" loc="13" ncloc="13" npath="4"/>
+    </class>
+    <class name="NaturezaController" ca="2" cbo="4" ce="4" cis="7" cloc="0" cr="0.15" csz="8" dit="0" eloc="34" impl="0" lloc="18" loc="38" ncloc="38" noam="0" nocc="0" nom="7" noom="0" npm="7" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="9" wmci="9" wmcnp="9">
+      <file name="C:\xampp\htdocs\mds2013\controller\NaturezaController.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodas" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodasAlfabicamente" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorNome" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirArrayParse" ccn="3" ccn2="3" cloc="0" eloc="16" lloc="12" loc="16" ncloc="16" npath="3"/>
+    </class>
+    <class name="TempoController" ca="2" cbo="2" ce="2" cis="8" cloc="0" cr="0.15" csz="9" dit="0" eloc="34" impl="0" lloc="16" loc="38" ncloc="38" noam="0" nocc="0" nom="8" noom="0" npm="8" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="10" wmci="10" wmcnp="10">
+      <file name="C:\xampp\htdocs\mds2013\controller\TempoController.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodos" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_listarTodasEmOrdem" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_consultarPorIntervalo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="_inserirTempoArrayParse" ccn="2" ccn2="2" cloc="0" eloc="7" lloc="4" loc="7" ncloc="7" npath="2"/>
+      <method name="_retornarDadosFormatados" ccn="2" ccn2="2" cloc="0" eloc="9" lloc="6" loc="9" ncloc="9" npath="2"/>
+    </class>
+    <class name="EConexaoFalha" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EConexaoFalha.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="EFalhaLeituraSerieCategoria" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieCategoria.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="EFalhaLeituraSerieCrime" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieCrime.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="EFalhaLeituraSerieNatureza" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieNatureza.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="EFalhaLeituraSerieTempo" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EFalhaLeituraSerieTempo.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="ENomePlanilhaIncompativel" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\ENomePlanilhaIncompativel.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="EPlanilhaSerieIncompativel" ca="1" cbo="0" ce="0" cis="1" cloc="0" cr="0.15" csz="1" dit="2" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="1" nocc="0" nom="1" noom="0" npm="1" rcr="0.16821428571429" vars="0" varsi="0" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\exceptions\EPlanilhaSerieIncompativel.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="Categoria" ca="3" cbo="0" ce="0" cis="6" cloc="0" cr="0.15" csz="8" dit="0" eloc="18" impl="0" lloc="6" loc="24" ncloc="24" noam="0" nocc="0" nom="6" noom="0" npm="6" rcr="0.15" vars="2" varsi="2" varsnp="0" wmc="6" wmci="6" wmcnp="6">
+      <file name="C:\xampp\htdocs\mds2013\model\Categoria.php"/>
+      <method name="__setIdCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setNomeCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getNomeCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__constructOverload" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="Crime" ca="2" cbo="0" ce="0" cis="10" cloc="0" cr="0.15" csz="14" dit="0" eloc="32" impl="0" lloc="12" loc="40" ncloc="40" noam="0" nocc="0" nom="10" noom="0" npm="10" rcr="0.15" vars="4" varsi="4" varsnp="0" wmc="10" wmci="10" wmcnp="10">
+      <file name="C:\xampp\htdocs\mds2013\model\Crime.php"/>
+      <method name="__setIdCrime" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdCrime" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setQuantidade" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getQuantidade" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setIdTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+      <method name="__constructOverload" ccn="1" ccn2="1" cloc="0" eloc="6" lloc="4" loc="6" ncloc="6" npath="1"/>
+    </class>
+    <class name="Natureza" ca="3" cbo="0" ce="0" cis="8" cloc="0" cr="0.15" csz="11" dit="0" eloc="25" impl="0" lloc="9" loc="32" ncloc="32" noam="0" nocc="0" nom="8" noom="0" npm="8" rcr="0.15" vars="3" varsi="3" varsnp="0" wmc="8" wmci="8" wmcnp="8">
+      <file name="C:\xampp\htdocs\mds2013\model\Natureza.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+      <method name="__constructOverload" ccn="1" ccn2="1" cloc="0" eloc="5" lloc="3" loc="5" ncloc="5" npath="1"/>
+      <method name="__setIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setIdCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="RegiaoAdministrativa" ca="0" cbo="0" ce="0" cis="4" cloc="0" cr="0.15" csz="6" dit="0" eloc="12" impl="0" lloc="4" loc="17" ncloc="17" noam="0" nocc="0" nom="4" noom="0" npm="4" rcr="0.15" vars="2" varsi="2" varsnp="0" wmc="4" wmci="4" wmcnp="4">
+      <file name="C:\xampp\htdocs\mds2013\model\RegiaoAdministrativa.php"/>
+      <method name="__setIdRegiaoAdministrativa" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdRegiaoAdministrativa" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setNomeRegiao" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getNomeRegiao" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="Tempo" ca="3" cbo="0" ce="0" cis="6" cloc="0" cr="0.15" csz="8" dit="0" eloc="18" impl="0" lloc="6" loc="24" ncloc="24" noam="0" nocc="0" nom="6" noom="0" npm="6" rcr="0.15" vars="2" varsi="2" varsnp="0" wmc="6" wmci="6" wmcnp="6">
+      <file name="C:\xampp\htdocs\mds2013\model\Tempo.php"/>
+      <method name="__setIdTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIdTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setIntervalo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getIntervalo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+      <method name="__constructOverload" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="CategoriaDAO" ca="2" cbo="2" ce="2" cis="6" cloc="0" cr="0.15" csz="7" dit="0" eloc="45" impl="0" lloc="29" loc="50" ncloc="50" noam="0" nocc="0" nom="6" noom="0" npm="6" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="8" wmci="8" wmcnp="8">
+      <file name="C:\xampp\htdocs\mds2013\persistence\CategoriaDAO.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="listarTodas" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="listarTodasAlfabicamente" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="9" ncloc="9" npath="1"/>
+      <method name="consultarPorNome" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="inserirCategoria" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="Conexao" ca="4" cbo="1" ce="1" cis="2" cloc="0" cr="0.15" csz="7" dit="0" eloc="17" impl="0" lloc="13" loc="27" ncloc="27" noam="0" nocc="0" nom="1" noom="0" npm="1" rcr="0.15" vars="6" varsi="6" varsnp="1" wmc="3" wmci="3" wmcnp="3">
+      <file name="C:\xampp\htdocs\mds2013\persistence\Conexao.php"/>
+      <method name="__construct" ccn="3" ccn2="3" cloc="0" eloc="17" lloc="13" loc="18" ncloc="18" npath="3"/>
+    </class>
+    <class name="CrimeDAO" ca="1" cbo="2" ce="2" cis="8" cloc="0" cr="0.15" csz="9" dit="0" eloc="54" impl="0" lloc="36" loc="58" ncloc="58" noam="0" nocc="0" nom="8" noom="0" npm="8" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="9" wmci="9" wmcnp="9">
+      <file name="C:\xampp\htdocs\mds2013\persistence\CrimeDAO.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="listarTodos" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="consultarPorIdNatureza" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="consultarPorIdTempo" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="somaDeCrimePorAno" ccn="1" ccn2="1" cloc="0" eloc="6" lloc="4" loc="6" ncloc="6" npath="1"/>
+      <method name="somaDeCrimePorNatureza" ccn="1" ccn2="1" cloc="0" eloc="6" lloc="4" loc="6" ncloc="6" npath="1"/>
+      <method name="inserirCrime" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="NaturezaDAO" ca="2" cbo="2" ce="2" cis="6" cloc="0" cr="0.15" csz="7" dit="0" eloc="45" impl="0" lloc="29" loc="50" ncloc="50" noam="0" nocc="0" nom="6" noom="0" npm="6" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="8" wmci="8" wmcnp="8">
+      <file name="C:\xampp\htdocs\mds2013\persistence\NaturezaDAO.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="listarTodas" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="listarTodasAlfabicamente" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="9" ncloc="9" npath="1"/>
+      <method name="consultarPorNome" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="inserirNatureza" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="TempoDAO" ca="2" cbo="2" ce="2" cis="6" cloc="0" cr="0.15" csz="7" dit="0" eloc="45" impl="0" lloc="29" loc="50" ncloc="50" noam="0" nocc="0" nom="6" noom="0" npm="6" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="8" wmci="8" wmcnp="8">
+      <file name="C:\xampp\htdocs\mds2013\persistence\TempoDAO.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="listarTodos" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="listarTodasEmOrdem" ccn="2" ccn2="2" cloc="0" eloc="11" lloc="7" loc="11" ncloc="11" npath="2"/>
+      <method name="consultarPorId" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="9" ncloc="9" npath="1"/>
+      <method name="consultarPorIntervalo" ccn="1" ccn2="1" cloc="0" eloc="8" lloc="6" loc="8" ncloc="8" npath="1"/>
+      <method name="inserirTempo" ccn="1" ccn2="1" cloc="0" eloc="4" lloc="2" loc="4" ncloc="4" npath="1"/>
+    </class>
+    <class name="Parse" ca="1" cbo="7" ce="7" cis="14" cloc="6" cr="0.15" csz="19" dit="0" eloc="163" impl="0" lloc="95" loc="194" ncloc="188" noam="0" nocc="0" nom="14" noom="0" npm="14" rcr="0.15" vars="5" varsi="5" varsnp="0" wmc="78" wmci="78" wmcnp="78">
+      <file name="C:\xampp\htdocs\mds2013\util\Parse.php"/>
+      <method name="__construct" ccn="5" ccn2="5" cloc="0" eloc="20" lloc="11" loc="20" ncloc="20" npath="5"/>
+      <method name="parseDeSerieHistorica" ccn="28" ccn2="57" cloc="4" eloc="93" lloc="62" loc="97" ncloc="93" npath="6220805"/>
+      <method name="parsePorRegiao" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+      <method name="parseDeQuadrimestre" ccn="1" ccn2="1" cloc="0" eloc="2" lloc="0" loc="3" ncloc="3" npath="1"/>
+      <method name="__setNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getNatureza" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getTempo" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setCrime" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getCrime" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__setCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="__getCategoria" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="somaLinhas" ccn="3" ccn2="3" cloc="0" eloc="11" lloc="7" loc="13" ncloc="13" npath="3"/>
+      <method name="somaColunas" ccn="3" ccn2="3" cloc="0" eloc="11" lloc="7" loc="13" ncloc="13" npath="3"/>
+    </class>
+    <class name="RunParse" ca="0" cbo="5" ce="5" cis="1" cloc="0" cr="0.15" csz="6" dit="0" eloc="11" impl="0" lloc="9" loc="18" ncloc="18" noam="0" nocc="0" nom="1" noom="0" npm="1" rcr="0.15" vars="5" varsi="5" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\util\RunParse.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="11" lloc="9" loc="11" ncloc="11" npath="1"/>
+    </class>
+    <class name="Classe3Test" ca="0" cbo="0" ce="0" cis="2" cloc="8" cr="0.15" csz="2" dit="2" eloc="10" impl="0" lloc="2" loc="25" ncloc="17" noam="2" nocc="0" nom="2" noom="0" npm="2" rcr="0.2775" vars="0" varsi="0" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\xampp\htdocs\mds2013\util\teste.php"/>
+      <method name="testCombine" ccn="1" ccn2="1" cloc="1" eloc="3" lloc="1" loc="5" ncloc="4" npath="1"/>
+      <method name="provider" ccn="1" ccn2="1" cloc="1" eloc="7" lloc="1" loc="9" ncloc="8" npath="1"/>
+    </class>
+    <class name="CategoriaView" ca="0" cbo="1" ce="1" cis="1" cloc="0" cr="0.15" csz="2" dit="0" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="0" nocc="0" nom="1" noom="0" npm="1" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\view\CategoriaView.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="CrimeView" ca="0" cbo="1" ce="1" cis="2" cloc="0" cr="0.15" csz="3" dit="0" eloc="6" impl="0" lloc="2" loc="9" ncloc="9" noam="0" nocc="0" nom="2" noom="0" npm="2" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\xampp\htdocs\mds2013\view\CrimeView.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="retornarDadosCrimeSomadoFormatado" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="NaturezaView" ca="0" cbo="1" ce="1" cis="1" cloc="0" cr="0.15" csz="2" dit="0" eloc="3" impl="0" lloc="1" loc="6" ncloc="6" noam="0" nocc="0" nom="1" noom="0" npm="1" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="1" wmci="1" wmcnp="1">
+      <file name="C:\xampp\htdocs\mds2013\view\NaturezaView.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+    <class name="TempoView" ca="0" cbo="1" ce="1" cis="2" cloc="0" cr="0.15" csz="3" dit="0" eloc="6" impl="0" lloc="2" loc="10" ncloc="10" noam="0" nocc="0" nom="2" noom="0" npm="2" rcr="0.15" vars="1" varsi="1" varsnp="0" wmc="2" wmci="2" wmcnp="2">
+      <file name="C:\xampp\htdocs\mds2013\view\TempoView.php"/>
+      <method name="__construct" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+      <method name="retornarDadosTempoFormatado" ccn="1" ccn2="1" cloc="0" eloc="3" lloc="1" loc="3" ncloc="3" npath="1"/>
+    </class>
+  </package>
+</metrics>
