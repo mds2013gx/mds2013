@@ -8,15 +8,11 @@
 	
 		public function testListarTodas()
 		{
-			$categoriaDAO = new CategoriaDAO();
-			$this->assertNotEmpty($categoriaDAO->listarTodas());
+		
 		}
 		
 		public function testListarTodasAlfabeticamente()
 		{
-			$categoriaDAO = new CategoriaDAO();
-			$this->assertNotEmpty($categoriaDAO->listarTodasAlfabeticamente());
-			$this->assertNotNull($categoriaDAO->listarTodasAlfabeticamente());
 		}
 	
 		public function testConsultarPorId(){

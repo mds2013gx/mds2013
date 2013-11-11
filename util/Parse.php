@@ -1,11 +1,11 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/ENomePlanilhaIncompativel.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EPlanilhaSerieIncompativel.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EFalhaLeituraSerieCategoria.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EFalhaLeituraSerieNatureza.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EFalhaLeituraSerieTempo.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/exceptions/EFalhaLeituraSerieCrime.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/mds2013/libs/excel_reader2.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/ENomePlanilhaIncompativel.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/EPlanilhaSerieIncompativel.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/EFalhaLeituraSerieCategoria.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/EFalhaLeituraSerieNatureza.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/EFalhaLeituraSerieTempo.php');
+require_once ('C:/xampp/htdocs/mds2013/exceptions/EFalhaLeituraSerieCrime.php');
+require_once ('C:/xampp/htdocs/mds2013/libs/excel_reader2.php');
 
 class Parse{
 	private $natureza;
