@@ -13,6 +13,8 @@ class Parse{
 	private $crime;
 	private $categoria;
 	private $dados;
+	private $total;
+	private $mes;
 	
 	public function __construct($planilha){
 		try{
