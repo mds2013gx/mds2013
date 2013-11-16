@@ -186,14 +186,19 @@ class Parse{
 		 		}else{
 		 			continue;
 		 		}
+		} 		
 		/**		 
 		* Loop que pega as informações sobre tempo da planilha
 		* @author Lucas Carvalho
 		*/
 		for($i=5, $auxTempo = 0; $i<numeroColunas; $i++){
 			$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
+			$auxTempo++;
 		}
-		//Loop que popula a matriz de crime
+		/**
+		* Loop que pega as informações do crime da planilha
+		* @author Lucas Carvalho 
+		*/
 		for($i = 8,$auxHilmer = 0,$auxCategoria=0,$auxTorradas=0, $auxLinha=0; $i<$numeroLinhas;$i++,$auxTorradas++){
 			if($i==11|| $i==26|| $i==31 ||  $i==32 || $i==33 || $i==38 || $i==41) continue;
 			//for($j=6, $auxCategoria=0,$auxTorradas = 0; $j<$numeroColunas; $j++, $auxTorradas++){
@@ -230,7 +235,6 @@ class Parse{
 				//echo $this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria][$auxLinha] ]] [$this->mes[$auxMes][$auxAno]];
 		}
 	}
-	
 	public function __setNatureza($natureza){
 		$this->natureza = $natureza;
 	}
