@@ -236,6 +236,90 @@ class Parse{
 		 		//echo $this->total['Ano2013'][$auxAno2013]."<br>";
 		 		$auxAno2013++;
 		 }
+		 //Loop de Janeiro 2012
+		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[0][0][$auxAno2012] =  $this->dados->val($i,6,2);
+		 		$auxAno2012++;
+		 }
+
+		 //Loop de Janeiro 2013
+		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[0][1][$auxAno2013] =  $this->dados->val($i,7,2);
+		 		//echo $this->mes['Janeiro']['ano2013'][$auxAno2013]."<br>";
+		 		$auxAno2013++;
+		 }
+
+		 //Loop de Fevereiro 2012
+		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[1][0][$auxAno2012] =  $this->dados->val($i,8,2);
+		 		//echo $this->mes['Fevereiro']['ano2012'][$auxAno2012]."<br>";
+		 		$auxAno2012++;
+		 }
+
+		  //Loop de Fevereiro 2013
+		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[1][1][$auxAno2013] =  $this->dados->val($i,9,2);
+		 		//echo $this->mes['Fevereiro']['ano2013'][$auxAno2013]."<br>";
+		 		$auxAno2013++;
+		 }
+		 //Loop de marÃ§o 2012
+		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[2][0][$auxAno2012] =  $this->dados->val($i,10,2);
+		 		//echo $this->mes['Marco']['ano2012'][$auxAno2012]."<br>";
+		 		$auxAno2012++;
+		 }
+
+		  //Loop de marÃ§o 2013
+		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[2][1][$auxAno2013] =  $this->dados->val($i,11,2);
+		 		//echo $this->mes['Marco']['ano2013'][$auxAno2013]."<br>";
+		 		$auxAno2013++;
+		 }
+		//Loop de Abril 2012
+		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[3][0][$auxAno2012] =  $this->dados->val($i,12,2);
+		 		//echo $this->mes['Abril']['ano2012'][$auxAno2012]."<br>";
+		 		$auxAno2012++;
+		 }
+
+		  //Loop de Abril 2013
+		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->mes[3][1][$auxAno2013] =  $this->dados->val($i,13,2);
+		 		//echo $this->mes['Abril']['ano2013'][$auxAno2013]."<br>";
+		 		$auxAno2013++;
+		 }
 	}
 	
 	public function __setNatureza($natureza){
