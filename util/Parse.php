@@ -138,16 +138,26 @@ class Parse{
 	public function parsePorRegiao(){
 		
 	}
-	//Desenvolvimento SPRINT#2
-	//@author: Lucas Carvalho
-	//Refatoração de parse quadrimestral
+	/**
+	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre
+	*	@access public
+	*	@author Bruno Rodrigues
+	*	@author Eliseu Egewarth
+	*	@author Lucas Andrade	
+	*	@author Lucas Carvalho
+	*	@author Lucas Santos
+	*	@author Sérgio Bezerra
+	*	@author Thiago Honorato
+	*	@tutorial Método realizado durante sprint 2, atulizando arrays para cada campo, para depois ir para persistência.
+	*/
 	public function parseDeQuadrimestre(){
 		$numeroLinhas = 41;
 		$numeroColunas = 13;
-		
-		//Loop para pegar os nomes das categorias de tabela parserQuadrimestral
-		//@author: Lucas Carvalho
-		//Refatorando parte do método que procura por categorias	
+		/**
+		* Loop para pegar os nomes das categorias contidas na planilha
+		* @author Lucas Carvalho
+		* @tutorial Refatoração do metodo antes implementados por outros autores 	 
+		*/	
 		for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
 			if(($i == 8) || ($i == 12) || ($i == 34) || ($i == 35) || ($i == 36) || ($i == 37) || ($i == 39) ){
 				$this->categoria[$auxCategoria] = $this->dados->val($i,1,2);
@@ -157,9 +167,12 @@ class Parse{
 			}
 			
 		}
-		//Loop
-		//@author: Lucas Carvalho / Sergio Silva
-		//Refatoração: Ajustar dimenções do vetor natureza para diminuir a complexidade de população do vetor.
+		/**
+		* Loop para pegar os nomes das naturezas contidas na planilha
+		* @author Lucas Carvalho
+		* @author Sérgio Bezerra
+		* @tutorial Refatoração para ajustar dimenções do vetor natureza para diminuir a complexidade de população do vetor
+		*/
 		for($i=8,$auxNatureza=0;$i< $numeroLinhas;$i++){
 		 		// Val ÃƒÂ© o valor da cÃƒÂ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
 		 		if($i>7 && $i<11){
@@ -199,40 +212,34 @@ class Parse{
 		* Loop que pega as informações do crime da planilha
 		* @author Lucas Carvalho 
 		*/
-		for($i = 8,$auxHilmer = 0,$auxCategoria=0,$auxTorradas=0, $auxLinha=0; $i<$numeroLinhas;$i++,$auxTorradas++){
-			if($i==11|| $i==26|| $i==31 ||  $i==32 || $i==33 || $i==38 || $i==41) continue;
-			//for($j=6, $auxCategoria=0,$auxTorradas = 0; $j<$numeroColunas; $j++, $auxTorradas++){
-				
-				if($i<11 && $i>7){
-					$auxCategoria=0;
-				}
-
-				else if($i>11 && $i<31){
-					$auxCategoria=1;
-				}
-
-				else if($i==34){
-					$auxCategoria=2;	
-				}
-
-				else if($i==35){
-					$auxCategoria=3;
-				}
-
-				else if($i==36){
-					$auxCategoria=4;
-				}
-
-				else if($i==37){
-					$auxCategoria=5;
-				}
-				else if($i>38 && $i<41){
-					$auxCategoria=6;
-				}
-				//essa parte mostra aonde estah errado
-				echo $this->__getNatureza()[$this->__getCategoria()[0][0]];
-				//echo $this->__getNatureza()[$this->__getCategoria()[$auxCategoria][$auxTorradas]]."<br>";
-				//echo $this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria][$auxLinha] ]] [$this->mes[$auxMes][$auxAno]];
+		for($i = 8, $auxLinha = 0; $i<$numeroLinhas; $i++){
+			if(($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
+				continue;
+			}else{
+				for($j = 5, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
+					if(($j % 2) == 0){
+						continue;
+					}
+					if($i>7 && $i<11){
+						$auxCategoria = 0;
+					}else if($i>11 && $i<32){
+						$auxCategoria = 1;
+					}else if($i==34){
+						$auxCategoria = 2;
+					}else if($i==35){
+						$auxCategoria = 3;
+					}else if($i==36){
+						$auxCategoria = 4;
+					}else if($i==37){
+						$auxCategoria = 5;
+					}else if($i>38 && $i<41){
+						$auxCategoria = 6;
+					}
+					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
+					$auxColuna++;
+					}	
+				$auxLinha++;
+			}
 		}
 	}
 	public function __setNatureza($natureza){
