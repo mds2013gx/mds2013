@@ -24,7 +24,7 @@ class Parse{
 			else if($planilha = "JAN_SET_2011_12  POR REGIAO ADM_2.xls"){
 				$this->parsePorRegiao();
 			}
-			else if($planilha = "Quadrimestre_final.2013"){
+			else if($planilha = "Quadrimestre_final.2013.xls"){
 				$this->parseDeQuadrimestre();
 			}
 			else{
