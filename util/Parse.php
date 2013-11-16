@@ -39,9 +39,9 @@ class Parse{
 	//ParsePorSerieHistorica 
 	public function parseDeSerieHistorica(){
 		try{
-			if($this->dados->val(2, 1,1) != "Natureza"){
-				throw new EPlanilhaSerieIncompativel();
-			}
+			//if($this->dados->val(2, 1,1) != "Natureza"){
+			//	throw new EPlanilhaSerieIncompativel();
+			//}
 			$numeroLinhas = 40;
 			$numeroColunas = 15;
 			//loop que pega a natureza
