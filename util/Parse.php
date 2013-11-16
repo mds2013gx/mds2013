@@ -134,6 +134,10 @@ class Parse{
 	}//fim do metodo parseDeSerieHistorica
 	
 	public function parsePorRegiao(){
+		
+	}
+	
+	public function parseDeQuadrimestre(){
 		$numeroLinhas = 41;
 		$numeroColunas = 13;
 		
@@ -173,10 +177,46 @@ class Parse{
 			
 
 		}
-	}
-	
-	public function parseDeQuadrimestre(){
-		
+		// loop de natureza
+		$auxNatureza1=0;
+		$auxNatureza2=0;
+		$auxNatureza3=0;
+
+		 for($i=8,$auxNatureza=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		// Val Ã© o valor da cÃ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
+		 		if ($i>7 && $i<11){
+		 			$this->natureza[$this->__getCategoria()[0][$auxNatureza1]] =  $this->dados->val($i,2,2);
+		 			$auxNatureza1++;
+		 		}
+		 		else if ($i>11 && $i<32){
+		 			$this->natureza[$this->__getCategoria()[1][$auxNatureza2]] =  $this->dados->val($i,2,2);
+		 			$auxNatureza2++;
+
+		 		}
+
+		 		else if ($i==34){
+		 			$this->natureza[$this->__getCategoria()[2][0]] =  $this->dados->val($i,2,2);
+		 		}
+		 		else if ($i==35){
+		 			$this->natureza[$this->__getCategoria()[3][0]] =  $this->dados->val($i,2,2);
+		 		}
+		 		else if ($i==36){
+		 			$this->natureza[$this->__getCategoria()[4][0]] =  $this->dados->val($i,2,2);
+		 		}
+		 		else if ($i==37){
+		 			$this->natureza[$this->__getCategoria()[5][0]] =  $this->dados->val($i,2,2);
+		 		}
+		 		else if ($i>38 && $i<41){
+		 			$this->natureza[$this->__getCategoria()[6][$auxNatureza3]] =  $this->dados->val($i,2,2);
+		 			//echo $this->natureza[$this->__getCategoria()[6][$auxNatureza3]];
+		 			$auxNatureza3++;
+		 		}
+
+		 }
 	}
 	
 	public function __setNatureza($natureza){
