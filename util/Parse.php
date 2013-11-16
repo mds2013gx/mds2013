@@ -16,7 +16,7 @@ class Parse{
 	
 	public function __construct($planilha){
 		try{
-			if($planilha = "série histórica - 2001 - 2012 2.xls"){
+			if($planilha = "sï¿½rie histï¿½rica - 2001 - 2012 2.xls"){
 				$this->parseDeSerieHistorica();
 			}
 			else if($planilha = "JAN_SET_2011_12  POR REGIAO ADM_2.xls"){
@@ -134,7 +134,45 @@ class Parse{
 	}//fim do metodo parseDeSerieHistorica
 	
 	public function parsePorRegiao(){
+		$numeroLinhas = 41;
+		$numeroColunas = 13;
 		
+		//Loop para pegar os nomes das categorias de tabela parserQuadrimestral	
+		for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
+			if($i == 8){
+				$this->categoria[$auxCategoria] = $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+			if($i == 12){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+			if($i == 34){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+
+			if($i == 35){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+			
+			if($i == 36){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+
+			if($i == 37){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}
+			
+			if($i == 39){
+				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
+			}
+			
+
+		}
 	}
 	
 	public function parseDeQuadrimestre(){
