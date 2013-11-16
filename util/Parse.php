@@ -217,6 +217,25 @@ class Parse{
 		 		}
 
 		 }
+		 //Loop de total 2012
+		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->total['Ano2012'][$auxAno2012] =  $this->dados->val($i,3,2);
+		 		$auxAno2012++;
+		 }
+		 //Loop de total 2013
+		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
+		 		if($i==11) continue;
+		 		if($i==26) continue;
+		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
+
+		 		$this->total['Ano2013'][$auxAno2013] =  $this->dados->val($i,4,2);
+		 		//echo $this->total['Ano2013'][$auxAno2013]."<br>";
+		 		$auxAno2013++;
+		 }
 	}
 	
 	public function __setNatureza($natureza){
