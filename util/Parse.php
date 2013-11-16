@@ -138,192 +138,61 @@ class Parse{
 	public function parsePorRegiao(){
 		
 	}
-	
+	//Desenvolvimento SPRINT#2
+	//@author: Lucas Carvalho
+	//Refatoração de parse quadrimestral
 	public function parseDeQuadrimestre(){
 		$numeroLinhas = 41;
 		$numeroColunas = 13;
 		
-		//Loop para pegar os nomes das categorias de tabela parserQuadrimestral	
+		//Loop para pegar os nomes das categorias de tabela parserQuadrimestral
+		//@author: Lucas Carvalho
+		//Refatorando parte do método que procura por categorias	
 		for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
-			if($i == 8){
+			if(($i == 8) || ($i == 12) || ($i == 34) || ($i == 35) || ($i == 36) || ($i == 37) || ($i == 39) ){
 				$this->categoria[$auxCategoria] = $this->dados->val($i,1,2);
 				$auxCategoria++;
-			}
-			if($i == 12){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-				$auxCategoria++;
-			}
-			if($i == 34){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-				$auxCategoria++;
-			}
-
-			if($i == 35){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-				$auxCategoria++;
+			}else{
+				continue;
 			}
 			
-			if($i == 36){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-				$auxCategoria++;
-			}
-
-			if($i == 37){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-				$auxCategoria++;
-			}
-			
-			if($i == 39){
-				$this->categoria[$auxCategoria] =  $this->dados->val($i,1,2);
-			}
-			
-
 		}
-		// loop de natureza
-		$auxNatureza1=0;
-		$auxNatureza2=0;
-		$auxNatureza3=0;
-
-		 for($i=8,$auxNatureza=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
+		//Loop
+		//@author: Lucas Carvalho / Sergio Silva
+		//Refatoração: Ajustar dimenções do vetor natureza para diminuir a complexidade de população do vetor.
+		for($i=8,$auxNatureza=0;$i< $numeroLinhas;$i++){
 		 		// Val ÃƒÂ© o valor da cÃƒÂ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
-		 		if ($i>7 && $i<11){
-		 			$this->natureza[$this->__getCategoria()[0][$auxNatureza1]] =  $this->dados->val($i,2,2);
-		 			$auxNatureza1++;
+		 		if($i>7 && $i<11){
+		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>11 && $i<32){
+		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==34){
+		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==35){
+		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==36){
+		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==37){
+		 			$this->natureza[$this->__getCategoria()[5]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>38 && $i<41){
+		 			$this->natureza[$this->__getCategoria()[6]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else{
+		 			continue;
 		 		}
-		 		else if ($i>11 && $i<32){
-		 			$this->natureza[$this->__getCategoria()[1][$auxNatureza2]] =  $this->dados->val($i,2,2);
-		 			$auxNatureza2++;
-
-		 		}
-
-		 		else if ($i==34){
-		 			$this->natureza[$this->__getCategoria()[2][0]] =  $this->dados->val($i,2,2);
-		 		}
-		 		else if ($i==35){
-		 			$this->natureza[$this->__getCategoria()[3][0]] =  $this->dados->val($i,2,2);
-		 		}
-		 		else if ($i==36){
-		 			$this->natureza[$this->__getCategoria()[4][0]] =  $this->dados->val($i,2,2);
-		 		}
-		 		else if ($i==37){
-		 			$this->natureza[$this->__getCategoria()[5][0]] =  $this->dados->val($i,2,2);
-		 		}
-		 		else if ($i>38 && $i<41){
-		 			$this->natureza[$this->__getCategoria()[6][$auxNatureza3]] =  $this->dados->val($i,2,2);
-		 			//echo $this->natureza[$this->__getCategoria()[6][$auxNatureza3]];
-		 			$auxNatureza3++;
-		 		}
-
-		 }
-		 //Loop de total 2012
-		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->total['Ano2012'][$auxAno2012] =  $this->dados->val($i,3,2);
-		 		$auxAno2012++;
-		 }
-		 //Loop de total 2013
-		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->total['Ano2013'][$auxAno2013] =  $this->dados->val($i,4,2);
-		 		//echo $this->total['Ano2013'][$auxAno2013]."<br>";
-		 		$auxAno2013++;
-		 }
-		 //Loop de Janeiro 2012
-		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[0][0][$auxAno2012] =  $this->dados->val($i,6,2);
-		 		$auxAno2012++;
-		 }
-
-		 //Loop de Janeiro 2013
-		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[0][1][$auxAno2013] =  $this->dados->val($i,7,2);
-		 		//echo $this->mes['Janeiro']['ano2013'][$auxAno2013]."<br>";
-		 		$auxAno2013++;
-		 }
-
-		 //Loop de Fevereiro 2012
-		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[1][0][$auxAno2012] =  $this->dados->val($i,8,2);
-		 		//echo $this->mes['Fevereiro']['ano2012'][$auxAno2012]."<br>";
-		 		$auxAno2012++;
-		 }
-
-		  //Loop de Fevereiro 2013
-		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[1][1][$auxAno2013] =  $this->dados->val($i,9,2);
-		 		//echo $this->mes['Fevereiro']['ano2013'][$auxAno2013]."<br>";
-		 		$auxAno2013++;
-		 }
-		 //Loop de marÃƒÂ§o 2012
-		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[2][0][$auxAno2012] =  $this->dados->val($i,10,2);
-		 		//echo $this->mes['Marco']['ano2012'][$auxAno2012]."<br>";
-		 		$auxAno2012++;
-		 }
-
-		  //Loop de marÃƒÂ§o 2013
-		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[2][1][$auxAno2013] =  $this->dados->val($i,11,2);
-		 		//echo $this->mes['Marco']['ano2013'][$auxAno2013]."<br>";
-		 		$auxAno2013++;
-		 }
-		//Loop de Abril 2012
-		 for($i=8,$auxAno2012=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[3][0][$auxAno2012] =  $this->dados->val($i,12,2);
-		 		//echo $this->mes['Abril']['ano2012'][$auxAno2012]."<br>";
-		 		$auxAno2012++;
-		 }
-
-		  //Loop de Abril 2013
-		 for($i=8,$auxAno2013=0;$i< $numeroLinhas;$i++){
-		 		if($i==11) continue;
-		 		if($i==26) continue;
-		 		if($i==31 || $i==32 || $i==33 || $i==38 || $i==41) continue;
-
-		 		$this->mes[3][1][$auxAno2013] =  $this->dados->val($i,13,2);
-		 		//echo $this->mes['Abril']['ano2013'][$auxAno2013]."<br>";
-		 		$auxAno2013++;
-		 }
-		 
-		
+		/**		 
+		* Loop que pega as informações sobre tempo da planilha
+		* @author Lucas Carvalho
+		*/
+		for($i=5, $auxTempo = 0; $i<numeroColunas; $i++){
+			$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
+		}
 		//Loop que popula a matriz de crime
 		for($i = 8,$auxHilmer = 0,$auxCategoria=0,$auxTorradas=0, $auxLinha=0; $i<$numeroLinhas;$i++,$auxTorradas++){
 			if($i==11|| $i==26|| $i==31 ||  $i==32 || $i==33 || $i==38 || $i==41) continue;
