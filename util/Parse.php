@@ -320,6 +320,44 @@ class Parse{
 		 		//echo $this->mes['Abril']['ano2013'][$auxAno2013]."<br>";
 		 		$auxAno2013++;
 		 }
+		 
+		
+		//Loop que popula a matriz de crime
+		for($i = 8,$auxHilmer = 0,$auxCategoria=0,$auxTorradas=0, $auxLinha=0; $i<$numeroLinhas;$i++,$auxTorradas++){
+			if($i==11|| $i==26|| $i==31 ||  $i==32 || $i==33 || $i==38 || $i==41) continue;
+			//for($j=6, $auxCategoria=0,$auxTorradas = 0; $j<$numeroColunas; $j++, $auxTorradas++){
+				
+				if($i<11 && $i>7){
+					$auxCategoria=0;
+				}
+
+				else if($i>11 && $i<31){
+					$auxCategoria=1;
+				}
+
+				else if($i==34){
+					$auxCategoria=2;	
+				}
+
+				else if($i==35){
+					$auxCategoria=3;
+				}
+
+				else if($i==36){
+					$auxCategoria=4;
+				}
+
+				else if($i==37){
+					$auxCategoria=5;
+				}
+				else if($i>38 && $i<41){
+					$auxCategoria=6;
+				}
+				//essa parte mostra aonde estah errado
+				echo $this->__getNatureza()[$this->__getCategoria()[0][0]];
+				//echo $this->__getNatureza()[$this->__getCategoria()[$auxCategoria][$auxTorradas]]."<br>";
+				//echo $this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria][$auxLinha] ]] [$this->mes[$auxMes][$auxAno]];
+		}
 	}
 	
 	public function __setNatureza($natureza){
