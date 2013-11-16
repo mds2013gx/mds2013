@@ -1,4 +1,9 @@
 <?php
+/**
+ *	Desenvolvimento dos testes automatizados da classe Parse
+ *	@author Lucas Carvalho
+ *	@copyright Radar Criminal 2013
+ */
 require_once "../../util/Parse.php";
 class ParseTeste extends PHPUnit_Framework_Testcase{
 	
