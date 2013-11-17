@@ -631,7 +631,7 @@ function circle_progess() {
 		$(this).find(".count > .number").countTo({
 			
 			from: 0,
-		    to: endValue,
+		    to: 70,
 		    speed: countSpeed,
 		    refreshInterval: 50,
 		    onComplete: function(value) {

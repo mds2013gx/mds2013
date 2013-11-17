@@ -315,7 +315,7 @@ function charts() {
 		
 			var chartColor = $(this).parent().parent().css("color");
 		
-			var dayOfWeek = ["SUN", "MON", "TUE", "WED", "THR", "FRI", "SAT"];
+			var dayOfWeek = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
 		
 		function gd(year, month, day) {
 		     return new Date(year, month - 1, day).getTime();

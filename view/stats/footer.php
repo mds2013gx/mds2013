@@ -62,9 +62,9 @@
 		<script src="js/retina.js"></script>
 		<script src="js/jquery.placeholder.min.js"></script>
 		<script src="js/wizard.min.js"></script>
-		<script src="js/core.min.js"></script>	
-		<script src="js/charts.min.js"></script>	
-		<script src="js/custom.min.js"></script>
+		<script src="js/core.js"></script>	
+		<script src="js/charts.js"></script>	
+		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
 	
 </body>
