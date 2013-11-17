@@ -8,5 +8,5 @@ switch($pagina){
 		include('C:/xampp/htdocs/mds2013/view/type.php');
 		break;
 	default:
-		include('C:/xampp/htdocs/mds2013/view/initial.php');	
+		include('./view/index.php');	
 }

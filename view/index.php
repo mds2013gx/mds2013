@@ -1,7 +1,11 @@
 <?php 
 	include 'header.php';
 ?>
-
+<?php include_once('../views/CrimeView.php');
+	include_once('../views/TempoView.php');
+	$crimeVW = new CrimeView();
+	$tempoVW = new TempoView();
+?>
 			<!-- start: Content -->
 			<div id="content" class="span10">
 			
@@ -41,8 +45,8 @@
 			<div class="row-fluid">
 				
 				<div class="main-chart">
-					
-					<div class="bar">
+					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
+					<!--<div class="bar">
 						
 						<div class="title">JAN</div>
 						<div class="value">80%</div>
@@ -118,7 +122,7 @@
 						<div class="value">20%</div>
 					
 					</div>
-					
+
 					<div class="bar simple">
 						
 						<div class="title">DEZ</div>
@@ -180,7 +184,7 @@
 						<div class="title">AGO</div>
 						<div class="value">65%</div>
 					
-					</div>		
+					</div> -->	
 					
 				</div>	
 			

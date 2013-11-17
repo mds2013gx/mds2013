@@ -4,6 +4,7 @@ include_once ('C:/xampp/htdocs/mds2013/controller/CategoriaController.php');
 include_once ('C:/xampp/htdocs/mds2013/controller/CrimeController.php');
 include_once ('C:/xampp/htdocs/mds2013/controller/NaturezaController.php');
 include_once ('C:/xampp/htdocs/mds2013/controller/TempoController.php');
+
 class RunParse{
 	private $parse;
 	private $categoriaCO;
@@ -11,6 +12,7 @@ class RunParse{
 	private $naturezaCO;
 	private $tempoCO;
 	public function __construct(){
+	
 		$this->categoriaCO = new CategoriaController();
 		$this->crimeCO = new CrimeController();
 		$this->naturezaCO = new NaturezaController();

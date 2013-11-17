@@ -38,7 +38,6 @@ class Parse{
 	}
 	//ParsePorSerieHistorica 
 	public function parseDeSerieHistorica(){
-		try{
 			//if($this->dados->val(2, 1,1) != "Natureza"){
 			//	throw new EPlanilhaSerieIncompativel();
 			//}
@@ -46,6 +45,7 @@ class Parse{
 			$numeroColunas = 15;
 			//loop que pega a natureza
 			for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
+				
 				if($i == 2){
 					$this->categoria[$auxCategoria] = $this->dados->val($i,1,1);
 					$auxCategoria++;
@@ -122,17 +122,17 @@ class Parse{
 			//if(($this->__getCrime() ==  null) || (empty($this->__getCrime())== true)){
 			//	throw EFalhaLeituraSerieCrime();
 			//}
-		}catch(EPlanilhaSerieIncompativel $e){
-			echo $e->getMessage();
-		}catch (EFalhaLeituraSerieCategoria $e){
-			echo $e->getMessage();
-		}catch(EFalhaLeituraSerieNatureza $e){
-			echo $e->getMessage();
-		}catch(EFalhaLeituraSerieTempo $e){
-			echo $e->getMessage();
-		}catch(EFalhaLeituraSerieCrime $e){
-			echo $e->getMessage();
-		}
+		//}catch(EPlanilhaSerieIncompativel $e){
+		//	echo $e->getMessage();
+		//}catch (EFalhaLeituraSerieCategoria $e){
+		//	echo $e->getMessage();
+		//}catch(EFalhaLeituraSerieNatureza $e){
+		//	echo $e->getMessage();
+		//}catch(EFalhaLeituraSerieTempo $e){
+		//	echo $e->getMessage();
+		//}catch(EFalhaLeituraSerieCrime $e){
+		//	echo $e->getMessage();
+		//}
 	}//fim do metodo parseDeSerieHistorica
 	
 	public function parsePorRegiao(){
