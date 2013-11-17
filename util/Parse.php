@@ -13,16 +13,18 @@ class Parse{
 	private $crime;
 	private $categoria;
 	private $dados;
+	private $total;
+	private $mes;
 	
 	public function __construct($planilha){
 		try{
-			if($planilha = "série histórica - 2001 - 2012 2.xls"){
+			if($planilha = "sï¿½rie histï¿½rica - 2001 - 2012 2.xls"){
 				$this->parseDeSerieHistorica();
 			}
 			else if($planilha = "JAN_SET_2011_12  POR REGIAO ADM_2.xls"){
 				$this->parsePorRegiao();
 			}
-			else if($planilha = "Quadrimestre_final.2013"){
+			else if($planilha = "Quadrimestre_final.2013.xls"){
 				$this->parseDeQuadrimestre();
 			}
 			else{
@@ -36,7 +38,6 @@ class Parse{
 	}
 	//ParsePorSerieHistorica 
 	public function parseDeSerieHistorica(){
-		//try{
 			//if($this->dados->val(2, 1,1) != "Natureza"){
 			//	throw new EPlanilhaSerieIncompativel();
 			//}
@@ -137,11 +138,110 @@ class Parse{
 	public function parsePorRegiao(){
 		
 	}
-	
+	/**
+	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre
+	*	@access public
+	*	@author Bruno Rodrigues
+	*	@author Eliseu Egewarth
+	*	@author Lucas Andrade	
+	*	@author Lucas Carvalho
+	*	@author Lucas Santos
+	*	@author Sérgio Bezerra
+	*	@author Thiago Honorato
+	*	@tutorial Método realizado durante sprint 2, atulizando arrays para cada campo, para depois ir para persistência.
+	*/
 	public function parseDeQuadrimestre(){
-		
+		$numeroLinhas = 41;
+		$numeroColunas = 13;
+		/**
+		* Loop para pegar os nomes das categorias contidas na planilha
+		* @author Lucas Carvalho
+		* @tutorial Refatoração do metodo antes implementados por outros autores 	 
+		*/	
+		for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
+			if(($i == 8) || ($i == 12) || ($i == 34) || ($i == 35) || ($i == 36) || ($i == 37) || ($i == 39) ){
+				$this->categoria[$auxCategoria] = $this->dados->val($i,1,2);
+				$auxCategoria++;
+			}else{
+				continue;
+			}
+			
+		}
+		/**
+		* Loop para pegar os nomes das naturezas contidas na planilha
+		* @author Lucas Carvalho
+		* @author Sérgio Bezerra
+		* @tutorial Refatoração para ajustar dimenções do vetor natureza para diminuir a complexidade de população do vetor
+		*/
+		for($i=8,$auxNatureza=0;$i< $numeroLinhas;$i++){
+		 		// Val ÃƒÂ© o valor da cÃƒÂ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
+		 		if($i>7 && $i<11){
+		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>11 && $i<32){
+		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==34){
+		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==35){
+		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==36){
+		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i==37){
+		 			$this->natureza[$this->__getCategoria()[5]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>38 && $i<41){
+		 			$this->natureza[$this->__getCategoria()[6]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else{
+		 			continue;
+		 		}
+		} 		
+		/**		 
+		* Loop que pega as informações sobre tempo da planilha
+		* @author Lucas Carvalho
+		*/
+		for($i=5, $auxTempo = 0; $i<numeroColunas; $i++){
+			$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
+			$auxTempo++;
+		}
+		/**
+		* Loop que pega as informações do crime da planilha
+		* @author Lucas Carvalho 
+		*/
+		for($i = 8, $auxLinha = 0; $i<$numeroLinhas; $i++){
+			if(($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
+				continue;
+			}else{
+				for($j = 5, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
+					if(($j % 2) == 0){
+						continue;
+					}
+					if($i>7 && $i<11){
+						$auxCategoria = 0;
+					}else if($i>11 && $i<32){
+						$auxCategoria = 1;
+					}else if($i==34){
+						$auxCategoria = 2;
+					}else if($i==35){
+						$auxCategoria = 3;
+					}else if($i==36){
+						$auxCategoria = 4;
+					}else if($i==37){
+						$auxCategoria = 5;
+					}else if($i>38 && $i<41){
+						$auxCategoria = 6;
+					}
+					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
+					$auxColuna++;
+					}	
+				$auxLinha++;
+			}
+		}
 	}
-	
 	public function __setNatureza($natureza){
 		$this->natureza = $natureza;
 	}
