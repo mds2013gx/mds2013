@@ -67,4 +67,25 @@ class CrimeController{
 		}
 		return "data : [$dadosCrime[0],$dadosCrime[1],$dadosCrime[2],$dadosCrime[3],$dadosCrime[4],$dadosCrime[5],$dadosCrime[6],$dadosCrime[7],$dadosCrime[8],$dadosCrime[9],$dadosCrime[10]]";
 	}
+	
+	//Metodo duplicado para adaptacao do retorno de dados para a nova interface
+	/**
+	 * @author Eduardo Augusto
+	 * @author Sergio Silva
+	 * @author Eliseu Egewarth
+	 * @copyright RadarCriminal 2013
+	 **/
+	public function _retornarDadosDeSomaFormatoNovo(){
+		$tempoDAO = new TempoDAO();
+		$dadosTempo = new Tempo();
+		$arrayDadosTempo = $tempoDAO->listarTodos();
+		for($i=0; $i<count($arrayDadosTempo);$i++){
+			$dadosTempo = $arrayDadosTempo[$i];
+			$dados[$i] = $dadosTempo->__getIntervalo();
+		}
+		for($i=0;$i<count($dados);$i++){
+			$dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
+		}
+		return "data : [$dadosCrime[0],$dadosCrime[1],$dadosCrime[2],$dadosCrime[3],$dadosCrime[4],$dadosCrime[5],$dadosCrime[6],$dadosCrime[7],$dadosCrime[8],$dadosCrime[9],$dadosCrime[10]]";
+	}
 }
