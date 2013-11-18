@@ -35,6 +35,30 @@
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
 			$this->assertInstanceOf('Categoria', $categoriaController->_consultarPorId(1));
 		}
-		
+		public function testConsultarPorNome()
+		{
+			$categoriaController = new CategoriaController();
+			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
+			$this->assertInstanceOf('CategoriaController', $categoriaController);
+			$this->assertInstanceOf('Categoria', $categoriaController->_consultarPorNome('Criminalidade'));
+		}
+		public function testInserirCategoria()
+		{
+			$categoriaController = new CategoriaController();
+			$categoria = new Categoria();
+			$this->assertNull($categoriaController->_inserirCategoria($categoria));
+			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
+			$this->assertInstanceOf('CategoriaController', $categoriaController);
+			$this->assertInstanceOf('Categoria', $categoria);
+		}
+		public function testInserirCategoriaArrayParse()
+		{
+			$categoriaController = new CategoriaController();
+			$categoria = new Categoria();
+			$this->assertNull($categoriaController->_inserirCategoriaArrayParse(0));
+			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
+			$this->assertInstanceOf('CategoriaController', $categoriaController);
+			$this->assertInstanceOf('Categoria', $categoria);
+		}
 	}
 ?>
