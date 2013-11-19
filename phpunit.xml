@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <phpunit
+<phpunit
                convertErrorsToExceptions="true"
                convertNoticesToExceptions="true"
                convertWarningsToExceptions="true"
@@ -15,13 +15,13 @@
            <directory>test\persistence</directory>
        </testsuite>
    </testsuites>
-</phpunit> -->
+</phpunit>
 
-<phpunit><testsuites><testsuite name="Generated">
-<!--<file>test\controller\CategoriaControllerTeste.php</file>
+<!-- <phpunit><testsuites><testsuite name="Generated">
+<file>test\controller\CategoriaControllerTeste.php</file>
 <file>test\controller\NaturezaControllerTeste.php</file>
-<file>test\model\CategoriaTeste.php</file> -->
+<file>test\model\CategoriaTeste.php</file>
 <file>test\model\CrimeTeste.php</file>
-<!--<file>test\model\TempoTeste.php</file>
-<file>test\persistence\NaturezaDAOTeste.php</file>-->
-</testsuite></testsuites></phpunit>
+<file>test\model\TempoTeste.php</file>
+<file>test\persistence\NaturezaDAOTeste.php</file>
+</testsuite></testsuites></phpunit> -->

@@ -87,7 +87,7 @@ class CrimeController{
                         $dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
                 }
 
-                return "					<div class=\"bar\">
+                return "					<div class=\"bar\" title=\"$dadosCrime[0]\"]>
 						
 						<div class=\"title\">$dados[0]</div>
 						<div class=\"value\">$dadosCrime[0]</div>

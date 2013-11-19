@@ -101,19 +101,25 @@ function charts() {
 	}
 	
 	/* ---------- Main Chart ---------- */
+
 	if($('.main-chart')) {
 		
 		$('.bar').each(function(){
 			
-			var percent = $(this).find('.value').html();
+			var value = $(this).find(".value").html();
+
+			var percent = (value * 100) / 250000;
+
+			var psign = "%";
 			
 			$(this).find('.value').html('');
 			
-			$(this).find('.value').animate({height:percent}, 2000);
+			$(this).find('.value').animate({height:percent.psign}, 2000);
 			
 		});
 		
 	}
+
 	
 	/* ---------- Bar Stats ---------- */
 	if($('.bar-stat').length) {
