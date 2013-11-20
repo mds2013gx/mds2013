@@ -21,7 +21,7 @@ class CrimeController{
 		return $this->crimeDAO->consultarPorIdNatureza($natureza);
 	}
 	public function _consultarPorIdTempo($tempo){
-		return $this->crimeDAO->consultarPorIdNatureza($tempo);
+		return $this->crimeDAO->consultarPorIdTempo($tempo);
 	}
 	public function _inserirCrime(Crime $crime){
 		return $this->crimeDAO->inserirCrime($crime);
@@ -53,6 +53,7 @@ class CrimeController{
 			}
 			next($arrayKey);
 		}
+		return $dadosNatureza;
 	}
 	public function _retornarDadosDeSomaFormatado(){
 		$tempoDAO = new TempoDAO();
