@@ -68,8 +68,8 @@ class NaturezaDAO{
 	public function inserirNatureza(Natureza $natureza){
 		$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$natureza->__getIdCategoria()}','{$natureza->__getNatureza()}')";
 		$this->conexao->banco->Execute($sql);	
-		if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
-			throw new EConexaoFalha();	
-		}				
+		//if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
+		//	throw new EConexaoFalha();	
+		//}				
 	}
 }
