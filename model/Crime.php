@@ -9,9 +9,9 @@ class Crime{
 	private $exceptionCrime;
 	
 	public function __setIdCrime($idCrime){
-		$exceptionCrime = new EFalhaLeituraSerieCrime();
+		
 		if(!is_int($idCrime)){
-			throw $exceptionCrime;
+			throw new EFalhaLeituraSerieCrime();
 			echo $exceptionCrime->getMessage();
 		}
 		else {
@@ -22,40 +22,38 @@ class Crime{
 		return $this->idCrime;
 	}
 	public function __setQuantidade($quantidade){
-		//$exceptionCrime = new EFalhaLeituraSerieCrime();
-		//if( (!is_int($quantidade)) || (is_float($quantidade)) ){
-		//	throw $exceptionCrime;
-		//	echo $exceptionCrime->getMessage();
-		//}
-		//else{
+		if( (!is_array($quantidade)) || (is_float($quantidade)) ){
+			throw new EFalhaLeituraSerieCrime();
+			echo $exceptionCrime->getMessage();
+		}
+		else{
 			$this->quantidade = $quantidade;
-		//}
+		}
 	}
 	public function __getQuantidade(){
 		return $this->quantidade;
 	}
 	public function __setIdTempo($idTempo){
-		//$exceptionCrime = new EFalhaLeituraSerieCrime();
-		//if((!is_int($idTempo)) || (is_float($idTempo))){
-		//	throw $exceptionCrime;
-		//	echo $exceptionCrime->getMessage();
-		//}
-		//else{
+		$exceptionCrime = new EFalhaLeituraSerieCrime();
+		if((!is_numeric($idTempo)) || (is_float($idTempo))){
+			throw $exceptionCrime;
+			echo $exceptionCrime->getMessage();
+		}
+		else{
 			$this->idTempo = $idTempo;
-		//}
+		}
 	}
 	public function __getIdTempo(){
 		return $this->idTempo;
 	}
 	public function __setIdNatureza($idNatureza){
-		//$exceptionCrime = new EFalhaLeituraSerieCrime();
-		//if(!is_int($idNatureza)){
-		//	throw $exceptionCrime;
-		//	echo $exceptionCrime->getMessage();
-		//}
-		//else{
+		if(!is_numeric($idNatureza)){
+			throw new EFalhaLeituraSerieCrime();
+			echo $exceptionCrime->getMessage();
+		}
+		else{
 			$this->idNatureza = $idNatureza;
-	//	}
+		}
 	}
 	public function __getIdNatureza(){
 		return $this->idNatureza;
