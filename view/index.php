@@ -46,12 +46,6 @@
 				
 				<div class="main-chart">
 					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
-					<div class="bar">
-						
-						<div class="title">JAN</div>
-						<div class="value">80%</div>
-					
-					</div>
 					<!--<div class="bar">
 						
 						<div class="title">JAN</div>

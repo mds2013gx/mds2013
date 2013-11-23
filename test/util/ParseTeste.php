@@ -4,7 +4,7 @@
  *	@author Lucas Carvalho
  *	@copyright Radar Criminal 2013
  */
-require_once "../../util/Parse.php";
+require_once ('C:/xampp/htdocs/mds2013/util/Parse.php');
 class ParseTeste extends PHPUnit_Framework_Testcase{
 	
 	public function testExistenciaInstanciaParseSerieHistorica(){

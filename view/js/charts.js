@@ -108,13 +108,13 @@ function charts() {
 			
 			var value = $(this).find(".value").html();
 
-			var percent = (value * 100) / 250000;
+			var percentValue = (value * 100) / 200000;
 
-			var psign = "%";
+			var finalValue = (300 * percentValue) / 100;
 			
 			$(this).find('.value').html('');
 			
-			$(this).find('.value').animate({height:percent.psign}, 2000);
+			$(this).find('.value').animate({height:finalValue}, 2000);
 			
 		});
 		
