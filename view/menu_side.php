@@ -20,7 +20,7 @@
 							</ul>
 						</li>
 						<li>
-							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades</span> <span class="label">4</span></a>
+							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades</span> <span class="label">5</span></a>
 							<ul>
 								<li><a class="submenu" href="tasks.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Mês</span></a></li>
 								<li><a class="submenu" href="tasks.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Bimestre</span></a></li>

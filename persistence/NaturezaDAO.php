@@ -65,6 +65,9 @@ class NaturezaDAO{
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				
 		return $dadosNatureza;
 	}
+
+
+
 	public function inserirNatureza(Natureza $natureza){
 		$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$natureza->__getIdCategoria()}','{$natureza->__getNatureza()}')";
 		$this->conexao->banco->Execute($sql);	
