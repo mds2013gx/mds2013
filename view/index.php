@@ -38,7 +38,7 @@
 				<div class="span3 smallstat mobileHalf box" onTablet="span6" onDesktop="span3">
 					<i class="icon-certificate yellow"></i>
 					<span class="title">Furto</span>
-					<span class="value"><?php echo  number_format($crimeVW->somaTotalFurtos(),0,',','.') ?></span>
+					<span class="value"><?php echo number_format($crimeVW->somaTotalFurtos(),0,',','.') ?></span>
 				</div>
 			
 			</div>	
@@ -46,147 +46,8 @@
 			<div class="row-fluid">
 				
 				<div class="main-chart">
+					<!--Impressão de gráfico em barras-->
 					<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
-					<!--<div class="bar">
-						
-						<div class="title">JAN</div>
-						<div class="value">80%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">FEV</div>
-						<div class="value">60%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">MAR</div>
-						<div class="value">50%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">ABR</div>
-						<div class="value">40%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">MAI</div>
-						<div class="value">10%</div>
-					
-					</div>	
-					
-					<div class="bar simple">
-						
-						<div class="title">JUN</div>
-						<div class="value">30%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">JUL</div>
-						<div class="value">50%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">AGO</div>
-						<div class="value">65%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">SET</div>
-						<div class="value">40%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">OUT</div>
-						<div class="value">32%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">NOV</div>
-						<div class="value">20%</div>
-					
-					</div>
-
-					<div class="bar simple">
-						
-						<div class="title">DEZ</div>
-						<div class="value">10%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">JAN</div>
-						<div class="value">100%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">FEV</div>
-						<div class="value">60%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">MAR</div>
-						<div class="value">50%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">ABR</div>
-						<div class="value">40%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">MAI</div>
-						<div class="value">10%</div>
-					
-					</div>	
-					
-					<div class="bar simple">
-						
-						<div class="title">JUN</div>
-						<div class="value">30%</div>
-					
-					</div>
-					
-					<div class="bar">
-						
-						<div class="title">JUL</div>
-						<div class="value">50%</div>
-					
-					</div>
-					
-					<div class="bar simple">
-						
-						<div class="title">AGO</div>
-						<div class="value">65%</div>
-					
-					</div> -->	
-					
 				</div>	
 			
 			</div>	
@@ -213,11 +74,11 @@
 									<ul>
 										<li>
 											<span class="date">Homicídio</span>
-											<span class="value"><?php //echo $crimeVW->retornarDadosHomicidio2010-2011() ?>1.360</span>
+											<span class="value"><?php echo number_format($crimeVW->somaHomicidios2010_2011(),0,',','.') ?></span>
 										</li>
 										<li class="active">
 											<span class="date">Tentativa de Homicídio</span>
-											<span class="value"><?php //echo $crimeVW->retornarDadosTentativaHomicidio2010-2011() ?>2.209</span>
+											<span class="value"><?php echo number_format($crimeVW->retornarDadosTentativaHomicidio2010_2011(),0,',','.') ?></span>
 										</li>
 										<li>
 											<span class="date">Lesão Corporal</span>

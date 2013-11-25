@@ -50,4 +50,12 @@ class CrimeView{
         public function somaTotalFurtos(){
                 return $this->crimeCO->_somaTotalFurtos();
         }
+
+        public function somaHomicidios2010_2011(){
+                return $this->crimeCO->_somaHomicidios2010_2011();
+        }
+
+        public function retornarDadosTentativaHomicidio2010_2011(){
+                return $this->crimeCO->_retornarDadosTentativaHomicidio2010_2011();
+        }
 }

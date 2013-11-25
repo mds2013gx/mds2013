@@ -37,6 +37,10 @@ class CrimeController{
                 return $this->crimeDAO->somaDeCrimePorAno($ano);
         }
 
+        public function _somaTotalTentativasHomicidio($ano){
+                return $this->crimeDAO->somaTotalTentativasHomicidio($ano);
+        }
+
         /**
         *Elaboracao de metodo para somatorio de todos os anos
         * @author Sergio Bezerra da Silva
@@ -200,6 +204,24 @@ class CrimeController{
         }
         public function _somaTotalFurtos(){
             return $this->crimeDAO->somaTotalFurtos();
+        }
+
+        public function _somaHomicidios2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaHomicidios2010_2011[] = $this->_somaDeCrimePorAno($i);
+            }
+
+            $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
+            return $retornoHomicidios2010_2011;
+        }
+
+        public function _retornarDadosTentativaHomicidio2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaTentativaHomicidio2010_2011[] = $this->_somaTotalTentativasHomicidio($i);
+            }
+
+            $retornoTentativaHomicidio2010_2011 = array_sum($somaTentativaHomicidio2010_2011);
+            return $retornoTentativaHomicidio2010_2011;
         }
 
 
