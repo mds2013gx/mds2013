@@ -26,8 +26,29 @@ class CrimeController{
         public function _inserirCrime(Crime $crime){
                 return $this->crimeDAO->inserirCrime($crime);
         }
+        //Implementação de consultas para apresentacao na view | Apenas utilização de consultas já prontas
+        /**
+         * @author Eduardo Augusto
+         * @author Sergio Silva
+         * @copyright RadarCriminal 2013
+         **/
         public function _somaDeCrimePorAno($ano){
                 return $this->crimeDAO->somaDeCrimePorAno($ano);
+        }
+
+        /**
+        *Elaboracao de metodo para somatorio de todos os anos
+        * @author Sergio Bezerra da Silva
+        * @author Lucas Andrade Ribeiro
+        * @copyright RadarCriminal 2013
+        **/
+        public function _somaCrimeTodosAnos(){
+            for($i=2001; $i<2012; $i++){
+                $somaTodosAnos[] = $this->_somaDeCrimePorAno($i);
+            }
+
+            $retornoSomaTodosAnos = array_sum($somaTodosAnos);
+            return $retornoSomaTodosAnos;
         }
         public function _somaDeCrimePorNatureza($natureza){
                 return $this->crimeDAO->somaDeCrimePorNatureza($natureza);
@@ -163,5 +184,20 @@ class CrimeController{
 						<div class=\"value\">$dadosCrime[10]</div>
 					
 					</div>";
+        }
+        //Metodo de somar todos homicícios por ano        
+        /**
+         * @author Lucas Andrade Ribeiro
+         * @author Sergio Silva
+         * @copyright RadarCriminal 2013
+         **/
+        public function _somaTotalHomicidios(){
+            return $this->crimeDAO->somaTotalHomicidios();
+        }
+        public function _somaTotalRoubo(){
+            return $this->crimeDAO->somaTotalRoubo();
+        }
+        public function _somaTotalFurtos(){
+            return $this->crimeDAO->somaTotalFurtos();
         }
 }

@@ -5,6 +5,7 @@
 	include_once('../views/TempoView.php');
 	$crimeVW = new CrimeView();
 	$tempoVW = new TempoView();
+
 ?>
 			<!-- start: Content -->
 			<div id="content" class="span10">
@@ -17,7 +18,7 @@
 						<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 					</div>	
 					<span class="title">Ocorrências</span>
-					<span class="value"><?php //echo $crimeVW->_somaDeCrimePorAno($ano) ?>1.403.323</span>
+					<span class="value"><?php echo number_format($crimeVW->somaCrimeTodosAnos(),0,',','.') ?></span>
 				</div>
 				
 				<div class="span3 smallstat box mobileHalf" onTablet="span6" onDesktop="span3">
@@ -25,19 +26,19 @@
 						<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
 					</div>	
 					<span class="title">Homicídios</span>
-					<span class="value"><?php //echo $crimeVW->_somaTotalHomicidios2011($ano) ?>10.498</span>
+					<span class="value"> <?php echo number_format($crimeVW->somaTotalHomicidios(),0,',','.') ?> </span>
 				</div>
 				
 				<div class="span3 smallstat box mobileHalf noMargin" onTablet="span6" onDesktop="span3">
 					<i class="icon-search green"></i>
 					<span class="title">Roubo</span>
-					<span class="value"><?php //echo $crimeVW->_somaTotalRoubo2011($ano) ?>298.557</span>
+					<span class="value"><?php echo  number_format($crimeVW->somaTotalRoubo(),0,',','.') ?></span>
 				</div>
 				
 				<div class="span3 smallstat mobileHalf box" onTablet="span6" onDesktop="span3">
 					<i class="icon-certificate yellow"></i>
 					<span class="title">Furto</span>
-					<span class="value"><?php //echo $crimeVW->_somaTotalFurtos2011($ano) ?>737.685</span>
+					<span class="value"><?php echo  number_format($crimeVW->somaTotalFurtos(),0,',','.') ?></span>
 				</div>
 			
 			</div>	

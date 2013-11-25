@@ -71,11 +71,43 @@ class CrimeDAO{
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
+	 //Metodo de somar todos homicícios por ano        
+        /**
+         * @author Lucas Andrade Ribeiro
+         * @author Sergio Silva
+         * @copyright RadarCriminal 2013
+         **/
+	public function somaTotalHomicidios(){
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 1";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+	 //Metodo de somar todos homicícios por ano        
+        /**
+         * @author Lucas Andrade Ribeiro
+         * @author Sergio Silva
+         * @copyright RadarCriminal 2013
+         **/
+	public function somaTotalRoubo(){
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Roubo%'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+	public function somaTotalFurtos(){
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Furto%'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
 	public function inserirCrime(Crime $crime){
 		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}')";
 		$this->conexao->banco->Execute($sql);
 		if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
 				throw new EConexaoFalha();	
 		}
+
 	}
+	
 }

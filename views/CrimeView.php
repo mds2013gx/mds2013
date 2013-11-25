@@ -24,4 +24,30 @@ class CrimeView{
         public function somaDeCrimePorAno($ano){
                 return $this->crimeCO->_somaDeCrimePorAno($ano);
         }
+ //Metodo duplicado para adaptacao do retorno de dados para a nova interface
+        /**
+        * @author Sergio Silva
+        * @author Lucas Andrade Ribeiro
+        * @copyright RadarCriminal 2013
+        **/
+        public function somaCrimeTodosAnos(){
+                return $this->crimeCO->_somaCrimeTodosAnos();
+        }
+        //Metodo duplicado para adaptacao do retorno de dados para a nova interface
+        /**
+        * @author Lucas Andrade Ribeiro
+        * @author Sergio Silva
+        * @copyright RadarCriminal 2013
+        **/
+        public function somaTotalHomicidios(){
+                return $this->crimeCO->_somaTotalHomicidios();
+        }
+       
+        public function somaTotalRoubo(){
+                return $this->crimeCO->_somaTotalRoubo();
+        }
+       
+        public function somaTotalFurtos(){
+                return $this->crimeCO->_somaTotalFurtos();
+        }
 }
