@@ -26,7 +26,8 @@ class CategoriaController{
 		$dadosCategoria = new Categoria();
 		for($i=0; $i<count($arrayCategoria);$i++){
 			$dadosCategoria->__setNomeCategoria($arrayCategoria[$i]);
-			$this->categoriaDAO->inserirCategoria($dadosCategoria);
+			$retorno = $this->categoriaDAO->inserirCategoria($dadosCategoria);
 		}
+	
 	}
 }

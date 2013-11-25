@@ -6,6 +6,7 @@ include_once('C:/xampp/htdocs/mds2013/model/Crime.php');
 include_once('C:/xampp/htdocs/mds2013/model/Tempo.php');
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 class CrimeController{
+
         private $crimeDAO;
         
         public function __construct(){
@@ -185,7 +186,7 @@ class CrimeController{
 					
 					</div>";
         }
-        //Metodo de somar todos homicícios por ano        
+                //Metodo de somar todos homicícios por ano        
         /**
          * @author Lucas Andrade Ribeiro
          * @author Sergio Silva
@@ -200,4 +201,7 @@ class CrimeController{
         public function _somaTotalFurtos(){
             return $this->crimeDAO->somaTotalFurtos();
         }
+
+
+
 }
