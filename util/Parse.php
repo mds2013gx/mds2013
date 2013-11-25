@@ -242,8 +242,19 @@ class Parse{
 						$auxCategoria = 6;
 					}
 					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
-					print_r($this->__getNatureza());
-					$auxColuna++;
+					/**
+					 * metodo __getNatureza() retorna um array, 
+					 * porem um array de chave numerica. a chave passada no metodo é uma string.
+					 * Possibilidades:
+					 * 1)criar auxNatureza para navegar no array natureza.
+					 * ...
+					 * @author Eliseu
+					 */
+					
+					echo "\n";
+					echo "linha:".$auxLinha++."coluna:".$auxColuna++.": ".$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]];
+					echo "\n";
+					//print_r($this->__getNatureza());
 				}	
 				$auxLinha++;
 			}
