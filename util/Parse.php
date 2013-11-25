@@ -14,23 +14,23 @@ class Parse{
 	private $categoria;
 	private $dados;
 	private $total;
-	private $mes;
 	
 	public function __construct($planilha){
 		try{
-			if($planilha = "sï¿½rie histï¿½rica - 2001 - 2012 2.xls"){
+			$this->dados = new Spreadsheet_Excel_Reader("C:/xampp/htdocs/mds2013/files/".$planilha,"UTF-8");
+			if($planilha == "série histórica - 2001 - 2012 2.xls"){
 				$this->parseDeSerieHistorica();
 			}
-			else if($planilha = "JAN_SET_2011_12  POR REGIAO ADM_2.xls"){
+			else if($planilha == "JAN_SET_2011_12  POR REGIAO ADM_2.xls"){
 				$this->parsePorRegiao();
 			}
-			else if($planilha = "Quadrimestre_final.2013.xls"){
+			else if($planilha == "Quadrimestre_final.2013.xls"){
 				$this->parseDeQuadrimestre();
 			}
 			else{
 				throw new ENomePlanilhaIncompativel();
 			}		
-			$this->dados = new Spreadsheet_Excel_Reader("files/".$planilha,"UTF-8");
+			
 		}
 		catch(ENomePlanilhaIncompativel $e){
 			echo $e->getMessage();
@@ -38,9 +38,10 @@ class Parse{
 	}
 	//ParsePorSerieHistorica 
 	public function parseDeSerieHistorica(){
-			//if($this->dados->val(2, 1,1) != "Natureza"){
-			//	throw new EPlanilhaSerieIncompativel();
-			//}
+		try{
+			if($this->dados->val(1,1,1) != "Natureza"){
+				throw new EPlanilhaSerieIncompativel();
+			}
 			$numeroLinhas = 40;
 			$numeroColunas = 15;
 			//loop que pega a natureza
@@ -58,9 +59,9 @@ class Parse{
 					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
 				}
 			}
-			//if(($this->__getCategoria() == null) || (empty($this->__getCategoria())== true) || (count($this->__getCategoria()) != 3)){
-			//	throw new EFalhaLeituraSerieCategoria();
-			//} 
+			if(($this->__getCategoria() == null) || (count($this->__getCategoria()) != 3)){
+				throw new EFalhaLeituraSerieCategoria();
+			} 
 			//loop que pega natureza do crime
 			for($i=1,$auxNatureza=0; $i<$numeroLinhas; $i++){
 				if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -85,9 +86,10 @@ class Parse{
 					$auxNatureza++;
 				}
 			}
-			//if(($this->__getNatureza() == null) || (empty($this->__getNatureza()) == true) || (count($this->__getNatureza()[0]) !=25) || (count($this->__getNatureza()[1]) !=4) || (count($this->__getNatureza()[1]) != 2)){			
-			//	throw new EFalhaLeituraSerieNatureza();
-			//}
+			print_r($this->__getNatureza());
+			if(($this->__getNatureza() == null) || (count($this->__getNatureza()[0]) !=25) || (count($this->__getNatureza()[1]) !=4) || (count($this->__getNatureza()[1]) != 2)){			
+				throw new EFalhaLeituraSerieNatureza();
+			}
 			//loop que pega os anos disponiveis
 			for($i=1,$auxTempo = 0; $i<$numeroColunas; $i++){
 				if(($i == 1)||($i == 2)||($i == 3)){
@@ -97,9 +99,9 @@ class Parse{
 					$auxTempo++;
 				}
 			}
-			//if(($this->__getTempo() ==  null) || (empty($this->__getTempo())== true) || (count($this->__getTempo()) !=11)){
-			//	throw EFalhaLeituraSerieTempo();
-			//}
+			if(($this->__getTempo() ==  null) || (count($this->__getTempo()) !=11)){
+				throw EFalhaLeituraSerieTempo();
+			}
 			//loop que pega os dados do crime
 			for($i=1,$auxLinha=0; $i<$numeroLinhas; $i++){	
 				if(($i == 1)||($i == 5)||($i == 21)||($i == 27)||($i == 28)||($i == 31)||($i == 32)||($i == 37)||($i == 40)){
@@ -119,20 +121,20 @@ class Parse{
 					$auxLinha++;
 				}
 			}
-			//if(($this->__getCrime() ==  null) || (empty($this->__getCrime())== true)){
-			//	throw EFalhaLeituraSerieCrime();
-			//}
-		//}catch(EPlanilhaSerieIncompativel $e){
-		//	echo $e->getMessage();
-		//}catch (EFalhaLeituraSerieCategoria $e){
-		//	echo $e->getMessage();
-		//}catch(EFalhaLeituraSerieNatureza $e){
-		//	echo $e->getMessage();
-		//}catch(EFalhaLeituraSerieTempo $e){
-		//	echo $e->getMessage();
-		//}catch(EFalhaLeituraSerieCrime $e){
-		//	echo $e->getMessage();
-		//}
+			if(($this->__getCrime() ==  null)){
+				throw EFalhaLeituraSerieCrime();
+			}
+		}catch(EPlanilhaSerieIncompativel $e){
+			echo $e->getMessage();
+		}catch (EFalhaLeituraSerieCategoria $e){
+			echo $e->getMessage();
+		}catch(EFalhaLeituraSerieNatureza $e){
+			echo $e->getMessage();
+		}catch(EFalhaLeituraSerieTempo $e){
+			echo $e->getMessage();
+		}catch(EFalhaLeituraSerieCrime $e){
+			echo $e->getMessage();
+		}
 	}//fim do metodo parseDeSerieHistorica
 	
 	public function parsePorRegiao(){
@@ -204,7 +206,7 @@ class Parse{
 		* Loop que pega as informações sobre tempo da planilha
 		* @author Lucas Carvalho
 		*/
-		for($i=5, $auxTempo = 0; $i<numeroColunas; $i++){
+		for($i=5, $auxTempo = 0; $i<$numeroColunas; $i++){
 			$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
 			$auxTempo++;
 		}
