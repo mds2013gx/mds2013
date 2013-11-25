@@ -322,6 +322,9 @@ function charts() {
 			var chartColor = $(this).parent().parent().css("color");
 		
 			var dayOfWeek = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
+
+			//Variavel adicionada por @author Sérgio Bezerra da Silva | para grafico de crimes contra a vida
+			var yearsOfDecade = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
 		
 		function gd(year, month, day) {
 		     return new Date(year, month - 1, day).getTime();
@@ -350,7 +353,7 @@ function charts() {
 				   xaxis: {
 						mode: "time",       
 							tickFormatter: function (val, axis) {           
-						        return dayOfWeek[new Date(val).getDay()];
+						        return yearsOfDecade[new Date(val).getDay()];
 						    },
 						color: "#c7cbd5",
 						autoscaleMargin: 0.000000000000000001

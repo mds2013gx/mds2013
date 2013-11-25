@@ -202,28 +202,29 @@
 									<a class="icon-chevron-down"></a>
 								</div>
 								<div class="right">
-									<h2>JAN 2010 - JAN 2011</h2>
-									<div class="percent"><i class="icon-double-angle-up"></i> 22%</div>
+									<h2>JAN 2010 - DEZ 2011</h2>
+									<div class="percent"><i class="icon-double-angle-down"></i> 5%</div>
 								</div>
 							</div>
 							<div class="content row-fluid">	
+								<!--Dados retirados das celulas de total e somatorio entre anos 2010 e 2011-->
 								<div class="left">
 									<ul>
 										<li>
 											<span class="date">Homicídio</span>
-											<span class="value">500</span>
+											<span class="value"><?php //echo $crimeVW->retornarDadosHomicidio2010-2011() ?>1.360</span>
 										</li>
 										<li class="active">
 											<span class="date">Tentativa de Homicídio</span>
-											<span class="value">821</span>
+											<span class="value"><?php //echo $crimeVW->retornarDadosTentativaHomicidio2010-2011() ?>2.209</span>
 										</li>
 										<li>
 											<span class="date">Lesão Corporal</span>
-											<span class="value">12230</span>
+											<span class="value"><?php //echo $crimeVW->retornarDadosLesaoCorporal2010-2011() ?>20.919</span>
 										</li>
 										<li>
-											<span class="date"></span>
-											<span class="value"></span>
+											<span class="date">Total de Crimes*</span>
+											<span class="value">148.647</span>
 										</li>
 									</ul>	
 								</div>
@@ -235,7 +236,7 @@
 						
 						<div class="box blue span12 noMarginLeft">
 							<div class="box-header">
-								<h2><i class="icon-bar-chart"></i>Estatistica Semanal</h2>
+								<h2><i class="icon-bar-chart"></i>Estatistica da Última Década</h2>
 								<div class="box-icon">
 									<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 									<a href="#" class="btn-close"><i class="icon-remove"></i></a>
@@ -251,8 +252,9 @@
 				</div>				
 
 				<div class="box blue span6 noMargin" onTablet="span12" onDesktop="span6">
+					<!--Valores totais extraidos direto do arquivo de série histórica 2001-2011-->
 					<div class="box-header">
-						<h2>Homicídios nos últimos 10 anos</h2>
+						<h2>Crimes contra a pessoa nos últimos 10 anos</h2>
 					</div>
 					<div class="box-content">
 						
@@ -700,12 +702,12 @@
 						
 						<div class="span6 smallchart blue box mobileHalf">
 
-							<div class="title">GRAFICO</div>
+							<div class="title">ROUBOS ÚLTIMA DÉCADA</div>
 
 							<div class="content">
 
 								<div class="chart-stat">
-									<span class="chart white">7,3,2,6,6,3,9,0,1,4</span>
+									<span class="chart white">10000,3,2,6,6,3,9,0,1,4</span>
 								</div>
 
 							</div>

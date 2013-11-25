@@ -244,26 +244,7 @@
 								<i class="icon-wrench"></i>
 							</a>
 						</li>
-						<!-- start: User Dropdown -->
-						<li class="dropdown">
-							<a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
-								<div class="avatar"><img src="img/avatar.jpg" alt="Avatar"></div>
-								<div class="user">
-									<span class="hello">Bem Vindo!</span>
-									<span class="name">Łukasz Holeczek</span>
-								</div>
-							</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-menu-title">
-									
-								</li>
-								<li><a href="#"><i class="icon-user"></i> Profile</a></li>
-								<li><a href="#"><i class="icon-cog"></i> Settings</a></li>
-								<li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
-								<li><a href="login.php"><i class="icon-off"></i> Logout</a></li>
-							</ul>
-						</li>
-						<!-- end: User Dropdown -->
+						
 					</ul>
 				</div>
 				<!-- end: Header Menu -->
