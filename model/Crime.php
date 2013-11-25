@@ -9,9 +9,9 @@ class Crime{
 	private $exceptionCrime;
 	
 	public function __setIdCrime($idCrime){
-		$exceptionCrime = new EFalhaLeituraSerieCrime();
+		
 		if(!is_int($idCrime)){
-			throw $exceptionCrime;
+			throw new EFalhaLeituraSerieCrime();
 			echo $exceptionCrime->getMessage();
 		}
 		else {
@@ -22,9 +22,8 @@ class Crime{
 		return $this->idCrime;
 	}
 	public function __setQuantidade($quantidade){
-		$exceptionCrime = new EFalhaLeituraSerieCrime();
-		if( (!is_int($quantidade)) || (is_float($quantidade)) ){
-			throw $exceptionCrime;
+		if( (!is_array($quantidade)) || (is_float($quantidade)) ){
+			throw new EFalhaLeituraSerieCrime();
 			echo $exceptionCrime->getMessage();
 		}
 		else{
@@ -36,7 +35,7 @@ class Crime{
 	}
 	public function __setIdTempo($idTempo){
 		$exceptionCrime = new EFalhaLeituraSerieCrime();
-		if((!is_int($idTempo)) || (is_float($idTempo))){
+		if((!is_numeric($idTempo)) || (is_float($idTempo))){
 			throw $exceptionCrime;
 			echo $exceptionCrime->getMessage();
 		}
@@ -48,9 +47,8 @@ class Crime{
 		return $this->idTempo;
 	}
 	public function __setIdNatureza($idNatureza){
-		$exceptionCrime = new EFalhaLeituraSerieCrime();
-		if(!is_int($idNatureza)){
-			throw $exceptionCrime;
+		if(!is_numeric($idNatureza)){
+			throw new EFalhaLeituraSerieCrime();
 			echo $exceptionCrime->getMessage();
 		}
 		else{

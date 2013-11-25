@@ -21,7 +21,7 @@
 			$categoria->__constructOverload(2,"nomeCategoria");
 			$this->assertEquals(2,$categoria->__getIdCategoria());
 			$this->assertEquals("nomeCategoria",$categoria->__getNomeCategoria());
-			
+			$this->assertInstanceOf('Categoria', $categoria);
 		}
 	}
 

@@ -2,6 +2,6 @@
 class ECategoriaListarConsultaPorIdVazio extends Exception{
 
 	public function __construct(){
-		$this->message = "ID não encontrado.";
+		$this->message = "ID nao encontrado.";
 	}
 }

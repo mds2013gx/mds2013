@@ -6,6 +6,7 @@ include_once('C:/xampp/htdocs/mds2013/model/Crime.php');
 include_once('C:/xampp/htdocs/mds2013/model/Tempo.php');
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 class CrimeController{
+
         private $crimeDAO;
         
         public function __construct(){
@@ -164,4 +165,5 @@ class CrimeController{
 					
 					</div>";
         }
+
 }

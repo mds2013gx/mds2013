@@ -39,5 +39,6 @@ class NaturezaController{
 			$inicio = $inicio+count($arrayNatureza[$chave]);
 			next($arrayKey);
 		}
+		return $dadosCategoria;
 	}
 }
