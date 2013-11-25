@@ -48,15 +48,15 @@ class Parse{
 			for($i=0,$auxCategoria=0;$i<$numeroLinhas;$i++){
 				
 				if($i == 2){
-					$this->categoria[$auxCategoria] = $this->dados->val($i,1,1);
+					$this->categoria[$auxCategoria] = $this->dados->val($i,1,0);
 					$auxCategoria++;
 				}
 				if($i == 33){
-					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,0);
 					$auxCategoria++;
 				}
 				if($i == 38){
-					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,1);
+					$this->categoria[$auxCategoria] =  $this->dados->val($i,1,0);
 				}
 			}
 			if(($this->__getCategoria() == null) || (count($this->__getCategoria()) != 3)){
@@ -70,24 +70,26 @@ class Parse{
 				else{	
 					if($i>32){
 						if($i<37){
-							$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'B',1);
+							$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'B',0);
 						}else{
-							$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'B',1);
+							$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'B',0);
 						}
 					}else{
 						if($i<32){
-							$this->natureza[$this->__getCategoria()[0]][$auxNatureza]= $this->dados->val($i,'C',1);
+							$this->natureza[$this->__getCategoria()[0]][$auxNatureza]= $this->dados->val($i,'C',0);
 						}else if($i>32 && $i<37){
-							$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'C',1);
+							$this->natureza[$this->__getCategoria()[1]][$auxNatureza]= $this->dados->val($i,'C',0);
 						}else{
-							$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'C',1);
+							$this->natureza[$this->__getCategoria()[2]][$auxNatureza]= $this->dados->val($i,'C',0);
 						}
 					}
 					$auxNatureza++;
 				}
 			}
-			print_r($this->__getNatureza());
-			if(($this->__getNatureza() == null) || (count($this->__getNatureza()[0]) !=25) || (count($this->__getNatureza()[1]) !=4) || (count($this->__getNatureza()[1]) != 2)){			
+			$criminalidade = utf8_encode("Criminalidade");
+			$acao = utf8_encode("Ação Policial");
+			$transito = utf8_encode("Trânsito");
+			if(($this->__getNatureza() == null) || (count($this->__getNatureza()[$criminalidade]) != 25) || (count($this->__getNatureza()[$acao]) !=4) || (count($this->__getNatureza()[$transito]) != 2)){			
 				throw new EFalhaLeituraSerieNatureza();
 			}
 			//loop que pega os anos disponiveis
@@ -95,7 +97,7 @@ class Parse{
 				if(($i == 1)||($i == 2)||($i == 3)){
 					continue;
 				}else{
-					$this->tempo[$auxTempo] = $this->dados->val(1,$i,1);
+					$this->tempo[$auxTempo] = $this->dados->val(1,$i,0);
 					$auxTempo++;
 				}
 			}
@@ -115,7 +117,7 @@ class Parse{
 							}else{
 								$auxCategoria = 2;
 							}
-							$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[$auxColuna]] = $this->dados->raw($i,$j,1);
+							$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[$auxColuna]] = $this->dados->raw($i,$j,0);
 							$auxColuna++;
 					}
 					$auxLinha++;
@@ -154,7 +156,7 @@ class Parse{
 	*/
 	public function parseDeQuadrimestre(){
 		$numeroLinhas = 41;
-		$numeroColunas = 13;
+		$numeroColunas = 14;
 		/**
 		* Loop para pegar os nomes das categorias contidas na planilha
 		* @author Lucas Carvalho
@@ -180,7 +182,7 @@ class Parse{
 		 		if($i>7 && $i<11){
 		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',2);
 		 			$auxNatureza++;
-		 		}else if($i>11 && $i<32){
+		 		}else if(($i>11 && $i<26) || ($i>26 && $i<31)){
 		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',2);
 		 			$auxNatureza++;
 		 		}else if($i==34){
@@ -206,25 +208,27 @@ class Parse{
 		* Loop que pega as informações sobre tempo da planilha
 		* @author Lucas Carvalho
 		*/
-		for($i=5, $auxTempo = 0; $i<$numeroColunas; $i++){
-			$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
-			$auxTempo++;
+		for($i=6, $auxTempo = 0; $i<$numeroColunas; $i++){
+			if(($i % 2) == 0){
+				$this->tempo[2013][$auxTempo] = $this->dados->val(6,$i,2);
+				$auxTempo++;
+			}
 		}
 		/**
 		* Loop que pega as informações do crime da planilha
 		* @author Lucas Carvalho 
 		*/
-		for($i = 8, $auxLinha = 0; $i<$numeroLinhas; $i++){
-			if(($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
+		for($i = 0, $auxLinha = 0; $i<$numeroLinhas; $i++){
+			if(($i< 8)||($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
 				continue;
 			}else{
-				for($j = 5, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
+				for($j = 6, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
 					if(($j % 2) == 0){
 						continue;
 					}
 					if($i>7 && $i<11){
 						$auxCategoria = 0;
-					}else if($i>11 && $i<32){
+					}else if(($i>11 && $i<26) || ($i>26 && $i<31)){
 						$auxCategoria = 1;
 					}else if($i==34){
 						$auxCategoria = 2;
@@ -238,8 +242,9 @@ class Parse{
 						$auxCategoria = 6;
 					}
 					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
+					print_r($this->__getNatureza());
 					$auxColuna++;
-					}	
+				}	
 				$auxLinha++;
 			}
 		}
