@@ -82,7 +82,7 @@
 										</li>
 										<li>
 											<span class="date">Lesão Corporal</span>
-											<span class="value"><?php //echo $crimeVW->retornarDadosLesaoCorporal2010-2011() ?>20.919</span>
+											<span class="value"><?php echo number_format($crimeVW->retornarDadosLesaoCorporal2010_2011(),0,',','.') ?></span>
 										</li>
 										<li>
 											<span class="date">Total de Crimes*</span>

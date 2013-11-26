@@ -108,6 +108,13 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
+	public function somaLesaoCorporal2010_2011(){
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 3";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+
 	public function inserirCrime(Crime $crime){
 		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}')";
 		$this->conexao->banco->Execute($sql);

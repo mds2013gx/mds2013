@@ -58,4 +58,8 @@ class CrimeView{
         public function retornarDadosTentativaHomicidio2010_2011(){
                 return $this->crimeCO->_retornarDadosTentativaHomicidio2010_2011();
         }
+
+        public function retornarDadosLesaoCorporal2010_2011(){
+                return $this->crimeCO->_retornarDadosLesaoCorporal2010_2011();
+        }
 }
