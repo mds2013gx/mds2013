@@ -1,7 +1,11 @@
 <?php
 require_once('C:/xampp/htdocs/mds2013/persistence/CrimeDAO.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
-
+/**
+ * Classe de teste da classe CrimeDAO
+ * @author Lucas Andrade Ribeiro
+ * @copyright RadarCriminal 2013
+ */
 class CrimeDAOTeste extends PHPUnit_Framework_TestCase{
 	
 	function testConstruct(){
