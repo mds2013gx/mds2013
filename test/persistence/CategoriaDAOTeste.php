@@ -1,10 +1,12 @@
 <?php
 	require_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 	include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
-	
-	/**
-	 * Classe CategoriaDAOTeste
-	 **/
+
+/**
+ * Classe de teste da classe CategoriaDAO
+ * @author Lucas Andrade Ribeiro
+ * @copyright RadarCriminal 2013
+ */
 	class CategoriaDAOTeste extends PHPUnit_Framework_TestCase{
 		
 		
