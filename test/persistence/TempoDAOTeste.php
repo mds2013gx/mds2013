@@ -1,7 +1,11 @@
 <?php
 require_once('C:/xampp/htdocs/mds2013/persistence/TempoDAO.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
-
+/**
+ * Classe de teste da classe TempoDAO
+ * @author Lucas Andrade Ribeiro
+ * @copyright RadarCriminal 2013
+ */
 class TempoDAOTeste extends PHPUnit_Framework_TestCase{
 	
 	public function testConstruct(){
