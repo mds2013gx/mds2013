@@ -1,9 +1,11 @@
 <?php
 	require_once ('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 	//include_once(__APP_PATH.'../../persistence/NaturezaDAO.php');
-	/**
-	 * Classe natureza Teste
-	 **/
+/**
+ * Classe de teste da classe NaturezaDAO
+ * @author Lucas Andrade Ribeiro
+ * @copyright RadarCriminal 2013
+ */
 	class NaturezaDAOTeste extends PHPUnit_Framework_Testcase{
 		
 		public function testConstruct(){
