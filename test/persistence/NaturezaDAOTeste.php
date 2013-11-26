@@ -2,14 +2,45 @@
 	require_once ('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 	//include_once(__APP_PATH.'../../persistence/NaturezaDAO.php');
 	/**
-	 * Classe Categoria Teste
+	 * Classe natureza Teste
 	 **/
 	class NaturezaDAOTeste extends PHPUnit_Framework_Testcase{
-	
+		
+		public function testConstruct(){
+			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
+		}
 		public function testListarTodas(){
 			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
 			$this->assertNotEmpty($naturezaDAO->listarTodas());
-			
+			$this->assertNotNull($naturezaDAO->listarTodas());
+		}
+		public function testListarTodasAlfabeticamente(){
+			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
+			$this->assertNotEmpty($naturezaDAO->listarTodas());
+			$this->assertNotNull($naturezaDAO->listarTodas());
+		}
+		public function testConsultarPorId(){
+			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
+			$this->assertInstanceOf('Natureza', $naturezaDAO->consultarPorId(1));
+		}
+		public function testConsultarPorNome(){
+			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
+			$this->assertInstanceOf('Natureza', $naturezaDAO->consultarPorNome('Estupro'));
+		}
+		public function testInserirNatureza(){
+			$naturezaDAO = new NaturezaDAO();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
 		}
 	
 	}
