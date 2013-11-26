@@ -71,42 +71,112 @@ class CrimeDAO{
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
-	 //Metodo de somar todos homicícios por ano        
-        /**
-         * @author Lucas Andrade Ribeiro
-         * @author Sergio Silva
-         * @copyright RadarCriminal 2013
-         **/
+
+	//Metodo de somar todos homicícios por ano        
+    /**
+    * @author Lucas Andrade Ribeiro
+    * @author Sergio Silva
+    * @copyright RadarCriminal 2013
+    **/
+
+    //Somatorio Geral de todas as naturezas de crimes
+    public function somaGeralCrimes(){
+    	
+    }
+
+
 	public function somaTotalHomicidios(){
 		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 1";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
-	 //Metodo de somar todos homicícios por ano        
-        /**
-         * @author Lucas Andrade Ribeiro
-         * @author Sergio Silva
-         * @copyright RadarCriminal 2013
-         **/
+	
+	//Metodo de somar todos homicícios por ano        
+    /**
+    * @author Lucas Andrade Ribeiro
+    * @author Sergio Silva
+    * @copyright RadarCriminal 2013
+    **/
+
+
 	public function somaTotalRoubo(){
-		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Roubo%'";
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Roubo%'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
+
+	public function somaTotalRoubo2010_2011(){
+    	
+    }
+
+    public function somaGeralCrimeContraPessoa(){
+    	
+    }
+
+    public function somaGeralCrimeContraPessoa2010_2011(){
+    	
+    }
+
+    public function somaTotalFurtosContraPatrimonio(){
+    	
+    }
+
+    public function omaTotalFurtosContraPatrimonio2010_2011(){
+    	
+    }
+
+    public function somaTotalDignidadeSexual(){
+    	
+    }
+
+    public function somaTotalDignidadeSexual2010_2011(){
+    	
+    }
+
+    public function somaTotalAcaoPolicial(){
+    	
+    }
+
+    public function somaTotalAcaoPolicial2010_2011(){
+    	
+    }
+
+    public function somaTotalCrimeTransito(){
+    	
+    }
+
+    public function somaTotalCrimeTransito2010_2011(){
+    	
+    }
+
 	public function somaTotalFurtos(){
-		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Furto%'";
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza LIKE '%Furto%'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
+
+	public function somaTotalFurtos2010_2011(){
+    	
+    }
+
+
 	public function somaTotalTentativasHomicidio(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 2";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
+
+	public function somaTotalTentativasHomicidio2010_2011(){
+    	
+    }
+
+    public function somaLesaoCorporal(){
+    	
+    }
 
 	public function somaLesaoCorporal2010_2011(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 3";

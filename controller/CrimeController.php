@@ -236,6 +236,14 @@ class CrimeController{
             return $retornoLesaoCorporal2010_2011;
         }
 
+        public function _somaCrime2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaCrime2010_2011[] = $this->_somaDeCrimePorAno($i);
+            }
+            $retornoSomaCrime2010_2011 = array_sum($somaCrime2010_2011);
+            return $retornoSomaCrime2010_2011;
+        }
+
 
 
 }
