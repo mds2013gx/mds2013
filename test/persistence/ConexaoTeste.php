@@ -9,8 +9,12 @@ require_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
 class ConexaoTeste extends PHPUnit_Framework_TestCase{
 
 	public function testConstruct(){
-		$conexao = new Conexao();
-		$this->assertObjectHasAttribute('banco', $conexao);
-		$this->assertInstanceOf('Conexao', $conexao);
+	//	$conexao = new Conexao();
+	//	$this->assertObjectHasAttribute('banco', $conexao);
+	//	$this->assertInstanceOf('Conexao', $conexao);
 	}
+	public function testConstructExcessao(){
+		$conexao = new Conexao("localhost","root","","teste");
+		$this->setExpectedException('EConexaoFalha');
+	} 
 }
