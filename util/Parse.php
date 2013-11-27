@@ -203,7 +203,8 @@ class Parse{
 		 		}else{
 		 			continue;
 		 		}
-		} 		
+		}
+	
 		/**		 
 		* Loop que pega as informações sobre tempo da planilha
 		* @author Lucas Carvalho
@@ -219,10 +220,10 @@ class Parse{
 		* @author Lucas Carvalho 
 		*/
 		for($i = 0, $auxLinha = 0; $i<$numeroLinhas; $i++){
-			if(($i< 8)||($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
+			if(($i < 8)||($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 33)|| ($i == 38)|| ($i == 41)){
 				continue;
 			}else{
-				for($j = 6, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
+				for($j = 6, $auxColuna = 0, $auxCategoria = 0; $j<$numeroColunas; $j++){
 					if(($j % 2) == 0){
 						continue;
 					}
@@ -242,22 +243,10 @@ class Parse{
 						$auxCategoria = 6;
 					}
 					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
-					/**
-					 * metodo __getNatureza() retorna um array, 
-					 * porem um array de chave numerica. a chave passada no metodo é uma string.
-					 * Possibilidades:
-					 * 1)criar auxNatureza para navegar no array natureza.
-					 * ...
-					 * @author Eliseu
-					 */
-					
-					echo "\n";
-					echo "linha:".$auxLinha++."coluna:".$auxColuna++.": ".$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]];
-					echo "\n";
-					//print_r($this->__getNatureza());
-				}	
+					$auxColuna++;
+				}
 				$auxLinha++;
-			}
+			}	
 		}
 	}
 	public function __setNatureza($natureza){
