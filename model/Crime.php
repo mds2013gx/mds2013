@@ -13,7 +13,6 @@ class Crime{
 		
 		if(!is_numeric($idCrime)){
 			throw new ETipoErrado();
-			echo $exceptionCrime->getMessage();
 		}
 		else {
 			$this->idCrime = $idCrime;
@@ -27,7 +26,7 @@ class Crime{
 	}
 	public function __setQuantidade($quantidade){
 		if(!is_numeric($quantidade)) {
-			throw new EFalhaLeituraSerieCrime();
+			throw new ETipoErrado();
 				}
 		else{
 			$this->quantidade = $quantidade;
@@ -55,8 +54,7 @@ class Crime{
 	}
 	public function __setIdNatureza($idNatureza){
 		if(!is_numeric($idNatureza)){
-			throw new EFalhaLeituraSerieCrime();
-			echo $exceptionCrime->getMessage();
+			throw new ETipoErrado();
 		}
 		else{
 			$this->idNatureza = $idNatureza;
