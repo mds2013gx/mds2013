@@ -1,5 +1,6 @@
 <?php
 include_once('/../exceptions/EFalhaLeituraSerieCrime.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/ETipoErrado.php');
 
 class Crime{
 	private $idCrime;
@@ -10,58 +11,68 @@ class Crime{
 	
 	public function __setIdCrime($idCrime){
 		
-		if(!is_int($idCrime)){
-			throw new EFalhaLeituraSerieCrime();
-			echo $exceptionCrime->getMessage();
+		if(!is_numeric($idCrime)){
+			throw new ETipoErrado();
 		}
 		else {
 			$this->idCrime = $idCrime;
 		}
 	}
 	public function __getIdCrime(){
+		if(!is_numeric($this->idCrime)){
+			throw new ETipoErrado();
+		}
 		return $this->idCrime;
 	}
 	public function __setQuantidade($quantidade){
-		if( (!is_array($quantidade)) || (is_float($quantidade)) ){
-			throw new EFalhaLeituraSerieCrime();
-			echo $exceptionCrime->getMessage();
-		}
+		if(!is_numeric($quantidade)) {
+			throw new ETipoErrado();
+				}
 		else{
 			$this->quantidade = $quantidade;
 		}
 	}
 	public function __getQuantidade(){
+		if(!is_numeric($this->quantidade)){
+			throw new ETipoErrado();
+		}
 		return $this->quantidade;
 	}
 	public function __setIdTempo($idTempo){
-		$exceptionCrime = new EFalhaLeituraSerieCrime();
-		if((!is_numeric($idTempo)) || (is_float($idTempo))){
-			throw $exceptionCrime;
-			echo $exceptionCrime->getMessage();
+		if(!is_numeric($idTempo)){
+			throw new ETipoErrado();
 		}
 		else{
 			$this->idTempo = $idTempo;
 		}
 	}
 	public function __getIdTempo(){
+		if(!is_numeric($this->idTempo)){
+			throw new ETipoErrado();
+		}
 		return $this->idTempo;
 	}
 	public function __setIdNatureza($idNatureza){
 		if(!is_numeric($idNatureza)){
-			throw new EFalhaLeituraSerieCrime();
-			echo $exceptionCrime->getMessage();
+			throw new ETipoErrado();
 		}
 		else{
 			$this->idNatureza = $idNatureza;
 		}
 	}
 	public function __getIdNatureza(){
+		if(!is_numeric($this->idNatureza)){
+			throw new ETipoErrado();
+		}
 		return $this->idNatureza;
 	}
 	public function __construct(){
 		
 	}
 	public function __constructOverload($idCrime="",$idTempo="",$idNatureza="",$quantidade=""){
+		if( (!is_numeric($idCrime)) || (!is_numeric($idTempo)) || (!is_numeric($idNatureza)) || (!is_numeric($quantidade)) ){
+			throw new ETipoErrado();
+		}
 		$this->idCrime = $idCrime;
 		$this->idTempo = $idTempo;
 		$this->idNatureza = $idNatureza;

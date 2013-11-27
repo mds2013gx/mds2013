@@ -19,12 +19,6 @@ class Conexao{
 		$this->banco = NewADOConnection($this->tipo_banco);
 		$this->banco->dialect = 3;
 		$this->banco->debug = false;
-		try{
-			if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
-				throw new EConexaoFalha();	
-			}
-		}catch(EConexaoFalha $e){
-			echo $e->getMessage();
-		}
+		$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db);
 	}
 }
