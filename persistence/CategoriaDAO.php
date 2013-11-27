@@ -16,9 +16,6 @@ class CategoriaDAO{
 	public function listarTodas(){
 		$sql = "SELECT * FROM categoria";
 		$resultado = $this->conexao->banco->Execute($sql);
-	//	if($resultado->RecordCount()== 0){
-		//	throw new ECategoriaListarTodasVazio();
-		//}
 		while($registro = $resultado->FetchNextObject())
 		{
 			$dadosCategoria = new Categoria();
