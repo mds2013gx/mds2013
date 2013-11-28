@@ -256,7 +256,7 @@ class CrimeController{
 
         public function _somaTotalFurtos(){
             for($i=2010; $i<2012; $i++){
-                $somaTotalFurtos[] = $this->_somaTotalFurtos($i);
+                $somaTotalFurtos[] = $this->crimeDAO->somaTotalFurtos($i);
             }
             $retornoSomaTotalFurtos = array_sum($somaTotalFurtos);
             return $retornoSomaTotalFurtos;
