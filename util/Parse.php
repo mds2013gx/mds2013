@@ -196,7 +196,7 @@ class Parse{
 		print_r($this->__getTempo());
 		echo "<br>";
 		/**
-		* Loop para pegar os nomes das regiões contidas na planilha RA nas linhas 
+		* Loop para pegar os nomes das regiões contidas na planilha RA
 		* @author Lucas Carvalho
 		*/
 		for($i=0, $auxRegiao = 0; $i<3; $i++ ){
@@ -223,6 +223,50 @@ class Parse{
 		}
 		print_r($this->__getRegiao());
 		echo "<br>";
+		/**
+		* Loop para pegar os dados de crime contidas na planila de RA 
+		* @author Lucas Carvalho
+		*/
+		for($i = 0, $auxLinha = 0; $i<143; $i++){
+			if(($i < 8) || ($i>44 && $i<57) || ($i>93 && $i<106) || ($i == 11) || ($i == 26) || ($i == 32) 
+				|| ($i == 33) || ($i == 36) || ($i == 37) || ($i == 42) || ($i == 60) || ($i == 75) || ($i == 81)
+				|| ($i == 82) || ($i == 85) || ($i == 86) || ($i == 91) || ($i == 109) || ($i == 124) || ($i == 130) 
+				|| ($i == 124) || ($i == 130) || ($i == 131) || ($i == 134) || ($i == 140)) {
+				continue;
+			}else{
+				if($i>=8 && $i<=44) {
+					$numeroColunas = 25;
+				}
+				if($i>=57 && $i<=93){
+					$numeroColunas = 25;
+				}
+				if($i>=106 && $i<=142){
+					$numeroColunas = 29;
+				}
+				for($j = 6, $auxColuna = 0, $auxCategoria = 0, $auxRegiao = 0; $j<$numeroColunas; $j++){
+					if(($j % 2) == 0){
+						continue;
+					}
+					if(($i>=8 && $i<=10) || ($i>=57 && $i<=59) || ($i>=106 && $i<=108)){
+						$auxCategoria = 0;
+					}else if(($i>11 && $i<26) || ($i>26 && $i<32) || ($i>75 && $i<81) || ($i>60 && $i<75) || ($i>109 && $i<124) || ($i>124 && $i<130)){
+						$auxCategoria = 1;
+					}else if(($i>33 && $i<36) || ($i>82 && $i<85) || ($i>131 && $i<134)){
+						$auxCategoria = 2;
+					}else if(($i>37 && $i<42) || ($i>86 && $i<91) || ($i>135 && $i<140)){
+						$auxCategoria = 3;
+					}else if(($i>42 && $i<45) || ($i>91 && $i<94) || ($i>140 && $i<143)){
+						$auxCategoria = 4;
+					}
+					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[0]][$this->__getRegiao()[$auxRegiao]] = $this->dados->raw($i,$j,1);
+					$auxColuna++;
+					$auxRegiao++;
+				}
+				$auxLinha++;
+			}	
+		}
+		echo "<br>";
+		print_r($this->__getCrime());
 
 	}
 	/**
