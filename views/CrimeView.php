@@ -40,12 +40,21 @@ class CrimeView{
         * @copyright RadarCriminal 2013
         **/
 
-        public function _somaHomicidios2010_2011(){
+        public function somaHomicidios2010_2011(){
             for($i=2010; $i<2012; $i++){
-                $somaHomicidios2010_2011[] = $this->_somaDeCrimePorAno($i);
+                $somaHomicidios2010_2011[] = $this->_somaHomicidios2010_2011($i);
             }
 
             $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
             return $retornoHomicidios2010_2011;
+        }
+
+        public function somaTotalHomicidios(){
+            for($i=2001; $i<2012; $i++){
+                $somaTotalHomicidios[] = $this->_somaTotalHomicidios($i);
+            }
+
+            $retornoSomaTotalHomicidios = array_sum($somaTotalHomicidios);
+            return $retornoSomaTotalHomicidios;
         }
 }

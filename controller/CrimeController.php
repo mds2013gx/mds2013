@@ -200,6 +200,11 @@ class CrimeController{
          * @author Sergio Silva
          * @copyright RadarCriminal 2013
          **/
+
+        public function _somaHomicidios2010_2011(){
+            return $this->crimeDAO->somaHomicidios2010_2011();
+        }
+        
         public function _somaTotalHomicidios(){
             return $this->crimeDAO->somaTotalHomicidios();
         }
