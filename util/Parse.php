@@ -14,6 +14,7 @@ class Parse{
 	private $categoria;
 	private $dados;
 	private $total;
+	private $regiao;
 	
 	public function __construct($planilha){
 		try{
@@ -158,36 +159,71 @@ class Parse{
 				continue;
 			}
 		}
+		print_r($this->__getCategoria());
+		echo "<br>";
 		/**
 		* Loop para pegar os nomes das naturezas de crimes contidas na planilha de RA
 		* @author Lucas Carvalho 
 		*/
-		for($i=8,$auxNatureza=0;$i<45;$i++){
+		for($i=0,$auxNatureza=0;$i<45;$i++){
 		 		// Val Ã© o valor da cÃ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
 		 		if($i>7 && $i<11){
 		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',1);
 		 			$auxNatureza++;
 		 		}else if(($i>11 && $i<26) || ($i>26 && $i<31)){
-		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',1);
 		 			$auxNatureza++;
 		 		}else if($i>33 && $i<36){
-		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',1);
 		 			$auxNatureza++;
 		 		}else if($i>37 && $i<42){
-		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',1);
 		 			$auxNatureza++;
 		 		}else if($i>42 && $i<45){
-		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',1);
 		 			$auxNatureza++;
 		 		}else{
 		 			continue;
 		 		}
 		}
+		print_r($this->__getNatureza());
+		echo "<br>";
 		/**
 		 * Loop para pegar os nomes dos tempos contidas na planilha de RA
 		 * @author Lucas Carvalho
 		 */
-		
+		$this->tempo[0] = $this->dados->val(7,7,1); 
+		print_r($this->__getTempo());
+		echo "<br>";
+		/**
+		* Loop para pegar os nomes das regi�es contidas na planilha RA nas linhas 
+		* @author Lucas Carvalho
+		*/
+		for($i=0, $auxRegiao = 0; $i<3; $i++ ){
+			if ($i==0) {
+				$linha = 6;
+				$numeroColunas = 25;
+			}
+			if($i==1){
+				$linha = 55;
+				$numeroColunas = 25;
+			}
+			if($i==2){
+				$linha = 104;
+				$numeroColunas = 29;
+			}
+			for ($j=0;$j<$numeroColunas ; $j++) { 
+				if(($j<6) || ($j % 2 != 0)){
+					continue;
+				}else{
+					$this->regiao[$auxRegiao] = $this->dados->val($linha,$j,1);
+					$auxRegiao++;
+				}
+			}
+		}
+		print_r($this->__getRegiao());
+		echo "<br>";
+
 	}
 	/**
 	*	Desenvolvimento do m�todo para efetuar parse da planilha de quadrimestre
@@ -326,5 +362,13 @@ class Parse{
 	
 	public function __getCategoria(){
 		return $this->categoria;
+	}
+
+	public function __setRegiao($regiao){
+		$this->regiao = $regiao;
+	}
+
+	public function __getRegiao(){
+		return $this->regiao;
 	}
 }
