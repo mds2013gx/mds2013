@@ -183,6 +183,11 @@ class Parse{
 		 			continue;
 		 		}
 		}
+		/**
+		 * Loop para pegar os nomes dos tempos contidas na planilha de RA
+		 * @author Lucas Carvalho
+		 */
+		
 	}
 	/**
 	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre
