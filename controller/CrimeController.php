@@ -312,6 +312,22 @@ class CrimeController{
             return $retornoSomaTotalDignidadeSexual2010_2011;
         }
 
+        public function _somaTotalAcaoPolicial(){
+            for($i=2001; $i<2012; $i++){
+                $somaTotalAcaoPolicial[] = $this->_somaTotalAcaoPolicial($i);
+            }
+            $retornoSomaTotalAcaoPolicial = array_sum($somaTotalAcaoPolicial);
+            return $retornoSomaTotalAcaoPolicial;
+        }
+
+        public function _somaTotalAcaoPolicial2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaTotalAcaoPolicial2010_2011[] = $this->_somaTotalAcaoPolicial($i);
+            }
+            $retornoSomaTotalAcaoPolicial2010_2011 = array_sum($somaTotalAcaoPolicial2010_2011);
+            return $retornoSomaTotalAcaoPolicial2010_2011;
+        }
+
 
 
 

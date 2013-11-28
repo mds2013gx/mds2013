@@ -90,4 +90,12 @@ class CrimeView{
         public function _somaTotalDignidadeSexual2010_2011(){
                 return $this->crimeCO->_somaTotalDignidadeSexual2010_2011();
         }
+
+        public function _somaTotalAcaoPolicial(){
+                return $this->crimeCO->_somaTotalAcaoPolicial();
+        }
+
+        public function _somaTotalAcaoPolicial2010_2011(){
+                return $this->crimeCO->_somaTotalAcaoPolicial2010_2011();
+        }
 }
