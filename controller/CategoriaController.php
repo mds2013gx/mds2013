@@ -24,6 +24,9 @@ class CategoriaController{
 		return $arrayCategoria;
 	}
 	public function _consultarPorId($id){
+		if(!is_int($id)){
+			throw new EErroConsulta();
+		}
 		 $categoria = $this->categoriaDAO->consultarPorId($id);
 		 if(get_class($categoria)!= 'Categoria'){
 		 	throw new EErroConsulta();
@@ -31,6 +34,9 @@ class CategoriaController{
 		 return $categoria;
 	}
 	public function _consultarPorNome($nomeCategoria){
+		 if(!is_string($nomeCategoria)){
+		 	throw new EErroConsulta();
+		 }
 		 $categoria =  $this->categoriaDAO->consultarPorNome($nomeCategoria);
 		 if(get_class($categoria)!= 'Categoria'){
 		 	throw new EErroConsulta();
@@ -41,6 +47,9 @@ class CategoriaController{
 		return $this->categoriaDAO->inserirCategoria($categoria);
 	}
 	public function _inserirCategoriaArrayParse($arrayCategoria){
+		if(!is_array($arrayCategoria)){
+			throw new EErroConsulta();
+		}
 		$dadosCategoria = new Categoria();
 		for($i=0; $i<count($arrayCategoria);$i++){
 			$dadosCategoria->__setNomeCategoria($arrayCategoria[$i]);

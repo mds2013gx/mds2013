@@ -30,7 +30,7 @@ class CrimeControllerTeste extends PHPUnit_Framework_Testcase{
 		$crimeController = new CrimeController();
 		$this->assertObjectHasAttribute('crimeDAO', $crimeController);
 		$this->assertInstanceOf('CrimeController', $crimeController);
-		$this->assertInstanceOf('Crime', $crimeController->_consultarPorIdNatureza(1));
+		$this->assertInstanceOf('Crime',$crimeController->_consultarPorIdNatureza(1));
 	}
 	public function testConsultarPorIdTempo()
 	{
@@ -43,6 +43,7 @@ class CrimeControllerTeste extends PHPUnit_Framework_Testcase{
 	{
 		$crimeController = new CrimeController();
 		$crime = new Crime();
+		$crime->__constructOverload(0,0,0,0);
 		$this->assertNull($crimeController->_inserirCrime($crime));
 		$this->assertObjectHasAttribute('crimeDAO', $crimeController);
 		$this->assertInstanceOf('CrimeController', $crimeController);
@@ -64,7 +65,7 @@ class CrimeControllerTeste extends PHPUnit_Framework_Testcase{
 	{
 		$crimeController = new CrimeController();
 		$crime = new Crime();
-		$array['Estupro']['2001'][1] = 1;
+		$array['Estupro']['2001'] = 1;
 		$resultado = $crimeController->_inserirCrimeArrayParse($array);
 		$this->assertEquals('Estupro', $resultado->__getNatureza());
 		$this->assertObjectHasAttribute('crimeDAO', $crimeController);
