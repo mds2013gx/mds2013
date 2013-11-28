@@ -147,16 +147,41 @@ class Parse{
 	*/
 	public function parsePorRegiao(){
 		/**
-		 * Loop para pegar os nomes das categorias na planilha
-		 * @author Lucas Carvalho 
-		 */	
+		* Loop para pegar os nomes das categorias na planilha
+		* @author Lucas Carvalho 
+		*/	
 		for($i = 0, $auxCategoria = 0;$i<45;$i++){
 			if(($i==8)||($i==12)||($i==34)||($i==38)||($i==43)){
-				$this->categoria[$auxCategoria] = $this->dados->val($i,'B',1);
+				$this->categoria[$auxCategoria] = $this->dados->val($i,'A',1);
 				$auxCategoria++; 
 			}else{
 				continue;
 			}
+		}
+		/**
+		* Loop para pegar os nomes das naturezas de crimes contidas na planilha de RA
+		* @author Lucas Carvalho 
+		*/
+		for($i=8,$auxNatureza=0;$i<45;$i++){
+		 		// Val Ã© o valor da cÃ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
+		 		if($i>7 && $i<11){
+		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else if(($i>11 && $i<26) || ($i>26 && $i<31)){
+		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>33 && $i<36){
+		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>37 && $i<42){
+		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else if($i>42 && $i<45){
+		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',2);
+		 			$auxNatureza++;
+		 		}else{
+		 			continue;
+		 		}
 		}
 	}
 	/**
