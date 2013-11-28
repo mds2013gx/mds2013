@@ -279,4 +279,24 @@ class CrimeController{
         }
 
 
+        public function _somaTotalTentativasHomicidio(){
+            for($i=2001; $i<2012; $i++){
+                $somaTotalTentativasHomicidio[] = $this->_somaTotalTentativasHomicidio($i);
+            }
+            $retornoSomaTotalTentativasHomicidio = array_sum($somaTotalTentativasHomicidio);
+            return $retornoSomaTotalTentativasHomicidio;
+        }
+
+
+        public function _somaTotalTentativasHomicidio2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaTotalTentativasHomicidio2010_2011[] = $this->_somaTotalTentativasHomicidio($i);
+            }
+            $retornoSomaTotalTentativasHomicidio2010_2011 = array_sum($somaTotalTentativasHomicidio2010_2011);
+            return $retornoSomaTotalTentativasHomicidio2010_2011;
+        }
+
+
+
+
 }
