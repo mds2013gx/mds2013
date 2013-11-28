@@ -254,6 +254,14 @@ class CrimeController{
             return $retornoSomaTotalRoubo2010_2011;
         }
 
+        public function _somaTotalFurtos(){
+            for($i=2010; $i<2012; $i++){
+                $somaTotalFurtos[] = $this->_$somaTotalFurtos($i);
+            }
+            $retornoSomaTotalFurtos = array_sum($somaTotalFurtos);
+            return $retornoSomaTotalFurtos;
+        }
+
         
 
 
