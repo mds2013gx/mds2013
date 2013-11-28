@@ -8,6 +8,7 @@ include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaListarTodasAlfabeticam
 include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaConsultarPorIdVazio.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaConsultarPorNomeVazio.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/EConexaoFalha.php');
+
 class NaturezaDAO{
 	private $conexao;
 	public function __construct(){

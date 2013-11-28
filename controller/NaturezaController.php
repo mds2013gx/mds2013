@@ -3,6 +3,9 @@ include_once('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/EErroConsulta.php');
+include_once('C:/xampp/htdocs/mds2013/exceptions/EFalhaNaturezaController.php');
+
 class NaturezaController{
 	private $naturezaDAO;
 	
@@ -10,21 +13,46 @@ class NaturezaController{
 		$this->naturezaDAO = new NaturezaDAO();
 	}
 	public function _listarTodas(){
-		return $this->naturezaDAO->listarTodas();
+		$resultado = $this->naturezaDAO->listarTodas();
+		if(!is_array($resultado)){
+			throw new EErroConsulta();
+		}
+		return $resultado;
 	}
 	public function _listarTodasAlfabicamente(){
-		return $this->naturezaDAO->listarTodasAlfabicamente();
+		$resultado = $this->naturezaDAO->listarTodasAlfabicamente();
+		if(!is_array($resultado)){
+			throw new EErroConsulta();
+		}
+		return $resultado;
 	}
 	public function _consultarPorId($id){
-		return $this->naturezaDAO->consultarPorId($id);
+		if(!is_int($id)){
+			throw new EErroConsulta();
+		}
+		$natureza = $this->naturezaDAO->consultarPorId($id);
+		if(get_class($natureza) != 'Natureza'){
+			throw new EErroConsulta();
+		}
+		return $natureza;
 	}
 	public function _consultarPorNome($natureza){
-		return $this->naturezaDAO->consultarPorNome($natureza);
+		if(!is_string($natureza)){
+			throw new EErroConsulta();
+		}
+		$natureza = $this->naturezaDAO->consultarPorNome($natureza);
+		if(get_class($natureza) != 'Natureza'){
+			
+		}
+		return $natureza;
 	}
 	public function _inserirNatureza(Natureza $natureza){
 		return $this->naturezaDAO->inserirNatureza($natureza);
 	}
 	public function _inserirArrayParse($arrayNatureza){
+		if(!is_array($arrayNatureza)){
+			throw new EFalhaNaturezaController();
+		}
 		for($i=0,$arrayKey = $arrayNatureza,$inicio = 0;$i<count($arrayNatureza);$i++){
 			$chave = key($arrayKey);
 			$categoriaDAO = new CategoriaDAO();
