@@ -86,13 +86,6 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
-    public function somaHomicidios2010_2011(){
-    	$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 1";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-    }
-
     //Metodo de somar todos homicícios por ano        
     /**
     * @author Lucas Andrade Ribeiro
@@ -114,6 +107,7 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
+
 	public function somaTotalFurtos(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 19 AND 23";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -130,6 +124,13 @@ class CrimeDAO{
 
     public function somaTotalTentativasHomicidio(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 2";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+
+	public function somaTotalDignidadeSexual(){
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 24 AND 25";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;

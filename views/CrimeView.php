@@ -76,10 +76,18 @@ class CrimeView{
         }
 
         public function _somaTotalTentativasHomicidio(){
-                return $this->crimeCO->somaTotalTentativasHomicidio();
+                return $this->crimeCO->_somaTotalTentativasHomicidio();
         }
 
         public function _somaTotalTentativasHomicidio(){
-                return $this->crimeCO->somaTotalTentativasHomicidio2010_2011();
+                return $this->crimeCO->_somaTotalTentativasHomicidio2010_2011();
+        }
+
+        public function _somaTotalDignidadeSexual(){
+                return $this->crimeCO->_somaTotalDignidadeSexual();
+        }
+
+        public function _somaTotalDignidadeSexual2010_2011(){
+                return $this->crimeCO->_somaTotalDignidadeSexual2010_2011();
         }
 }
