@@ -40,6 +40,7 @@ class NaturezaControllerTeste extends PHPUnit_Framework_Testcase{
 	{
 		$naturezaController = new NaturezaController();
 		$natureza = new Natureza();
+		$natureza->__constructOverload(0, "teste", 0);
 		$this->assertNull($naturezaController->_inserirNatureza($natureza));
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
@@ -49,7 +50,7 @@ class NaturezaControllerTeste extends PHPUnit_Framework_Testcase{
 	{
 		$naturezaController = new NaturezaController();
 		$natureza = new Natureza();
-		$array['Criminalidade'] = 1;
+		$array['Criminalidade'][0] = "teste";
 		$resultado = $naturezaController->_inserirArrayParse($array); 
 		$this->assertEquals('Criminalidade', $resultado->__getNomeCategoria());
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);

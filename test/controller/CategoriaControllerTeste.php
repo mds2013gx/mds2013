@@ -46,7 +46,8 @@
 		{
 			$categoriaController = new CategoriaController();
 			$categoria = new Categoria();
-			$this->assertNull($categoriaController->_inserirCategoria($categoria));
+			$categoria->__setNomeCategoria("teste");
+			$this->assertInstanceOf('ADORecordSet_empty',$categoriaController->_inserirCategoria($categoria));
 			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
 			$this->assertInstanceOf('Categoria', $categoria);
@@ -54,11 +55,10 @@
 		public function testInserirCategoriaArrayParse()
 		{
 			$categoriaController = new CategoriaController();
-			$categoria = new Categoria();
-			$this->assertNull($categoriaController->_inserirCategoriaArrayParse(0));
+			$arrayCategoria[0] = "teste";	
+			$this->assertNull($categoriaController->_inserirCategoriaArrayParse($arrayCategoria));
 			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
-			$this->assertInstanceOf('Categoria', $categoria);
 		}
 	}
 ?>
