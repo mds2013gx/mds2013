@@ -159,6 +159,8 @@ class Parse{
 				continue;
 			}
 		}
+		print_r($this->__getCategoria());
+		echo "<br>";
 		/**
 		* Loop para pegar os nomes das naturezas de crimes contidas na planilha de RA
 		* @author Lucas Carvalho 
@@ -184,30 +186,34 @@ class Parse{
 		 			continue;
 		 		}
 		}
-
+		print_r($this->__getNatureza());
+		echo "<br>";
 		/**
 		 * Loop para pegar os nomes dos tempos contidas na planilha de RA
 		 * @author Lucas Carvalho
 		 */
 		$this->tempo[0] = $this->dados->val(7,7,1); 
-
+		print_r($this->__getTempo());
+		echo "<br>";
 		/**
 		* Loop para pegar os nomes das regiões contidas na planilha RA nas linhas 
 		* @author Lucas Carvalho
 		*/
 		for($i=0, $auxRegiao = 0; $i<3; $i++ ){
-			if ($i=0) {
+			if ($i==0) {
 				$linha = 6;
 				$numeroColunas = 25;
-			}else if($i=55){
+			}
+			if($i==1){
 				$linha = 55;
 				$numeroColunas = 25;
-			}else{
+			}
+			if($i==2){
 				$linha = 104;
 				$numeroColunas = 29;
 			}
 			for ($j=0;$j<$numeroColunas ; $j++) { 
-				if(($j<6) && ($j % 2 !=0)){
+				if(($j<6) || ($j % 2 != 0)){
 					continue;
 				}else{
 					$this->regiao[$auxRegiao] = $this->dados->val($linha,$j,1);
@@ -215,7 +221,8 @@ class Parse{
 				}
 			}
 		}
-
+		print_r($this->__getRegiao());
+		echo "<br>";
 
 	}
 	/**
