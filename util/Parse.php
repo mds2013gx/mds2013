@@ -14,6 +14,7 @@ class Parse{
 	private $categoria;
 	private $dados;
 	private $total;
+	private $regiao;
 	
 	public function __construct($planilha){
 		try{
@@ -139,8 +140,134 @@ class Parse{
 		}
 	}//fim do metodo parseDeSerieHistorica
 	
+	/**
+	*	Desenvolvimento do método para efetuar parse da planilha de crimes por Região Administrativa
+	*	@access public
+	*	@author Lucas Carvalho
+	*	@tutorial Método realizado durante sprint 4, atualizando arrays para cada campo, para depois ir para persistência.
+	*/
 	public function parsePorRegiao(){
-		
+		/**
+		* Loop para pegar os nomes das categorias na planilha
+		* @author Lucas Carvalho 
+		*/	
+		for($i = 0, $auxCategoria = 0;$i<45;$i++){
+			if(($i==8)||($i==12)||($i==34)||($i==38)||($i==43)){
+				$this->categoria[$auxCategoria] = $this->dados->val($i,'A',1);
+				$auxCategoria++; 
+			}else{
+				continue;
+			}
+		}
+		print_r($this->__getCategoria());
+		echo "<br>";
+		/**
+		* Loop para pegar os nomes das naturezas de crimes contidas na planilha de RA
+		* @author Lucas Carvalho 
+		*/
+		for($i=0,$auxNatureza=0;$i<45;$i++){
+		 		// Val ÃƒÂ© o valor da cÃƒÂ©lula que esta sendo armazenado na nova tabela val(linha, coluna, sheet)
+		 		if($i>7 && $i<11){
+		 			$this->natureza[$this->__getCategoria()[0]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else if(($i>11 && $i<26) || ($i>26 && $i<31)){
+		 			$this->natureza[$this->__getCategoria()[1]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else if($i>33 && $i<36){
+		 			$this->natureza[$this->__getCategoria()[2]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else if($i>37 && $i<42){
+		 			$this->natureza[$this->__getCategoria()[3]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else if($i>42 && $i<45){
+		 			$this->natureza[$this->__getCategoria()[4]][$auxNatureza] =  $this->dados->val($i,'B',1);
+		 			$auxNatureza++;
+		 		}else{
+		 			continue;
+		 		}
+		}
+		print_r($this->__getNatureza());
+		echo "<br>";
+		/**
+		 * Loop para pegar os nomes dos tempos contidas na planilha de RA
+		 * @author Lucas Carvalho
+		 */
+		$this->tempo[0] = $this->dados->val(7,7,1); 
+		print_r($this->__getTempo());
+		echo "<br>";
+		/**
+		* Loop para pegar os nomes das regiões contidas na planilha RA
+		* @author Lucas Carvalho
+		*/
+		for($i=0, $auxRegiao = 0; $i<3; $i++ ){
+			if ($i==0) {
+				$linha = 6;
+				$numeroColunas = 25;
+			}
+			if($i==1){
+				$linha = 55;
+				$numeroColunas = 25;
+			}
+			if($i==2){
+				$linha = 104;
+				$numeroColunas = 29;
+			}
+			for ($j=0;$j<$numeroColunas ; $j++) { 
+				if(($j<6) || ($j % 2 != 0)){
+					continue;
+				}else{
+					$this->regiao[$auxRegiao] = $this->dados->val($linha,$j,1);
+					$auxRegiao++;
+				}
+			}
+		}
+		print_r($this->__getRegiao());
+		echo "<br>";
+		/**
+		* Loop para pegar os dados de crime contidas na planila de RA 
+		* @author Lucas Carvalho
+		*/
+		for($i = 0, $auxLinha = 0; $i<143; $i++){
+			if(($i < 8) || ($i>44 && $i<57) || ($i>93 && $i<106) || ($i == 11) || ($i == 26) || ($i == 32) 
+				|| ($i == 33) || ($i == 36) || ($i == 37) || ($i == 42) || ($i == 60) || ($i == 75) || ($i == 81)
+				|| ($i == 82) || ($i == 85) || ($i == 86) || ($i == 91) || ($i == 109) || ($i == 124) || ($i == 130) 
+				|| ($i == 124) || ($i == 130) || ($i == 131) || ($i == 134) || ($i == 140)) {
+				continue;
+			}else{
+				if($i>=8 && $i<=44) {
+					$numeroColunas = 25;
+				}
+				if($i>=57 && $i<=93){
+					$numeroColunas = 25;
+				}
+				if($i>=106 && $i<=142){
+					$numeroColunas = 29;
+				}
+				for($j = 6, $auxColuna = 0, $auxCategoria = 0, $auxRegiao = 0; $j<$numeroColunas; $j++){
+					if(($j % 2) == 0){
+						continue;
+					}
+					if(($i>=8 && $i<=10) || ($i>=57 && $i<=59) || ($i>=106 && $i<=108)){
+						$auxCategoria = 0;
+					}else if(($i>11 && $i<26) || ($i>26 && $i<32) || ($i>75 && $i<81) || ($i>60 && $i<75) || ($i>109 && $i<124) || ($i>124 && $i<130)){
+						$auxCategoria = 1;
+					}else if(($i>33 && $i<36) || ($i>82 && $i<85) || ($i>131 && $i<134)){
+						$auxCategoria = 2;
+					}else if(($i>37 && $i<42) || ($i>86 && $i<91) || ($i>135 && $i<140)){
+						$auxCategoria = 3;
+					}else if(($i>42 && $i<45) || ($i>91 && $i<94) || ($i>140 && $i<143)){
+						$auxCategoria = 4;
+					}
+					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[0]][$this->__getRegiao()[$auxRegiao]] = $this->dados->raw($i,$j,1);
+					$auxColuna++;
+					$auxRegiao++;
+				}
+				$auxLinha++;
+			}	
+		}
+		echo "<br>";
+		print_r($this->__getCrime());
+
 	}
 	/**
 	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre
@@ -203,7 +330,8 @@ class Parse{
 		 		}else{
 		 			continue;
 		 		}
-		} 		
+		}
+	
 		/**		 
 		* Loop que pega as informações sobre tempo da planilha
 		* @author Lucas Carvalho
@@ -219,10 +347,10 @@ class Parse{
 		* @author Lucas Carvalho 
 		*/
 		for($i = 0, $auxLinha = 0; $i<$numeroLinhas; $i++){
-			if(($i< 8)||($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 37) || ($i == 40)){
+			if(($i < 8)||($i == 11)|| ($i == 26) || ($i == 31) || ($i == 32) || ($i == 33)|| ($i == 38)|| ($i == 41)){
 				continue;
 			}else{
-				for($j = 6, $auxColuna = 0, $auxCategoria; $j<$numeroColunas; $j++){
+				for($j = 6, $auxColuna = 0, $auxCategoria = 0; $j<$numeroColunas; $j++){
 					if(($j % 2) == 0){
 						continue;
 					}
@@ -242,22 +370,10 @@ class Parse{
 						$auxCategoria = 6;
 					}
 					$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]] = $this->dados->raw($i,$j,2);
-					/**
-					 * metodo __getNatureza() retorna um array, 
-					 * porem um array de chave numerica. a chave passada no metodo é uma string.
-					 * Possibilidades:
-					 * 1)criar auxNatureza para navegar no array natureza.
-					 * ...
-					 * @author Eliseu
-					 */
-					
-					echo "\n";
-					echo "linha:".$auxLinha++."coluna:".$auxColuna++.": ".$this->crime[$this->__getNatureza()[$this->__getCategoria()[$auxCategoria]][$auxLinha]][$this->__getTempo()[2013][$auxColuna]];
-					echo "\n";
-					//print_r($this->__getNatureza());
-				}	
+					$auxColuna++;
+				}
 				$auxLinha++;
-			}
+			}	
 		}
 	}
 	public function __setNatureza($natureza){
@@ -290,5 +406,13 @@ class Parse{
 	
 	public function __getCategoria(){
 		return $this->categoria;
+	}
+
+	public function __setRegiao($regiao){
+		$this->regiao = $regiao;
+	}
+
+	public function __getRegiao(){
+		return $this->regiao;
 	}
 }

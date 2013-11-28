@@ -6,30 +6,24 @@
 	
 	class TempoTeste extends PHPUnit_Framework_Testcase{
 		
+		public function setUp(){
+			$this->tempo = new Tempo();
+		}
+		
 		public function testSetIdTempo(){
-			$tempo = new Tempo();
-			$tempo->__setIdTempo(1);
-			$this->assertEquals(1, $tempo->__getIdTempo());
+			$this->tempo->__setIdTempo(1);
+			$this->assertEquals(1, $this->tempo->__getIdTempo());
 		}
 		
 		public function testSetIntervalo(){
-			$tempo = new Tempo();
-			$tempo->__setIntervalo(1);
-			$this->assertEquals(1,$tempo->__getIntervalo());
+			$this->tempo->__setIntervalo(1);
+			$this->assertEquals(1,$this->tempo->__getIntervalo());
 		}
 		
 		public function testConstructOverLoad(){
-			$tempo = new Tempo();
-			$tempo->__constructOverload(1, 2);
-			$this->assertEquals(1,$tempo->__getIdTempo());
-			$this->assertEquals(2,$tempo->__getIntervalo());
+			$this->tempo->__constructOverload(1, 2);
+			$this->assertEquals(1,$this->tempo->__getIdTempo());
+			$this->assertEquals(2,$this->tempo->__getIntervalo());
 		}
-		
-		
-		
-		
-		
-		
-		
 	}
 ?>
