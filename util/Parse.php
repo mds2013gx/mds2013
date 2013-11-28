@@ -356,4 +356,8 @@ class Parse{
 	public function __getCategoria(){
 		return $this->categoria;
 	}
+
+	public function __setRegiao($regiao){
+		$this->regiao = $regiao;
+	}
 }
