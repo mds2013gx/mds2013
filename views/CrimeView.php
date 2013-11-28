@@ -70,4 +70,8 @@ class CrimeView{
         public function somaLesaoCorporal(){
                 return $this->crimeCO->_somaLesaoCorporal();
         }
+
+        public function somaLesaoCorporal2010_2011(){
+                return $this->crimeCO->_somaLesaoCorporal2010_2011();
+        }
 }

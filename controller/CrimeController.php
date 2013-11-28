@@ -262,12 +262,20 @@ class CrimeController{
             return $retornoSomaTotalFurtos;
         }
 
-        public function somaLesaoCorporal(){
+        public function _somaLesaoCorporal(){
             for($i=2001; $i<2012; $i++){
                 $somaLesaoCorporal[] = $this->_somaLesaoCorporal($i);
             }
             $retornoSomaLesaoCorporal = array_sum($somaLesaoCorporal);
             return $retornoSomaLesaoCorporal;
+        }
+
+        public function _somaLesaoCorporal2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaLesaoCorporal2010_2011[] = $this->_somaLesaoCorporal($i);
+            }
+            $retornoLesaoCorporal2010_2011 = array_sum($somaLesaoCorporal2010_2011);
+            return $retornoLesaoCorporal2010_2011;
         }
 
 
