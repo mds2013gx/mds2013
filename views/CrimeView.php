@@ -65,4 +65,12 @@ class CrimeView{
             $retornoSomaGeralCrimeContraPessoa = array_sum($somaGeralCrimeContraPessoa);
             return $retornoSomaGeralCrimeContraPessoa;
         }
+
+        public function _somaCrime2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaCrime2010_2011[] = $this->_somaGeralCrimeContraPessoa($i);
+            }
+            $retornoSomaCrime2010_2011 = array_sum($somaCrime2010_2011);
+            return $retornoSomaCrime2010_2011;
+        }
 }

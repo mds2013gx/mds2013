@@ -213,6 +213,10 @@ class CrimeController{
                 return $this->crimeCO->_somaGeralCrimeContraPessoa();
         }
 
+        public function somaGeralCrimeContraPessoa2010_2011(){
+                return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
+        }
+
         
 
 
