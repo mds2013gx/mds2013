@@ -54,4 +54,12 @@ class CrimeView{
         public function _somaGeralCrimeContraPessoa2010_2011(){
                 return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
         }
+
+        public function somaTotalRoubo(){
+                return $this->crimeCO->_somaTotalRoubo();
+        }
+
+        public function somaTotalRoubo2010_2011(){
+                return $this->crimeCO->_somaTotalRoubo2010_2011();
+        }
 }
