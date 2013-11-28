@@ -26,19 +26,19 @@
 						<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
 					</div>	
 					<span class="title">Homicídios</span>
-					<span class="value"> <?php echo number_format($crimeVW->somaTotalHomicidios(),0,',','.') ?> </span>
+					<span class="value"> <?php echo number_format($crimeVW->_somaTotalHomicidios(),0,',','.') ?> </span>
 				</div>
 				
 				<div class="span3 smallstat box mobileHalf noMargin" onTablet="span6" onDesktop="span3">
 					<i class="icon-search green"></i>
 					<span class="title">Roubo</span>
-					<span class="value"><?php echo  number_format($crimeVW->somaTotalRoubo(),0,',','.') ?></span>
+					<span class="value"><?php echo  number_format($crimeVW->_somaTotalRoubo(),0,',','.') ?></span>
 				</div>
 				
 				<div class="span3 smallstat mobileHalf box" onTablet="span6" onDesktop="span3">
 					<i class="icon-certificate yellow"></i>
 					<span class="title">Furto</span>
-					<span class="value"><?php echo number_format($crimeVW->somaTotalFurtos(),0,',','.') ?></span>
+					<span class="value"><?php echo number_format($crimeVW->_somaTotalFurtos(),0,',','.') ?></span>
 				</div>
 			
 			</div>	

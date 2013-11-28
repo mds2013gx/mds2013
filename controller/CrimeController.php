@@ -42,13 +42,13 @@ class CrimeController{
                 return $this->crimeDAO->somaDeCrimePorAno($ano);
         }
 
-        public function _somaTotalTentativasHomicidio($ano){
+        /*public function _somaTotalTentativasHomicidio($ano){
                 return $this->crimeDAO->somaTotalTentativasHomicidio($ano);
-        }
+        }*/
 
-        public function _somaLesaoCorporal2010_2011($ano){
+        /*public function _somaLesaoCorporal2010_2011($ano){
                 return $this->crimeDAO->somaLesaoCorporal2010_2011($ano);
-        }
+        }*/
 
         /**
         *Elaboracao de metodo para somatorio de todos os anos
@@ -215,7 +215,7 @@ class CrimeController{
 
         public function _somaTotalHomicidios(){
             for($i=2001; $i<2012; $i++){
-                $somaTotalHomicidios[] = $this->_somaTotalHomicidios($i);
+                $somaTotalHomicidios[] = $this->crimeDAO->somaTotalHomicidios($i);
             }
 
             $retornoSomaTotalHomicidios = array_sum($somaTotalHomicidios);
@@ -240,7 +240,7 @@ class CrimeController{
 
         public function _somaTotalRoubo(){
             for($i=2001; $i<2012; $i++){
-                $somaTotalRoubo[] = $this->_$somaTotalRoubo($i);
+                $somaTotalRoubo[] = $this->crimeDAO->somaTotalRoubo($i);
             }
             $retornoSomaTotalRoubo = array_sum($somaTotalRoubo);
             return $retornoSomaTotalRoubo;
@@ -248,7 +248,7 @@ class CrimeController{
 
         public function _somaTotalRoubo2010_2011(){
             for($i=2010; $i<2012; $i++){
-                $somaTotalRoubo2010_2011[] = $this->_$somaTotalRoubo($i);
+                $somaTotalRoubo2010_2011[] = $this->_somaTotalRoubo($i);
             }
             $retornoSomaTotalRoubo2010_2011 = array_sum($somaTotalRoubo2010_2011);
             return $retornoSomaTotalRoubo2010_2011;
@@ -256,7 +256,7 @@ class CrimeController{
 
         public function _somaTotalFurtos(){
             for($i=2010; $i<2012; $i++){
-                $somaTotalFurtos[] = $this->_$somaTotalFurtos($i);
+                $somaTotalFurtos[] = $this->_somaTotalFurtos($i);
             }
             $retornoSomaTotalFurtos = array_sum($somaTotalFurtos);
             return $retornoSomaTotalFurtos;
@@ -297,10 +297,11 @@ class CrimeController{
         }
 
         public function _somaTotalDignidadeSexual(){
-            for($i=2001; $i<2012; $i++){
-                $somaTotalDignidadeSexual[] = $this->_somaTotalDignidadeSexual($i);
+            $somaDignidadeSexual;
+        	for($i=2001; $i<2012; $i++){
+                $somaDignidadeSexual[] = $this->_somaTotalDignidadeSexual($i);
             }
-            $retornoSomaTotalDignidadeSexual = array_sum($somaTotalDignidadeSexual);
+            $retornoSomaTotalDignidadeSexual = array_sum($somaDignidadeSexual);
             return $retornoSomaTotalDignidadeSexual;
         }
 

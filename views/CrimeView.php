@@ -44,7 +44,7 @@ class CrimeView{
         }
 
         public function _somaTotalHomicidios(){
-            return $this->crimeCO->somaTotalHomicidios();
+            return $this->crimeCO->_somaTotalHomicidios();
         }
 
         public function _somaGeralCrimeContraPessoa(){
@@ -55,15 +55,15 @@ class CrimeView{
                 return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
         }
 
-        public function somaTotalRoubo(){
+        public function _somaTotalRoubo(){
                 return $this->crimeCO->_somaTotalRoubo();
         }
 
-        public function somaTotalRoubo2010_2011(){
+        public function _somaTotalRoubo2010_2011(){
                 return $this->crimeCO->_somaTotalRoubo2010_2011();
         }
 
-        public function somaTotalFurtos(){
+        public function _somaTotalFurtos(){
                 return $this->crimeCO->_somaTotalFurtos();
         }
 
@@ -79,9 +79,9 @@ class CrimeView{
                 return $this->crimeCO->_somaTotalTentativasHomicidio();
         }
 
-        public function _somaTotalTentativasHomicidio(){
+        /*public function _somaTotalTentativasHomicidio(){
                 return $this->crimeCO->_somaTotalTentativasHomicidio2010_2011();
-        }
+        }*/
 
         public function _somaTotalDignidadeSexual(){
                 return $this->crimeCO->_somaTotalDignidadeSexual();
