@@ -93,6 +93,20 @@ class CrimeDAO{
 		return $registro->TOTAL;
     }
 
+    //Metodo de somar todos homicícios por ano        
+    /**
+    * @author Lucas Andrade Ribeiro
+    * @author Sergio Silva
+    * @copyright RadarCriminal 2013
+    **/
+
+    public function somaGeralCrimeContraPessoa(){
+    	$sql = "SELECT SUM( c.quantidade ) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza BETWEEN 1 AND 3";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+    }
+
 
 
 

@@ -57,4 +57,12 @@ class CrimeView{
             $retornoSomaTotalHomicidios = array_sum($somaTotalHomicidios);
             return $retornoSomaTotalHomicidios;
         }
+
+        public function _somaGeralCrimeContraPessoa(){
+            for($i=2001; $i<2012; $i++){
+                $somaGeralCrimeContraPessoa[] = $this->_somaGeralCrimeContraPessoa($i);
+            }
+            $retornoSomaGeralCrimeContraPessoa = array_sum($somaGeralCrimeContraPessoa);
+            return $retornoSomaGeralCrimeContraPessoa;
+        }
 }

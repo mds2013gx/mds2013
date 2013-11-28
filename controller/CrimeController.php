@@ -204,15 +204,13 @@ class CrimeController{
         public function _somaHomicidios2010_2011(){
             return $this->crimeDAO->somaHomicidios2010_2011();
         }
-        
+
         public function _somaTotalHomicidios(){
             return $this->crimeDAO->somaTotalHomicidios();
         }
-        public function _somaTotalRoubo(){
-            return $this->crimeDAO->somaTotalRoubo();
-        }
-        public function _somaTotalFurtos(){
-            return $this->crimeDAO->somaTotalFurtos();
+
+        public function somaGeralCrimeContraPessoa(){
+                return $this->crimeCO->_somaGeralCrimeContraPessoa();
         }
 
         
