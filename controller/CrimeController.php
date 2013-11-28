@@ -92,9 +92,6 @@ class CrimeController{
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
 				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
-				if(!is_numeric($dadosTempo)){
-					throw new EFalhaCrimeController();
-				}
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
