@@ -360,4 +360,8 @@ class Parse{
 	public function __setRegiao($regiao){
 		$this->regiao = $regiao;
 	}
+
+	public function __getRegiao(){
+		return $this->regiao;
+	}
 }
