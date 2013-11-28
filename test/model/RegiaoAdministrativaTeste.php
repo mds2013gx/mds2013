@@ -1,4 +1,5 @@
 <?php
+
 	require_once ('C:/xampp/htdocs/mds2013/model/RegiaoAdministrativa.php');
 	
 	/**
@@ -12,13 +13,25 @@
 			$this->regiaoAdministrativa = new RegiaoAdministrativa();
 		}
 		
-		public function testeSetIdRegiaoAdministriva(){
+		public function testSetIdRegiaoAdministriva(){
 			$this->regiaoAdministrativa->__setIdRegiaoAdministrativa(42);
 			$this->assertEquals(42, $this->regiaoAdministrativa ->__getIdRegiaoAdministrativa());
 		}
-		public function testSetNomeRegiaoAdminstrativa(){
+		public function testExceptionSetIdRegiaoAdministrativa(){
+			$this->setExpectedException('ETipoErrado');
+			$this->regiaoAdministrativa->__getIdRegiaoAdministrativa("erro");
+		}
+		public function testSetNomeRegiaoAdministrativa(){
 			$this->regiaoAdministrativa ->__setNomeRegiao("Regiao Administrativa");
 			$this->assertEquals("Regiao Administrativa", $this->regiaoAdministrativa ->__getNomeRegiao());
+		}
+		public function testExceptionSetNomeRegiaoAdministrativa(){
+			$this->setExpectedException('ETipoErrado');
+			$this->regiaoAdministrativa->__setNomeRegiao(0);
+		}
+		public function testExceptionConstructOverLoad(){
+			$this->setExpectedException('ETipoErrado');
+			$this->regiaoAdministrativa->__constructOverLoad("erro", 0);
 		}
 	}
 ?>
