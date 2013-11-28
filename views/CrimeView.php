@@ -39,38 +39,19 @@ class CrimeView{
         * @author Sergio Silva
         * @copyright RadarCriminal 2013
         **/
-
-        public function somaHomicidios2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaHomicidios2010_2011[] = $this->_somaHomicidios2010_2011($i);
-            }
-
-            $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
-            return $retornoHomicidios2010_2011;
+        public function _somaHomicidios2010_2011(){
+            return $this->crimeCO->somaHomicidios2010_2011();
         }
 
-        public function somaTotalHomicidios(){
-            for($i=2001; $i<2012; $i++){
-                $somaTotalHomicidios[] = $this->_somaTotalHomicidios($i);
-            }
-
-            $retornoSomaTotalHomicidios = array_sum($somaTotalHomicidios);
-            return $retornoSomaTotalHomicidios;
+        public function _somaTotalHomicidios(){
+            return $this->crimeCO->somaTotalHomicidios();
         }
 
         public function _somaGeralCrimeContraPessoa(){
-            for($i=2001; $i<2012; $i++){
-                $somaGeralCrimeContraPessoa[] = $this->_somaGeralCrimeContraPessoa($i);
-            }
-            $retornoSomaGeralCrimeContraPessoa = array_sum($somaGeralCrimeContraPessoa);
-            return $retornoSomaGeralCrimeContraPessoa;
+                return $this->crimeCO->_somaGeralCrimeContraPessoa();
         }
 
-        public function _somaCrime2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaCrime2010_2011[] = $this->_somaGeralCrimeContraPessoa($i);
-            }
-            $retornoSomaCrime2010_2011 = array_sum($somaCrime2010_2011);
-            return $retornoSomaCrime2010_2011;
+        public function _somaGeralCrimeContraPessoa2010_2011(){
+                return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
         }
 }

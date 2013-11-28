@@ -107,6 +107,13 @@ class CrimeDAO{
 		return $registro->TOTAL;
     }
 
+    public function somaTotalRoubo(){
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza n.id_natureza BETWEEN 6 AND 18";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
+
 
 
 

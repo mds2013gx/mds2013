@@ -27,6 +27,11 @@ class CrimeController{
         public function _inserirCrime(Crime $crime){
                 return $this->crimeDAO->inserirCrime($crime);
         }
+
+        public function _somaDeCrimePorNatureza($natureza){
+                return $this->crimeDAO->somaDeCrimePorNatureza($natureza);
+        }
+
         //Implementação de consultas para apresentacao na view | Apenas utilização de consultas já prontas
         /**
          * @author Eduardo Augusto
@@ -59,9 +64,7 @@ class CrimeController{
             $retornoSomaTodosAnos = array_sum($somaTodosAnos);
             return $retornoSomaTodosAnos;
         }
-        public function _somaDeCrimePorNatureza($natureza){
-                return $this->crimeDAO->somaDeCrimePorNatureza($natureza);
-        }
+        
         public function _inserirCrimeArrayParse($arrayCrime){
                 for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
                         $natureza = key($arrayKey);
@@ -201,20 +204,46 @@ class CrimeController{
          * @copyright RadarCriminal 2013
          **/
 
-        public function _somaHomicidios2010_2011(){
-            return $this->crimeDAO->somaHomicidios2010_2011();
+         public function _somaHomicidios2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaHomicidios2010_2011[] = $this->_somaHomicidios2010_2011($i);
+            }
+
+            $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
+            return $retornoHomicidios2010_2011;
         }
 
         public function _somaTotalHomicidios(){
-            return $this->crimeDAO->somaTotalHomicidios();
+            for($i=2001; $i<2012; $i++){
+                $somaTotalHomicidios[] = $this->_somaTotalHomicidios($i);
+            }
+
+            $retornoSomaTotalHomicidios = array_sum($somaTotalHomicidios);
+            return $retornoSomaTotalHomicidios;
         }
 
-        public function somaGeralCrimeContraPessoa(){
-                return $this->crimeCO->_somaGeralCrimeContraPessoa();
+        public function _somaGeralCrimeContraPessoa(){
+            for($i=2001; $i<2012; $i++){
+                $somaGeralCrimeContraPessoa[] = $this->_somaGeralCrimeContraPessoa($i);
+            }
+            $retornoSomaGeralCrimeContraPessoa = array_sum($somaGeralCrimeContraPessoa);
+            return $retornoSomaGeralCrimeContraPessoa;
         }
 
-        public function somaGeralCrimeContraPessoa2010_2011(){
-                return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
+        public function _somaGeralCrimeContraPessoa2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaGeralCrimeContraPessoa2010_2011[] = $this->_somaGeralCrimeContraPessoa($i);
+            }
+            $retornoSomaGeralCrimeContraPessoa2010_2011 = array_sum($somaGeralCrimeContraPessoa2010_2011);
+            return $retornoSomaGeralCrimeContraPessoa2010_2011;
+        }
+
+        public function _somaTotalRoubo(){
+            for($i=2001; $i<2012; $i++){
+                $somaTotalRoubo[] = $this->_$somaTotalRoubo($i);
+            }
+            $retornoSomaTotalRoubo = array_sum($somaTotalRoubo);
+            return $retornoSomaTotalRoubo;
         }
 
         
