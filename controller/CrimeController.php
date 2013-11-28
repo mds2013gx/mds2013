@@ -210,40 +210,7 @@ class CrimeController{
             return $this->crimeDAO->somaTotalFurtos();
         }
 
-        public function _somaHomicidios2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaHomicidios2010_2011[] = $this->_somaDeCrimePorAno($i);
-            }
-
-            $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
-            return $retornoHomicidios2010_2011;
-        }
-
-        public function _retornarDadosTentativaHomicidio2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaTentativaHomicidio2010_2011[] = $this->_somaTotalTentativasHomicidio($i);
-            }
-
-            $retornoTentativaHomicidio2010_2011 = array_sum($somaTentativaHomicidio2010_2011);
-            return $retornoTentativaHomicidio2010_2011;
-        }
-
-        public function _retornarDadosLesaoCorporal2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaLesaoCorporal2010_2011[] = $this->_somaLesaoCorporal2010_2011($i);
-            }
-            $retornoLesaoCorporal2010_2011 = array_sum($somaLesaoCorporal2010_2011);
-            return $retornoLesaoCorporal2010_2011;
-        }
-
-        public function _somaCrime2010_2011(){
-            for($i=2010; $i<2012; $i++){
-                $somaCrime2010_2011[] = $this->_somaDeCrimePorAno($i);
-            }
-            $retornoSomaCrime2010_2011 = array_sum($somaCrime2010_2011);
-            return $retornoSomaCrime2010_2011;
-        }
-
+        
 
 
 }

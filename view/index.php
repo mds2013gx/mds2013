@@ -86,7 +86,7 @@
 										</li>
 										<li>
 											<span class="date">Total de Crimes*</span>
-											<span class="value"><?php echo number_format($crimeVW->somaCrime2010_2011(),0,',','.') ?></span>
+											<span class="value"><?php //echo number_format($crimeVW->somaCrime2010_2011(),0,',','.') ?></span>
 										</li>
 									</ul>	
 								</div>

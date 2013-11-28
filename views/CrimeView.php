@@ -39,31 +39,4 @@ class CrimeView{
         * @author Sergio Silva
         * @copyright RadarCriminal 2013
         **/
-        public function somaTotalHomicidios(){
-                return $this->crimeCO->_somaTotalHomicidios();
-        }
-       
-        public function somaTotalRoubo(){
-                return $this->crimeCO->_somaTotalRoubo();
-        }
-       
-        public function somaTotalFurtos(){
-                return $this->crimeCO->_somaTotalFurtos();
-        }
-
-        public function somaHomicidios2010_2011(){
-                return $this->crimeCO->_somaHomicidios2010_2011();
-        }
-
-        public function retornarDadosTentativaHomicidio2010_2011(){
-                return $this->crimeCO->_retornarDadosTentativaHomicidio2010_2011();
-        }
-
-        public function retornarDadosLesaoCorporal2010_2011(){
-                return $this->crimeCO->_retornarDadosLesaoCorporal2010_2011();
-        }
-
-        public function somaCrime2010_2011(){
-                return $this->crimeCO->_somaCrime2010_2011();
-        }
 }
