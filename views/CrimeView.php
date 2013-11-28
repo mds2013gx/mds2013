@@ -39,4 +39,13 @@ class CrimeView{
         * @author Sergio Silva
         * @copyright RadarCriminal 2013
         **/
+
+        public function _somaHomicidios2010_2011(){
+            for($i=2010; $i<2012; $i++){
+                $somaHomicidios2010_2011[] = $this->_somaDeCrimePorAno($i);
+            }
+
+            $retornoHomicidios2010_2011 = array_sum($somaHomicidios2010_2011);
+            return $retornoHomicidios2010_2011;
+        }
 }

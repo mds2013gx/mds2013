@@ -79,6 +79,13 @@ class CrimeDAO{
     * @copyright RadarCriminal 2013
     **/
 
+    public function somaHomicidios2010_2011(){
+    	$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 1";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+    }
+
 
     //INICIO DOS MÉTODOS DE INSERÇÃO
 
