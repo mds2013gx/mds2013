@@ -262,7 +262,13 @@ class CrimeController{
             return $retornoSomaTotalFurtos;
         }
 
-        
+        public function somaLesaoCorporal(){
+            for($i=2001; $i<2012; $i++){
+                $somaLesaoCorporal[] = $this->_somaLesaoCorporal($i);
+            }
+            $retornoSomaLesaoCorporal = array_sum($somaLesaoCorporal);
+            return $retornoSomaLesaoCorporal;
+        }
 
 
 }

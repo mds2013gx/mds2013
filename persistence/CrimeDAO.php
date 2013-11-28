@@ -121,6 +121,13 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
+	public function somaLesaoCorporal(){
+    	$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 3";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+    }
+
 
 
 

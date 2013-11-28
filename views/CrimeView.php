@@ -66,4 +66,8 @@ class CrimeView{
         public function somaTotalFurtos(){
                 return $this->crimeCO->_somaTotalFurtos();
         }
+
+        public function somaLesaoCorporal(){
+                return $this->crimeCO->_somaLesaoCorporal();
+        }
 }
