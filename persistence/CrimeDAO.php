@@ -136,12 +136,12 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
-	public function somaTotalDignidadeSexual(){
+	/*public function somaTotalDignidadeSexual(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 24 AND 25";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
-	}
+	}*/
 
 	public function somaTotalAcaoPolicial(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 26 AND 29";
