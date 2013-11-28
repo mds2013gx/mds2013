@@ -64,6 +64,7 @@ class CategoriaDAO{
 	public function inserirCategoria(Categoria $categoria){
 		$sql = "INSERT INTO categoria (nome_categoria) values ('{$categoria->__getNomeCategoria()}')";
 		$resultado = $this->conexao->banco->Execute($sql);
+		print_r($resultado);
 		return $resultado;
 		//if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
 			//	throw new EConexaoFalha();	
