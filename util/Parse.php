@@ -139,8 +139,25 @@ class Parse{
 		}
 	}//fim do metodo parseDeSerieHistorica
 	
+	/**
+	*	Desenvolvimento do método para efetuar parse da planilha de crimes por Região Administrativa
+	*	@access public
+	*	@author Lucas Carvalho
+	*	@tutorial Método realizado durante sprint 4, atualizando arrays para cada campo, para depois ir para persistência.
+	*/
 	public function parsePorRegiao(){
-		
+		/**
+		 * Loop para pegar os nomes das categorias na planilha
+		 * @author Lucas Carvalho 
+		 */	
+		for($i = 0, $auxCategoria = 0;$i<45;$i++){
+			if(($i==8)||($i==12)||($i==34)||($i==38)||($i==43)){
+				$this->categoria[$auxCategoria] = $this->dados->val($i,'B',1);
+				$auxCategoria++; 
+			}else{
+				continue;
+			}
+		}
 	}
 	/**
 	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre
