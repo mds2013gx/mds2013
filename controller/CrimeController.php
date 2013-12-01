@@ -118,79 +118,80 @@ class CrimeController{
 		}
 		for($i=0;$i<count($dados);$i++){
 			$dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
+			$dadosCrimeTitle[$i] = number_format($dadosCrime[$i],0,',','.');
 		}
 
-		return "					<div class=\"bar\" title=\"$dadosCrime[0] Ocorrencias\">
+		return "					<div class=\"bar\" title=\"$dadosCrimeTitle[0] Ocorrencias\">
 
 		<div class=\"title\">$dados[0]</div>
 		<div class=\"value\">$dadosCrime[0]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[1] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[1] Ocorrencias\">
 
 		<div class=\"title\">$dados[1]</div>
 		<div class=\"value\">$dadosCrime[1]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[2] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[2] Ocorrencias\">
 
 		<div class=\"title\">$dados[2]</div>
 		<div class=\"value\">$dadosCrime[2]</div>
 			
 		</div>
 			
-		<div class=\"bar\" title=\"$dadosCrime[3] Ocorrencias\">
+		<div class=\"bar\" title=\"$dadosCrimeTitle[3] Ocorrencias\">
 
 		<div class=\"title\">$dados[3]</div>
 		<div class=\"value\">$dadosCrime[3]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[4] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[4] Ocorrencias\">
 
 		<div class=\"title\">$dados[4]</div>
 		<div class=\"value\">$dadosCrime[4]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[5] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[5] Ocorrencias\">
 
 		<div class=\"title\">$dados[5]</div>
 		<div class=\"value\">$dadosCrime[5]</div>
 			
 		</div>
 			
-		<div class=\"bar\" title=\"$dadosCrime[6] Ocorrencias\">
+		<div class=\"bar\" title=\"$dadosCrimeTitle[6] Ocorrencias\">
 
 		<div class=\"title\">$dados[6]</div>
 		<div class=\"value\">$dadosCrime[6]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[7] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[7] Ocorrencias\">
 
 		<div class=\"title\">$dados[7]</div>
 		<div class=\"value\">$dadosCrime[7]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[8] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[8] Ocorrencias\">
 
 		<div class=\"title\">$dados[8]</div>
 		<div class=\"value\">$dadosCrime[8]</div>
 			
 		</div>
 			
-		<div class=\"bar\" title=\"$dadosCrime[9] Ocorrencias\">
+		<div class=\"bar\" title=\"$dadosCrimeTitle[9] Ocorrencias\">
 
 		<div class=\"title\">$dados[9]</div>
 		<div class=\"value\">$dadosCrime[9]</div>
 			
 		</div>
 			
-		<div class=\"bar simple\" title=\"$dadosCrime[10] Ocorrencias\">
+		<div class=\"bar simple\" title=\"$dadosCrimeTitle[10] Ocorrencias\">
 
 		<div class=\"title\">$dados[10]</div>
 		<div class=\"value\">$dadosCrime[10]</div>
