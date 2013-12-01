@@ -141,6 +141,12 @@ class CrimeDAO{
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
+	public function somarGeral(){
+		$sql = "SELECT SUM(total) as total FROM totalgeralcrimes";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;	
+	}
 
 
 
