@@ -5,6 +5,7 @@
 	<!-- start: Meta -->
 	<meta charset="utf-8">
 	<title>RadarCriminal | Estatísticas</title>
+	<link rel="shortcut icon" href="radarcriminal.ico">
 	<meta name="description" content="RadarCriminal - Pagina de estatísticas">
 	<meta name="author" content="Sérgio Silva, Eduardo Augusto, Lucas Carvalho, Lucas Andrade, Eliseu Egewarth">
 	<meta name="keyword" content="radar, criminal, crime, criminalidade, estatistica, estatisticas, regiao, administrativa">
@@ -38,7 +39,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-	<link rel="shortcut icon" href="ico/favicon.png">
+	
 	<!-- end: Favicon and Touch Icons -->	
 		
 </head>
