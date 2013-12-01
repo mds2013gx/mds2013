@@ -8,6 +8,7 @@
 				
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Pagina Inicial</span></a></li>
 						<li><a href="chart.php"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Estatísticas</span></a></li>	
 						<li>
 							<a class="dropmenu" href="#" alt="Por Natureza" title="Por Natureza"><i class="icon-globe"></i><span class="hidden-tablet"> Crimes</span> <span class="label">5</span></a>
