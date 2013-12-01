@@ -335,7 +335,9 @@ class CrimeController{
 		$retornoSomaTotalAcaoPolicial2010_2011 = array_sum($somaTotalAcaoPolicial2010_2011);
 		return $retornoSomaTotalAcaoPolicial2010_2011;
 	}
-
+	public function _somarGeral(){
+		return $this->crimeDAO->somarGeral();
+	}
 
 
 

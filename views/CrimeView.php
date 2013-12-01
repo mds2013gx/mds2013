@@ -102,4 +102,7 @@ class CrimeView{
 	public function _somaTotalAcaoPolicial2010_2011(){
 		return $this->crimeCO->_somaTotalAcaoPolicial2010_2011();
 	}
+	public function _somarGeral(){
+		return $this->crimeCO->_somarGeral();
+	}
 }

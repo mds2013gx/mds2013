@@ -18,7 +18,7 @@ $tempoVW = new TempoView();
 			<div class="boxchart-overlay blue">
 				<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 			</div>
-			<span class="title">Ocorrências</span> <span class="value"><?php echo number_format($crimeVW->_somaCrimeTodosAnos(),0,',','.') ?>
+			<span class="title">Ocorrências</span> <span class="value"><?php echo number_format($crimeVW->_somarGeral(),0,',','.') ?>
 			</span>
 		</div>
 
