@@ -158,9 +158,9 @@ class CrimeDAO{
 		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}')";
 		$this->conexao->banco->Execute($sql);
 
-		if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
-			throw new EConexaoFalha();
-		}
+		//if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
+		//	throw new EConexaoFalha();
+		//}
 
 
 		//if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){

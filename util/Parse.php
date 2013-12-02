@@ -18,6 +18,7 @@ class Parse{
 	
 	public function __construct($planilha){
 		try{
+			
 			$this->dados = new Spreadsheet_Excel_Reader("C:/xampp/htdocs/mds2013/files/".$planilha,"UTF-8");
 			if($planilha == "série histórica - 2001 - 2012 2.xls"){
 				$this->parseDeSerieHistorica();

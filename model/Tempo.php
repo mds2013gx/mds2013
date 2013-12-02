@@ -14,7 +14,7 @@ class Tempo{
 	}
 	public function __getIdTempo(){
 		$retorno = $this->idTempo;
-		if(!is_numeric($idTempo)){
+		if(!is_numeric($retorno)){
 			throw new ETipoErrado();
 		}
 		return $retorno;
