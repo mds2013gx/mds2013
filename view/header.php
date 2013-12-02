@@ -4,10 +4,10 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>RadarCriminal | Estatísticas</title>
+	<title>Radar Criminal</title>
 	<link rel="shortcut icon" href="radarcriminal.ico">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="description" content="RadarCriminal - Pagina de estatísticas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="author" content="Sérgio Silva, Eduardo Augusto, Lucas Carvalho, Lucas Andrade, Eliseu Egewarth">
 	<meta name="keyword" content="radar, criminal, crime, criminalidade, estatistica, estatisticas, regiao, administrativa">
 	<!-- end: Meta -->
