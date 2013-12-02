@@ -60,7 +60,7 @@ $tempoVW = new TempoView();
 
 		<div class="box span12">
 					<div class="box-header">
-						<h2><i class="icon-tasks"></i>Total de Crimes por Regiao Administrativa</h2>
+						<h2><i class="icon-tasks"></i>Crimes por R.A.</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
@@ -92,7 +92,7 @@ $tempoVW = new TempoView();
 				<div class="box blue span12 noMarginLeft">
 					<div class="box-header">
 						<h2>
-							<i class="icon-bar-chart"></i>Estatistica da Última Década
+							<i class="icon-bar-chart"></i>Dados Última Década
 						</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i>
