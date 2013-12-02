@@ -29,6 +29,18 @@ class TempoController{
                         $this->tempoDAO->inserirTempo($dadosTempo);
                 }
         }
+        public function _inserirTempoArrayParseQuadrimestral($arrayTempo){
+        	for($i=0, $arrayAno = $arrayTempo;$i<count($arrayTempo);$i++){
+        		$ano = key($arrayAno);
+        		$dadosTempo = new Tempo();
+        		$dadosTempo->__setIntervalo($ano);
+        		for($j=0;$j<count($arrayTempo[$ano]);$j++){
+        			$dadosTempo->__setMes($arrayDadosTempo[$ano][$j]);
+        			$this->tempoDAO->inserirTempo($dadosTempo);
+        		}
+        		next($arrayAno);
+        	}
+        }
         public function _retornarDadosFormatados(){
                 $dadosTempo = new Tempo();
                 $arrayDadosTempo = $this->_listarTodos();
