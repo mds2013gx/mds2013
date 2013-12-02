@@ -68,17 +68,9 @@ class Crime{
 		return $this->idNatureza;
 	}
 	public function __setIdRa($idRA){
-	
-		if(!is_numeric($idRA)){
-			throw new ETipoErrado();
-		}
 		$this->idRA = $idRA;
 	}
 	public function __getIdRA(){
-		
-		if(!is_numeric($this->idRA)){
-			throw new ETipoErrado();
-		}
 		return $this->idRA;
 	}
 	public function __construct(){

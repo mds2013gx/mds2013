@@ -37,8 +37,8 @@ class TempoControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertObjectHasAttribute('tempoDAO', $tempoController);
 		$this->assertInstanceOf('TempoController', $tempoController);
 		$this->assertInstanceOf('Tempo', $tempoController->_consultarPorIntervalo(2001));
-	}
-	/*public function testInserirTempo()
+	}/*
+	public function testInserirTempo()
 	{
 		$tempoController = new TempoController();
 		$tempo = new Tempo();

@@ -55,11 +55,11 @@ class CrimeDAOTeste extends PHPUnit_Framework_TestCase{
 		$this->assertInstanceOf('CrimeDAO', $crimeDAO);
 		$this->assertNotNull($crimeDAO->somaDeCrimePorNatureza('Estupro'));
 		$this->assertEquals(6633,$crimeDAO->somaDeCrimePorNatureza('Estupro'));
-	}
+	}/*
 	public function testeInserirCrime(){
 		$crimeDAO = new CrimeDAO();
 		$this->assertObjectHasAttribute('conexao', $crimeDAO);
 		$this->assertInstanceOf('CrimeDAO', $crimeDAO);
-	}
+	}*/
 	
 }

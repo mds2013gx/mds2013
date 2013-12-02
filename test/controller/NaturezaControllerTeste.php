@@ -35,8 +35,8 @@ class NaturezaControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
 		$this->assertInstanceOf('Natureza', $naturezaController->_consultarPorNome('Roubo de Carga'));
-	}
-	/*public function testInserirNatureza()
+	}/*
+	public function testInserirNatureza()
 	{
 		$naturezaController = new NaturezaController();
 		$natureza = new Natureza();
