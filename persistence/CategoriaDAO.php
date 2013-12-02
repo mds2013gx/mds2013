@@ -39,7 +39,7 @@ class CategoriaDAO{
 		return $retornaCategorias;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM categoria WHERE id_categoria = $id";
+		$sql = "SELECT * FROM categoria WHERE id_categoria = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		//if($resultado->RecordCount()== 0){
 			//throw new ECategoriaListarConsultaPorIdVazio();

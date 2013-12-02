@@ -27,7 +27,7 @@ class CrimeDAO{
 		return $retornaCrimes;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM crime WHERE id_crime = $id";
+		$sql = "SELECT * FROM crime WHERE id_crime = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if($resultado->RecordCount()== 0){
 			throw new ECrimeConsultarPorIdVazio();
@@ -38,7 +38,7 @@ class CrimeDAO{
 		return $dadosCrime;
 	}
 	public function consultarPorIdNatureza($id){
-		$sql = "SELECT * FROM crime WHERE natureza_id_natureza = $id";
+		$sql = "SELECT * FROM crime WHERE natureza_id_natureza = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if($resultado->RecordCount()== 0){
 			throw new ECrimeConsultarIdNaturezaVazio();
@@ -49,7 +49,7 @@ class CrimeDAO{
 		return $dadosCrime;
 	}
 	public function consultarPorIdTempo($id){
-		$sql = "SELECT * FROM crime WHERE tempo_id_tempo = $id";
+		$sql = "SELECT * FROM crime WHERE tempo_id_tempo = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if($resultado->RecordCount()== 0){
 			throw new ECrimeConsultarIdTempoVazio();

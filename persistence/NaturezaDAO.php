@@ -44,7 +44,7 @@ class NaturezaDAO{
 		return $retornaNaturezas;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM natureza WHERE id_natureza = $id";
+		$sql = "SELECT * FROM natureza WHERE id_natureza = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		if($resultado->RecordCount()== 0){
 			throw new ENaturezaConsultarPorIdVazio();
