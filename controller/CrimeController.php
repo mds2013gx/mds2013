@@ -75,17 +75,11 @@ class CrimeController{
 		return $resultado;
 	}
 	public function _inserirCrimeArrayParse($arrayCrime){
-		if(!is_array($arrayCrime)){
-			throw new EFalhaCrimeController();
-		}
 		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
 			$natureza = key($arrayKey);
 			$dadosNatureza = new Natureza();
 			$naturezaDAO = new NaturezaDAO();
 			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
-			if(!is_string($dadosNatureza)){
-				throw new EFalhaCrimeController();
-			}
 			$arrayTempo = $arrayCrime[$natureza];
 			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
 				$tempo = key($arrayTempo);
