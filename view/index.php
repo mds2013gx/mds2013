@@ -48,11 +48,18 @@ $tempoVW = new TempoView();
 	</div>
 
 	<div class="row-fluid">
-
-		<div class="main-chart">
-			<!--Impressão de gráfico em barras-->
-			<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
+		<div class="box span12" ondesktop="span12" ontablet="span12">
+			<div class="box-header">
+				<h2><i class="icon-bar-chart"></i>Total de Ocorrencias por Ano</h2>
+			</div>
+			<div class="box-content">
+				<div class="main-chart">
+				<!--Impressão de gráfico em barras-->
+				<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
+			</div>
 		</div>
+	</div>
+			
 
 	</div>
 

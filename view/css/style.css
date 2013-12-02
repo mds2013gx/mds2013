@@ -447,7 +447,8 @@ a.brand.noBg {
 .dropdown-submenu:hover > a {
   color: #ffffff;
   text-decoration: none;
-  background: #62bce8;
+  background: #C9CACB;
+  text-shadow: 0.5px 0.5px #626365;
 }
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
@@ -471,7 +472,7 @@ a.brand.noBg {
   background-color: transparent;
 }
 .dropdown-menu-title {
-  background: #383e4b;
+  background: #626365;
   color: white;
   padding: 5px 10px;
   display: block;
@@ -967,8 +968,8 @@ footer a {
 =================================================================== */
 .main-chart {
   height: 300px;
-  margin-top: 40px;
-  margin-bottom: 58px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-top: 1px dashed #c7cbd5;
 }
 .main-chart .bar {
@@ -1027,7 +1028,7 @@ footer a {
   transition: all 0.3s ease;
 }
 .main-chart .bar .value:before {
-  border-top: 5px solid #f5f5f5;
+  border-top: 5px solid #fff;
   position: absolute;
   content: '';
   width: 100%;
