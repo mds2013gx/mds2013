@@ -76,7 +76,7 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
@@ -98,7 +98,7 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
@@ -109,6 +109,7 @@ class CrimeController{
 			next($arrayKey);
 		}
 	}
+	
 	public function _retornarDadosDeSomaFormatado(){
 		$tempoDAO = new TempoDAO();
 		$dadosTempo = new Tempo();
