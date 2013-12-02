@@ -7,7 +7,9 @@ class Crime{
 	private $quantidade;
 	private $idTempo;
 	private $idNatureza;
+	private $idRA;
 	private $exceptionCrime;
+	
 	
 	public function __setIdCrime($idCrime){
 		try{
@@ -96,6 +98,28 @@ class Crime{
 			echo $e->getMessage();
 		}
 		return $this->idNatureza;
+	}
+	public function __setIdRa($idRA){
+		try{
+			if(!is_numeric($idRA)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
+		}
+		$this->idRA = $idRA;
+	}
+	public function __getIdRA(){
+		try{
+			if(!is_numeric($this->idRA)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
+		}
+		return $this->idRA;
 	}
 	public function __construct(){
 		
