@@ -301,10 +301,14 @@ h6 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 a.brand {
-  background: #626365;
+  /*background: #626365;*/
+  background: #302927;
   text-align: center;
-  border-bottom: 1px solid #626365;
-  padding: 10px 0px !important;
+  /*border-bottom: 1px solid #626365;*/
+  padding: 0px 0px !important;
+  background-image:url('../img/logo-half.png');
+  background-repeat: no-repeat;
+  height: 40px;
 }
 a.brand span {
   font-family: 'Kaushan Script', cursive;
@@ -314,7 +318,8 @@ a.brand span {
 a.brand.noBg {
   background: #302927;
   border-right: 1px solid #626365;
-  border-bottom: none;
+  /*border-bottom: none;*/
+  background-image:url('../img/logo-hover.png');
 }
 .header-nav {
   padding: 0px;
@@ -383,7 +388,7 @@ a.brand.noBg {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   color: white;
-  background-color: #1e8fc6;
+  background-color: #626365;
   outline: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -599,8 +604,8 @@ a#main-menu-toggle {
   border-radius: 2px 0px 0px 2px;
   position: absolute;
   right: 0px;
-  background: #f5f5f5;
-  color: #383e4b;
+  background: #C9CACB;
+  color: #302927;
 }
 .sidebar-nav > ul {
   margin: 0px -10px;
@@ -683,19 +688,24 @@ a#main-menu-toggle {
   -moz-border-radius: 2px;
   border-radius: 2px;
   text-shadow: none;
-  background: #d6d9e0;
+  background: #C9CACB;
 }
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  background-color: #DEDFE0;
+}
+
 .btn i {
   margin-top: 2px;
 }
 .btn-primary {
   color: #ffffff;
-  background: #36a9e1;
+  background: #302927;
 }
 .btn-primary:hover,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #1e8fc6;
+  background-color: #626365;
 }
 .btn-primary:active,
 .btn-primary.active {
@@ -1250,7 +1260,7 @@ footer a {
 }
 .smallchart .content {
   padding: 40px 0px;
-  background: #e4e6eb;
+  background: #DEDFE0;
 }
 .smallchart .content i {
   font-size: 40px;
@@ -1292,6 +1302,12 @@ footer a {
 }
 .smallchart.grey .title {
   background: #c7cbd5;
+}
+.smallchart.radarGrey .title {
+  background: #302927;
+}
+.smallchart.radarYellow .title {
+  background: #E4AF42;
 }
 /* Sparkline stats
 =================================================================== */
@@ -1425,6 +1441,9 @@ footer a {
 }
 .smallstat i.radarYellow {
   background: #E4AF42;
+}
+.smallstat i.radarLightYellow {
+  background: #FEE324;
 }
 .smallstat i.white {
   background: white;
@@ -3155,4 +3174,13 @@ ul.messagesList li span.date {
 /* AJUSTE DO TOPO -1px */
 .brand {
   line-height: 19px;
+}
+
+a:hover, a:focus {
+    color: #626365;
+    text-decoration: none;
+}
+
+.boxchart {
+  barColor: #FEE324;
 }

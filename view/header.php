@@ -55,7 +55,10 @@
 				</a>
 				<a id="main-menu-toggle" class="hidden-phone open"><i class="icon-reorder"></i></a>		
 				<div class="row-fluid">
-				<a class="brand span2" href="index.php"><span>RadarCriminal</span></a>
+				<a class="brand span2" href="index.php">
+					<!-- <span>RadarCriminal</span> -->
+					<!-- <img src="img/logo-half.png"> -->
+				</a>
 				</div>		
 <?php 
 	include 'menu_top.php';
