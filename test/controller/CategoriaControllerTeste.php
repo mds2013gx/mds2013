@@ -42,7 +42,7 @@
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
 			$this->assertInstanceOf('Categoria', $categoriaController->_consultarPorNome('Criminalidade'));
 		}
-		public function testInserirCategoria()
+		/*public function testInserirCategoria()
 		{
 			$categoriaController = new CategoriaController();
 			$categoria = new Categoria();
@@ -59,6 +59,6 @@
 			$this->assertNull($categoriaController->_inserirCategoriaArrayParse($arrayCategoria));
 			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
-		}
+		}*/
 	}
 ?>

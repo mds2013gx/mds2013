@@ -60,7 +60,7 @@ $tempoVW = new TempoView();
 		</div>
 	</div>
 		
-	<div class="row-fluid sortable">
+	<div class="row-fluid">
 		<div class="box span12">
 			<div class="box-header">
 				<h2><i class="icon-list-alt"></i><span class="break"></span>Pie</h2>
