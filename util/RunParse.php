@@ -34,7 +34,7 @@ class RunParse{
 		$this->parse = new Parse("JAN_SET_2011_12  POR REGIAO ADM_2.xls");
 		//$this->categoriaCO->_inserirCategoriaArrayParse($this->parse->__getCategoria());
 		//echo "CategoriaRA inserida com sucesso";
-		print_r($this->parse->__getNatureza());
+		print_r($this->parse->__getRegiao());
 		//$this->naturezaCO->_inserirArrayParse($this->parse->__getNatureza());
 		//echo "NaturezaRA inserida com sucesso";
 		//$this->tempoCO->_inserirTempoArrayParse($this->parse->__getTempo());

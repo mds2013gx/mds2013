@@ -76,7 +76,7 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
@@ -98,13 +98,45 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
 				$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
 				$this->crimeDAO->inserirCrime($dadosCrime);
 				next($arrayTempo);
+			}
+			next($arrayKey);
+		}
+	}
+	public function _inserirCrimeArrayParseRA($arrayCrime){
+		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
+			$natureza = key($arrayKey);
+			$dadosNatureza = new Natureza();
+			$naturezaDAO = new NaturezaDAO();
+			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
+			$arrayRegiao = $arrayCrime[$natureza];
+			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
+				$regiao = key($arrayRegiao);
+				$dadosRegiao = new RegiaoAdministrativa();
+				$regiaoDAO = new RegiaoAdministrativaDAODAO();
+				$dadosRegiao = $regiaoDAO->consultarPorNome($regiao);
+				$arrayTempo = $arrayCrime[$natureza][$regiao];
+				for($x = 0;$x<count(array_keys($arrayCrime[$natureza][$regiao])); $x++){
+					$tempo = key($arrayTempo);
+					$dadosTempo = new Tempo();
+					$tempoDAO = new TempoDAO();
+					$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+					$dadosCrime = new Crime();
+					$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
+					$dadosCrime->__setIdRegiaoAdministrativa($dadosRegiao->__getIdRegiaoAdministrativa());
+					$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
+					$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
+					$this->crimeDAO->inserirCrime($dadosCrime);
+					next($arrayTempo);
+				}
+				
+				next($arrayRegiao);
 			}
 			next($arrayKey);
 		}

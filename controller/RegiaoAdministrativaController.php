@@ -22,7 +22,7 @@ class RegiaoAdministrativaController {
 		return $arrayRA;
 	}
 	public function _listarTodasAlfabeticamente(){
-		$arrrayRA = $this->RADAO->listarTodasAlfabeticamente();
+		$arrayRA = $this->RADAO->listarTodasAlfabeticamente();
 		try{
 			if(!is_array($arrayRA)){
 				throw new EErroConsulta();
@@ -31,7 +31,10 @@ class RegiaoAdministrativaController {
 		catch(EErroConsulta $e){
 			echo $e->getMessage();
 		}
-		return $arrrayRA;
+		for($i=0;$i<(count($arrayRA));$i++){
+			$nomeRA[] = $arrayRA[$i]->__getNomeRegiao();
+		}
+		return $nomeRA;
 	}
 	public function _consultarPorId($id){
 		try{
@@ -72,6 +75,10 @@ class RegiaoAdministrativaController {
 			echo $e->getMessage();
 		}
 		return $RA;
+	}
+	
+	public function _contarRegistrosRA(){
+		return $this->RADAO->contarRegistrosRA();
 	}
 	public function _inserirRA(RegiaoAdministrativa $RA){
 		return $this->RADAO->inserirRA($RA);
