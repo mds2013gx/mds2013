@@ -60,7 +60,7 @@ class CrimeDAO{
 		return $dadosCrime;
 	}
 	public function somaDeCrimePorAno($ano){
-		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, tempo t WHERE c.tempo_id_tempo = t.id_tempo AND t.ano = $ano";
+		$sql = "SELECT SUM(c.quantidade) as total FROM crime c, tempo t WHERE t.ano = '".$ano."' AND c.tempo_id_tempo = t.id_tempo AND c.id_crime BETWEEN 1 AND 341";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
