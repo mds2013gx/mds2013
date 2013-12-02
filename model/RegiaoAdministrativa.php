@@ -9,58 +9,38 @@ class RegiaoAdministrativa{
 	
 	}
 	public function __constructOverLoad($idRA,$nomeRegiao){
-		try{
-			if(!is_numeric($idRA) || !is_string($nomeRegiao)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if(!is_numeric($idRA) || !is_string($nomeRegiao)){
+			throw new ETipoErrado();
 		}
 		$this->idRegiaoAdministrativa = $idRA;
 		$this->nomeRegiao = $nomeRegiao;
 	}
 	public function __setIdRegiaoAdministrativa($idRegiaoAdministrativa){
-		try{
-			if(!is_numeric($idRegiaoAdministrativa)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+	
+		if(!is_numeric($idRegiaoAdministrativa)){
+			throw new ETipoErrado();
 		}
 		$this->idRegiaoAdministrativa = $idRegiaoAdministrativa;
 	}
 	public function __getIdRegiaoAdministrativa(){
-		try{
-			if(!is_int($this->idRegiaoAdministrativa)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+
+		if(!is_int($this->idRegiaoAdministrativa)){
+			throw new ETipoErrado();
 		}
 		return $this->idRegiaoAdministrativa;
 	}
 	public function __setNomeRegiao($nomeRegiao){
-		try{
-			if(!is_string($nomeRegiao)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if(!is_string($nomeRegiao)){
+			throw new ETipoErrado();
 		}
 		$this->nomeRegiao = $nomeRegiao;
 	}
 	public function __getNomeRegiao(){
-		try{
-			if(!is_string($this->nomeRegiao)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if(!is_string($this->nomeRegiao)){
+			throw new ETipoErrado();
 		}
 		return $this->nomeRegiao;
 	}
