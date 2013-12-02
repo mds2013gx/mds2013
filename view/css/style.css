@@ -104,7 +104,7 @@ h6 {
   margin: 0px 0px 28px 0px;
 }
 .box .box-header {
-  background: #36a9e1;
+  background: #302927;
   color: white;
   font-size: 16px;
   overflow: hidden;
@@ -115,7 +115,7 @@ h6 {
   margin: 0px 0px 0px 20px;
 }
 .box .box-header h2 i {
-  background: #1e8fc6;
+  background: #626365;
   color: white;
   padding: 10px 0px;
   width: 36px;
@@ -124,7 +124,7 @@ h6 {
   margin: -10px 20px -10px -20px;
 }
 .box .box-header .box-icon {
-  background: #1e8fc6;
+  background: #302927;
   float: right;
 }
 .box .box-header .box-icon i {
@@ -141,7 +141,7 @@ h6 {
   opacity: .8;
   filter: alpha(opacity=80);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  border-left: 1px solid #36a9e1;
+  border-left: 1px solid #626365;
   text-decoration: none;
 }
 .box .box-header .box-icon i:hover {
@@ -282,7 +282,7 @@ h6 {
   margin-bottom: 0px;
   min-height: 40px;
   padding: 0px 20px;
-  background: #36a9e1;
+  background: #302927;
   border: none;
   color: #fff;
   -webkit-border-radius: 0px;
@@ -301,10 +301,14 @@ h6 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 a.brand {
-  background: #1e8fc6;
+  /*background: #626365;*/
+  background: #302927;
   text-align: center;
-  border-bottom: 1px solid #1e8fc6;
-  padding: 10px 0px !important;
+  /*border-bottom: 1px solid #626365;*/
+  padding: 0px 0px !important;
+  background-image:url('../img/logo-half.png');
+  background-repeat: no-repeat;
+  height: 40px;
 }
 a.brand span {
   font-family: 'Kaushan Script', cursive;
@@ -312,8 +316,10 @@ a.brand span {
   text-shadow: none;
 }
 a.brand.noBg {
-  background: #36a9e1;
-  border-bottom: none;
+  background: #302927;
+  border-right: 1px solid #626365;
+  /*border-bottom: none;*/
+  background-image:url('../img/logo-hover.png');
 }
 .header-nav {
   padding: 0px;
@@ -382,7 +388,7 @@ a.brand.noBg {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   color: white;
-  background-color: #1e8fc6;
+  background-color: #626365;
   outline: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -441,7 +447,8 @@ a.brand.noBg {
 .dropdown-submenu:hover > a {
   color: #ffffff;
   text-decoration: none;
-  background: #62bce8;
+  background: #C9CACB;
+  text-shadow: 0.5px 0.5px #626365;
 }
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
@@ -465,7 +472,7 @@ a.brand.noBg {
   background-color: transparent;
 }
 .dropdown-menu-title {
-  background: #383e4b;
+  background: #626365;
   color: white;
   padding: 5px 10px;
   display: block;
@@ -581,7 +588,7 @@ a#main-menu-toggle {
   cursor: pointer;
 }
 #sidebar-left {
-  background: #383e4b;
+  background: #302927;
   padding: 10px;
 }
 #sidebar-left .actions .search {
@@ -598,8 +605,8 @@ a#main-menu-toggle {
   border-radius: 2px 0px 0px 2px;
   position: absolute;
   right: 0px;
-  background: #f5f5f5;
-  color: #383e4b;
+  background: #C9CACB;
+  color: #302927;
 }
 .sidebar-nav > ul {
   margin: 0px -10px;
@@ -642,7 +649,7 @@ a#main-menu-toggle {
 }
 .nav-tabs.nav-stacked > li > a:hover,
 .nav-tabs.nav-stacked > li > ul > li > a:hover {
-  background: #2d323d;
+  background: #626365;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -652,7 +659,7 @@ a#main-menu-toggle {
 }
 .nav-tabs.nav-stacked > li.active > a,
 .nav-tabs.nav-stacked > li > ul > li.active > a {
-  background: #2d323d;
+  background: #626365;
 }
 .nav-tabs.nav-stacked > li.active > a:hover,
 .nav-tabs.nav-stacked > li > ul > li.active > a:hover {
@@ -682,19 +689,24 @@ a#main-menu-toggle {
   -moz-border-radius: 2px;
   border-radius: 2px;
   text-shadow: none;
-  background: #d6d9e0;
+  background: #C9CACB;
 }
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  background-color: #DEDFE0;
+}
+
 .btn i {
   margin-top: 2px;
 }
 .btn-primary {
   color: #ffffff;
-  background: #36a9e1;
+  background: #302927;
 }
 .btn-primary:hover,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #1e8fc6;
+  background-color: #626365;
 }
 .btn-primary:active,
 .btn-primary.active {
@@ -943,7 +955,7 @@ div.uploader {
 /* Footer
 =================================================================== */
 footer {
-  background: #383e4b;
+  background: #302927;
   color: white;
   padding: 10px 20px 20px 20px!important;
   margin: 0px !important;
@@ -956,8 +968,8 @@ footer a {
 =================================================================== */
 .main-chart {
   height: 300px;
-  margin-top: 40px;
-  margin-bottom: 58px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-top: 1px dashed #c7cbd5;
 }
 .main-chart .bar {
@@ -1003,8 +1015,8 @@ footer a {
 .main-chart .bar .value {
   position: absolute;
   bottom: 0px;
-  background: #c7cbd5;
-  color: #c7cbd5;
+  background: #C9CACB;
+  color: #C9CACB;
   width: 100%;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1016,7 +1028,7 @@ footer a {
   transition: all 0.3s ease;
 }
 .main-chart .bar .value:before {
-  border-top: 5px solid #f5f5f5;
+  border-top: 5px solid #fff;
   position: absolute;
   content: '';
   width: 100%;
@@ -1025,7 +1037,7 @@ footer a {
   left: 0px;
 }
 .main-chart .bar .value:hover {
-  background: #36a9e1;
+  background: #302927;
   color: white;
 }
 .main-chart .bar.simple:before {
@@ -1249,7 +1261,7 @@ footer a {
 }
 .smallchart .content {
   padding: 40px 0px;
-  background: #e4e6eb;
+  background: #DEDFE0;
 }
 .smallchart .content i {
   font-size: 40px;
@@ -1291,6 +1303,12 @@ footer a {
 }
 .smallchart.grey .title {
   background: #c7cbd5;
+}
+.smallchart.radarGrey .title {
+  background: #302927;
+}
+.smallchart.radarYellow .title {
+  background: #E4AF42;
 }
 /* Sparkline stats
 =================================================================== */
@@ -1347,6 +1365,11 @@ footer a {
 .smallstat .boxchart-overlay.blue {
   background: #36a9e1;
 }
+
+.smallstat .boxchart-overlay.radarGrey {
+  background: #626365;
+}
+
 .smallstat .boxchart-overlay.lightBlue {
   background: #67c2ef;
 }
@@ -1417,6 +1440,12 @@ footer a {
 .smallstat i.yellow {
   background: #eae874;
 }
+.smallstat i.radarYellow {
+  background: #E4AF42;
+}
+.smallstat i.radarLightYellow {
+  background: #FEE324;
+}
 .smallstat i.white {
   background: white;
 }
@@ -1425,7 +1454,7 @@ footer a {
 }
 .smallstat .title {
   top: 12px;
-  color: #c7cbd5;
+  color: #626365;
   display: block;
   font-size: 14px;
   margin-top: 4px;
@@ -3141,4 +3170,18 @@ ul.messagesList li span.date {
 .progress-success .bar, .progress .bar-success {
   background-color: #E4AF42;
   background-image: linear-gradient(to bottom, #E4AF42, #FEE324);
+}
+
+/* AJUSTE DO TOPO -1px */
+.brand {
+  line-height: 19px;
+}
+
+a:hover, a:focus {
+    color: #626365;
+    text-decoration: none;
+}
+
+.boxchart {
+  barColor: #FEE324;
 }

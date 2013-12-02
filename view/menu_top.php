@@ -1,7 +1,7 @@
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
 					<ul class="nav pull-right">
-						<li class="dropdown hidden-phone">
+						<!-- <li class="dropdown hidden-phone">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="icon-warning-sign"></i>
 							</a>
@@ -83,8 +83,8 @@
                             		<a>View all notifications</a>
 								</li>	
 							</ul>
-						</li>
-						<!-- start: Notifications Dropdown -->
+						</li> -->
+						<!-- start: Notifications Dropdown
 						<li class="dropdown hidden-phone">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="icon-tasks"></i>
@@ -142,9 +142,9 @@
                             		<a class="dropdown-menu-sub-footer">View all tasks</a>
 								</li>	
 							</ul>
-						</li>
+						</li> -->
 						<!-- end: Notifications Dropdown -->
-						<!-- start: Message Dropdown -->
+						<!-- start: Message Dropdown
 						<li class="dropdown hidden-phone">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="icon-envelope"></i>
@@ -237,13 +237,13 @@
                             		<a class="dropdown-menu-sub-footer">View all messages</a>
 								</li>	
 							</ul>
-						</li>
-						<!-- end: Message Dropdown -->
+						</li> -->
+						<!-- end: Message Dropdown
 						<li>
 							<a class="btn" href="#">
 								<i class="icon-wrench"></i>
 							</a>
-						</li>
+						</li> -->
 						
 					</ul>
 				</div>

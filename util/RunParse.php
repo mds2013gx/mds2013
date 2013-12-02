@@ -18,25 +18,27 @@ class RunParse{
 		$this->naturezaCO = new NaturezaController();
 		$this->tempoCO = new TempoController();
 		
+		/*
 		$this->parse = new Parse("série histórica - 2001 - 2012 2.xls");
-		$this->categoriaCO->_inserirCategoriaArrayParse($this->parse->__getCategoria());
+		$this->categoriaCO->_inserirCategoriaArrayParseSerie($this->parse->__getCategoria());
 		echo "Categoria inserida com sucesso";
 		$this->tempoCO->_inserirTempoArrayParse($this->parse->__getTempo());
 		echo "Tempo inserido com sucesso";
 		$this->naturezaCO->_inserirArrayParse($this->parse->__getNatureza());
 		echo "Natureza inserida com sucesso";
-		$this->crimeCO->_inserirCrimeArrayParse($this->parse->__getCrime());
+		$this->crimeCO->_inserirCrimeArrayParseSerieHistorico($this->parse->__getCrime());
 		echo "Crime inserida com sucesso";
 		echo "Parse RA rodando".'</br>';
+		*/
 		
 		$this->parse = new Parse("JAN_SET_2011_12  POR REGIAO ADM_2.xls");
 		//$this->categoriaCO->_inserirCategoriaArrayParse($this->parse->__getCategoria());
-		echo "CategoriaRA inserida com sucesso";
+		//echo "CategoriaRA inserida com sucesso";
 		print_r($this->parse->__getNatureza());
 		//$this->naturezaCO->_inserirArrayParse($this->parse->__getNatureza());
-		echo "NaturezaRA inserida com sucesso";
+		//echo "NaturezaRA inserida com sucesso";
 		//$this->tempoCO->_inserirTempoArrayParse($this->parse->__getTempo());
-		echo "TempoRA inserido com sucesso";
+		//echo "TempoRA inserido com sucesso";
 		
 	}
 }

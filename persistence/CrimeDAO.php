@@ -60,13 +60,13 @@ class CrimeDAO{
 		return $dadosCrime;
 	}
 	public function somaDeCrimePorAno($ano){
-		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, tempo t WHERE c.tempo_id_tempo = t.id_tempo AND t.intervalo = $ano";
+		$sql = "SELECT SUM(c.quantidade) as total FROM crime c, tempo t WHERE t.ano = '".$ano."' AND c.tempo_id_tempo = t.id_tempo AND c.id_crime BETWEEN 1 AND 341";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
 	public function somaDeCrimePorNatureza($natureza){
-		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza = '".$natureza."'";
+		$sql = "SELECT Sum(c.quantidade) as total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.natureza = '".$natureza."' AND c.id_crime BETWEEN 1 AND 341";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
@@ -142,7 +142,7 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 	public function somarGeral(){
-		$sql = "SELECT SUM(total) as total FROM totalgeralcrimes";
+		$sql = "SELECT SUM(total) as total FROM totalgeralcrimes ";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;	

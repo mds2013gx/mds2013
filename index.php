@@ -1,9 +1,9 @@
 <?php
 
+ include ('C:/xampp/htdocs/mds2013/util/RunParse.php');
 
- include ('C:/xampp/htdocs/mds2013/util/Parse.php'); 
- 
- $parse = new Parse("Quadrimestre_final.2013.xls");
- print_r($parse->__getTempo());
+ $parse = new Parse("JAN_SET_2011_12  POR REGIAO ADM_2.xls");
+ //$parse = new Parse("Quadrimestre_final.2013.xls");
+ $runParse = new RunParse();
 
 ?>

@@ -14,35 +14,65 @@ class NaturezaController{
 	}
 	public function _listarTodas(){
 		$resultado = $this->naturezaDAO->listarTodas();
-		if(!is_array($resultado)){
-			throw new EErroConsulta();
+		try{
+			if(!is_array($resultado)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $resultado;
 	}
 	public function _listarTodasAlfabicamente(){
 		$resultado = $this->naturezaDAO->listarTodasAlfabicamente();
-		if(!is_array($resultado)){
-			throw new EErroConsulta();
+		try{
+			if(!is_array($resultado)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $resultado;
 	}
 	public function _consultarPorId($id){
-		if(!is_int($id)){
-			throw new EErroConsulta();
+		try{
+			if(!is_int($id)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		$natureza = $this->naturezaDAO->consultarPorId($id);
-		if(get_class($natureza) != 'Natureza'){
-			throw new EErroConsulta();
+		try{
+			if(get_class($natureza) != 'Natureza'){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $natureza;
 	}
 	public function _consultarPorNome($natureza){
-		if(!is_string($natureza)){
-			throw new EErroConsulta();
+		try{
+			if(!is_string($natureza)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		$natureza = $this->naturezaDAO->consultarPorNome($natureza);
-		if(get_class($natureza) != 'Natureza'){
-			
+		try{
+			if(get_class($natureza) != 'Natureza'){
+				throw new EErroConsulta();	
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $natureza;
 	}
@@ -50,8 +80,13 @@ class NaturezaController{
 		return $this->naturezaDAO->inserirNatureza($natureza);
 	}
 	public function _inserirArrayParse($arrayNatureza){
-		if(!is_array($arrayNatureza)){
-			throw new EFalhaNaturezaController();
+		try{
+			if(!is_array($arrayNatureza)){
+				throw new EFalhaNaturezaController();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		for($i=0,$arrayKey = $arrayNatureza,$inicio = 0;$i<count($arrayNatureza);$i++){
 			$chave = key($arrayKey);
