@@ -11,35 +11,65 @@ class CategoriaController{
 	}
 	public function _listarTodas(){
 		$arrayCategoria = $this->categoriaDAO->listarTodas();
-		if(!is_array($arrayCategoria)){
-			throw new  EErroConsulta();
+		try{
+			if(!is_array($arrayCategoria)){
+				throw new  EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $arrayCategoria;
 	}
 	public function _listarTodasAlfabicamente(){
 		$arrayCategoria = $this->categoriaDAO->listarTodasAlfabicamente();
-		if(!is_array($arrayCategoria)){
-			throw new  EErroConsulta();
+		try{
+			if(!is_array($arrayCategoria)){
+				throw new  EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		return $arrayCategoria;
 	}
 	public function _consultarPorId($id){
-		if(!is_int($id)){
-			throw new EErroConsulta();
+		try{
+			if(!is_int($id)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		 $categoria = $this->categoriaDAO->consultarPorId($id);
-		 if(get_class($categoria)!= 'Categoria'){
-		 	throw new EErroConsulta();
+		 try{
+			 if(get_class($categoria)!= 'Categoria'){
+			 	throw new EErroConsulta();
+			 }
+		 }
+		 catch(EErroConsulta $e){
+		 	echo $e->getMessage();
 		 }
 		 return $categoria;
 	}
 	public function _consultarPorNome($nomeCategoria){
-		 if(!is_string($nomeCategoria)){
-		 	throw new EErroConsulta();
-		 }
+		try{
+			 if(!is_string($nomeCategoria)){
+			 	throw new EErroConsulta();
+			 }
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
+		}
 		 $categoria =  $this->categoriaDAO->consultarPorNome($nomeCategoria);
-		 if(get_class($categoria)!= 'Categoria'){
-		 	throw new EErroConsulta();
+		 try{
+			 if(get_class($categoria)!= 'Categoria'){
+			 	throw new EErroConsulta();
+			 }
+		 }
+		 catch(EErroConsulta $e){
+		 	echo $e->getMessage();
 		 }
 		 return $categoria;
 	}
@@ -47,8 +77,13 @@ class CategoriaController{
 		return $this->categoriaDAO->inserirCategoria($categoria);
 	}
 	public function _inserirCategoriaArrayParseSerie($arrayCategoria){
-		if(!is_array($arrayCategoria)){
-			throw new EErroConsulta();
+		try{
+			if(!is_array($arrayCategoria)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(EErroConsulta $e){
+			echo $e->getMessage();
 		}
 		$dadosCategoria = new Categoria();
 		for($i=0; $i<count($arrayCategoria);$i++){

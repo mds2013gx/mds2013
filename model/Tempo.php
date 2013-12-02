@@ -7,41 +7,71 @@ class Tempo{
 	
 	
 	public function __setIdTempo($idTempo){
-		if(!is_numeric($idTempo)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idTempo)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->idTempo = $idTempo;
 	}
 	public function __getIdTempo(){
 		$retorno = $this->idTempo;
-		if(!is_numeric($retorno)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($retorno)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $retorno;
 	}
 	public function __setIntervalo($intervalo){
-		if(!is_numeric($intervalo)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($intervalo)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->intervalo = $intervalo;
 	}
 	public function __getIntervalo(){
 		$retorno = $this->intervalo;
-		if(!is_numeric($retorno)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($retorno)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $retorno;
 	}
 	public function __setMes($mes){
-		if(!is_string($mes)){
-			throw new ETipoErrado();
+		try{
+			if(!is_string($mes)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->mes = $mes;
 	}
 	public function __getMes(){
 		$retorno =  $this->Mes;
-		if(!is_string($retorno)){
-			throw new ETipoErrado();
+		try{
+			if(!is_string($retorno)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return  $retorno;
 	}
@@ -49,6 +79,14 @@ class Tempo{
 		
 	}
 	public function __constructOverload($idTempo,$intervalo,$mes){
+		try{
+			if(!is_numeric($idTempo) || !is_numeric($intervalo) || !is_string($mes)){
+				throw new EErroConsulta();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
+		}
 		$this->idTempo = $idTempo;
 		$this->intervalo = $intervalo;
 		$this->mes = $mes;

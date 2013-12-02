@@ -10,59 +10,90 @@ class Crime{
 	private $exceptionCrime;
 	
 	public function __setIdCrime($idCrime){
-		
-		if(!is_numeric($idCrime)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idCrime)){
+				throw new ETipoErrado();
+			}
 		}
-		else {
-			$this->idCrime = $idCrime;
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
+		$this->idCrime = $idCrime;
 	}
 	public function __getIdCrime(){
-		if(!is_numeric($this->idCrime)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->idCrime)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->idCrime;
 	}
 	public function __setQuantidade($quantidade){
-		if(!is_numeric($quantidade)) {
-			throw new ETipoErrado();
-				}
-		else{
-			$this->quantidade = $quantidade;
+		try{
+			if(!is_numeric($quantidade)) {
+				throw new ETipoErrado();
+			}
 		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
+		}
+		$this->quantidade = $quantidade;
 	}
 	public function __getQuantidade(){
-		if(!is_numeric($this->quantidade)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->quantidade)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->quantidade;
 	}
 	public function __setIdTempo($idTempo){
-		if(!is_numeric($idTempo)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idTempo)){
+				throw new ETipoErrado();
+			}
 		}
-		else{
-			$this->idTempo = $idTempo;
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
+		$this->idTempo = $idTempo;
 	}
 	public function __getIdTempo(){
-		if(!is_numeric($this->idTempo)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->idTempo)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->idTempo;
 	}
 	public function __setIdNatureza($idNatureza){
-		if(!is_numeric($idNatureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idNatureza)){
+				throw new ETipoErrado();
+			}
 		}
-		else{
-			$this->idNatureza = $idNatureza;
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
+		$this->idNatureza = $idNatureza;
 	}
 	public function __getIdNatureza(){
-		if(!is_numeric($this->idNatureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->idNatureza)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->idNatureza;
 	}
@@ -70,8 +101,13 @@ class Crime{
 		
 	}
 	public function __constructOverload($idCrime="",$idTempo="",$idNatureza="",$quantidade=""){
-		if( (!is_numeric($idCrime)) || (!is_numeric($idTempo)) || (!is_numeric($idNatureza)) || (!is_numeric($quantidade)) ){
-			throw new ETipoErrado();
+		try{
+			if( (!is_numeric($idCrime)) || (!is_numeric($idTempo)) || (!is_numeric($idNatureza)) || (!is_numeric($quantidade)) ){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->idCrime = $idCrime;
 		$this->idTempo = $idTempo;

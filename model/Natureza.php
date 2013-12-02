@@ -10,46 +10,81 @@ class Natureza{
 		
 	}
 	public function __constructOverload($idNatureza,$nomeNatureza,$idCategoriaNatureza){
-		if( (!is_numeric($idNatureza))|| (!is_string($nomeNatureza)) || (!is_numeric($idCategoriaNatureza)) ){
-			throw new ETipoErrado();
+		try{
+			if( (!is_numeric($idNatureza))|| (!is_string($nomeNatureza)) || (!is_numeric($idCategoriaNatureza)) ){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->idNatureza = $idNatureza;
 		$this->natureza = $nomeNatureza;
 		$this->idCategoria = $idCategoriaNatureza;
 	}
 	public function __setIdNatureza($idNatureza){
-		if(!is_numeric($idNatureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idNatureza)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->idNatureza = $idNatureza;
 	}
 	public function __getIdNatureza(){
-		if(!is_numeric($this->idNatureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->idNatureza)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->idNatureza;
 	}
 	public function __setIdCategoria($idCategoria){
-		if(!is_numeric($idCategoria)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($idCategoria)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->idCategoria = $idCategoria;
 	}
 	public function __getIdCategoria(){
-		if(!is_numeric($this->idCategoria)){
-			throw new ETipoErrado();
+		try{
+			if(!is_numeric($this->idCategoria)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->idCategoria;
 	}
 	public function __setNatureza($natureza){
-		if(!is_string($natureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_string($natureza)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		$this->natureza = $natureza;
 	}
 	public function __getNatureza(){
-		if(!is_string($this->natureza)){
-			throw new ETipoErrado();
+		try{
+			if(!is_string($this->natureza)){
+				throw new ETipoErrado();
+			}
+		}
+		catch(ETipoErrado $e){
+			echo $e->getMessage();
 		}
 		return $this->natureza;
 	}
