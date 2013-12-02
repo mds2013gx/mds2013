@@ -46,10 +46,10 @@
 			$this->assertInstanceOf('CategoriaDAO', $categoriaDAO);
 			$this->assertInstanceOf('Categoria', $categoriaDAO->consultarPorNome('Criminalidade'));
 			$this->assertObjectHasAttribute('idCategoria',$categoriaDAO->consultarPorNome('Criminalidade'));
-		}
+		}/*
 		public function testeInserirCategoria(){
 			$categoriaDAO = new CategoriaDAO();
 			$this->assertObjectHasAttribute('conexao', $categoriaDAO);
 			$this->assertInstanceOf('CategoriaDAO', $categoriaDAO);
-		}
+		}*/
 	}

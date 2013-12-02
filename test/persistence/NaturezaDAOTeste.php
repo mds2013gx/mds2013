@@ -38,12 +38,12 @@
 			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
 			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
 			$this->assertInstanceOf('Natureza', $naturezaDAO->consultarPorNome('Estupro'));
-		}
+		}/*
 		public function testInserirNatureza(){
 			$naturezaDAO = new NaturezaDAO();
 			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
 			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
-		}
+		}*/
 	
 	}
 

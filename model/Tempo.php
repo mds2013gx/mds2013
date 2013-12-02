@@ -35,17 +35,10 @@ class Tempo{
 		return $retorno;
 	}
 	public function __setMes($mes){
-		
-		if(!is_string($mes)){
-			throw new ETipoErrado();
-		}
 		$this->mes = $mes;
 	}
 	public function __getMes(){
 		$retorno =  $this->mes;
-		if(!is_string($retorno)){
-			throw new ETipoErrado();
-		}
 		return  $retorno;
 	}
 	public function __construct(){
@@ -53,7 +46,7 @@ class Tempo{
 	}
 	public function __constructOverload($idTempo,$intervalo,$mes){
 		
-			if((!is_numeric($idTempo)) || (!is_string($intervalo)) || (!is_string($mes))){
+			if((!is_numeric($idTempo)) || (!is_string($intervalo))){
 				throw new ETipoErrado();
 			}
 		$this->idTempo = $idTempo;
