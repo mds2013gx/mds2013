@@ -48,6 +48,13 @@ class RegiaoAdministrativaDAO {
 		return $dadosRA;
 	
 	}
+	
+	public function contarRegistrosRA(){
+		$sql = "SELECT COUNT(id_regiao_administrativa)AS total FROM regiao_administrativa";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
 	public function inserirRA(RegiaoAdministrativa $RA){
 		$sql = "INSERT INTO regiao_administrativa (nome) values ('{$RA->__getNomeRegiao()}')";
 		$resultado = $this->conexao->banco->Execute($sql);
