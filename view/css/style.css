@@ -3132,3 +3132,13 @@ ul.messagesList li span.date {
   margin-top: 20px;
   float: left;
 }
+
+.progress .bar {
+  background-color: #302927;
+  background-image: linear-gradient(to bottom, #302927, #626365);
+}
+
+.progress-success .bar, .progress .bar-success {
+  background-color: #E4AF42;
+  background-image: linear-gradient(to bottom, #E4AF42, #FEE324);
+}

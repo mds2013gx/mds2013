@@ -58,6 +58,33 @@ $tempoVW = new TempoView();
 
 	<div class="row-fluid">
 
+		<div class="box span12">
+					<div class="box-header">
+						<h2><i class="icon-tasks"></i>Total de Crimes por Regiao Administrativa</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<h3>Taguatinga</h3>
+							<div class="progress">
+								<div class="bar" style="width: 70%;"></div>
+							</div>
+							<div class="progress progress-success" style="margin-bottom: 9px;">
+								<div class="bar" style="width: 40%"></div>
+							</div>
+						<h3>Guara</h3>
+							<div class="progress">
+								<div class="bar" style="width: 60%;"></div>
+							</div>
+							<div class="progress progress-success" style="margin-bottom: 9px;">
+								<div class="bar" style="width: 80%"></div>
+							</div>
+					</div>
+		</div><!--/span-->
+
 		<div class="span6" onTablet="span12" onDesktop="span6">
 
 			<div class="row-fluid">
@@ -122,447 +149,6 @@ $tempoVW = new TempoView();
 
 		</div>
 
-		<div class="box blue span6 noMargin" onTablet="span12"
-			onDesktop="span6">
-			<!--Valores totais extraidos direto do arquivo de série histórica 2001-2011-->
-			<div class="box-header">
-				<h2>Crimes contra a pessoa nos últimos 10 anos</h2>
-			</div>
-			<div class="box-content">
-
-				<div class="chart-type2" style="height: 220px"></div>
-
-				<div class="verticalChart">
-
-					<div class="singleBar" alt="Taguatinga" title="Taguatinga">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>85%</span>
-							</div>
-
-						</div>
-
-						<div class="title">TG</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>16%</span>
-							</div>
-
-						</div>
-
-						<div class="title">PL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>12%</span>
-							</div>
-
-						</div>
-
-						<div class="title">GB</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>9%</span>
-							</div>
-
-						</div>
-
-						<div class="title">DE</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>7%</span>
-							</div>
-
-						</div>
-
-						<div class="title">NL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>6%</span>
-							</div>
-
-						</div>
-
-						<div class="title">CA</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>5%</span>
-							</div>
-
-						</div>
-
-						<div class="title">FI</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>4%</span>
-							</div>
-
-						</div>
-
-						<div class="title">RU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>3%</span>
-							</div>
-
-						</div>
-
-						<div class="title">AU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>1%</span>
-							</div>
-
-						</div>
-
-						<div class="title">N/A</div>
-
-					</div>
-
-					<div class="singleBar" alt="Taguatinga" title="Taguatinga">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>37%</span>
-							</div>
-
-						</div>
-
-						<div class="title">TG</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>16%</span>
-							</div>
-
-						</div>
-
-						<div class="title">PL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>12%</span>
-							</div>
-
-						</div>
-
-						<div class="title">GB</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>9%</span>
-							</div>
-
-						</div>
-
-						<div class="title">DE</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>7%</span>
-							</div>
-
-						</div>
-
-						<div class="title">NL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>6%</span>
-							</div>
-
-						</div>
-
-						<div class="title">CA</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>5%</span>
-							</div>
-
-						</div>
-
-						<div class="title">FI</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>4%</span>
-							</div>
-
-						</div>
-
-						<div class="title">RU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>3%</span>
-							</div>
-
-						</div>
-
-						<div class="title">AU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>1%</span>
-							</div>
-
-						</div>
-
-						<div class="title">N/A</div>
-
-					</div>
-
-					<div class="singleBar" alt="Taguatinga" title="Taguatinga">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>37%</span>
-							</div>
-
-						</div>
-
-						<div class="title">TG</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>16%</span>
-							</div>
-
-						</div>
-
-						<div class="title">PL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>12%</span>
-							</div>
-
-						</div>
-
-						<div class="title">GB</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>9%</span>
-							</div>
-
-						</div>
-
-						<div class="title">DE</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>7%</span>
-							</div>
-
-						</div>
-
-						<div class="title">NL</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>6%</span>
-							</div>
-
-						</div>
-
-						<div class="title">CA</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>5%</span>
-							</div>
-
-						</div>
-
-						<div class="title">FI</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>4%</span>
-							</div>
-
-						</div>
-
-						<div class="title">RU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>3%</span>
-							</div>
-
-						</div>
-
-						<div class="title">AU</div>
-
-					</div>
-
-					<div class="singleBar" alt="" title="">
-
-						<div class="bar">
-
-							<div class="value">
-								<span>1%</span>
-							</div>
-
-						</div>
-
-						<div class="title">N/A</div>
-
-					</div>
-
-				</div>
-
-				<div class="clearfix"></div>
-
-			</div>
-
-		</div>
-		<!--/span-->
-
 	</div>
 
 	<div class="row-fluid">
@@ -613,7 +199,7 @@ $tempoVW = new TempoView();
 
 	<div class="row-fluid">
 
-		<div class="box span8" onTablet="span12" onDesktop="span8">
+		<div class="box span12" onTablet="span12" onDesktop="span12">
 			<div class="box-header">
 				<h2>tickets</h2>
 			</div>
@@ -622,64 +208,6 @@ $tempoVW = new TempoView();
 			</div>
 		</div>
 
-		<div class="box span4 noMargin" onTablet="span12" onDesktop="span4">
-			<div class="box-header">
-				<h2>
-					<i class="icon-check"></i>To Do List
-				</h2>
-				<div class="box-icon">
-					<a href="#" class="btn-setting"><i class="icon-wrench"></i> </a> <a
-						href="#" class="btn-minimize"><i class="icon-chevron-up"></i> </a>
-					<a href="#" class="btn-close"><i class="icon-remove"></i> </a>
-				</div>
-			</div>
-			<div class="box-content">
-				<div class="todo">
-					<ul class="todo-list">
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">Windows Phone 8 App</span> <span
-							class="label label-important">today</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">New frontend layout</span> <span
-							class="label label-important">today</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">Hire developers</span> <span
-							class="label label-warning">tommorow</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">Windows Phone 8 App</span> <span
-							class="label label-warning">tommorow</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">New frontend layout</span> <span
-							class="label label-success">this week</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">Hire developers</span> <span
-							class="label label-success">this week</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">New frontend layout</span> <span
-							class="label label-info">this month</span>
-						</li>
-						<li><span class="todo-actions"> <a href="#"><i
-									class="icon-check-empty"></i> </a>
-						</span> <span class="desc">Hire developers</span> <span
-							class="label label-info">this month</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
 	</div>
 
