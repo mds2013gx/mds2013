@@ -30,10 +30,6 @@
 			$this->tempo->__setMes('teste');
 			$this->assertEquals('teste',$this->tempo->__getMes());
 		}
-		public function testExceptionMes(){
-			$this->setExpectedException('ETipoErrado');
-			$this->tempo->__setMes(1);
-		}
 		public function testConstructOverLoad(){
 			$this->tempo->__constructOverload(1, '2001','janeiro');
 			$this->assertEquals(1,$this->tempo->__getIdTempo());
