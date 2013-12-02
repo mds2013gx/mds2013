@@ -19,6 +19,9 @@ class TempoController{
         public function _consultarPorIntervalo($intervalo){
                 return $this->tempoDAO->consultarPorIntervalo($intervalo);
         }
+        public function _consultarPorMes($mes){
+        	return $this->tempoDAO->consultarPorMes($mes);
+        }
         public function _inserirTempo(Tempo $tempo){
                 return $this->tempoDAO->inserirTempo($tempo);
         }

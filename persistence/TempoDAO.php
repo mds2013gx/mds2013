@@ -38,6 +38,15 @@ class TempoDAO{
 		return $dadosTempo;
 		
 	}
+	public function consultarPorMes($mes){
+		$sql = "SELECT * FROM tempo WHERE mes = $mes";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		$dadosTempo = new Tempo();
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
+		return $dadosTempo;
+	
+	}
 	public function consultarPorIntervalo($intervalo){
 		$sql = "SELECT * FROM tempo WHERE ano = $intervalo";
 		$resultado = $this->conexao->banco->Execute($sql);
