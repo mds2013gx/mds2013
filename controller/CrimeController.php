@@ -65,7 +65,29 @@ class CrimeController{
 		return $retornoSomaTodosAnos;
 	}
 
-	public function _inserirCrimeArrayParse($arrayCrime){
+	public function _inserirCrimeArrayParseSerieHistorico($arrayCrime){
+		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
+			$natureza = key($arrayKey);
+			$dadosNatureza = new Natureza();
+			$naturezaDAO = new NaturezaDAO();
+			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
+			$arrayTempo = $arrayCrime[$natureza];
+			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
+				$tempo = key($arrayTempo);
+				$dadosTempo = new Tempo();
+				$tempoDAO = new TempoDAO();
+				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosCrime = new Crime();
+				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
+				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
+				$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
+				$this->crimeDAO->inserirCrime($dadosCrime);
+				next($arrayTempo);
+			}
+			next($arrayKey);
+		}
+	}
+	public function _inserirCrimeArrayParseQuadrimestral($arrayCrime){
 		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
 			$natureza = key($arrayKey);
 			$dadosNatureza = new Natureza();

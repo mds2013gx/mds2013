@@ -46,7 +46,7 @@ class CategoriaController{
 	public function _inserirCategoria(Categoria $categoria){
 		return $this->categoriaDAO->inserirCategoria($categoria);
 	}
-	public function _inserirCategoriaArrayParse($arrayCategoria){
+	public function _inserirCategoriaArrayParseSerie($arrayCategoria){
 		if(!is_array($arrayCategoria)){
 			throw new EErroConsulta();
 		}

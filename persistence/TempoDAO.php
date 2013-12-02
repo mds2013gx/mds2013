@@ -13,18 +13,18 @@ class TempoDAO{
 		while($registro = $resultado->FetchNextObject())
 		{
 			$dadosTempo = new Tempo();
-			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);	
+			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);	
 			$retornaTempos[] = $dadosTempo;
 		}
 		return $retornaTempos;
 	} 
 	public function listarTodasEmOrdem(){
-		$sql = "SELECT * FROM tempo ORDER BY intervalo ASC ";
+		$sql = "SELECT * FROM tempo ORDER BY ano ASC ";
 		$resultado = $this->conexao->banco->Execute($sql);
 		while($registro = $resultado->FetchNextObject())
 		{
 			$dadosTempo = new Tempo();
-			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
+			$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
 			$retornaTempos[] = $dadosTempo;
 		}
 		return $retornaTempos;
@@ -34,20 +34,29 @@ class TempoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();
-		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
 		return $dadosTempo;
 		
 	}
-	public function consultarPorIntervalo($intervalo){
-		$sql = "SELECT * FROM tempo WHERE intervalo = $intervalo";
+	public function consultarPorMes($mes){
+		$sql = "SELECT * FROM tempo WHERE mes = $mes";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();
-		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->INTERVALO);
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
+		return $dadosTempo;
+	
+	}
+	public function consultarPorIntervalo($intervalo){
+		$sql = "SELECT * FROM tempo WHERE ano = $intervalo";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		$dadosTempo = new Tempo();
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES,$registro->MES);
 		return $dadosTempo;
 	}
 	public function inserirTempo(Tempo $tempo){
-		$sql = "INSERT INTO tempo (intervalo) VALUES ('{$tempo->__getIntervalo()}')";
+		$sql = "INSERT INTO tempo (ano) VALUES ('{$tempo->__getIntervalo()}')";
 		$this->conexao->banco->Execute($sql);
 	}
 }
