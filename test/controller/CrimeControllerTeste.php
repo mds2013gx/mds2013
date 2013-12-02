@@ -60,7 +60,8 @@ class CrimeControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertObjectHasAttribute('crimeDAO', $crimeController);
 		$this->assertInstanceOf('CrimeController', $crimeController);
 		$this->assertEquals(6633,$crimeController->_somaDeCrimePorNatureza('Estupro'));
-	}/*
+	}
+	/*
 	public function testInserirCrimeArrayParse()
 	{
 		$crimeController = new CrimeController();
