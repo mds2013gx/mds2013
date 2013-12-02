@@ -18,6 +18,7 @@ class Parse{
 	
 	public function __construct($planilha){
 		try{
+			
 			$this->dados = new Spreadsheet_Excel_Reader("C:/xampp/htdocs/mds2013/files/".$planilha,"UTF-8");
 			if($planilha == "série histórica - 2001 - 2012 2.xls"){
 				$this->parseDeSerieHistorica();
@@ -159,7 +160,7 @@ class Parse{
 				continue;
 			}
 		}
-		print_r($this->__getCategoria());
+		//print_r($this->__getCategoria());
 		echo "<br>";
 		/**
 		* Loop para pegar os nomes das naturezas de crimes contidas na planilha de RA
@@ -186,7 +187,7 @@ class Parse{
 		 			continue;
 		 		}
 		}
-		print_r($this->__getNatureza());
+		//print_r($this->__getNatureza());
 		echo "<br>";
 		/**
 		 * Loop para pegar os nomes dos tempos contidas na planilha de RA
@@ -197,7 +198,7 @@ class Parse{
 			$auxTempo++;
 		}
 		
-		print_r($this->__getTempo());
+		//print_r($this->__getTempo());
 		echo "<br>";
 		/**
 		* Loop para pegar os nomes das regiões contidas na planilha RA
@@ -225,7 +226,7 @@ class Parse{
 				}
 			}
 		}
-		print_r($this->__getRegiao());
+		//print_r($this->__getRegiao());
 		echo "<br>";
 		/**
 		* Loop para pegar os dados de crime contidas na planila de RA da primeira parte
@@ -334,7 +335,7 @@ class Parse{
 			}
 		}
 		echo "<br>";
-		print_r($this->__getCrime());
+		//print_r($this->__getCrime());
 	}
 	/**
 	*	Desenvolvimento do método para efetuar parse da planilha de quadrimestre

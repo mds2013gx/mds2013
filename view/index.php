@@ -15,7 +15,7 @@ $tempoVW = new TempoView();
 
 		<div class="span3 smallstat box mobileHalf" onTablet="span6"
 			onDesktop="span3">
-			<div class="boxchart-overlay blue">
+			<div class="boxchart-overlay radarGrey">
 				<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 			</div>
 			<span class="title">Ocorrências</span> <span class="value"><?php echo number_format($crimeVW->_somarGeral(),0,',','.') ?>
@@ -33,14 +33,14 @@ $tempoVW = new TempoView();
 
 		<div class="span3 smallstat box mobileHalf noMargin" onTablet="span6"
 			onDesktop="span3">
-			<i class="icon-search green"></i> <span class="title">Roubo</span> <span
+			<i class="icon-search radarLightYellow"></i> <span class="title">Roubo</span> <span
 				class="value"><?php echo  number_format($crimeVW->_somaTotalRoubo(),0,',','.') ?>
 			</span>
 		</div>
 
 		<div class="span3 smallstat mobileHalf box" onTablet="span6"
 			onDesktop="span3">
-			<i class="icon-certificate yellow"></i> <span class="title">Furto</span>
+			<i class="icon-certificate radarYellow"></i> <span class="title">Furto</span>
 			<span class="value"><?php echo number_format($crimeVW->_somaTotalFurtos(),0,',','.') ?>
 			</span>
 		</div>
@@ -69,17 +69,17 @@ $tempoVW = new TempoView();
 					</div>
 					<div class="box-content">
 						<h3>Taguatinga</h3>
-							<div class="progress">
+							<div class="progress" title="70%">
 								<div class="bar" style="width: 70%;"></div>
 							</div>
-							<div class="progress progress-success" style="margin-bottom: 9px;">
+							<div class="progress progress-success" style="margin-bottom: 9px;" title="40%">
 								<div class="bar" style="width: 40%"></div>
 							</div>
 						<h3>Guara</h3>
-							<div class="progress">
+							<div class="progress" title="60%">
 								<div class="bar" style="width: 60%;"></div>
 							</div>
-							<div class="progress progress-success" style="margin-bottom: 9px;">
+							<div class="progress progress-success" style="margin-bottom: 9px;" title="80%">
 								<div class="bar" style="width: 80%"></div>
 							</div>
 					</div>
@@ -88,46 +88,6 @@ $tempoVW = new TempoView();
 		<div class="span6" onTablet="span12" onDesktop="span6">
 
 			<div class="row-fluid">
-				<div class="span12 multi-stat-box box">
-					<div class="header row-fluid">
-						<div class="left">
-							<h2>Crimes contra pessoa</h2>
-							<a class="icon-chevron-down"></a>
-						</div>
-						<div class="right">
-							<h2>JAN 2010 - DEZ 2011</h2>
-							<div class="percent">
-								<i class="icon-double-angle-down"></i> 5%
-							</div>
-						</div>
-					</div>
-					<div class="content row-fluid">
-						<!--Dados retirados das celulas de total e somatorio entre anos 2010 e 2011-->
-						<div class="left">
-							<ul>
-								<li><span class="date">Homicídio</span> <span class="value"><?php echo number_format($crimeVW->_somaHomicidios2010_2011(),0,',','.') ?>
-								</span>
-								</li>
-								<li class="active"><span class="date">Tent. de Homicídio</span>
-									<span class="value"><?php echo number_format($crimeVW->_somaTotalTentativasHomicidio2010_2011(),0,',','.') ?>
-								</span>
-								</li>
-								<li><span class="date">Lesão Corporal</span> <span
-									class="value"><?php echo number_format($crimeVW->_somaLesaoCorporal2010_2011(),0,',','.') ?>
-								</span>
-								</li>
-								<li><span class="date">Total de Crimes*</span> <span
-									class="value"><?php echo number_format($crimeVW->_somaCrime2010_2011(),0,',','.') ?>
-								</span>
-								</li>
-							</ul>
-						</div>
-						<div class="right">
-							<div class="multi-stat-box-chart"
-								style="height: 180px; width: 90%; padding: 10px"></div>
-						</div>
-					</div>
-				</div>
 
 				<div class="box blue span12 noMarginLeft">
 					<div class="box-header">
@@ -159,7 +119,7 @@ $tempoVW = new TempoView();
 
 			<div class="row-fluid">
 
-				<div class="span6 smallchart blue box mobileHalf">
+				<div class="span6 smallchart radarGrey box mobileHalf">
 
 					<div class="title">ROUBOS ÚLTIMA DÉCADA</div>
 
@@ -175,7 +135,7 @@ $tempoVW = new TempoView();
 
 				</div>
 
-				<div class="span6 smallchart red box mobileHalf">
+				<div class="span6 smallchart radarYellow box mobileHalf">
 
 					<div class="title">GRAFICO</div>
 
