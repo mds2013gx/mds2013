@@ -104,7 +104,7 @@ h6 {
   margin: 0px 0px 28px 0px;
 }
 .box .box-header {
-  background: #36a9e1;
+  background: #302927;
   color: white;
   font-size: 16px;
   overflow: hidden;
@@ -115,7 +115,7 @@ h6 {
   margin: 0px 0px 0px 20px;
 }
 .box .box-header h2 i {
-  background: #1e8fc6;
+  background: #626365;
   color: white;
   padding: 10px 0px;
   width: 36px;
@@ -124,7 +124,7 @@ h6 {
   margin: -10px 20px -10px -20px;
 }
 .box .box-header .box-icon {
-  background: #1e8fc6;
+  background: #302927;
   float: right;
 }
 .box .box-header .box-icon i {
@@ -141,7 +141,7 @@ h6 {
   opacity: .8;
   filter: alpha(opacity=80);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  border-left: 1px solid #36a9e1;
+  border-left: 1px solid #626365;
   text-decoration: none;
 }
 .box .box-header .box-icon i:hover {
@@ -282,7 +282,7 @@ h6 {
   margin-bottom: 0px;
   min-height: 40px;
   padding: 0px 20px;
-  background: #36a9e1;
+  background: #302927;
   border: none;
   color: #fff;
   -webkit-border-radius: 0px;
@@ -301,9 +301,9 @@ h6 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 a.brand {
-  background: #1e8fc6;
+  background: #626365;
   text-align: center;
-  border-bottom: 1px solid #1e8fc6;
+  border-bottom: 1px solid #626365;
   padding: 10px 0px !important;
 }
 a.brand span {
@@ -312,7 +312,8 @@ a.brand span {
   text-shadow: none;
 }
 a.brand.noBg {
-  background: #36a9e1;
+  background: #302927;
+  border-right: 1px solid #626365;
   border-bottom: none;
 }
 .header-nav {
@@ -581,7 +582,7 @@ a#main-menu-toggle {
   cursor: pointer;
 }
 #sidebar-left {
-  background: #383e4b;
+  background: #302927;
   padding: 10px;
 }
 #sidebar-left .actions .search {
@@ -642,7 +643,7 @@ a#main-menu-toggle {
 }
 .nav-tabs.nav-stacked > li > a:hover,
 .nav-tabs.nav-stacked > li > ul > li > a:hover {
-  background: #2d323d;
+  background: #626365;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -652,7 +653,7 @@ a#main-menu-toggle {
 }
 .nav-tabs.nav-stacked > li.active > a,
 .nav-tabs.nav-stacked > li > ul > li.active > a {
-  background: #2d323d;
+  background: #626365;
 }
 .nav-tabs.nav-stacked > li.active > a:hover,
 .nav-tabs.nav-stacked > li > ul > li.active > a:hover {
@@ -943,7 +944,7 @@ div.uploader {
 /* Footer
 =================================================================== */
 footer {
-  background: #383e4b;
+  background: #302927;
   color: white;
   padding: 10px 20px 20px 20px!important;
   margin: 0px !important;
@@ -1003,8 +1004,8 @@ footer a {
 .main-chart .bar .value {
   position: absolute;
   bottom: 0px;
-  background: #c7cbd5;
-  color: #c7cbd5;
+  background: #C9CACB;
+  color: #C9CACB;
   width: 100%;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -1025,7 +1026,7 @@ footer a {
   left: 0px;
 }
 .main-chart .bar .value:hover {
-  background: #36a9e1;
+  background: #302927;
   color: white;
 }
 .main-chart .bar.simple:before {
@@ -1347,6 +1348,11 @@ footer a {
 .smallstat .boxchart-overlay.blue {
   background: #36a9e1;
 }
+
+.smallstat .boxchart-overlay.radarGrey {
+  background: #626365;
+}
+
 .smallstat .boxchart-overlay.lightBlue {
   background: #67c2ef;
 }
@@ -1417,6 +1423,9 @@ footer a {
 .smallstat i.yellow {
   background: #eae874;
 }
+.smallstat i.radarYellow {
+  background: #E4AF42;
+}
 .smallstat i.white {
   background: white;
 }
@@ -1425,7 +1434,7 @@ footer a {
 }
 .smallstat .title {
   top: 12px;
-  color: #c7cbd5;
+  color: #626365;
   display: block;
   font-size: 14px;
   margin-top: 4px;
@@ -3141,4 +3150,9 @@ ul.messagesList li span.date {
 .progress-success .bar, .progress .bar-success {
   background-color: #E4AF42;
   background-image: linear-gradient(to bottom, #E4AF42, #FEE324);
+}
+
+/* AJUSTE DO TOPO -1px */
+.brand {
+  line-height: 19px;
 }

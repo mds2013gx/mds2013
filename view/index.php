@@ -15,7 +15,7 @@ $tempoVW = new TempoView();
 
 		<div class="span3 smallstat box mobileHalf" onTablet="span6"
 			onDesktop="span3">
-			<div class="boxchart-overlay blue">
+			<div class="boxchart-overlay radarGrey">
 				<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
 			</div>
 			<span class="title">Ocorrências</span> <span class="value"><?php echo number_format($crimeVW->_somarGeral(),0,',','.') ?>
@@ -40,7 +40,7 @@ $tempoVW = new TempoView();
 
 		<div class="span3 smallstat mobileHalf box" onTablet="span6"
 			onDesktop="span3">
-			<i class="icon-certificate yellow"></i> <span class="title">Furto</span>
+			<i class="icon-certificate radarYellow"></i> <span class="title">Furto</span>
 			<span class="value"><?php echo number_format($crimeVW->_somaTotalFurtos(),0,',','.') ?>
 			</span>
 		</div>
