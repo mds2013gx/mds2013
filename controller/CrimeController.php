@@ -76,7 +76,7 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
@@ -98,13 +98,45 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
 				$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
 				$this->crimeDAO->inserirCrime($dadosCrime);
 				next($arrayTempo);
+			}
+			next($arrayKey);
+		}
+	}
+	public function _inserirCrimeArrayParseRA($arrayCrime){
+		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
+			$natureza = key($arrayKey);
+			$dadosNatureza = new Natureza();
+			$naturezaDAO = new NaturezaDAO();
+			$dadosNatureza = $naturezaDAO->consultarPorNome($natureza);
+			$arrayRegiao = $arrayCrime[$natureza];
+			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
+				$regiao = key($arrayRegiao);
+				$dadosRegiao = new RegiaoAdministrativa();
+				$regiaoDAO = new RegiaoAdministrativaDAODAO();
+				$dadosRegiao = $regiaoDAO->consultarPorNome($regiao);
+				$arrayTempo = $arrayCrime[$natureza][$regiao];
+				for($x = 0;$x<count(array_keys($arrayCrime[$natureza][$regiao])); $x++){
+					$tempo = key($arrayTempo);
+					$dadosTempo = new Tempo();
+					$tempoDAO = new TempoDAO();
+					$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
+					$dadosCrime = new Crime();
+					$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
+					$dadosCrime->__setIdRegiaoAdministrativa($dadosRegiao->__getIdRegiaoAdministrativa());
+					$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
+					$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
+					$this->crimeDAO->inserirCrime($dadosCrime);
+					next($arrayTempo);
+				}
+				
+				next($arrayRegiao);
 			}
 			next($arrayKey);
 		}
@@ -142,83 +174,33 @@ class CrimeController{
 			$dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
 			$dadosCrimeTitle[$i] = number_format($dadosCrime[$i],0,',','.');
 		}
-
-		return "					<div class=\"bar\" title=\"$dadosCrimeTitle[0] Ocorrencias\">
-
-		<div class=\"title\">$dados[0]</div>
-		<div class=\"value\">$dadosCrime[0]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[1] Ocorrencias\">
-
-		<div class=\"title\">$dados[1]</div>
-		<div class=\"value\">$dadosCrime[1]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[2] Ocorrencias\">
-
-		<div class=\"title\">$dados[2]</div>
-		<div class=\"value\">$dadosCrime[2]</div>
-			
-		</div>
-			
-		<div class=\"bar\" title=\"$dadosCrimeTitle[3] Ocorrencias\">
-
-		<div class=\"title\">$dados[3]</div>
-		<div class=\"value\">$dadosCrime[3]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[4] Ocorrencias\">
-
-		<div class=\"title\">$dados[4]</div>
-		<div class=\"value\">$dadosCrime[4]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[5] Ocorrencias\">
-
-		<div class=\"title\">$dados[5]</div>
-		<div class=\"value\">$dadosCrime[5]</div>
-			
-		</div>
-			
-		<div class=\"bar\" title=\"$dadosCrimeTitle[6] Ocorrencias\">
-
-		<div class=\"title\">$dados[6]</div>
-		<div class=\"value\">$dadosCrime[6]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[7] Ocorrencias\">
-
-		<div class=\"title\">$dados[7]</div>
-		<div class=\"value\">$dadosCrime[7]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[8] Ocorrencias\">
-
-		<div class=\"title\">$dados[8]</div>
-		<div class=\"value\">$dadosCrime[8]</div>
-			
-		</div>
-			
-		<div class=\"bar\" title=\"$dadosCrimeTitle[9] Ocorrencias\">
-
-		<div class=\"title\">$dados[9]</div>
-		<div class=\"value\">$dadosCrime[9]</div>
-			
-		</div>
-			
-		<div class=\"bar simple\" title=\"$dadosCrimeTitle[10] Ocorrencias\">
-
-		<div class=\"title\">$dados[10]</div>
-		<div class=\"value\">$dadosCrime[10]</div>
-			
-		</div>";
+		
+		
+		
+		for($i=0;$i<count($dadosCrime); $i++){
+			/**
+			 * LaÁo que escreve os dados do grafico de ocorrencias por ano.
+			 * a string ("\"bar\"") define a barra cheia do grafico e 
+			 * a string ("\"bar simple\"") define a barra pontilhada.
+			 * A condicional 'if($i%2==0)' garante que as barras pontilhadas e cheias sejam intercaladas.
+			 * Retorna-se o vetor de strings concatenado.
+			 * @author Eliseu
+			 * @copyright RadarCriminal 2013
+			 */
+			if($i%2==0){
+				$varbar="\"bar\"";
+			}else {
+				$varbar="\"bar simple\"";
+			}
+			$dadosCrimeFormatado[]="					<div class=".$varbar."title=\"".$dadosCrimeTitle[$i]." Ocorrencias\">
+				<div class=\"title\">".$dados[$i]."</div>
+				<div class=\"value\">".$dadosCrime[$i]."</div>
+				</div>";
+			if($i!=0)$dadosCrimeFormatado[0]=  $dadosCrimeFormatado[0].$dadosCrimeFormatado[$i];
+		}
+		
+		return $dadosCrimeFormatado[0];
+		
 	}
 	//Metodo de somar todos homic√≠cios por ano
 	/**

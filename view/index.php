@@ -48,11 +48,60 @@ $tempoVW = new TempoView();
 	</div>
 
 	<div class="row-fluid">
-
-		<div class="main-chart">
-			<!--Impressão de gráfico em barras-->
-			<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
+		<div class="box span12" ondesktop="span12" ontablet="span12">
+			<div class="box-header">
+				<h2><i class="icon-bar-chart"></i>Total de Ocorrencias por Ano</h2>
+			</div>
+			<div class="box-content">
+				<div class="main-chart">
+				<!--Impressão de gráfico em barras-->
+				<?php echo $crimeVW->retornarDadosCrimeSomadoFormatoNovo() ?>
+			</div>
 		</div>
+	</div>
+		
+	<div class="row-fluid sortable">
+		<div class="box span12">
+			<div class="box-header">
+				<h2><i class="icon-list-alt"></i><span class="break"></span>Pie</h2>
+				<div class="box-icon">
+					<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
+					<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+					<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+					<div id="piechart" style="height:300px"></div>
+			</div>
+		</div>
+
+	</div><!--/row-->
+
+	</div>
+
+	<div class="row-fluid">
+
+		<div class="box span12">
+					<div class="box-header">
+						<h2><i class="icon-tasks"></i>Crimes por Tipo</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<h3>Homicidio</h3>
+							<div class="progress progress-success" title="70%">
+								<div class="bar" style="width: 70%;"></div>
+							</div>
+
+						<h3>Roubo</h3>
+							<div class="progress progress-success" title="60%">
+								<div class="bar" style="width: 60%;"></div>
+							</div>
+					</div>
+		</div><!--/span-->
 
 	</div>
 
@@ -85,6 +134,7 @@ $tempoVW = new TempoView();
 					</div>
 		</div><!--/span-->
 
+<<<<<<< HEAD
 		<div class="span6" onTablet="span12" onDesktop="span6">
 
 			<div class="row-fluid">
@@ -169,6 +219,8 @@ $tempoVW = new TempoView();
 		</div>
 
 
+=======
+>>>>>>> 59cb44c533cdbd3f39f84a0b6248bc29dad5c0f1
 	</div>
 
 	<!-- MAPA DO DF -->

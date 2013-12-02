@@ -1,3 +1,7 @@
+<?php 
+	include ('C:/xampp/htdocs/mds2013/views/RegiaoAdministrativaView.php');
+	$RAVW = new RegiaoAdministrativaView();
+?>
 <!-- start: Header -->
 	
 		<div class="container-fluid-full">
@@ -21,13 +25,11 @@
 							</ul>
 						</li>
 						<li>
-							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades</span> <span class="label">5</span></a>
+							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades</span> <span class="label"><?php echo $RAVW->contarRegistrosRA();?></span></a>
 							<ul>
-								<li><a class="submenu" href="table.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Mês</span></a></li>
-								<li><a class="submenu" href="table.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Bimestre</span></a></li>
-								<li><a class="submenu" href="table.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Trimestre</span></a></li>
-								<li><a class="submenu" href="table.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Quadrimestre</span></a></li>
-								<li><a class="submenu" href="table.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Por Ano</span></a></li>
+								<?php 
+									$RAVW->listarTodasAlfabeticamente();
+								?>
 							</ul>
 						</li>
 					</ul>
