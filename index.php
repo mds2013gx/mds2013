@@ -1,6 +1,5 @@
 <?php
 
-
  include ('C:/xampp/htdocs/mds2013/util/Parse.php'); 
  
  $parse = new Parse("JAN_SET_2011_12  POR REGIAO ADM_2.xls");
@@ -10,4 +9,5 @@
  $tempo = key($parse->__getCrime()[$natureza][$regiao]);
  $crime = $parse->__getCrime()[$natureza][$regiao][$tempo];
  echo $crime;
+
 ?>

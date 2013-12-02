@@ -155,7 +155,7 @@ class CrimeDAO{
 	//INICIO DOS MÉTODOS DE INSERÇÃO
 
 	public function inserirCrime(Crime $crime){
-		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}')";
+		$sql = "INSERT INTO crime (natureza_id_natureza,tempo_id_tempo,quantidade,regiao_administrativa_id_regiao_administrativa) VALUES ('{$crime->__getIdNatureza()}','{$crime->__getIdTempo()}','{$crime->__getQuantidade()}','{$crime->__getIdRA()}')";
 		$this->conexao->banco->Execute($sql);
 
 		//if(!$this->banco->Connect($this->servidor,$this->usuario,$this->senha,$this->db)){
