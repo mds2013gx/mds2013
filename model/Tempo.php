@@ -80,8 +80,8 @@ class Tempo{
 	}
 	public function __constructOverload($idTempo,$intervalo,$mes){
 		try{
-			if(!is_numeric($idTempo) || !is_numeric($intervalo) || !is_string($mes)){
-				throw new EErroConsulta();
+			if((!is_numeric($idTempo)) || (!is_numeric($intervalo))){
+				throw new ETipoErrado();
 			}
 		}
 		catch(ETipoErrado $e){
