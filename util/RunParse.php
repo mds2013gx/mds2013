@@ -19,8 +19,12 @@ class RunParse{
 		$this->tempoCO = new TempoController();
 		$this->parse = new Parse("série histórica - 2001 - 2012 2.xls");
 		$this->categoriaCO->_inserirCategoriaArrayParse($this->parse->__getCategoria());
+		echo "Categoria inserida com sucesso";
 		$this->tempoCO->_inserirTempoArrayParse($this->parse->__getTempo());
+		echo "Tempo inserido com sucesso";
 		$this->naturezaCO->_inserirArrayParse($this->parse->__getNatureza());
+		echo "Natureza inserida com sucesso";
 		$this->crimeCO->_inserirCrimeArrayParse($this->parse->__getCrime());
+		echo "Crime inserida com sucesso";
 	}
 }

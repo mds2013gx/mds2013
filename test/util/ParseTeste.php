@@ -19,6 +19,12 @@ class ParseTeste extends PHPUnit_Framework_Testcase{
 		$parse = new Parse($planilha);
 		$this->assertInstanceOf("Parse", $parse);
 	}
+	public function testExistenciaInstanciaParseRA(){
+		$planilha = "JAN_SET_2011_12  POR REGIAO ADM_2.xls";
+		$this->assertFileExists('C:/xampp/htdocs/mds2013/files/'.$planilha);
+		$parse = new Parse($planilha);
+		$this->assertInstanceOf("Parse", $parse);
+	}
 	public function testeSetNatureza(){
 		$planilha = "série histórica - 2001 - 2012 2.xls";
 		$parse = new Parse($planilha);
