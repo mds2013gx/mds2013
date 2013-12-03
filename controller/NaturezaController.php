@@ -31,11 +31,11 @@ class NaturezaController{
 	}
 	public function _consultarPorNome($natureza){
 		
-		if(!is_string($natureza)){
-			throw new EErroConsulta();
-		}
 		$natureza = $this->naturezaDAO->consultarPorNome($natureza);
 		return $natureza;
+	}
+	public function _consultarPorIdCategoria($id){
+		return $this->naturezaDAO->consultarPorIdCategoria($id);
 	}
 	public function _inserirNatureza(Natureza $natureza){
 		return $this->naturezaDAO->inserirNatureza($natureza);

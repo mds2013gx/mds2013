@@ -47,4 +47,7 @@ class CategoriaController{
 		}
 	
 	}
+	public function _contarRegistros(){
+		return $this->categoriaDAO->contarRegistros();
+	}
 }

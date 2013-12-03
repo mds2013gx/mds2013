@@ -20,9 +20,14 @@ class CategoriaView{
 		for($i = 0,$retornoCategoria = ""; $i < count($arrayCategoria); $i++){
 			$auxCategoria = $arrayCategoria[$i];
 			$nomeCategoria = $auxCategoria->__getNomeCategoria();
-			$retornoCategoria = $retornoCategoria."<li><a class=\"submenu\" href=\"crimeporcat.php\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">$nomeCategoria</span></a></li>";
+			$idCategoria = $auxCategoria->__getIdCategoria();
+			$retornoCategoria = $retornoCategoria."<li><a class=\"submenu\" href=\"crimeporcat.php?id=$i\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">$nomeCategoria</span></a></li>";
 		}
 		return $retornoCategoria;
+	}
+	public function listarTodasAlfabeticamentePuro(){
+		$arrayCategoria = $this->categoriaCO->_listarTodasAlfabicamente();
+		return $arrayCategoria;
 	}
 	public function consultarPorId($id){
 		$categoria = $this->categoriaCO->_consultarPorId($id);
@@ -37,5 +42,8 @@ class CategoriaView{
 			throw new EErroConsulta();
 		}
 		return $categoria;
+	}
+	public function contarRegistros(){
+		return $this->categoriaCO->_contarRegistros();
 	}
 }

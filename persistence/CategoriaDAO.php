@@ -69,4 +69,10 @@ class CategoriaDAO{
 			//	throw new EConexaoFalha();	
 			//}
 	}
+	public function contarRegistros(){
+		$sql = "SELECT COUNT(id_categoria)AS total FROM categoria";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
 }

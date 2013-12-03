@@ -17,5 +17,15 @@ class NaturezaView{
 		
 		return $retornoTipos;
 	}
-	
+	public function consultarPorNome($natureza){
+		$natureza = $this->naturezaCO->_consultarPorNome($natureza);
+		return $natureza->__getNatureza();
+	}
+	public function consultarPorId($id){
+		$natureza = $this->naturezaCO->_consultarPorId($id);
+		return $natureza->__getNatureza();
+	}
+	public function consultarPorIdCategoria($id){
+		return $this->naturezaCO->_consultarPorIdCategoria($id);
+	}
 }
