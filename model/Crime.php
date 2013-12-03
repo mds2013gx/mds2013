@@ -23,9 +23,6 @@ class Crime{
 	}
 	public function __setQuantidade($quantidade){
 	
-		if(!is_numeric($quantidade)) {
-			throw new ETipoErrado();
-		}
 		$this->quantidade = $quantidade;
 	}
 	public function __getQuantidade(){
@@ -33,9 +30,6 @@ class Crime{
 	}
 	public function __setIdTempo($idTempo){
 		
-		if(!is_numeric($idTempo)){
-			throw new ETipoErrado();
-		}
 		$this->idTempo = $idTempo;
 	}
 	public function __getIdTempo(){
@@ -43,31 +37,21 @@ class Crime{
 	}
 	public function __setIdNatureza($idNatureza){
 		
-		if(!is_numeric($idNatureza)){
-			throw new ETipoErrado();
-		}
 		$this->idNatureza = $idNatureza;
 	}
 	public function __getIdNatureza(){
 		return $this->idNatureza;
 	}
-	public function __setIdRA($idRA){
-		if(!is_numeric($idRA)){
-			throw new ETipoErrado();
-		}
+	public function __setIdRegiaoAdministrativa($idRA){
 		$this->idRA = $idRA;
 	}
-	public function __getIdRA(){
+	public function __getIdRegiaoAdministrativa(){
 		return $this->idRA;
 	}
 	public function __construct(){
 		
 	}
-	public function __constructOverload($idCrime="",$idTempo="",$idNatureza="",$quantidade=""){
-	
-		if( (!is_numeric($idCrime)) || (!is_numeric($idTempo)) || (!is_numeric($idNatureza)) || (!is_numeric($quantidade)) ){
-			throw new ETipoErrado();
-		}
+	public function __constructOverload($idCrime,$idTempo,$idNatureza,$quantidade){
 		$this->idCrime = $idCrime;
 		$this->idTempo = $idTempo;
 		$this->idNatureza = $idNatureza;

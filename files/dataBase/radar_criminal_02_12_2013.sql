@@ -1,38 +1,11 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4.1
--- http://www.phpmyadmin.net
---
--- Servidor: 127.0.0.1
--- Tempo de Geração: 02/12/2013 às 13:37
--- Versão do servidor: 5.5.16
--- Versão do PHP: 5.4.19
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Banco de dados: `radar_criminal`
---
-CREATE DATABASE IF NOT EXISTS `radar_criminal` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_cs;
-USE `radar_criminal`;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `categoria`
 --
 
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_categoria` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nome_categoria` varchar(100) COLLATE latin1_general_cs NOT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci AUTO_INCREMENT=4 ;
 
 --
 -- Fazendo dump de dados para tabela `categoria`
@@ -59,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `crime` (
   KEY `crime_FKIndex1` (`natureza_id_natureza`),
   KEY `crime_FKIndex4` (`tempo_id_tempo`),
   KEY `crime_FKIndex3` (`regiao_administrativa_id_regiao_administrativa`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs AUTO_INCREMENT=342 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci AUTO_INCREMENT=342 ;
 
 --
 -- Fazendo dump de dados para tabela `crime`
@@ -420,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `natureza` (
   `natureza` varchar(50) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`id_natureza`),
   KEY `natureza_FKIndex1` (`categoria_id_categoria`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci AUTO_INCREMENT=32 ;
 
 --
 -- Fazendo dump de dados para tabela `natureza`
@@ -469,7 +442,7 @@ CREATE TABLE IF NOT EXISTS `regiao_administrativa` (
   `id_regiao_administrativa` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`id_regiao_administrativa`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -482,7 +455,7 @@ CREATE TABLE IF NOT EXISTS `tempo` (
   `ano` varchar(10) COLLATE latin1_general_cs DEFAULT NULL,
   `mes` varchar(30) COLLATE latin1_general_cs DEFAULT NULL,
   PRIMARY KEY (`id_tempo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci AUTO_INCREMENT=12 ;
 
 --
 -- Fazendo dump de dados para tabela `tempo`
@@ -517,7 +490,3 @@ CREATE TABLE IF NOT EXISTS `totalgeralcrimes` (
 DROP TABLE IF EXISTS `totalgeralcrimes`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `totalgeralcrimes` AS select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` = 1)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where (`c`.`natureza_id_natureza` = (`n`.`id_natureza` between 1 and 3)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) = (`n`.`id_natureza` between 6 and 18)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` between 19 and 23)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` = 3)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` = 2)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` between 24 and 25)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` between 26 and 29)and (`c`.`id_crime` between 1 and 341)) union select sum(`c`.`quantidade`) AS `total` from (`crime` `c` join `natureza` `n`) where ((`c`.`natureza_id_natureza` = `n`.`id_natureza`) and (`n`.`id_natureza` between 30 and 31)and (`c`.`id_crime` between 1 and 341));
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

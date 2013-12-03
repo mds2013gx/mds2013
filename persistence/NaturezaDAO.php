@@ -47,15 +47,14 @@ class NaturezaDAO{
 
 	}
 	public function consultarPorNome($natureza){
+		
 		$sql = "SELECT * FROM natureza WHERE natureza = '".$natureza."'";
-		$resultado = $this->conexao->banco->Execute($sql);
+		$resultado = $this->conexao->banco->Execute($sql);	
 		$registro = $resultado->FetchNextObject();
 		$dadosNatureza = new Natureza();
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				
 		return $dadosNatureza;
 	}
-
-
 
 	public function inserirNatureza(Natureza $natureza){
 		$sql = "INSERT INTO natureza (categoria_id_categoria,natureza) values ('{$natureza->__getIdCategoria()}','{$natureza->__getNatureza()}')";

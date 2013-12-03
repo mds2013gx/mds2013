@@ -10,10 +10,6 @@ class Natureza{
 		
 	}
 	public function __constructOverload($idNatureza,$nomeNatureza,$idCategoriaNatureza){
-	
-		if( (!is_numeric($idNatureza))|| (!is_string($nomeNatureza)) || (!is_numeric($idCategoriaNatureza)) ){
-			throw new ETipoErrado();
-		}
 		$this->idNatureza = $idNatureza;
 		$this->natureza = $nomeNatureza;
 		$this->idCategoria = $idCategoriaNatureza;

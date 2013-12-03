@@ -3,9 +3,10 @@ include 'header.php';
 ?>
 <?php include_once('../views/CrimeView.php');
 include_once('../views/TempoView.php');
+include_once('../views/NaturezaView.php');
 $crimeVW = new CrimeView();
 $tempoVW = new TempoView();
-
+$naturezaVW = new NaturezaView();
 ?>
 <!-- start: Content -->
 <div id="content" class="span10">
@@ -90,15 +91,7 @@ $tempoVW = new TempoView();
 						</div>
 					</div>
 					<div class="box-content">
-						<h3>Homicidio</h3>
-							<div class="progress progress-success" title="70%">
-								<div class="bar" style="width: 70%;"></div>
-							</div>
-
-						<h3>Roubo</h3>
-							<div class="progress progress-success" title="60%">
-								<div class="bar" style="width: 60%;"></div>
-							</div>
+						<?php echo $naturezaVW->listarTodasAlfabicamente(); ?>
 					</div>
 		</div><!--/span-->
 
@@ -132,8 +125,6 @@ $tempoVW = new TempoView();
 							</div>
 					</div>
 		</div><!--/span-->
-
-	</div>
 
 	</div>
 

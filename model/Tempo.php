@@ -37,9 +37,6 @@ class Tempo{
 	}
 	public function __constructOverload($idTempo,$intervalo,$mes){
 		
-			if((!is_numeric($idTempo)) || (!is_string($intervalo))){
-				throw new ETipoErrado();
-			}
 		$this->idTempo = $idTempo;
 		$this->intervalo = $intervalo;
 		$this->mes = $mes;
