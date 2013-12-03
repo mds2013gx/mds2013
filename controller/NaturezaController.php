@@ -14,6 +14,7 @@ class NaturezaController{
 	}
 	public function _listarTodas(){
 		$resultado = $this->naturezaDAO->listarTodas();
+		
 		return $resultado;
 	}
 	public function _listarTodasAlfabicamente(){

@@ -10,9 +10,10 @@ class RegiaoAdministrativaView{
 	}
 	public function listarTodasAlfabeticamente(){
 		$nomeRA = $this->RACO->_listarTodasAlfabeticamente();
-		for($i=0;$i<count($nomeRA);$i++){
-			echo '<li><a class="submenu" href="table.php">&nbsp;<i class="icon-map-marker"></i><span class="hidden-tablet">'.$nomeRA[$i].'</span></a></li>';
+		for($i = 0, $retornoRA = ""; $i < count($nomeRA); $i++){
+			$retornoRA = $retornoRA."<li><a class=\"submenu\" href=\"ui.php\"><i class=\"icon-map-marker\"></i><span class=\"hidden-tablet\">".$nomeRA[$i]."</span></a></li>";
 		}
+		return $retornoRA;
 	}
 	
 	public function contarRegistrosRA(){
