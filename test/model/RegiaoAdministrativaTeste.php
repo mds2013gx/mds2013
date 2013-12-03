@@ -12,14 +12,22 @@
 		public function setUp(){
 			$this->regiaoAdministrativa = new RegiaoAdministrativa();
 		}
-		
+		public function testeConstructOverLoad(){
+			$this->regiaoAdministrativa->__constructOverLoad(1, 'teste');
+			$this->assertEquals(1,$this->regiaoAdministrativa->__getIdRegiaoAdministrativa());
+			$this->assertEquals('teste',$this->regiaoAdministrativa->__getNomeRegiao());
+		}
+		public function testeExceptionConstructOverLoad(){
+			$this->setExpectedException('ETipoErrado');
+			$this->regiaoAdministrativa->__constructOverLoad('teste', 2);
+		}
 		public function testSetIdRegiaoAdministriva(){
 			$this->regiaoAdministrativa->__setIdRegiaoAdministrativa(42);
 			$this->assertEquals(42, $this->regiaoAdministrativa ->__getIdRegiaoAdministrativa());
 		}
 		public function testExceptionSetIdRegiaoAdministrativa(){
 			$this->setExpectedException('ETipoErrado');
-			$this->regiaoAdministrativa->__getIdRegiaoAdministrativa("erro");
+			$this->regiaoAdministrativa->__setIdRegiaoAdministrativa("erro");
 		}
 		public function testSetNomeRegiaoAdministrativa(){
 			$this->regiaoAdministrativa ->__setNomeRegiao("Regiao Administrativa");

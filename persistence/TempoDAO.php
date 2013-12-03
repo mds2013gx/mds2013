@@ -30,7 +30,7 @@ class TempoDAO{
 		return $retornaTempos;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM tempo WHERE id_tempo = $id";
+		$sql = "SELECT * FROM tempo WHERE id_tempo = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();
@@ -39,7 +39,7 @@ class TempoDAO{
 		
 	}
 	public function consultarPorMes($mes){
-		$sql = "SELECT * FROM tempo WHERE mes = $mes";
+		$sql = "SELECT * FROM tempo WHERE mes = '".$mes."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();
@@ -48,7 +48,7 @@ class TempoDAO{
 	
 	}
 	public function consultarPorIntervalo($intervalo){
-		$sql = "SELECT * FROM tempo WHERE ano = $intervalo";
+		$sql = "SELECT * FROM tempo WHERE ano = '".$intervalo."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();

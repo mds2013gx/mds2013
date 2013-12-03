@@ -192,10 +192,11 @@ class CrimeController{
 			}else {
 				$varbar="\"bar simple\"";
 			}
-			$dadosCrimeFormatado[]="					<div class=".$varbar."title=\"".$dadosCrimeTitle[$i]." Ocorrencias\">
-				<div class=\"title\">".$dados[$i]."</div>
-				<div class=\"value\">".$dadosCrime[$i]."</div>
-				</div>";
+			$dadosCrimeFormatado[]="
+<div class=".$varbar."title=\"".$dadosCrimeTitle[$i]." Ocorrencias\">
+<div class=\"title\">".$dados[$i]."</div>
+<div class=\"value\">".$dadosCrime[$i]."</div>
+</div>";
 			if($i!=0)$dadosCrimeFormatado[0]=  $dadosCrimeFormatado[0].$dadosCrimeFormatado[$i];
 		}
 		
@@ -293,8 +294,8 @@ class CrimeController{
 
 
 	public function _somaTotalTentativasHomicidio(){
-		for($i=2001; $i<2012; $i++){
-			$somaTotalTentativasHomicidio[] = $this->_somaTotalTentativasHomicidio($i);
+		for($j=2001; $j<2012; $j++){
+			$somaTotalTentativasHomicidio[] = $this->_somaTotalTentativasHomicidio($j);
 		}
 		$retornoSomaTotalTentativasHomicidio = array_sum($somaTotalTentativasHomicidio);
 		return $retornoSomaTotalTentativasHomicidio;

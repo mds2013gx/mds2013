@@ -18,9 +18,6 @@ class NaturezaDAO{
 	public function listarTodas(){
 		$sql = "SELECT * FROM natureza";
 		$resultado = $this->conexao->banco->Execute($sql);
-		if($resultado->RecordCount()== 0){
-			throw new ENaturezaListarTodosVazio();
-		}
 		while($registro = $resultado->FetchNextObject())
 		{
 			$dadosNatureza = new Natureza();
@@ -32,9 +29,6 @@ class NaturezaDAO{
 	public function listarTodasAlfabicamente(){
 		$sql = "SELECT * FROM natureza ORDER BY natureza ASC ";
 		$resultado = $this->conexao->banco->Execute($sql);
-		if($resultado->RecordCount()== 0){
-			throw new ENaturezaListarTodasAlfabeticamenteVazio();
-		}
 		while($registro = $resultado->FetchNextObject())
 		{
 			$dadosNatureza = new Natureza();
@@ -44,11 +38,8 @@ class NaturezaDAO{
 		return $retornaNaturezas;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM natureza WHERE id_natureza = $id";
+		$sql = "SELECT * FROM natureza WHERE id_natureza = '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
-		if($resultado->RecordCount()== 0){
-			throw new ENaturezaConsultarPorIdVazio();
-		}
 		$registro = $resultado->FetchNextObject();
 		$dadosNatureza = new Natureza();
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				
@@ -58,9 +49,6 @@ class NaturezaDAO{
 	public function consultarPorNome($natureza){
 		$sql = "SELECT * FROM natureza WHERE natureza = '".$natureza."'";
 		$resultado = $this->conexao->banco->Execute($sql);
-		if($resultado->RecordCount()== 0){
-			throw new ENaturezaConsultarPorNomeVazio();
-		}
 		$registro = $resultado->FetchNextObject();
 		$dadosNatureza = new Natureza();
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				

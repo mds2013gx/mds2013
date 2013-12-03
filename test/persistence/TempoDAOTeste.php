@@ -41,10 +41,10 @@ class TempoDAOTeste extends PHPUnit_Framework_TestCase{
 		$this->assertInstanceOf('TempoDAO', $tempoDAO);
 		$this->assertInstanceOf('Tempo', $tempoDAO->consultarPorIntervalo(2001));
 		$this->assertObjectHasAttribute('idTempo',$tempoDAO->consultarPorIntervalo(2001));
-	}
+	}/*
 	public function testeInserirTempo(){
 		$tempoDAO = new TempoDAO();
 		$this->assertObjectHasAttribute('conexao', $tempoDAO);
 		$this->assertInstanceOf('TempoDAO', $tempoDAO);
-	}
+	}*/
 }

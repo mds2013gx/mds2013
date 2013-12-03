@@ -35,6 +35,13 @@
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
 			$this->assertInstanceOf('Categoria', $categoriaController->_consultarPorId(1));
 		}
+		public function testExceptionConsultarPorId(){
+			$categoriaController = new CategoriaController();
+			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
+			$this->assertInstanceOf('CategoriaController', $categoriaController);
+			$this->setExpectedException('EErroConsulta');
+			$categoriaController->_consultarPorId('teste');
+		}
 		public function testConsultarPorNome()
 		{
 			$categoriaController = new CategoriaController();
@@ -42,6 +49,14 @@
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
 			$this->assertInstanceOf('Categoria', $categoriaController->_consultarPorNome('Criminalidade'));
 		}
+		public function testExceptionConsultarPorNome(){
+			$categoriaController = new CategoriaController();
+			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
+			$this->assertInstanceOf('CategoriaController', $categoriaController);
+			$this->setExpectedException('EErroConsulta');
+			$categoriaController->_consultarPorNome(1);
+		}
+		/*
 		public function testInserirCategoria()
 		{
 			$categoriaController = new CategoriaController();
@@ -59,6 +74,6 @@
 			$this->assertNull($categoriaController->_inserirCategoriaArrayParse($arrayCategoria));
 			$this->assertObjectHasAttribute('categoriaDAO', $categoriaController);
 			$this->assertInstanceOf('CategoriaController', $categoriaController);
-		}
+		}*/
 	}
 ?>
