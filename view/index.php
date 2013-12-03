@@ -134,7 +134,6 @@ $tempoVW = new TempoView();
 					</div>
 		</div><!--/span-->
 
-<<<<<<< HEAD
 		<div class="span6" onTablet="span12" onDesktop="span6">
 
 			<div class="row-fluid">
@@ -219,19 +218,21 @@ $tempoVW = new TempoView();
 		</div>
 
 
-=======
->>>>>>> 59cb44c533cdbd3f39f84a0b6248bc29dad5c0f1
 	</div>
 
 	<!-- MAPA DO DF -->
 	<div class="row-fluid">
+		<style>
+			path {transition: .6s fill; fill: #D3D3D3;}
+			path:hover {fill: #22aa22;}
+		</style>
 		<div class="box span12" onTablet="span12" onDesktop="span12">
 			<div class="box-header">
 				<h2>Mapa do Distrito Federal</h2>
 			</div>
 			<div class="box-content">
-				<div class="span12" style="height: 200px">
-					<p>MAPA DO DF</p>
+				<div class="span12" style="width: 950px; height: 650px; margin: 0 auto;">
+					<embed src='./img/regioes_administrativa.svg' width='950' height='650'/>
 				</div>
 			</div>
 		</div>
@@ -245,5 +246,5 @@ $tempoVW = new TempoView();
 <!--/fluid-row-->
 
 <?php 
-include 'footer.php';
+	include 'footer.php';
 ?>
