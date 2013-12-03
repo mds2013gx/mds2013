@@ -66,9 +66,11 @@ class NaturezaDAO{
 	public function consultarPorIdCategoria($id){
 		$sql = "SELECT * FROM natureza WHERE categoria_id_categoria= '".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		$dadosNatureza = new Natureza();
-		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);
-		return $dadosNatureza;
+		while($registro = $resultado->FetchNextObject()){
+			$dadosNatureza = new Natureza();
+			$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);
+			$retornaNaturezas[] = $dadosNatureza;
+		}
+		return $retornaNaturezas;
 	}
 }
