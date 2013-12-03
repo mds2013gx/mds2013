@@ -6,57 +6,29 @@ class Categoria{
 	private $nomeCategoria;
 	
 	public function __setIdCategoria($idCategoria){
-		try{
-			if (!is_numeric($idCategoria)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if (!is_numeric($idCategoria)){
+			throw new ETipoErrado();
 		}
 		$this->idCategoria = $idCategoria;
 	}
 	public function __getIdCategoria(){
-		try{
-			if (!is_numeric($this->idCategoria)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
-		}
 		return $this->idCategoria;
 	}
 	public function __setNomeCategoria($nomeCategoria){
-		try{
-			if(!is_string($nomeCategoria)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if(!is_string($nomeCategoria)){
+			throw new ETipoErrado();
 		}
 		$this->nomeCategoria = $nomeCategoria;
 	}
 	public function __getNomeCategoria(){
-		try{
-			if (!is_string($this->nomeCategoria)){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
-		}
 		return $this->nomeCategoria;
 	}
 	public function __constructOverload($idCategoria,$nomeCategoria){
-		try{
-			if ( (!is_string($nomeCategoria)) || (!is_numeric($idCategoria))){
-				throw new ETipoErrado();
-			}
-		}
-		catch(ETipoErrado $e){
-			echo $e->getMessage();
+		
+		if ( (!is_string($nomeCategoria)) || (!is_numeric($idCategoria))){
+			throw new ETipoErrado();
 		}
 		$this->idCategoria = $idCategoria;
 		$this->nomeCategoria = $nomeCategoria;

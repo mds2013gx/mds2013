@@ -31,7 +31,7 @@ class RegiaoAdministrativaDAO {
 		return $retornaRAs;
 	}
 	public function consultarPorId($id){
-		$sql = "SELECT * FROM regiao_administrativa WHERE id_regiao_administrativa = $id";
+		$sql = "SELECT * FROM regiao_administrativa WHERE id_regiao_administrativa ='".$id."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosRA = new RegiaoAdministrativa();
@@ -40,7 +40,7 @@ class RegiaoAdministrativaDAO {
 	
 	}
 	public function consultarPorNome($nome){
-		$sql = "SELECT * FROM regiao_administrativa WHERE nome = $nome";
+		$sql = "SELECT * FROM regiao_administrativa WHERE nome = '".$nome."'";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosRA = new RegiaoAdministrativa();

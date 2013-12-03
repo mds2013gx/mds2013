@@ -59,7 +59,49 @@ $tempoVW = new TempoView();
 			</div>
 		</div>
 	</div>
-			
+		
+	<div class="row-fluid">
+		<div class="box span12">
+			<div class="box-header">
+				<h2><i class="icon-list-alt"></i><span class="break"></span>Pie</h2>
+				<div class="box-icon">
+					<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
+					<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+					<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+					<div id="piechart" style="height:300px"></div>
+			</div>
+		</div>
+
+	</div><!--/row-->
+
+	</div>
+
+	<div class="row-fluid">
+
+		<div class="box span12">
+					<div class="box-header">
+						<h2><i class="icon-tasks"></i>Crimes por Tipo</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<h3>Homicidio</h3>
+							<div class="progress progress-success" title="70%">
+								<div class="bar" style="width: 70%;"></div>
+							</div>
+
+						<h3>Roubo</h3>
+							<div class="progress progress-success" title="60%">
+								<div class="bar" style="width: 60%;"></div>
+							</div>
+					</div>
+		</div><!--/span-->
 
 	</div>
 
@@ -91,90 +133,6 @@ $tempoVW = new TempoView();
 							</div>
 					</div>
 		</div><!--/span-->
-
-		<div class="span6" onTablet="span12" onDesktop="span6">
-
-			<div class="row-fluid">
-
-				<div class="box blue span12 noMarginLeft">
-					<div class="box-header">
-						<h2>
-							<i class="icon-bar-chart"></i>Estatistica da Última Década
-						</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i>
-							</a> <a href="#" class="btn-close"><i class="icon-remove"></i> </a>
-						</div>
-					</div>
-					<div class="box-content">
-						<div class="chart-type1" style="height: 170px"></div>
-					</div>
-				</div>
-				<!--/span-->
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="row-fluid">
-
-		<div class="span7" onTablet="span12" onDesktop="span7">
-
-
-
-			<div class="row-fluid">
-
-				<div class="span6 smallchart radarGrey box mobileHalf">
-
-					<div class="title">ROUBOS ÚLTIMA DÉCADA</div>
-
-					<div class="content">
-
-						<div class="chart-stat">
-							<span class="chart white">10000,3,2,6,6,3,9,0,1,4</span>
-						</div>
-
-					</div>
-
-					<div class="value">$19 999,99</div>
-
-				</div>
-
-				<div class="span6 smallchart radarYellow box mobileHalf">
-
-					<div class="title">GRAFICO</div>
-
-					<div class="content">
-
-						<div class="chart-stat">
-							<span class="chart white">5,8,3,9,2,5,6,2,2,5</span>
-						</div>
-
-					</div>
-
-					<div class="value">$1 849,99</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="row-fluid">
-
-		<div class="box span12" onTablet="span12" onDesktop="span12">
-			<div class="box-header">
-				<h2>tickets</h2>
-			</div>
-			<div class="box-content" style="height: 308px">
-				<div id="stats-chart2" class="span12" style="height: 308px"></div>
-			</div>
-		</div>
-
 
 	</div>
 
