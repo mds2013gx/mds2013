@@ -55,7 +55,20 @@ class CrimeDAOTeste extends PHPUnit_Framework_TestCase{
 		$this->assertInstanceOf('CrimeDAO', $crimeDAO);
 		$this->assertNotNull($crimeDAO->somaDeCrimePorNatureza('Estupro'));
 		$this->assertEquals(6633,$crimeDAO->somaDeCrimePorNatureza('Estupro'));
-	}/*
+	}
+	public function testSomaTotalAcaoPolicial(){
+		$crimeDAO = new CrimeDAO();
+		$this->assertObjectHasAttribute('conexao', $crimeDAO);
+		$this->assertInstanceOf('CrimeDAO', $crimeDAO);
+		$this->assertEquals(111264,$crimeDAO->somaTotalAcaoPolicial());
+	}
+	public function testSomaTotalDignidadeSexual(){
+		$crimeDAO = new CrimeDAO();
+		$this->assertObjectHasAttribute('conexao', $crimeDAO);
+		$this->assertInstanceOf('CrimeDAO', $crimeDAO);
+		$this->assertEquals(7316,$crimeDAO->somaTotalDignidadeSexual());
+	}
+	/*
 	public function testeInserirCrime(){
 		$crimeDAO = new CrimeDAO();
 		$this->assertObjectHasAttribute('conexao', $crimeDAO);

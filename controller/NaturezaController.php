@@ -14,65 +14,37 @@ class NaturezaController{
 	}
 	public function _listarTodas(){
 		$resultado = $this->naturezaDAO->listarTodas();
-		try{
-			if(!is_array($resultado)){
-				throw new EErroConsulta();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		if(!is_array($resultado)){
+			throw new EErroConsulta();
 		}
 		return $resultado;
 	}
 	public function _listarTodasAlfabicamente(){
 		$resultado = $this->naturezaDAO->listarTodasAlfabicamente();
-		try{
-			if(!is_array($resultado)){
-				throw new EErroConsulta();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		if(!is_array($resultado)){
+			throw new EErroConsulta();
 		}
 		return $resultado;
 	}
 	public function _consultarPorId($id){
-		try{
-			if(!is_int($id)){
-				throw new EErroConsulta();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		
+		if(!is_numeric($id)){
+			throw new EErroConsulta();
 		}
 		$natureza = $this->naturezaDAO->consultarPorId($id);
-		try{
-			if(get_class($natureza) != 'Natureza'){
-				throw new EErroConsulta();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		if(get_class($natureza) != 'Natureza'){
+			throw new EErroConsulta();
 		}
 		return $natureza;
 	}
 	public function _consultarPorNome($natureza){
-		try{
-			if(!is_string($natureza)){
-				throw new EErroConsulta();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		
+		if(!is_string($natureza)){
+			throw new EErroConsulta();
 		}
 		$natureza = $this->naturezaDAO->consultarPorNome($natureza);
-		try{
-			if(get_class($natureza) != 'Natureza'){
-				throw new EErroConsulta();	
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		if(get_class($natureza) != 'Natureza'){
+			throw new EErroConsulta();	
 		}
 		return $natureza;
 	}
@@ -80,13 +52,9 @@ class NaturezaController{
 		return $this->naturezaDAO->inserirNatureza($natureza);
 	}
 	public function _inserirArrayParse($arrayNatureza){
-		try{
-			if(!is_array($arrayNatureza)){
-				throw new EFalhaNaturezaController();
-			}
-		}
-		catch(EErroConsulta $e){
-			echo $e->getMessage();
+		
+		if(!is_array($arrayNatureza)){
+			throw new EFalhaNaturezaController();
 		}
 		for($i=0,$arrayKey = $arrayNatureza,$inicio = 0;$i<count($arrayNatureza);$i++){
 			$chave = key($arrayKey);

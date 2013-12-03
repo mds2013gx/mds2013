@@ -25,10 +25,6 @@ class Natureza{
 		$this->idNatureza = $idNatureza;
 	}
 	public function __getIdNatureza(){
-		
-		if(!is_numeric($this->idNatureza)){
-			throw new ETipoErrado();
-		}
 		return $this->idNatureza;
 	}
 	public function __setIdCategoria($idCategoria){
@@ -39,10 +35,6 @@ class Natureza{
 		$this->idCategoria = $idCategoria;
 	}
 	public function __getIdCategoria(){
-		
-		if(!is_numeric($this->idCategoria)){
-			throw new ETipoErrado();
-		}
 		return $this->idCategoria;
 	}
 	public function __setNatureza($natureza){
@@ -53,10 +45,6 @@ class Natureza{
 		$this->natureza = $natureza;
 	}
 	public function __getNatureza(){
-		
-		if(!is_string($this->natureza)){
-			throw new ETipoErrado();
-		}
 		return $this->natureza;
 	}
 }

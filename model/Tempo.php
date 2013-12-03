@@ -14,11 +14,7 @@ class Tempo{
 		$this->idTempo = $idTempo;
 	}
 	public function __getIdTempo(){
-		$retorno = $this->idTempo;
-		if(!is_numeric($retorno)){
-			throw new ETipoErrado();
-		}
-		return $retorno;
+		return $this->idTempo;
 	}
 	public function __setIntervalo($intervalo){
 		
@@ -28,18 +24,13 @@ class Tempo{
 		$this->intervalo = $intervalo;
 	}
 	public function __getIntervalo(){
-		$retorno = $this->intervalo;
-		if(!is_numeric($retorno)){
-			throw new ETipoErrado();
-		}
-		return $retorno;
+		return $this->intervalo;
 	}
 	public function __setMes($mes){
 		$this->mes = $mes;
 	}
 	public function __getMes(){
-		$retorno =  $this->mes;
-		return  $retorno;
+		return  $this->mes;
 	}
 	public function __construct(){
 		

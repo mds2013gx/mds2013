@@ -70,6 +70,18 @@
 			$this->assertEquals(3, $this->crime->__getIdNatureza());
 			$this->assertEquals(4, $this->crime->__getQuantidade());
 		}
+		public function testeIdRA(){
+			$this->assertInstanceOf('Crime',$this->crime);
+			$this->assertObjectHasAttribute('idCrime', $this->crime);
+			$this->crime->__setIdRA(1);
+			$this->assertEquals(1, $this->crime->__getIdRA());
+		}
+		public function testExceptionSetIdRA(){
+			$this->assertInstanceOf('Crime',$this->crime);
+			$this->assertObjectHasAttribute('idCrime', $this->crime);
+			$this->setExpectedException('ETipoErrado');
+			$this->crime->__setIdRA("erro");
+		}
 		public function testExceptionConstructOverLoad(){
 			$this->assertInstanceOf('Crime',$this->crime);
 			$this->assertObjectHasAttribute('idCrime', $this->crime);

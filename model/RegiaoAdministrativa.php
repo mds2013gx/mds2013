@@ -24,10 +24,6 @@ class RegiaoAdministrativa{
 		$this->idRegiaoAdministrativa = $idRegiaoAdministrativa;
 	}
 	public function __getIdRegiaoAdministrativa(){
-
-		if(!is_int($this->idRegiaoAdministrativa)){
-			throw new ETipoErrado();
-		}
 		return $this->idRegiaoAdministrativa;
 	}
 	public function __setNomeRegiao($nomeRegiao){
@@ -38,10 +34,6 @@ class RegiaoAdministrativa{
 		$this->nomeRegiao = $nomeRegiao;
 	}
 	public function __getNomeRegiao(){
-		
-		if(!is_string($this->nomeRegiao)){
-			throw new ETipoErrado();
-		}
 		return $this->nomeRegiao;
 	}
 }

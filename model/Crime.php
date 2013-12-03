@@ -19,10 +19,6 @@ class Crime{
 		$this->idCrime = $idCrime;
 	}
 	public function __getIdCrime(){
-		
-		if(!is_numeric($this->idCrime)){
-			throw new ETipoErrado();
-		}
 		return $this->idCrime;
 	}
 	public function __setQuantidade($quantidade){
@@ -33,10 +29,6 @@ class Crime{
 		$this->quantidade = $quantidade;
 	}
 	public function __getQuantidade(){
-		
-		if(!is_numeric($this->quantidade)){
-			throw new ETipoErrado();
-		}
 		return $this->quantidade;
 	}
 	public function __setIdTempo($idTempo){
@@ -47,10 +39,6 @@ class Crime{
 		$this->idTempo = $idTempo;
 	}
 	public function __getIdTempo(){
-		
-		if(!is_numeric($this->idTempo)){
-			throw new ETipoErrado();
-		}
 		return $this->idTempo;
 	}
 	public function __setIdNatureza($idNatureza){
@@ -61,13 +49,12 @@ class Crime{
 		$this->idNatureza = $idNatureza;
 	}
 	public function __getIdNatureza(){
-		
-		if(!is_numeric($this->idNatureza)){
-			throw new ETipoErrado();
-		}
 		return $this->idNatureza;
 	}
-	public function __setIdRa($idRA){
+	public function __setIdRA($idRA){
+		if(!is_numeric($idRA)){
+			throw new ETipoErrado();
+		}
 		$this->idRA = $idRA;
 	}
 	public function __getIdRA(){

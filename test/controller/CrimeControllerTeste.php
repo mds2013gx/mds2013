@@ -208,5 +208,4 @@ class CrimeControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertInstanceOf('CrimeController', $crimeController);
 		$this->assertEquals(25575667,$crimeController->_somarGeral());
 	}
-	
 }

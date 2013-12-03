@@ -29,13 +29,28 @@ class NaturezaControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
 		$this->assertInstanceOf('Natureza', $naturezaController->_consultarPorId(1));
 	}
+	public function testExceptionsConsultarPorId(){
+		$naturezaController = new NaturezaController();
+		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
+		$this->assertInstanceOf('NaturezaController', $naturezaController);
+		$this->setExpectedException('EErroConsulta');
+		$naturezaController->_consultarPorId('teste');
+	}
 	public function testConsultarPorNome()
 	{
 		$naturezaController = new NaturezaController();
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
 		$this->assertInstanceOf('Natureza', $naturezaController->_consultarPorNome('Roubo de Carga'));
-	}/*
+	}
+	public function testExceptionsConsultarPorNome(){
+		$naturezaController = new NaturezaController();
+		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
+		$this->assertInstanceOf('NaturezaController', $naturezaController);
+		$this->setExpectedException('EErroConsulta');
+		$naturezaController->_consultarPorNome(1);
+	}
+	/*
 	public function testInserirNatureza()
 	{
 		$naturezaController = new NaturezaController();

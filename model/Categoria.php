@@ -13,10 +13,6 @@ class Categoria{
 		$this->idCategoria = $idCategoria;
 	}
 	public function __getIdCategoria(){
-		
-		if (!is_numeric($this->idCategoria)){
-			throw new ETipoErrado();
-		}
 		return $this->idCategoria;
 	}
 	public function __setNomeCategoria($nomeCategoria){
@@ -27,10 +23,6 @@ class Categoria{
 		$this->nomeCategoria = $nomeCategoria;
 	}
 	public function __getNomeCategoria(){
-	
-		if (!is_string($this->nomeCategoria)){
-			throw new ETipoErrado();
-		}
 		return $this->nomeCategoria;
 	}
 	public function __constructOverload($idCategoria,$nomeCategoria){
