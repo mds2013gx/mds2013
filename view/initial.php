@@ -1,9 +1,7 @@
-<?php 
-include 'header.php';
-?>
-<?php include_once('../views/CrimeView.php');
-include_once('../views/TempoView.php');
-include_once('../views/NaturezaView.php');
+
+<?php include_once('C:/xampp/htdocs/mds2013/views/CrimeView.php');
+include_once('C:/xampp/htdocs/mds2013/views/TempoView.php');
+include_once('C:/xampp/htdocs/mds2013/views/NaturezaView.php');
 $crimeVW = new CrimeView();
 $tempoVW = new TempoView();
 $naturezaVW = new NaturezaView();
@@ -132,7 +130,3 @@ $naturezaVW = new NaturezaView();
 
 </div>
 <!--/fluid-row-->
-
-<?php 
-	include 'footer.php';
-?>

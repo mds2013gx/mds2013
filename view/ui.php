@@ -1,6 +1,4 @@
-<?php 
-	include 'header.php';
-?>
+
 
 			<!-- start: Content -->
 			<div id="content" class="span10">
@@ -735,7 +733,3 @@
 			<!-- end: Content -->
 				
 				</div><!--/fluid-row-->
-
-<?php 
-	include 'footer.php';
-?>
