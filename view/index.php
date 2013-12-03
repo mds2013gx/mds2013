@@ -222,9 +222,8 @@ $tempoVW = new TempoView();
 
 	<!-- MAPA DO DF -->
 	<div class="row-fluid">
-		<style>
-			path {transition: .6s fill; fill: #D3D3D3;}
-			path:hover {fill: #22aa22;}
+		<style type="text/css">
+			path:hover {fill: #000000;}
 		</style>
 		<div class="box span12" onTablet="span12" onDesktop="span12">
 			<div class="box-header">
