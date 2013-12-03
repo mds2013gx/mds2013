@@ -109,6 +109,12 @@ h6 {
   font-size: 16px;
   overflow: hidden;
 }
+.box .box-header a{
+  color: #FFF;
+}
+.box .box-header a:hover{
+  color: #C9CACB;
+}
 .box .box-header h2 {
   float: left;
   padding: 10px 0px;
