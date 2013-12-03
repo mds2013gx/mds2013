@@ -23,10 +23,11 @@
 							</ul>
 						</li>
 						<li>
-							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades</span> <span class="label"></span></a>
+							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades <span class="label">5</span></span></a>
 							<ul>
+								<!--<span class="label"><?php/* echo $RAVW->contarRegistrosRA(); */?></span> -->
 								<?php 
-									$RAVW->listarTodasAlfabeticamente();
+									echo $RAVW->listarTodasAlfabeticamente();
 								?>
 							</ul>
 						</li>

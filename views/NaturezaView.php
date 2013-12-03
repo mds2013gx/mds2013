@@ -7,7 +7,7 @@ class NaturezaView{
 	}
 	
 	public function listarTodasAlfabicamente(){
-		$todasNaturezas= $this->naturezaCO->_listarTodas();
+		$todasNaturezas= $this->naturezaCO->_listarTodasAlfabicamente();
 		for($i=0,$retornoTipos = "";$i<count($todasNaturezas);$i++){
 			$retornoTipos=$retornoTipos."<h3>".$todasNaturezas[$i]->__getNatureza()."</h3>
 		<div class=\"progress\" title=\"70%\">
