@@ -131,7 +131,7 @@ class CrimeController{
 					$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 					$dadosCrime->__setIdRegiaoAdministrativa($dadosRegiao->__getIdRegiaoAdministrativa());
 					$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
-					$dadosCrime->__setQuantidade($arrayCrime[$natureza][$tempo]);
+					$dadosCrime->__setQuantidade($arrayCrime[$natureza][$regiao][$tempo]);
 					$this->crimeDAO->inserirCrime($dadosCrime);
 					next($arrayTempo);
 				}

@@ -58,9 +58,10 @@ class NaturezaDAO{
 	public function consultarPorNome($natureza){
 		$sql = "SELECT * FROM natureza WHERE natureza = '".$natureza."'";
 		$resultado = $this->conexao->banco->Execute($sql);
-		if($resultado->RecordCount()== 0){
-			throw new ENaturezaConsultarPorNomeVazio();
-		}
+		
+		//if($resultado->RecordCount()== 0){
+		//	throw new ENaturezaConsultarPorNomeVazio();
+		//}
 		$registro = $resultado->FetchNextObject();
 		$dadosNatureza = new Natureza();
 		$dadosNatureza->__constructOverload($registro->ID_NATUREZA,$registro->NATUREZA,$registro->CATEGORIA_ID_CATEGORIA);				

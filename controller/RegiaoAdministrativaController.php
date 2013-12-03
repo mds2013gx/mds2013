@@ -4,13 +4,13 @@ include_once('C:/xampp/htdocs/mds2013/exceptions/EErroConsulta.php');
 include_once('C:/xampp/htdocs/mds2013/model/RegiaoAdministrativa.php');
 
 class RegiaoAdministrativaController {
-	private $RADAO;
+	private $raDAO;
 	
 	public function __construct(){
-		$this->RADAO = new RegiaoAdministrativaDAO();
+		$this->raDAO = new RegiaoAdministrativaDAO();
 	}
 	public function _listarTodas(){
-		$arrayRA = $this->RADAO->listarTodas();
+		$arrayRA = $this->raDAO->listarTodas();
 		try{
 			if(!is_array($arrayRA)){
 				throw new EErroConsulta();
@@ -22,7 +22,7 @@ class RegiaoAdministrativaController {
 		return $arrayRA;
 	}
 	public function _listarTodasAlfabeticamente(){
-		$arrayRA = $this->RADAO->listarTodasAlfabeticamente();
+		$arrayRA = $this->raDAO->listarTodasAlfabeticamente();
 		try{
 			if(!is_array($arrayRA)){
 				throw new EErroConsulta();
@@ -45,7 +45,7 @@ class RegiaoAdministrativaController {
 		catch(EErroConsulta $e){
 			echo $e->getMessage();
 		}
-		$RA =  $this->RADAO->consultarPorId($id);
+		$RA =  $this->raDAO->consultarPorId($id);
 		try{
 			if(get_class($RA)!='RegiaoAdministrativa'){
 				throw new EErroConsulta();
@@ -65,7 +65,7 @@ class RegiaoAdministrativaController {
 		catch(EErroConsulta $e){
 			echo $e->getMessage();
 		}
-		$RA = $this->RADAO->consultarPorNome($nome);
+		$RA = $this->raDAO->consultarPorNome($nome);
 		try{
 			if(get_class($RA)!='RegiaoAdministrativa'){
 				throw new EErroConsulta();
@@ -82,5 +82,13 @@ class RegiaoAdministrativaController {
 	}
 	public function _inserirRA(RegiaoAdministrativa $RA){
 		return $this->RADAO->inserirRA($RA);
+	}
+	
+	public function _inserirRegiaoArrayParseRA($arrayRA){
+		for($i=0; $i <count($arrayRA); $i++){
+			$dadosRegiao = new RegiaoAdministrativa();
+			$dadosRegiao->__setNomeRegiao($arrayRA[$i]);
+			$this->raDAO->inserirRA($dadosRegiao);
+		}
 	}
 }

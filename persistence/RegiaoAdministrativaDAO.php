@@ -46,7 +46,6 @@ class RegiaoAdministrativaDAO {
 		$dadosRA = new RegiaoAdministrativa();
 		$dadosRA->__constructOverload($registro->ID_REGIAO_ADMINISTRATIVA,$registro->NOME);
 		return $dadosRA;
-	
 	}
 	
 	public function contarRegistrosRA(){
