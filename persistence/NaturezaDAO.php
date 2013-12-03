@@ -73,4 +73,7 @@ class NaturezaDAO{
 		}
 		return $retornaNaturezas;
 	}
+	public function somaDeNaturezaPorAno(){
+		
+	}
 }

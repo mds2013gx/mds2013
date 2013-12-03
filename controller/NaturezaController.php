@@ -3,6 +3,7 @@ include_once('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
+include_once('C:/xampp/htdocs/mds2013/controller/CrimeController.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/EErroConsulta.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/EFalhaNaturezaController.php');
 
@@ -61,16 +62,20 @@ class NaturezaController{
 		}
 		return $dadosCategoria;
 	}
-	public function _retornarDadosDeSomaFormatoNovo(){
+	public function _somaDeNaturezaPorAno($ano){
+		return $this->naturezaDAO->somaDeNaturezaPorAno($ano);
+	}
+	public function _retornarDadosDeNaturezaFormatado(){
 		$tempoDAO = new TempoDAO();
 		$dadosTempo = new Tempo();
+		$crimeCO = new CrimeController();
 		$arrayDadosTempo = $tempoDAO->listarTodos();
 		for($i=0; $i<count($arrayDadosTempo);$i++){
 			$dadosTempo = $arrayDadosTempo[$i];
 			$dados[$i] = $dadosTempo->__getIntervalo();
 		}
 		for($i=0;$i<count($dados);$i++){
-			$dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
+			$dadosCrime[$i]= $crimeCO->_somaDeCrimePorNatureza('Estupro');
 			$dadosCrimeTitle[$i] = number_format($dadosCrime[$i],0,',','.');
 		}
 	

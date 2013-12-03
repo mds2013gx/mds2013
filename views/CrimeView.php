@@ -24,6 +24,9 @@ class CrimeView{
 	public function somaDeCrimePorAno($ano){
 		return $this->crimeCO->_somaDeCrimePorAno($ano);
 	}
+	public function somaDeCrimePorNatureza($natureza){
+		return $this->crimeCO->_somaDeCrimePorNatureza($natureza);
+	}
 	//Metodo duplicado para adaptacao do retorno de dados para a nova interface
 	/**
 	 * @author Sergio Silva

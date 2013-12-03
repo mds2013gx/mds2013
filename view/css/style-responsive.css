@@ -1,5 +1,5 @@
 /*
-* Author: Łukasz Holeczek
+* Author: Å�ukasz Holeczek
 * Template: SimpliQ - Flat & Responsive Bootstrap Admin Template
 * Version: 1.0.2 
 * Bootstrap version: 2.3.2
@@ -361,6 +361,15 @@
     display: none;
   }
   .discussions ul li .name {
+    display: none;
+  }
+}
+  /* Main Chart Natureza
+  	=================================================================== */
+  .main-chart-natureza .bar .title {
+    left: -4px;
+  }
+  .main-chart-natureza .bar.simple .title {
     display: none;
   }
 }

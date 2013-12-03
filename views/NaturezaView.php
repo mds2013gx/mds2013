@@ -30,6 +30,9 @@ class NaturezaView{
 	public function consultarPorIdCategoria($id){
 		return $this->naturezaCO->_consultarPorIdCategoria($id);
 	}
+	public function _retornarDadosDeNaturezaFormatado(){
+		return $this->naturezaCO->_retornarDadosDeNaturezaFormatado();
+	}
 	public function aposBarraLateral($idCategoria){
 		
 		$categoriaVW = new CategoriaView();
@@ -51,9 +54,9 @@ class NaturezaView{
 							</div>
 							<div class=\"box-content\" style=\"display: none;\">
 								<h3>Por Ano</h3></br>
-									<div class=\"main-chart\">
+									<div class=\"main-chart-natureza\">
 									
-									 ".$crimeVW->retornarDadosCrimeSomadoFormatoNovo()." </div>
+									 ".$this->_retornarDadosDeNaturezaFormatado()." </div>
 								</br><h3>Por Regiao Administrativa</h3></br>
 									
 									".$this->listarTodasAlfabicamente()." 
