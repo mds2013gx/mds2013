@@ -10,9 +10,6 @@ class RegiaoAdministrativa{
 	}
 	public function __constructOverLoad($idRA,$nomeRegiao){
 		
-		if(!is_numeric($idRA) || !is_string($nomeRegiao)){
-			throw new ETipoErrado();
-		}
 		$this->idRegiaoAdministrativa = $idRA;
 		$this->nomeRegiao = $nomeRegiao;
 	}

@@ -17,16 +17,16 @@
  $parse = new Parse("JAN_SET_2011_12  POR REGIAO ADM_2.xls");
  
  $categoriaCO = new CategoriaController();
- $categoriaCO->_inserirCategoriaArrayParseSerie($parse->__getCategoria());
+ //$categoriaCO->_inserirCategoriaArrayParseSerie($parse->__getCategoria());
  $naturezaCO = new NaturezaController();
- $naturezaCO->_inserirArrayParse($parse->__getNatureza());
+ //$naturezaCO->_inserirArrayParse($parse->__getNatureza());
  $tempoCO = new TempoController();
- $tempoCO->_inserirTempoArrayParse($parse->__getTempo());
- //$regiaoCO = new RegiaoAdministrativaController();
+ //$tempoCO->_inserirTempoArrayParse($parse->__getTempo());
+ $regiaoCO = new RegiaoAdministrativaController();
  //$regiaoCO->_inserirRegiaoArrayParseRA($parse->__getRegiao());
  $crimeCO = new CrimeController();
- $crimeCO->_inserirCrimeArrayParseSerieHistorica($parse->__getCrime());
- //$crimeCO->_inserirCrimeArrayParseRA($parse->__getCrime());
+ //$crimeCO->_inserirCrimeArrayParseSerieHistorica($parse->__getCrime());
+ $crimeCO->_inserirCrimeArrayParseRA($parse->__getCrime());
  
  
  

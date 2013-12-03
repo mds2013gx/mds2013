@@ -76,7 +76,7 @@ class CrimeController{
 				$tempo = key($arrayTempo);
 				$dadosTempo = new Tempo();
 				$tempoDAO = new TempoDAO();
-				$dadosTempo = $tempoDAO->consultarPorMes($tempo);
+				$dadosTempo = $tempoDAO->consultarPorIntervalo($tempo);
 				$dadosCrime = new Crime();
 				$dadosCrime->__setIdNatureza($dadosNatureza->__getIdNatureza());
 				$dadosCrime->__setIdTempo($dadosTempo->__getIdTempo());
