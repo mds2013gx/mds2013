@@ -36,5 +36,9 @@
 			$this->assertEquals('2001',$this->tempo->__getIntervalo());
 			$this->assertEquals('janeiro',$this->tempo->__getMes());
 		}
+		public function testExceptionConstructOverLoad(){
+			$this->setExpectedException('ETipoErrado');
+			$this->tempo->__constructOverload('teste', 1,'janeiro');
+		}
 	}
 ?>

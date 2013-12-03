@@ -11,17 +11,10 @@ class CategoriaController{
 	}
 	public function _listarTodas(){
 		$arrayCategoria = $this->categoriaDAO->listarTodas();
-		if(!is_array($arrayCategoria)){
-			throw new  EErroConsulta();
-		}
 		return $arrayCategoria;
 	}
 	public function _listarTodasAlfabicamente(){
 		$arrayCategoria = $this->categoriaDAO->listarTodasAlfabicamente();
-		
-		if(!is_array($arrayCategoria)){
-			throw new  EErroConsulta();
-		}
 		return $arrayCategoria;
 	}
 	public function _consultarPorId($id){
@@ -30,9 +23,6 @@ class CategoriaController{
 			throw new EErroConsulta();
 		 }
 		 $categoria = $this->categoriaDAO->consultarPorId($id);
-		 if(get_class($categoria)!= 'Categoria'){
-		 	throw new EErroConsulta();
-		 }
 		 return $categoria;
 	}
 	public function _consultarPorNome($nomeCategoria){
@@ -41,9 +31,6 @@ class CategoriaController{
 		 	throw new EErroConsulta();
 		 }
 		 $categoria =  $this->categoriaDAO->consultarPorNome($nomeCategoria);
-		 if(get_class($categoria)!= 'Categoria'){
-		 	throw new EErroConsulta();
-		 }
 		 return $categoria;
 	}
 	public function _inserirCategoria(Categoria $categoria){

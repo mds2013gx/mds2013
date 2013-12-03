@@ -14,16 +14,10 @@ class NaturezaController{
 	}
 	public function _listarTodas(){
 		$resultado = $this->naturezaDAO->listarTodas();
-		if(!is_array($resultado)){
-			throw new EErroConsulta();
-		}
 		return $resultado;
 	}
 	public function _listarTodasAlfabicamente(){
 		$resultado = $this->naturezaDAO->listarTodasAlfabicamente();
-		if(!is_array($resultado)){
-			throw new EErroConsulta();
-		}
 		return $resultado;
 	}
 	public function _consultarPorId($id){
@@ -32,9 +26,6 @@ class NaturezaController{
 			throw new EErroConsulta();
 		}
 		$natureza = $this->naturezaDAO->consultarPorId($id);
-		if(get_class($natureza) != 'Natureza'){
-			throw new EErroConsulta();
-		}
 		return $natureza;
 	}
 	public function _consultarPorNome($natureza){
@@ -43,9 +34,6 @@ class NaturezaController{
 			throw new EErroConsulta();
 		}
 		$natureza = $this->naturezaDAO->consultarPorNome($natureza);
-		if(get_class($natureza) != 'Natureza'){
-			throw new EErroConsulta();	
-		}
 		return $natureza;
 	}
 	public function _inserirNatureza(Natureza $natureza){
