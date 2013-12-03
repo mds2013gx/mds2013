@@ -1,6 +1,9 @@
 <?php 
 	include ('C:/xampp/htdocs/mds2013/views/RegiaoAdministrativaView.php');
+	include ('C:/xampp/htdocs/mds2013/views/CategoriaView.php');
 	$RAVW = new RegiaoAdministrativaView();
+	$categoriaVW = new CategoriaView();
+	$aux = $RAVW->contarRegistrosRA();
 ?>
 <!-- start: Header -->
 	
@@ -17,15 +20,15 @@
 						<li>
 							<a class="dropmenu" href="#" alt="Por Natureza" title="Por Natureza"><i class="icon-globe"></i><span class="hidden-tablet"> Crimes</span> <span class="label">5</span></a>
 							<ul>
-								<li><a class="submenu" href="crimeporcat.php"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
-								<li><a class="submenu" href="ui.php"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
+								<?php //echo "<li><a class=\"submenu\" href=\"crimeporcat.php\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">aa</span></a></li>";
+							    	echo $categoriaVW->listarTodasAlfabicamente();
+								?>
 							</ul>
 						</li>
 						<li>
-							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades <span class="label">5</span></span></a>
+							<a class="dropmenu" href="#" alt="Região Administrativa" title="Região Administrativa"><i class="icon-move"></i><span class="hidden-tablet"> Cidades <span class="label"><?php echo $aux;  ?></span></a>
 							<ul>
-								<!--<span class="label"><?php/* echo $RAVW->contarRegistrosRA(); */?></span> -->
+								<!--<span class="label"></span> -->
 								<?php 
 									echo $RAVW->listarTodasAlfabeticamente();
 								?>
