@@ -22,9 +22,7 @@
 						<li>
 							<a class="dropmenu" href="#" alt="Por Natureza" title="Por Natureza"><i class="icon-globe"></i><span class="hidden-tablet"> Crimes</span> <span class="label"><?php echo $contCategoria; ?></span></a>
 							<ul>
-								<li><a class="submenu" href="?pag=cCat"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
-								<li><a class="submenu" href="?pag=u"><i class="icon-inbox"></i><span class="hidden-tablet"> $Categoria</span></a></li>
+						
 
 								<?php //echo "<li><a class=\"submenu\" href=\"crimeporcat.php\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">aa</span></a></li>";
 							    	echo $categoriaVW->listarTodasAlfabicamente();

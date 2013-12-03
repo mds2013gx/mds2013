@@ -1,7 +1,7 @@
 <?php
 include_once('C:/xampp/htdocs/mds2013/controller/NaturezaController.php');
-include_once('../views/CategoriaView.php');
-include_once('../views/CrimeView.php');
+include_once('./views/CategoriaView.php');
+include_once('./views/CrimeView.php');
 class NaturezaView{
 	private $naturezaCO;
 	public function __construct(){

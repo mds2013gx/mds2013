@@ -61,4 +61,45 @@ class NaturezaController{
 		}
 		return $dadosCategoria;
 	}
+	public function _retornarDadosDeSomaFormatoNovo(){
+		$tempoDAO = new TempoDAO();
+		$dadosTempo = new Tempo();
+		$arrayDadosTempo = $tempoDAO->listarTodos();
+		for($i=0; $i<count($arrayDadosTempo);$i++){
+			$dadosTempo = $arrayDadosTempo[$i];
+			$dados[$i] = $dadosTempo->__getIntervalo();
+		}
+		for($i=0;$i<count($dados);$i++){
+			$dadosCrime[$i]= $this->_somaDeCrimePorAno($dados[$i]);
+			$dadosCrimeTitle[$i] = number_format($dadosCrime[$i],0,',','.');
+		}
+	
+	
+	
+		for($i=0;$i<count($dadosCrime); $i++){
+			/**
+			 * Laço que escreve os dados do grafico de ocorrencias por ano.
+			 * a string ("\"bar\"") define a barra cheia do grafico e
+			 * a string ("\"bar simple\"") define a barra pontilhada.
+			 * A condicional 'if($i%2==0)' garante que as barras pontilhadas e cheias sejam intercaladas.
+			 * Retorna-se o vetor de strings concatenado.
+			 * @author Eliseu
+			 * @copyright RadarCriminal 2013
+			 */
+			if($i%2==0){
+				$varbar="\"bar\"";
+			}else {
+				$varbar="\"bar simple\"";
+			}
+			$dadosCrimeFormatado[]="
+<div class=".$varbar."title=\"".$dadosCrimeTitle[$i]." Ocorrencias\">
+<div class=\"title\">".$dados[$i]."</div>
+<div class=\"value\">".$dadosCrime[$i]."</div>
+</div>";
+			if($i!=0)$dadosCrimeFormatado[0]=  $dadosCrimeFormatado[0].$dadosCrimeFormatado[$i];
+		}
+	
+		return $dadosCrimeFormatado[0];
+	
+	}
 }

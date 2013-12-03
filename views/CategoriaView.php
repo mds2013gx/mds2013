@@ -21,7 +21,7 @@ class CategoriaView{
 			$auxCategoria = $arrayCategoria[$i];
 			$nomeCategoria = $auxCategoria->__getNomeCategoria();
 			$idCategoria = $auxCategoria->__getIdCategoria();
-			$retornoCategoria = $retornoCategoria."<li><a class=\"submenu\" href=\"crimeporcat.php?id=$i\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">$nomeCategoria</span></a></li>";
+			$retornoCategoria = $retornoCategoria."<li><a class=\"submenu\" href=\"?pag=cCat&id=$i\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">$nomeCategoria</span></a></li>";
 		}
 		return $retornoCategoria;
 	}

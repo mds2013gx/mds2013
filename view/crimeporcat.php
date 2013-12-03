@@ -1,9 +1,8 @@
 <?php 
-include 'header.php';
-include_once('../views/CrimeView.php');
-include_once('../views/TempoView.php');
-include_once('../views/NaturezaView.php');
-include_once('../views/CategoriaView.php');
+include_once('./views/CrimeView.php');
+include_once('./views/TempoView.php');
+include_once('./views/NaturezaView.php');
+include_once('./views/CategoriaView.php');
 $crimeVW = new CrimeView();
 $tempoVW = new TempoView();
 $naturezaVW = new NaturezaView();
@@ -30,7 +29,3 @@ $idCategoria = isset( $_GET['id'] ) ? $_GET['id'] : null;
 
 </div>
 <!--/fluid-row-->
-
-<?php 
-include 'footer.php';
-?>

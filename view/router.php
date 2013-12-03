@@ -9,11 +9,14 @@ switch($pagina){
                 break;
         case 'tRA':
         		include('C:/xampp/htdocs/mds2013/view/totalra.php');    
-        		
+        		break;
         case 'cCat':
         		include('C:/xampp/htdocs/mds2013/view/crimeporcat.php');
+        		break;
         case 'u':
         		include('C:/xampp/htdocs/mds2013/view/ui.php');
+        		break;
         default:
-                include('C:/xampp/htdocs/mds2013/view/initial.php');        
+                include('C:/xampp/htdocs/mds2013/view/initial.php');     
+                break;   
 }
