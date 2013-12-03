@@ -52,7 +52,7 @@ class TempoDAO{
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		$dadosTempo = new Tempo();
-		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES,$registro->MES);
+		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
 		return $dadosTempo;
 	}
 	public function inserirTempo(Tempo $tempo){

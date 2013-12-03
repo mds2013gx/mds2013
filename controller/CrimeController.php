@@ -65,7 +65,7 @@ class CrimeController{
 		return $retornoSomaTodosAnos;
 	}
 
-	public function _inserirCrimeArrayParseSerieHistorico($arrayCrime){
+	public function _inserirCrimeArrayParseSerieHistorica($arrayCrime){
 		for($i=0,$arrayKey = $arrayCrime,$inicio = 0;$i<count($arrayCrime);$i++){
 			$natureza = key($arrayKey);
 			$dadosNatureza = new Natureza();
@@ -119,7 +119,7 @@ class CrimeController{
 			for($j=0;$j<count(array_keys($arrayCrime[$natureza]));$j++){
 				$regiao = key($arrayRegiao);
 				$dadosRegiao = new RegiaoAdministrativa();
-				$regiaoDAO = new RegiaoAdministrativaDAODAO();
+				$regiaoDAO = new RegiaoAdministrativaDAO();
 				$dadosRegiao = $regiaoDAO->consultarPorNome($regiao);
 				$arrayTempo = $arrayCrime[$natureza][$regiao];
 				for($x = 0;$x<count(array_keys($arrayCrime[$natureza][$regiao])); $x++){
