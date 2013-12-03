@@ -25,7 +25,7 @@ class CategoriaDAO{
 		return $retornaCategorias;
 	} 
 	public function listarTodasAlfabicamente(){
-		$sql = "SELECT * FROM categoria ORDER BY nome_categoria ASC ";
+		$sql = "SELECT * FROM categoria ORDER BY nome_categoria ASC";
 		$resultado = $this->conexao->banco->Execute($sql);
 		//if($resultado->RecordCount()== 0){
 		//	throw new ECategoriaListarTodasAlfabeticamenteVazio();

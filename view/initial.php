@@ -83,7 +83,6 @@ $naturezaVW = new NaturezaView();
 					<div class="box-header">
 						<h2><i class="icon-tasks"></i>Total de Crimes por Tipo</h2>
 						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
 						</div>

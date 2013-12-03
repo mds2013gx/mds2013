@@ -78,10 +78,10 @@ class RegiaoAdministrativaController {
 	}
 	
 	public function _contarRegistrosRA(){
-		return $this->RADAO->contarRegistrosRA();
+		return $this->raDAO->contarRegistrosRA();
 	}
 	public function _inserirRA(RegiaoAdministrativa $RA){
-		return $this->RADAO->inserirRA($RA);
+		return $this->raDAO->inserirRA($RA);
 	}
 	
 	public function _inserirRegiaoArrayParseRA($arrayRA){

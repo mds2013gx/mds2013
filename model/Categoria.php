@@ -27,9 +27,6 @@ class Categoria{
 	}
 	public function __constructOverload($idCategoria,$nomeCategoria){
 		
-		if ( (!is_string($nomeCategoria)) || (!is_numeric($idCategoria))){
-			throw new ETipoErrado();
-		}
 		$this->idCategoria = $idCategoria;
 		$this->nomeCategoria = $nomeCategoria;
 	}

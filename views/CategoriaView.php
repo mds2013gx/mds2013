@@ -15,12 +15,14 @@ class CategoriaView{
 		}
 		return $arrayCategoria;
 	}
-	public function _listarTodasAlfabicamente(){
+	public function listarTodasAlfabicamente(){
 		$arrayCategoria = $this->categoriaCO->_listarTodasAlfabicamente();
-		if(!is_array($arrayCategoria)){
-			throw new  EErroConsulta();
+		for($i = 0,$retornoCategoria = ""; $i < count($arrayCategoria); $i++){
+			$auxCategoria = $arrayCategoria[$i];
+			$nomeCategoria = $auxCategoria->__getNomeCategoria();
+			$retornoCategoria = $retornoCategoria."<li><a class=\"submenu\" href=\"crimeporcat.php\"><i class=\"icon-inbox\"></i><span class=\"hidden-tablet\">$nomeCategoria</span></a></li>";
 		}
-		return $arrayCategoria;
+		return $retornoCategoria;
 	}
 	public function consultarPorId($id){
 		$categoria = $this->categoriaCO->_consultarPorId($id);

@@ -14,8 +14,7 @@ class CategoriaController{
 		return $arrayCategoria;
 	}
 	public function _listarTodasAlfabicamente(){
-		$arrayCategoria = $this->categoriaDAO->listarTodasAlfabicamente();
-		return $arrayCategoria;
+		return  $this->categoriaDAO->listarTodasAlfabicamente();
 	}
 	public function _consultarPorId($id){
 		
