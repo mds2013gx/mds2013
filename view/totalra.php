@@ -33,14 +33,12 @@ $tempoVW = new TempoView();
 
 		<div class="box span12">
 					<div class="box-header">
-						<h2><i class="icon-tasks"></i>Total de Crimes por R.A.</h2>
+						<h2><a href="#" class="btn-minimize"><i class="icon-tasks"></i>Total de Crimes por R.A.</h2>
 						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="icon-wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
 						</div>
 					</div>
-					<div class="box-content">
+					<div class="box-content" style="display: none;">
 						<h3>Taguatinga</h3>
 							<div class="progress progress-success" title="70%">
 								<div class="bar" style="width: 70%;"></div>
