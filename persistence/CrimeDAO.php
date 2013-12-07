@@ -3,6 +3,7 @@ include_once('C:/xampp/htdocs/mds2013/model/Crime.php');
 include_once('C:/xampp/htdocs/mds2013/model/Tempo.php');
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/ConexaoTeste.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/NaturezaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/TempoDAO.php');
 
@@ -11,7 +12,10 @@ class CrimeDAO{
 	public function __construct(){
 		$this->conexao = new Conexao();
 	}
-
+	public function __constructTeste(){
+		$this->conexao = new ConexaoTeste();
+	
+	}
 	public function listarTodos(){
 		$sql = "SELECT * FROM crime";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -74,33 +78,18 @@ class CrimeDAO{
 		return $registro->TOTAL;
 	}
 
+	public function somaDeCrimePorNaturezaEmAno($natureza,$ano){
+		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n,tempo t WHERE c.natureza_id_natureza = n.id_natureza AND c.tempo_id_tempo = t.id_tempo AND t.ano = ".$ano." AND n.natureza = '".$natureza."'";
+		$resultado = $this->conexao->banco->Execute($sql);
+		$registro = $resultado->FetchNextObject();
+		return $registro->TOTAL;
+	}
 	//Metodo de somar todos homicícios por ano
 	/**
 	 * @author Lucas Andrade Ribeiro
 	 * @author Sergio Silva
 	 * @copyright RadarCriminal 2013
 	 **/
-	public function somaGeralCrimeContraPessoa(){
-		$sql = "SELECT SUM( c.quantidade ) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza BETWEEN 1 AND 3";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-	}
-
-	public function somaTotalRoubo(){
-		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza BETWEEN 6 AND 18";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-	}
-
-
-	public function somaTotalFurtos(){
-		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 19 AND 23";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-	}
 
 	public function somaLesaoCorporal(){
 		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza = 3";
@@ -115,30 +104,14 @@ class CrimeDAO{
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;
 	}
-
-	public function somaTotalDignidadeSexual(){
-		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 24 AND 25";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-	}
 	
-	public function somaTotalAcaoPolicial(){
-		$sql = "SELECT SUM(c.quantidade) AS total FROM crime c, natureza n WHERE c.natureza_id_natureza = n.id_natureza AND n.id_natureza BETWEEN 26 AND 29";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		return $registro->TOTAL;
-	}
+	
 	public function somarGeral(){
 		$sql = "SELECT SUM(total) as total FROM totalgeralcrimes ";
 		$resultado = $this->conexao->banco->Execute($sql);
 		$registro = $resultado->FetchNextObject();
 		return $registro->TOTAL;	
 	}
-
-
-
-
 
 	//INICIO DOS MÉTODOS DE INSERÇÃO
 

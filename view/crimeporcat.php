@@ -20,7 +20,7 @@ $idCategoria = isset( $_GET['id'] ) ? $_GET['id'] : null;
 	<?php 
 	$tr = $naturezaVW->aposBarraLateral($idCategoria);
 	for($i=0;$i<count($tr);$i++){
-		echo $tr[$i];
+		echo utf8_encode($tr[$i]);
 	}
 	?>
 

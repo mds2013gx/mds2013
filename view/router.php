@@ -14,7 +14,7 @@ switch($pagina){
         		include('C:/xampp/htdocs/mds2013/view/crimeporcat.php');
         		break;
         case 'u':
-        		include('C:/xampp/htdocs/mds2013/view/ui.php');
+        		include('C:/xampp/htdocs/mds2013/view/crimeporra.php');
         		break;
         default:
                 include('C:/xampp/htdocs/mds2013/view/initial.php');     

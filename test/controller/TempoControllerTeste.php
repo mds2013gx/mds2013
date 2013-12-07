@@ -37,25 +37,25 @@ class TempoControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertObjectHasAttribute('tempoDAO', $tempoController);
 		$this->assertInstanceOf('TempoController', $tempoController);
 		$this->assertInstanceOf('Tempo', $tempoController->_consultarPorIntervalo(2001));
-	}/*
+	}
 	public function testInserirTempo()
 	{
 		$tempoController = new TempoController();
-		$tempo = new Tempo();
-		$this->assertNull($tempoController->_inserirTempo($tempo));
+		$tempoController->__constructTeste();
+		$this->assertNull($tempoController->_inserirTempo(new Tempo()));
 		$this->assertObjectHasAttribute('tempoDAO', $tempoController);
 		$this->assertInstanceOf('TempoController', $tempoController);
-		$this->assertInstanceOf('Tempo', $tempo);
 	}
+	/*
 	public function testInserirTempoArrayParse()
 	{
 		$tempoController = new TempoController();
-		$tempo = new Tempo();
+		$tempoController->__constructTeste();
 		$this->assertNull($tempoController->_inserirTempoArrayParse(0));
 		$this->assertObjectHasAttribute('tempoDAO', $tempoController);
-		$this->assertInstanceOf('TempoController', $tempoController);
-		$this->assertInstanceOf('Tempo', $tempo);
-	}*/
+		$this->assertInstanceOf('TempoController', $tempoController);	
+	}
+	*/
 	public function testRetornaDadosFormatados(){
 		$tempoController = new TempoController();
 		$this->assertObjectHasAttribute('tempoDAO', $tempoController);

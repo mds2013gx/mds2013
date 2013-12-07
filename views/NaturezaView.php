@@ -1,20 +1,23 @@
 <?php
-include_once('C:/xampp/htdocs/mds2013/controller/NaturezaController.php');
+include_once('./controller/NaturezaController.php');
 include_once('./views/CategoriaView.php');
 include_once('./views/CrimeView.php');
 class NaturezaView{
 	private $naturezaCO;
+	private $crimeCO;
 	public function __construct(){
 		$this->naturezaCO = new NaturezaController();
+		$this->crimeCO = new CrimeController();
 	}
 	
 	public function listarTodasAlfabicamente(){
 		$todasNaturezas= $this->naturezaCO->_listarTodasAlfabicamente();
 		for($i=0,$retornoTipos = "";$i<count($todasNaturezas);$i++){
-			$retornoTipos=$retornoTipos."<h3>".$todasNaturezas[$i]->__getNatureza()."</h3>
-		<div class=\"progress\" title=\"70%\">
-		<div class=\"bar\" style=\"width: 70%;\"></div>
-		</div>";
+			$dadosCrime = $this->crimeCO->_somaDeCrimePorNatureza($todasNaturezas[$i]->__getNatureza());
+			$retornoTipos = $retornoTipos."<h3>".$todasNaturezas[$i]->__getNatureza()."</h3>
+				<div class=\"progress\" title=\"".number_format($dadosCrime, 0 , ',','.')."\">
+				<div class=\"bar\" style=\"width: ".(100 * $dadosCrime / 450000)."%;\"></div>
+				</div>";
 		}
 		
 		return $retornoTipos;
@@ -30,8 +33,33 @@ class NaturezaView{
 	public function consultarPorIdCategoria($id){
 		return $this->naturezaCO->_consultarPorIdCategoria($id);
 	}
-	public function _retornarDadosDeNaturezaFormatado(){
-		return $this->naturezaCO->_retornarDadosDeNaturezaFormatado();
+	public function _retornarDadosDeNaturezaFormatado($natureza){
+		$dadosDeNatureza = $this->naturezaCO->_retornarDadosDeNaturezaFormatado($natureza);
+		$dadosCrimeFormatado = "";
+		$retornoFormatado = "";
+		for($i=0;$i<count($dadosDeNatureza['title']); $i++){
+			/**
+			 * Laço que escreve os dados do grafico de ocorrencias por ano.
+			 * a string ("\"bar\"") define a barra cheia do grafico e
+			 * a string ("\"bar simple\"") define a barra pontilhada.
+			 * A condicional 'if($i%2==0)' garante que as barras pontilhadas e cheias sejam intercaladas.
+			 * Retorna-se o vetor de strings concatenado.
+			 * @author Eliseu
+			 * @copyright RadarCriminal 2013
+			 */
+			if($i%2==0){
+				$varbar="\"bar\"";
+			}else {
+				$varbar="\"bar simple\"";
+			}
+			$dadosCrimeFormatado[$i]="
+				<div class=".$varbar." title=\"".$dadosDeNatureza['title'][$i]." Ocorrencias\">
+					<div class=\"title\">".$dadosDeNatureza['tempo'][$i]."</div>
+					<div class=\"value\">".$dadosDeNatureza['crime'][$i]."</div>
+				</div>";
+			$retornoFormatado .= $dadosCrimeFormatado[$i];
+		}
+		return $retornoFormatado;
 	}
 	public function aposBarraLateral($idCategoria){
 		
@@ -54,12 +82,10 @@ class NaturezaView{
 							</div>
 							<div class=\"box-content\" style=\"display: none;\">
 								<h3>Por Ano</h3></br>
-									<div class=\"main-chart-natureza\">
+									<div class=\"chart-natureza\">
 									
-									 ".$this->_retornarDadosDeNaturezaFormatado()." </div>
-								</br><h3>Por Regiao Administrativa</h3></br>
+									 ".$this->_retornarDadosDeNaturezaFormatado($naturezaAtual->__getNatureza())." </div>
 									
-									".$this->listarTodasAlfabicamente()." 
 		
 							</div>
 				</div>
@@ -69,3 +95,6 @@ class NaturezaView{
 		return $auxBarra;
 	}
 }
+
+//</br><h3>Por Regiao Administrativa</h3></br>
+//".$this->listarTodasAlfabicamente()."

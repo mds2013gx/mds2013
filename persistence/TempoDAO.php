@@ -1,12 +1,16 @@
 <?php
 include_once('C:/xampp/htdocs/mds2013/model/Tempo.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/ConexaoTeste.php');
 class TempoDAO{
 	private $conexao;
 	public function __construct(){
 		$this->conexao = new Conexao();
 	} 
+	public function __constructTeste(){
+		$this->conexao = new ConexaoTeste();
 	
+	}
 	public function listarTodos(){
 		$sql = "SELECT * FROM tempo";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -38,15 +42,7 @@ class TempoDAO{
 		return $dadosTempo;
 		
 	}
-	public function consultarPorMes($mes){
-		$sql = "SELECT * FROM tempo WHERE mes = '".$mes."'";
-		$resultado = $this->conexao->banco->Execute($sql);
-		$registro = $resultado->FetchNextObject();
-		$dadosTempo = new Tempo();
-		$dadosTempo->__constructOverload($registro->ID_TEMPO,$registro->ANO,$registro->MES);
-		return $dadosTempo;
-	
-	}
+
 	public function consultarPorIntervalo($intervalo){
 		$sql = "SELECT * FROM tempo WHERE ano = '".$intervalo."'";
 		$resultado = $this->conexao->banco->Execute($sql);

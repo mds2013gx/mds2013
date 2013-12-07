@@ -49,4 +49,10 @@ class ParseTeste extends PHPUnit_Framework_Testcase{
 		$parse->__setCrime(200);
 		$this->assertEquals(200 , $parse->__getCrime());
 	}
+public function testeSetRegiao(){
+		$planilha = "série histórica - 2001 - 2012 2.xls";
+		$parse = new Parse($planilha);
+		$parse->__setRegiao('N BAND');
+		$this->assertEquals('N BAND' , $parse->__getRegiao());
+	}
 }

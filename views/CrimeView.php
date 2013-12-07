@@ -5,9 +5,6 @@ class CrimeView{
 	public function __construct(){
 		$this->crimeCO = new CrimeController();
 	}
-	public function retornarDadosCrimeSomadoFormatado(){
-		return $this->crimeCO->_retornarDadosDeSomaFormatado();
-	}
 
 	//Metodo duplicado para adaptacao do retorno de dados para a nova interface
 	/**
@@ -54,26 +51,7 @@ class CrimeView{
 		return $this->crimeCO->_somaTotalHomicidios();
 	}
 
-	public function _somaGeralCrimeContraPessoa(){
-		return $this->crimeCO->_somaGeralCrimeContraPessoa();
-	}
-
-	public function _somaGeralCrimeContraPessoa2010_2011(){
-		return $this->crimeCO->_somaGeralCrimeContraPessoa2010_2011();
-	}
-
-	public function _somaTotalRoubo(){
-		return $this->crimeCO->_somaTotalRoubo();
-	}
-
-	public function _somaTotalRoubo2010_2011(){
-		return $this->crimeCO->_somaTotalRoubo2010_2011();
-	}
-
-	public function _somaTotalFurtos(){
-		return $this->crimeCO->_somaTotalFurtos();
-	}
-
+	
 	public function _somaLesaoCorporal(){
 		return $this->crimeCO->_somaLesaoCorporal();
 	}
@@ -90,21 +68,7 @@ class CrimeView{
 		return $this->crimeCO->_somaTotalTentativasHomicidio2010_2011();
 	}
 
-	public function _somaTotalDignidadeSexual(){
-		return $this->crimeCO->_somaTotalDignidadeSexual();
-	}
-
-	public function _somaTotalDignidadeSexual2010_2011(){
-		return $this->crimeCO->_somaTotalDignidadeSexual2010_2011();
-	}
-
-	public function _somaTotalAcaoPolicial(){
-		return $this->crimeCO->_somaTotalAcaoPolicial();
-	}
-
-	public function _somaTotalAcaoPolicial2010_2011(){
-		return $this->crimeCO->_somaTotalAcaoPolicial2010_2011();
-	}
+	
 	public function _somarGeral(){
 		return $this->crimeCO->_somarGeral();
 	}

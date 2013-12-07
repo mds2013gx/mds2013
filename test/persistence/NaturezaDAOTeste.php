@@ -38,13 +38,22 @@
 			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
 			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
 			$this->assertInstanceOf('Natureza', $naturezaDAO->consultarPorNome('Estupro'));
-		}/*
+		}
+		
 		public function testInserirNatureza(){
 			$naturezaDAO = new NaturezaDAO();
+			$naturezaDAO->__constructTeste();
 			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
 			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
-		}*/
-	
+			$naturezaDAO->inserirNatureza(new Natureza());
+		}
+		public function testConsultarPorIdCategoria(){
+			$naturezaDAO = new NaturezaDAO();
+			$naturezaDAO->__constructTeste();
+			$this->assertObjectHasAttribute('conexao', $naturezaDAO);
+			$this->assertInstanceOf('NaturezaDAO', $naturezaDAO);
+			$this->assertArrayHasKey(1,$naturezaDAO->consultarPorIdCategoria(1));
+		}
 	}
 
 ?>

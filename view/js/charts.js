@@ -120,6 +120,24 @@ function charts() {
 		
 	}
 
+	else if($('.chart-natureza')) {
+		
+		$('.bar').each(function(){
+			
+			var value = $(this).find(".value").html();
+
+			var percentValue = (value * 100) / 100;
+
+			var finalValue = (300 * percentValue) / 10000;
+			
+			$(this).find('.value').html('');
+			
+			$(this).find('.value').animate({height:finalValue}, 2000);
+			
+		});
+		
+	}
+
 	
 	/* ---------- Bar Stats ---------- */
 	if($('.bar-stat').length) {
@@ -1036,14 +1054,11 @@ function charts() {
 	}
 
 	/* ---------- Pie chart ---------- */
-	var data = [
-	{ label: "Internet Explorer",  data: 12},
-	{ label: "Mobile",  data: 27},
-	{ label: "Safari",  data: 85},
-	{ label: "Opera",  data: 64},
-	{ label: "Firefox",  data: 90},
-	{ label: "Chrome",  data: 112}
-	];
+	<?php			
+			include("../../views/CategoriaView.php");
+			$categoriaVW = new CategoriaView();
+			echo utf8_encode($categoriaVW->_listarTotalDeCategoria());
+	?>
 	
 	if($("#piechart").length)
 	{

@@ -30,36 +30,17 @@
 			$this->crime->__setQuantidade(15);
 			$this->assertEquals(15, $this->crime->__getQuantidade());
 		}
-		public function testExceptionSetQuantidade(){
-			$this->assertInstanceOf('Crime',$this->crime);
-			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->setExpectedException('ETipoErrado');
-			$this->crime->__setQuantidade("erro");
-		}
-		
 		public function testeIdTempo(){
 			$this->assertInstanceOf('Crime',$this->crime);
 			$this->assertObjectHasAttribute('idCrime', $this->crime);
 			$this->crime->__setIdTempo(15);
 			$this->assertEquals(15, $this->crime->__getIdTempo());
 		}
-		public function testExceptionSetIdTempo(){
-			$this->assertInstanceOf('Crime',$this->crime);
-			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->setExpectedException('ETipoErrado');
-			$this->crime->__setIdTempo("erro");
-		}
 		public function testeIdNatureza(){
 			$this->assertInstanceOf('Crime',$this->crime);
 			$this->assertObjectHasAttribute('idCrime', $this->crime);
 			$this->crime->__setIdNatureza(15);
 			$this->assertEquals(15, $this->crime->__getIdNatureza());
-		}
-		public function testExceptionSetIdNatureza(){
-			$this->assertInstanceOf('Crime',$this->crime);
-			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->setExpectedException('ETipoErrado');
-			$this->crime->__setIdNatureza("erro");
 		}
 		public function testeConstructOverLoad(){
 			$this->assertInstanceOf('Crime',$this->crime);
@@ -73,20 +54,8 @@
 		public function testeIdRA(){
 			$this->assertInstanceOf('Crime',$this->crime);
 			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->crime->__setIdRA(1);
-			$this->assertEquals(1, $this->crime->__getIdRA());
-		}
-		public function testExceptionSetIdRA(){
-			$this->assertInstanceOf('Crime',$this->crime);
-			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->setExpectedException('ETipoErrado');
-			$this->crime->__setIdRA("erro");
-		}
-		public function testExceptionConstructOverLoad(){
-			$this->assertInstanceOf('Crime',$this->crime);
-			$this->assertObjectHasAttribute('idCrime', $this->crime);
-			$this->setExpectedException('ETipoErrado');
-			$this->crime->__constructOverload("erro","erro","erro","erro");
+			$this->crime->__setIdRegiaoAdministrativa(1);
+			$this->assertEquals(1, $this->crime->__getIdRegiaoAdministrativa());
 		}
 	}
 ?>

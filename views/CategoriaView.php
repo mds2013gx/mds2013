@@ -46,4 +46,44 @@ class CategoriaView{
 	public function contarRegistros(){
 		return $this->categoriaCO->_contarRegistros();
 	}
+
+	public function _somaTotalDignidadeSexual(){
+		return $this->categoriaCO->_somaTotalDignidadeSexual();
+	}
+
+	public function _somaTotalDignidadeSexual2010_2011(){
+		return $this->categoriaCO->_somaTotalDignidadeSexual2010_2011();
+	}
+
+	public function _somaTotalAcaoPolicial(){
+		return $this->categoriaCO->_somaTotalAcaoPolicial();
+	}
+
+	public function _somaTotalAcaoPolicial2010_2011(){
+		return $this->categoriaCO->_somaTotalAcaoPolicial2010_2011();
+	}
+
+	public function _somaGeralCrimeContraPessoa(){
+		return $this->categoriaCO->_somaGeralCrimeContraPessoa();
+	}
+
+	public function _somaGeralCrimeContraPessoa2010_2011(){
+		return $this->categoriaCO->_somaGeralCrimeContraPessoa2010_2011();
+	}
+
+	public function _somaTotalRoubo(){
+		return $this->categoriaCO->_somaTotalRoubo();
+	}
+
+	public function _somaTotalRoubo2010_2011(){
+		return $this->categoriaCO->_somaTotalRoubo2010_2011();
+	}
+
+	public function _somaTotalFurtos(){
+		return $this->categoriaCO->_somaTotalFurtos();
+	}
+	
+	public function _listarTotalDeCategoria(){
+		return $this->categoriaCO->_listarTotalDeCategoria();
+	}
 }

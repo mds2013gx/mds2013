@@ -43,6 +43,14 @@ class RegiaoAdministrativaDAOTeste extends PHPUnit_Framework_TestCase{
 		$RADAO = new RegiaoAdministrativaDAO();
 		$this->assertObjectHasAttribute('conexao', $RADAO);
 		$this->assertInstanceOf('RegiaoAdministrativaDAO', $RADAO);
-		$this->assertEquals(31,$RADAO->contarRegistrosRA());
+		$this->assertEquals(32,$RADAO->contarRegistrosRA());
+	}
+	
+	 public function testInserirRA(){
+	$raDAO = new RegiaoAdministrativaDAO();
+	$raDAO->__constructTeste();
+	$this->assertObjectHasAttribute('conexao', $raDAO);
+	$this->assertInstanceOf('RegiaoAdministrativaDAO', $raDAO);
+	$raDAO->inserirRA(new RegiaoAdministrativa());
 	}
 }

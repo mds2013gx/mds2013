@@ -13,6 +13,9 @@ class NaturezaController{
 	public function __construct(){
 		$this->naturezaDAO = new NaturezaDAO();
 	}
+	public function __constructTeste(){
+		$this->naturezaDAO->__constructTeste();
+	}
 	public function _listarTodas(){
 		$resultado = $this->naturezaDAO->listarTodas();
 		
@@ -62,49 +65,16 @@ class NaturezaController{
 		}
 		return $dadosCategoria;
 	}
-	public function _somaDeNaturezaPorAno($ano){
-		return $this->naturezaDAO->somaDeNaturezaPorAno($ano);
-	}
-	public function _retornarDadosDeNaturezaFormatado(){
+	public function _retornarDadosDeNaturezaFormatado($natureza){
 		$tempoDAO = new TempoDAO();
-		$dadosTempo = new Tempo();
 		$crimeCO = new CrimeController();
 		$arrayDadosTempo = $tempoDAO->listarTodos();
+		$dados;
 		for($i=0; $i<count($arrayDadosTempo);$i++){
-			$dadosTempo = $arrayDadosTempo[$i];
-			$dados[$i] = $dadosTempo->__getIntervalo();
+			$dados['tempo'][$i] = $arrayDadosTempo[$i]->__getIntervalo();
+			$dados['crime'][$i]= $crimeCO->_somaDeCrimePorNaturezaEmAno($natureza, $dados['tempo'][$i]);
+			$dados['title'][$i] = number_format($dados['crime'][$i],0,',','.');
 		}
-		for($i=0;$i<count($dados);$i++){
-			$dadosCrime[$i]= $crimeCO->_somaDeCrimePorNatureza('Estupro');
-			$dadosCrimeTitle[$i] = number_format($dadosCrime[$i],0,',','.');
-		}
-	
-	
-	
-		for($i=0;$i<count($dadosCrime); $i++){
-			/**
-			 * Laço que escreve os dados do grafico de ocorrencias por ano.
-			 * a string ("\"bar\"") define a barra cheia do grafico e
-			 * a string ("\"bar simple\"") define a barra pontilhada.
-			 * A condicional 'if($i%2==0)' garante que as barras pontilhadas e cheias sejam intercaladas.
-			 * Retorna-se o vetor de strings concatenado.
-			 * @author Eliseu
-			 * @copyright RadarCriminal 2013
-			 */
-			if($i%2==0){
-				$varbar="\"bar\"";
-			}else {
-				$varbar="\"bar simple\"";
-			}
-			$dadosCrimeFormatado[]="
-<div class=".$varbar."title=\"".$dadosCrimeTitle[$i]." Ocorrencias\">
-<div class=\"title\">".$dados[$i]."</div>
-<div class=\"value\">".$dadosCrime[$i]."</div>
-</div>";
-			if($i!=0)$dadosCrimeFormatado[0]=  $dadosCrimeFormatado[0].$dadosCrimeFormatado[$i];
-		}
-	
-		return $dadosCrimeFormatado[0];
-	
+		return $dados;
 	}
 }

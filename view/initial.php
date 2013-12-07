@@ -3,6 +3,7 @@
 include_once('C:/xampp/htdocs/mds2013/views/TempoView.php');
 include_once('C:/xampp/htdocs/mds2013/views/NaturezaView.php');
 $crimeVW = new CrimeView();
+$categoriaVW = new CategoriaView();
 $tempoVW = new TempoView();
 $naturezaVW = new NaturezaView();
 ?>
@@ -33,14 +34,14 @@ $naturezaVW = new NaturezaView();
 		<div class="span3 smallstat box mobileHalf noMargin" onTablet="span6"
 			onDesktop="span3">
 			<i class="icon-search radarLightYellow"></i> <span class="title">Roubo</span> <span
-				class="value"><?php echo  number_format($crimeVW->_somaTotalRoubo(),0,',','.') ?>
+				class="value"><?php echo  number_format($categoriaVW->_somaTotalRoubo(),0,',','.') ?>
 			</span>
 		</div>
 
 		<div class="span3 smallstat mobileHalf box" onTablet="span6"
 			onDesktop="span3">
 			<i class="icon-certificate radarYellow"></i> <span class="title">Furto</span>
-			<span class="value"><?php echo number_format($crimeVW->_somaTotalFurtos(),0,',','.') ?>
+			<span class="value"><?php echo number_format($categoriaVW->_somaTotalFurtos(),0,',','.') ?>
 			</span>
 		</div>
 
@@ -69,7 +70,7 @@ $naturezaVW = new NaturezaView();
 				</div>
 			</div>
 			<div class="box-content">
-					<div id="piechart" style="height:300px"></div>
+					<div id="piechart" style="height:450px"></div>
 			</div>
 		</div>
 
@@ -81,20 +82,19 @@ $naturezaVW = new NaturezaView();
 
 		<div class="box span12">
 					<div class="box-header">
-						<h2><i class="icon-tasks"></i>Total de Crimes por Tipo</h2>
+						<h2><a href="#" class="btn-minimize"><i class="icon-tasks"></i>Total de Crimes por Tipo</a></h2>
 						<div class="box-icon">
-							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
 						</div>
 					</div>
-					<div class="box-content">
-						<?php echo $naturezaVW->listarTodasAlfabicamente(); ?>
+					<div class="box-content" style="display:none;">
+						<?php echo utf8_encode($naturezaVW->listarTodasAlfabicamente()); ?>
 					</div>
 		</div><!--/span-->
 
 	</div>
 
-	<div class="row-fluid">
+	<!--<div class="row-fluid">
 
 		<div class="box span12">
 					<div class="box-header">
@@ -121,9 +121,9 @@ $naturezaVW = new NaturezaView();
 								<div class="bar" style="width: 80%"></div>
 							</div>
 					</div>
-		</div><!--/span-->
+		</div>
 
-	</div>
+	</div> -->
 
 </div>
 <!-- end: Content -->

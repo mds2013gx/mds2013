@@ -1,12 +1,17 @@
 <?php
 include_once('C:/xampp/htdocs/mds2013/model/RegiaoAdministrativa.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/ConexaoTeste.php');
 
 class RegiaoAdministrativaDAO {
 	private $conexao;
 	
 	public function __construct(){
 		$this->conexao = new Conexao();
+	}
+	public function __constructTeste(){
+		$this->conexao = new ConexaoTeste();
+	
 	}
 	public function listarTodas(){
 		$sql = "SELECT * FROM regiao_administrativa";

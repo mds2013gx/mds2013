@@ -46,12 +46,6 @@
 			$this->assertEquals("nomeCategoria",$this->categoria->__getNomeCategoria());
 			$this->assertInstanceOf('Categoria', $this->categoria);
 		}
-		public function testExceptionConstructOverLoad(){
-			$this->assertInstanceOf('Categoria',$this->categoria);
-			$this->assertObjectHasAttribute('idCategoria', $this->categoria);
-			$this->setExpectedException('ETipoErrado');
-			$this->categoria->__constructOverload("erro",1);
-		}
 	}
 
 ?>

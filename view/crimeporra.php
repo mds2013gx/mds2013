@@ -1,8 +1,5 @@
-<?php 
-include 'header.php';
-?>
-<?php include_once('../views/CrimeView.php');
-include_once('../views/TempoView.php');
+<?php include_once('./views/CrimeView.php');
+include_once('./views/TempoView.php');
 $crimeVW = new CrimeView();
 $tempoVW = new TempoView();
 
@@ -78,7 +75,3 @@ $tempoVW = new TempoView();
 
 </div>
 <!--/fluid-row-->
-
-<?php 
-include 'footer.php';
-?>

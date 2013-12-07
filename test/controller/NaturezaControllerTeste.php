@@ -43,33 +43,48 @@ class NaturezaControllerTeste extends PHPUnit_Framework_Testcase{
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
 		$this->assertInstanceOf('Natureza', $naturezaController->_consultarPorNome('Roubo de Carga'));
 	}
-	public function testExceptionsConsultarPorNome(){
+	public function testConsultarPorIdCategoria()
+	{
 		$naturezaController = new NaturezaController();
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
-		$this->setExpectedException('EErroConsulta');
-		$naturezaController->_consultarPorNome(1);
+		$this->assertArrayHasKey(1, $naturezaController->_consultarPorIdCategoria(1));
 	}
-	/*
+	
 	public function testInserirNatureza()
 	{
 		$naturezaController = new NaturezaController();
-		$natureza = new Natureza();
-		$natureza->__constructOverload(0, "teste", 0);
-		$this->assertNull($naturezaController->_inserirNatureza($natureza));
+		$naturezaController->__constructTeste();
+		$this->assertNull($naturezaController->_inserirNatureza(new Natureza()));
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
-		$this->assertInstanceOf('Natureza', $natureza);
-	}
+	}/*
 	public function testInserirNaturezaArrayParse()
 	{
 		$naturezaController = new NaturezaController();
+		$naturezaController->__constructTeste();
 		$natureza = new Natureza();
-		$array['Criminalidade'][0] = "teste";
-		$resultado = $naturezaController->_inserirArrayParse($array); 
-		$this->assertEquals('Criminalidade', $resultado->__getNomeCategoria());
+		$array['Criminalidade'][0] = "testeNovo";
+		$this->assertInstanceOf('Categoria',$naturezaController->_inserirArrayParse($array)); 
 		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
 		$this->assertInstanceOf('NaturezaController', $naturezaController);
 		$this->assertInstanceOf('Natureza', $natureza);
 	}*/
+	public function testExceptionInserirNaturezaArrayParse()
+	{
+		$naturezaController = new NaturezaController();
+		$naturezaController->__constructTeste();
+		$this->setExpectedException('EFalhaNaturezaController');
+		$resultado = $naturezaController->_inserirArrayParse(1);
+		$this->assertEquals('Criminalidade', $resultado->__getNomeCategoria());
+		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
+		$this->assertInstanceOf('NaturezaController', $naturezaController);
+	}
+	public function testRetornarDadosDeNaturezaFormatado()
+	{
+		$naturezaController = new NaturezaController();
+		$this->assertObjectHasAttribute('naturezaDAO', $naturezaController);
+		$this->assertInstanceOf('NaturezaController', $naturezaController);
+		$this->assertArrayHasKey('tempo', $naturezaController->_retornarDadosDeNaturezaFormatado('Estupro'));
+	}
 }

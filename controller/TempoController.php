@@ -7,20 +7,21 @@ class TempoController{
         public function __construct(){
                 $this->tempoDAO = new TempoDAO();
         }
+     
         public function _listarTodos(){
                 return $this->tempoDAO->listarTodos();
         }
         public function _listarTodasEmOrdem(){
                 return $this->tempoDAO->listarTodasEmOrdem();
         }
+        public function __constructTeste(){
+        	$this->tempoDAO->__constructTeste();
+        }
         public function _consultarPorId($id){
                 return $this->tempoDAO->consultarPorId($id);
         }
         public function _consultarPorIntervalo($intervalo){
                 return $this->tempoDAO->consultarPorIntervalo($intervalo);
-        }
-        public function _consultarPorMes($mes){
-        	return $this->tempoDAO->consultarPorMes($mes);
         }
         public function _inserirTempo(Tempo $tempo){
                 return $this->tempoDAO->inserirTempo($tempo);

@@ -17,10 +17,6 @@
 			$this->assertEquals(1,$this->regiaoAdministrativa->__getIdRegiaoAdministrativa());
 			$this->assertEquals('teste',$this->regiaoAdministrativa->__getNomeRegiao());
 		}
-		public function testeExceptionConstructOverLoad(){
-			$this->setExpectedException('ETipoErrado');
-			$this->regiaoAdministrativa->__constructOverLoad('teste', 2);
-		}
 		public function testSetIdRegiaoAdministriva(){
 			$this->regiaoAdministrativa->__setIdRegiaoAdministrativa(42);
 			$this->assertEquals(42, $this->regiaoAdministrativa ->__getIdRegiaoAdministrativa());
@@ -36,10 +32,6 @@
 		public function testExceptionSetNomeRegiaoAdministrativa(){
 			$this->setExpectedException('ETipoErrado');
 			$this->regiaoAdministrativa->__setNomeRegiao(0);
-		}
-		public function testExceptionConstructOverLoad(){
-			$this->setExpectedException('ETipoErrado');
-			$this->regiaoAdministrativa->__constructOverLoad("erro", 0);
 		}
 	}
 ?>

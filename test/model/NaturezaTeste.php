@@ -54,12 +54,5 @@
 			$this->assertEquals("natureza", $this->natureza->__getNatureza());
 			$this->assertEquals(2, $this->natureza->__getIdCategoria());
 		}
-		public function testExceptionConstructOverLoad(){
-			$natureza = new Natureza();
-			$this->assertInstanceOf('Natureza',$natureza);
-			$this->assertObjectHasAttribute('idNatureza', $natureza);
-			$this->setExpectedException('ETipoErrado');
-			$natureza->__constructOverload("erro",10,"erro");
-		}
 	}
 ?>

@@ -2,6 +2,7 @@
 include_once('C:/xampp/htdocs/mds2013/model/Natureza.php');
 include_once('C:/xampp/htdocs/mds2013/model/Categoria.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/Conexao.php');
+include_once('C:/xampp/htdocs/mds2013/persistence/ConexaoTeste.php');
 include_once('C:/xampp/htdocs/mds2013/persistence/CategoriaDAO.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaListarTodosVazio.php');
 include_once('C:/xampp/htdocs/mds2013/exceptions/ENaturezaListarTodasAlfabeticamenteVazio.php');
@@ -14,7 +15,10 @@ class NaturezaDAO{
 	public function __construct(){
 		$this->conexao = new Conexao();
 	}
-
+	public function __constructTeste(){
+		$this->conexao = new ConexaoTeste();
+	
+	}
 	public function listarTodas(){
 		$sql = "SELECT * FROM natureza";
 		$resultado = $this->conexao->banco->Execute($sql);
@@ -72,8 +76,5 @@ class NaturezaDAO{
 			$retornaNaturezas[] = $dadosNatureza;
 		}
 		return $retornaNaturezas;
-	}
-	public function somaDeNaturezaPorAno(){
-		
 	}
 }

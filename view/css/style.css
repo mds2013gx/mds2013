@@ -1075,13 +1075,13 @@ footer a {
 }
 /* Main Chart Natureza
 =================================================================== */
-.main-chart-natureza {
+.chart-natureza {
   height: 300px;
   margin-top: 30px;
   margin-bottom: 30px;
   border-top: 1px dashed #c7cbd5;
 }
-.main-chart-natureza .bar {
+.chart-natureza .bar {
   height: 100%;
   position: relative;
   width: 3%;
@@ -1093,7 +1093,7 @@ footer a {
   border-radius: 2px;
   z-index: 10;
 }
-.main-chart-natureza .bar:before {
+.chart-natureza .bar:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1104,7 +1104,7 @@ footer a {
   width: 8px;
   background: #c7cbd5;
 }
-.main-chart-natureza .bar:after {
+.chart-natureza .bar:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1115,13 +1115,13 @@ footer a {
   width: 2px;
   background: #c7cbd5;
 }
-.main-chart-natureza .bar .title {
+.chart-natureza .bar .title {
   position: absolute;
   top: -50px;
   width: 100%;
   text-align: center;
 }
-.main-chart-natureza .bar .value {
+.chart-natureza .bar .value {
   position: absolute;
   bottom: 0px;
   background: #C9CACB;
@@ -1136,7 +1136,7 @@ footer a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.main-chart-natureza .bar .value:before {
+.chart-natureza .bar .value:before {
   border-top: 5px solid #fff;
   position: absolute;
   content: '';
@@ -1145,11 +1145,11 @@ footer a {
   top: -5px;
   left: 0px;
 }
-.main-chart-natureza .bar .value:hover {
+.chart-natureza .bar .value:hover {
   background: #302927;
   color: white;
 }
-.main-chart-natureza .bar.simple:before {
+.chart-natureza .bar.simple:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1160,7 +1160,7 @@ footer a {
   width: 5px;
   background: #c7cbd5;
 }
-.main-chart-natureza .bar.simple:after {
+.chart-natureza .bar.simple:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1172,7 +1172,7 @@ footer a {
   background: transparent;
   border-left: 1px dashed #d6d9e0;
 }
-.main-chart-natureza .bar.simple .title {
+.chart-natureza .bar.simple .title {
   top: -46px;
   font-size: 10px;
 }
